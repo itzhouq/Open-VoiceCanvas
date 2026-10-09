@@ -236,67 +236,27 @@ export default function StoryPage() {
     });
   };
 
-  // 客户端直接调用DeepSeek API
-  const generateStoryClientSide = async (requirement: string) => {
-    const DEEPSEEK_API_KEY = process.env.NEXT_PUBLIC_DEEPSEEK_API_KEY;
-    
-    if (!DEEPSEEK_API_KEY) {
-      throw new Error('DeepSeek API密钥未配置，请在环境变量中设置 NEXT_PUBLIC_DEEPSEEK_API_KEY');
-    }
-
-    const systemPrompt = `你是专业故事创作者。根据要求创作完整故事。
-
-格式要求：
-1. 对话格式：角色名："对话内容"
-2. 旁白格式：旁白：描述内容  
-3. 故事长度300-1000字
-4. 包含开头、发展、结局
-
-示例：
-旁白：在遥远王国里，住着勇敢骑士艾伦。
-艾伦："我要拯救公主！"
-旁白：艾伦踏上了征程。
-
-请严格按此格式创作。`;
-
-    const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
+  // 通过服务端 API 生成故事（API Key 仅保存在服务端，不暴露给浏览器）
+  const generateStoryViaServer = async (requirement: string) => {
+    const response = await fetch('/api/story/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${DEEPSEEK_API_KEY}`,
       },
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [
-          {
-            role: 'system',
-            content: systemPrompt
-          },
-          {
-            role: 'user',
-            content: `创作故事：${requirement}`
-          }
-        ],
-        temperature: 0.7,
-        max_tokens: 2000,
-        top_p: 0.8,
-        frequency_penalty: 0.1,
-        presence_penalty: 0.1
-      }),
+      body: JSON.stringify({ requirement }),
     });
 
+    const data = await response.json().catch(() => null);
+
     if (!response.ok) {
-      const errorData = await response.json().catch(() => null);
-      throw new Error(errorData?.error?.message || `API调用失败 (${response.status})`);
+      throw new Error(data?.error || `请求失败 (${response.status})`);
     }
 
-    const data = await response.json();
-    
-    if (!data.choices || data.choices.length === 0) {
+    if (!data?.story || data.story.trim().length === 0) {
       throw new Error('故事生成失败，请重试');
     }
 
-    return data.choices[0].message.content;
+    return data.story as string;
   };
 
   // 生成故事
@@ -321,8 +281,8 @@ export default function StoryPage() {
 
     setIsGenerating(true);
     try {
-      // 客户端直接调用DeepSeek API，无时间限制
-      const story = await generateStoryClientSide(storyRequirement);
+      // 通过服务端 API 生成故事，Key 不进浏览器
+      const story = await generateStoryViaServer(storyRequirement);
 
       setGeneratedStory(story);
       setCurrentStory(story); // 设置当前故事

@@ -1,5 +1,4 @@
-import { SynthesizeSpeechCommand, SynthesizeSpeechCommandInput, LanguageCode, VoiceId } from "@aws-sdk/client-polly";
-import { pollyClient } from "./aws-config";
+import type { LanguageCode, VoiceId } from "@aws-sdk/client-polly";
 import { AudioCache } from './audio-cache';
 import { openai, TTS_MODEL } from './openai';
 
@@ -79,7 +78,7 @@ const voiceConfig = {
   }
 };
 
-const languageCodeMap = {
+export const languageCodeMap = {
   "en-US": "en-US" as LanguageCode,
   "en-GB": "en-GB" as LanguageCode,
   "en-AU": "en-AU" as LanguageCode,
@@ -654,58 +653,43 @@ async function synthesizeWithPolly(
   speed: number
 ): Promise<ArrayBuffer> {
   try {
-    const languageCode = languageCodeMap[language as keyof typeof languageCodeMap] || languageCodeMap["en-US"];
     const { voiceId, engine = 'standard' } = voiceOptions;
 
     if (!voiceId) {
       throw new Error("语音ID不能为空");
     }
 
-    // 查找此voice是否支持指定的engine
-    let isEngineSupported = true;
-    
-    if (engine === 'neural') {
-      // 检查所选声音是否支持神经引擎
-      const neuralVoices = AWS_NTTS_VOICES.flatMap(lang => lang.voices.map(voice => voice.id));
-      isEngineSupported = neuralVoices.includes(voiceId);
-      
-      if (!isEngineSupported) {
-        console.warn(`声音 ${voiceId} 不支持神经引擎，将使用标准引擎代替`);
+    // 通过服务端 API 代理合成，AWS 凭据仅保存在服务端，不暴露给浏览器
+    const response = await fetch('/api/speech/polly', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        text,
+        language,
+        voiceId,
+        engine,
+        speed
+      })
+    });
+
+    if (!response.ok) {
+      let errorMessage = '语音合成失败';
+      try {
+        const errorData = await response.json();
+        if (errorData?.error) {
+          errorMessage = typeof errorData.error === 'string'
+            ? errorData.error
+            : JSON.stringify(errorData.error);
+        }
+      } catch (e) {
+        console.error('解析错误响应失败:', e);
       }
-    }
-    
-    // 如果不支持神经引擎，则使用标准引擎
-    const finalEngine = isEngineSupported ? engine : 'standard';
-
-    // 使用 AbortController 设置超时
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10000); // 10秒超时
-
-    const input: SynthesizeSpeechCommandInput = {
-      Engine: finalEngine,
-      LanguageCode: languageCode,
-      OutputFormat: "mp3",
-      SampleRate: "24000",
-      Text: text,
-      TextType: "text",
-      VoiceId: voiceId
-    };
-
-    const command = new SynthesizeSpeechCommand(input);
-    const response = await Promise.race([
-      pollyClient.send(command),
-      new Promise<never>((_, reject) => 
-        setTimeout(() => reject(new Error("Polly 请求超时")), 10000)
-      )
-    ]);
-
-    clearTimeout(timeout);
-
-    if (!response.AudioStream) {
-      throw new Error("No audio stream returned");
+      throw new Error(errorMessage);
     }
 
-    return new Uint8Array(await response.AudioStream.transformToByteArray()).buffer;
+    return await response.arrayBuffer();
   } catch (error) {
     console.error("Error synthesizing speech:", error);
     throw error;
