@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const es: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Plataforma avanzada de síntesis y clonación de voz con IA en múltiples idiomas",
-  appPageTitle: "VoiceCanvas Estudio - Espacio de trabajo de texto a voz",
-  voicePageTitle: "VoiceCanvas Clonación de voz - Plataforma de clonación de voz personalizada con IA",
-  storyPageTitle: "VoiceCanvas Historia - Plataforma para generación y conversión de texto a voz con IA",
-  pricingPageTitle: "VoiceCanvas Planes de precios - Opciones de suscripción flexibles y transparentes",
-  longTextPageTitle: "VoiceCanvas Procesamiento de textos largos - Herramienta para convertir artículos extensos en voz",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Plataforma avanzada de síntesis y clonación de voz con IA en múltiples idiomas",
+  appPageTitle: "VoiceWove Estudio - Espacio de trabajo de texto a voz",
+  voicePageTitle: "VoiceWove Clonación de voz - Plataforma de clonación de voz personalizada con IA",
+  storyPageTitle: "VoiceWove Historia - Plataforma para generación y conversión de texto a voz con IA",
+  pricingPageTitle: "VoiceWove Planes de precios - Opciones de suscripción flexibles y transparentes",
+  longTextPageTitle: "VoiceWove Procesamiento de textos largos - Herramienta para convertir artículos extensos en voz",
   inputPlaceholder: "Ingrese texto para leer...",
   speed: "Velocidad",
   voice: "Voz",
@@ -40,7 +40,7 @@ export const es: TranslationType = {
   on: "Activado",
   off: "Desactivado",
   characters: "caracteres",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Probar Ahora",
   tryForFree: "Prueba Gratis",
   feature1Title: "Voz de Alta Calidad",
@@ -82,7 +82,7 @@ export const es: TranslationType = {
   dividerText: "o",
   aiPowered: "Con Tecnología AI",
   languagesSupported: "50+ Idiomas",
-  copyright: "© {year} VoiceCanvas. Todos los derechos reservados.",
+  copyright: "© {year} VoiceWove. Todos los derechos reservados.",
   footerSlogan: "Creado con ❤️ para mejores experiencias vocales",
   loginDescription: "Inicia sesión para más funciones",
   registerDescription: "Crea una cuenta para comenzar",
@@ -190,7 +190,7 @@ export const es: TranslationType = {
   
   // Plans
   trialPlan: "Prueba",
-  trialDesc: "Funciones básicas de VoiceCanvas",
+  trialDesc: "Funciones básicas de VoiceWove",
   yearlyPlan: "Plan Anual",
   yearlyDesc: "Máximo valor para usuarios avanzados",
   monthlyPlan: "Plan Mensual",
@@ -760,7 +760,7 @@ pleaseSelectNarratorVoice: 'Selecciona la voz del narrador',
 
   // Voice Design page related translation keys
   "voiceDesign": "Diseño de Tono de Voz",
-  "voiceDesignPageTitle": "VoiceCanvas Diseño de Tono de Voz - Plataforma de Personalización y Diseño de Voz con IA",
+  "voiceDesignPageTitle": "VoiceWove Diseño de Tono de Voz - Plataforma de Personalización y Diseño de Voz con IA",
   "designVoice": "Diseñar Tono de Voz",
   "voiceDesignDescription": "Diseña una voz personalizada única ajustando parámetros como idioma, acento y tono",
   "designedVoices": "Voces Diseñadas",
@@ -824,7 +824,7 @@ pleaseSelectNarratorVoice: 'Selecciona la voz del narrador',
 
   // Traducciones relacionadas con podcast AI
   aiPodcast: 'Podcast AI',
-  podcastPageTitle: 'Estudio de Podcasts AI - Generación de entrevistas inteligentes | VoiceCanvas',
+  podcastPageTitle: 'Estudio de Podcasts AI - Generación de entrevistas inteligentes | VoiceWove',
   podcastTitle: 'Generador de Podcasts AI',
   podcastDescription: 'Ingrese contenido, la IA genera automáticamente diálogos profesionales de podcast en formato entrevista',
   inputPodcastContent: 'Ingresar contenido del podcast',
@@ -984,7 +984,7 @@ pleaseSelectNarratorVoice: 'Selecciona la voz del narrador',
   noAudioSegmentsDesc: 'Sin segmentos generables',
 
   // Nombres de archivos
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segmento{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segmento{segment}.mp3',
 
   // Títulos de UI
   contentInputTitle: 'Entrada de contenido',
@@ -998,7 +998,7 @@ pleaseSelectNarratorVoice: 'Selecciona la voz del narrador',
   dialogueSegmentsCount: '{count} segmentos de diálogo',
 
   // Archivo completo
-  completePodcastFileName: 'VoiceCanvas-PodcastAI-Completo-{date}.wav',
+  completePodcastFileName: 'VoiceWove-PodcastAI-Completo-{date}.wav',
 
   // Controles de audio
   pauseButton: 'Pausa',

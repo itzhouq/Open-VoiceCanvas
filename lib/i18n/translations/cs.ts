@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const cs: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Pokročilá vícejazyčná platforma pro syntézu hlasu a klonování hlasu s umělou inteligencí",
-  appPageTitle: "VoiceCanvas Studio - Pracovní prostor pro převod textu na řeč",
-  voicePageTitle: "VoiceCanvas Klonování hlasu - Platforma pro personalizované klonování hlasu",
-  storyPageTitle: "VoiceCanvas Povídky - Platforma pro automatické generování a převod textu na řeč",
-  pricingPageTitle: "VoiceCanvas Ceník - Flexibilní a transparentní možnosti předplatného",
-  longTextPageTitle: "VoiceCanvas Dlouhý text - Nástroj pro převod rozsáhlých dokumentů na řeč",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Pokročilá vícejazyčná platforma pro syntézu hlasu a klonování hlasu s umělou inteligencí",
+  appPageTitle: "VoiceWove Studio - Pracovní prostor pro převod textu na řeč",
+  voicePageTitle: "VoiceWove Klonování hlasu - Platforma pro personalizované klonování hlasu",
+  storyPageTitle: "VoiceWove Povídky - Platforma pro automatické generování a převod textu na řeč",
+  pricingPageTitle: "VoiceWove Ceník - Flexibilní a transparentní možnosti předplatného",
+  longTextPageTitle: "VoiceWove Dlouhý text - Nástroj pro převod rozsáhlých dokumentů na řeč",
   inputPlaceholder: "Zadejte text ke čtení...",
   speed: "Rychlost",
   voice: "Hlas",
@@ -40,7 +40,7 @@ export const cs: TranslationType = {
   on: "Zapnuto",
   off: "Vypnuto", 
   characters: "znaků",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Vyzkoušet nyní",
   tryForFree: "Vyzkoušet zdarma",
   feature1Title: "Vysoce kvalitní hlas",
@@ -82,7 +82,7 @@ export const cs: TranslationType = {
   dividerText: "nebo",
   aiPowered: "Poháněno AI",
   languagesSupported: "50+ jazyků",
-  copyright: " {year} VoiceCanvas. Všechna práva vyhrazena.",
+  copyright: " {year} VoiceWove. Všechna práva vyhrazena.",
   footerSlogan: "Vytvořeno s pro lepší hlasový zážitek",
   loginDescription: "Přihlaste se ke svému účtu pro přístup k dalším funkcím",
   registerDescription: "Vytvořte si nový účet a začněte používat naši službu",
@@ -190,7 +190,7 @@ export const cs: TranslationType = {
 
   // Plans
   trialPlan: "Zkušební",
-  trialDesc: "Vyzkoušejte si základní funkce VoiceCanvas",
+  trialDesc: "Vyzkoušejte si základní funkce VoiceWove",
   yearlyPlan: "Roční plán",
   yearlyDesc: "Perfektní pro náročné uživatele, nejlepší hodnota",
   monthlyPlan: "Měsíční plán",
@@ -758,7 +758,7 @@ pleaseSelectNarratorVoice: 'Vyberte hlas vypravěče',
 
   // Voice Design page related translation keys
   "voiceDesign": "Design hlasu",
-  "voiceDesignPageTitle": "VoiceCanvas Design hlasu - Platforma pro přizpůsobení a design hlasu pomocí AI",
+  "voiceDesignPageTitle": "VoiceWove Design hlasu - Platforma pro přizpůsobení a design hlasu pomocí AI",
   "designVoice": "Navrhnout hlas",
   "voiceDesignDescription": "Navrhněte si svůj vlastní personalizovaný hlas úpravou parametrů jako jazyk, přízvuk, barva hlasu atd.",
   "designedVoices": "Navržené hlasy",
@@ -822,7 +822,7 @@ pleaseSelectNarratorVoice: 'Vyberte hlas vypravěče',
 
   // Překlad AI podcastu
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'Studio AI Podcastu - Generování inteligentních rozhovorů | VoiceCanvas',
+  podcastPageTitle: 'Studio AI Podcastu - Generování inteligentních rozhovorů | VoiceWove',
   podcastTitle: 'Generátor AI Podcastů',
   podcastDescription: 'Vložte obsah a AI automaticky vygeneruje profesionální podcastové rozhovory',
   inputPodcastContent: 'Zadejte obsah podcastu',
@@ -982,7 +982,7 @@ pleaseSelectNarratorVoice: 'Vyberte hlas vypravěče',
   noAudioSegmentsDesc: 'Žádné audio segmenty k generování',
 
   // Názvy souborů pro stahování
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Nadpisy rozhraní
   contentInputTitle: 'Vstup obsahu',
@@ -996,7 +996,7 @@ pleaseSelectNarratorVoice: 'Vyberte hlas vypravěče',
   dialogueSegmentsCount: 'Celkem {count} segmentů dialogu',
 
   // Název souboru pro kompletní podcast
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Kompletní-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Kompletní-{date}.wav',
 
   // Ovládací tlačítka audia
   pauseButton: 'Pozastavit',

@@ -33,7 +33,7 @@ export const VerificationEmailTemplate: React.FC<VerificationEmailProps> = ({
       marginBottom: '20px',
     }}>
       <p>Dear {userName || 'User'},</p>
-      <p>Thank you for registering with VoiceCanvas. Please click the button below to verify your email address:</p>
+      <p>Thank you for registering with VoiceWove. Please click the button below to verify your email address:</p>
       
       <div style={{
         textAlign: 'center',
@@ -71,7 +71,7 @@ export const VerificationEmailTemplate: React.FC<VerificationEmailProps> = ({
       textAlign: 'center',
     }}>
       <p>If you did not request this verification, please ignore this email.</p>
-      <p>&copy; {new Date().getFullYear()} VoiceCanvas. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} VoiceWove. All rights reserved.</p>
     </div>
   </div>
 ); 

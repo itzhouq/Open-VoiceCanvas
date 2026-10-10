@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const ar: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - منصة متعددة اللغات لتوليف الصوت ونسخ الصوت بالذكاء الاصطناعي",
-  appPageTitle: "استديو VoiceCanvas - مساحة عمل تحويل النص إلى كلام",
-  voicePageTitle: "VoiceCanvas استنساخ الصوت - منصة استنساخ الصوت الشخصي بالذكاء الاصطناعي",
-  storyPageTitle: "VoiceCanvas القصص - أداة تحويل النص إلى كلام بالذكاء الاصطناعي",
-  pricingPageTitle: "أسعار VoiceCanvas - خيارات اشتراك مرنة وشفافة",
-  longTextPageTitle: "VoiceCanvas النصوص الطويلة - أداة تحويل المستندات الكبيرة إلى كلام",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - منصة متعددة اللغات لتوليف الصوت ونسخ الصوت بالذكاء الاصطناعي",
+  appPageTitle: "استديو VoiceWove - مساحة عمل تحويل النص إلى كلام",
+  voicePageTitle: "VoiceWove استنساخ الصوت - منصة استنساخ الصوت الشخصي بالذكاء الاصطناعي",
+  storyPageTitle: "VoiceWove القصص - أداة تحويل النص إلى كلام بالذكاء الاصطناعي",
+  pricingPageTitle: "أسعار VoiceWove - خيارات اشتراك مرنة وشفافة",
+  longTextPageTitle: "VoiceWove النصوص الطويلة - أداة تحويل المستندات الكبيرة إلى كلام",
   inputPlaceholder: "أدخل النص للقراءة...",
   speed: "السرعة",
   voice: "الصوت",
@@ -40,7 +40,7 @@ export const ar: TranslationType = {
   on: "تشغيل",
   off: "إيقاف",
   characters: "حرفًا",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "جربه الآن",
   tryForFree: "جربه مجانًا",
   feature1Title: "جودة صوت عالية",
@@ -82,7 +82,7 @@ export const ar: TranslationType = {
   dividerText: "أو",
   aiPowered: "مدعوم بالذكاء الاصطناعي",
   languagesSupported: "أكثر من 50 لغة",
-  copyright: "© {year} VoiceCanvas. جميع الحقوق محفوظة.",
+  copyright: "© {year} VoiceWove. جميع الحقوق محفوظة.",
   footerSlogan: "مصمم ب ❤️ لتجربة صوتية أفضل",
   loginDescription: "سجل الدخول بحسابك للوصول إلى ميزات أكثر",
   registerDescription: "أنشئ حسابًا جديدًا لبدء استخدام خدمتنا",
@@ -190,7 +190,7 @@ export const ar: TranslationType = {
 
   // Plans
   trialPlan: "تجريبي",
-  trialDesc: "جرب ميزات VoiceCanvas الأساسية",
+  trialDesc: "جرب ميزات VoiceWove الأساسية",
   yearlyPlan: "خطة سنوية",
   yearlyDesc: "مثالية للمستخدمين المكثفين، أفضل قيمة",
   monthlyPlan: "خطة شهرية",
@@ -758,7 +758,7 @@ pleaseSelectNarratorVoice: 'يرجى اختيار نغمة صوتية للراو
 
   // Voice Design page related translation keys
   "voiceDesign": "تصميم الصوت",
-  "voiceDesignPageTitle": "VoiceCanvas تصميم الصوت - منصة تخصيص وتصميم الأصوات بالذكاء الاصطناعي",
+  "voiceDesignPageTitle": "VoiceWove تصميم الصوت - منصة تخصيص وتصميم الأصوات بالذكاء الاصطناعي",
   "designVoice": "صمم صوتك",
   "voiceDesignDescription": "صمم صوتًا شخصيًا فريدًا من خلال ضبط معايير اللغة واللكنة ونوعية الصوت",
   "designedVoices": "الأصوات المصممة",
@@ -822,7 +822,7 @@ pleaseSelectNarratorVoice: 'يرجى اختيار نغمة صوتية للراو
 
   // AI播客相关翻译
   aiPodcast: 'بودكاست الذكاء الاصطناعي',
-  podcastPageTitle: 'استوديو بودكاست الذكاء الاصطناعي - توليد حوارات ذكية | VoiceCanvas',
+  podcastPageTitle: 'استوديو بودكاست الذكاء الاصطناعي - توليد حوارات ذكية | VoiceWove',
   podcastTitle: 'مولد بودكاست الذكاء الاصطناعي',
   podcastDescription: 'أدخل المحتوى، وسيولد الذكاء الاصطناعي حوارات بودكاست احترافية تلقائيًا',
   inputPodcastContent: 'أدخل محتوى البودكاست',
@@ -982,7 +982,7 @@ pleaseSelectNarratorVoice: 'يرجى اختيار نغمة صوتية للراو
   noAudioSegmentsDesc: 'لا توجد مقاطع صوتية قابلة للتوليد',
 
   // 下载文件名
-  downloadFileName: 'VoiceCanvas-بودكاست-{speaker}-المقطع{segment}.mp3',
+  downloadFileName: 'VoiceWove-بودكاست-{speaker}-المقطع{segment}.mp3',
 
   // 界面标题
   contentInputTitle: 'إدخال المحتوى',
@@ -996,7 +996,7 @@ pleaseSelectNarratorVoice: 'يرجى اختيار نغمة صوتية للراو
   dialogueSegmentsCount: 'إجمالي {count} مقاطع حوار',
 
   // 完整播客下载文件名
-  completePodcastFileName: 'VoiceCanvas-بودكاست-النسخة-الكاملة-{date}.wav',
+  completePodcastFileName: 'VoiceWove-بودكاست-النسخة-الكاملة-{date}.wav',
 
   // 音频控制按钮
   pauseButton: 'إيقاف مؤقت',

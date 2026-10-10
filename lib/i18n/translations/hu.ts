@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const hu: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Fejlett AI hangszintézis és többnyelvű hangklónozó platform",
-  appPageTitle: "VoiceCanvas Stúdió - Szöveg-beszéd munkaterület",
-  voicePageTitle: "VoiceCanvas Hangklónozás - Személyre szabott AI hangklónozó platform",
-  storyPageTitle: "VoiceCanvas Történet - Szöveg-beszéd generálás és átalakítás AI-val",
-  pricingPageTitle: "VoiceCanvas Árazási csomagok - Rugalmas és átlátható előfizetési lehetőségek",
-  longTextPageTitle: "VoiceCanvas Hosszú szöveg feldolgozás - Eszköz hosszú cikkek beszéddé alakításához",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Fejlett AI hangszintézis és többnyelvű hangklónozó platform",
+  appPageTitle: "VoiceWove Stúdió - Szöveg-beszéd munkaterület",
+  voicePageTitle: "VoiceWove Hangklónozás - Személyre szabott AI hangklónozó platform",
+  storyPageTitle: "VoiceWove Történet - Szöveg-beszéd generálás és átalakítás AI-val",
+  pricingPageTitle: "VoiceWove Árazási csomagok - Rugalmas és átlátható előfizetési lehetőségek",
+  longTextPageTitle: "VoiceWove Hosszú szöveg feldolgozás - Eszköz hosszú cikkek beszéddé alakításához",
   inputPlaceholder: "Szöveg beírása olvasáshoz...",
   speed: "Sebesség",
   voice: "Hang",
@@ -40,7 +40,7 @@ export const hu: TranslationType = {
   on: "Be",
   off: "Ki",
   characters: "karakter",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Próbálja Most",
   tryForFree: "Ingyenes Kipróbálás",
   feature1Title: "Kiváló Minőségű Hang",
@@ -82,7 +82,7 @@ export const hu: TranslationType = {
   dividerText: "vagy",
   aiPowered: "Művi Intelligencia",
   languagesSupported: "50+ Támogatott Nyelv",
-  copyright: "© {year} VoiceCanvas. Minden jog fenntartva.",
+  copyright: "© {year} VoiceWove. Minden jog fenntartva.",
   footerSlogan: "Szívvel készítve egy jobb hangélményért",
   loginDescription: "Jelentkezzen be további funkciók eléréséhez",
   registerDescription: "Hozzon létre új fiókot a szolgáltatás használatához",
@@ -190,7 +190,7 @@ export const hu: TranslationType = {
   
   // Plans
   trialPlan: "Próbaverzió",
-  trialDesc: "Ismerje meg VoiceCanvas alapfunkcióit",
+  trialDesc: "Ismerje meg VoiceWove alapfunkcióit",
   yearlyPlan: "Éves Csomag",
   yearlyDesc: "Haladó felhasználóknak ideális",
   monthlyPlan: "Havi Csomag",
@@ -762,7 +762,7 @@ pleaseSelectNarratorVoice: 'Kérjük válassz narrátor hangot',
 
   // Voice Design page related translation keys
   "voiceDesign": "Hangszíntervezés",
-  "voiceDesignPageTitle": "VoiceCanvas Hangszíntervezés - Mesterséges Intelligencia alapú hangtestreszabó és tervező platform",
+  "voiceDesignPageTitle": "VoiceWove Hangszíntervezés - Mesterséges Intelligencia alapú hangtestreszabó és tervező platform",
   "designVoice": "Hangszín tervezése",
   "voiceDesignDescription": "Tervezz egyedi személyre szabott hangot a nyelv, akcentus, hangszín és egyéb paraméterek beállításával",
   "designedVoices": "Tervezett hangszínek",
@@ -826,7 +826,7 @@ pleaseSelectNarratorVoice: 'Kérjük válassz narrátor hangot',
 
   // AI पॉडकास्ट अनुवाद
   aiPodcast: 'AI पॉडकास्ट',
-  podcastPageTitle: 'AI पॉडकास्ट स्टूडियो - स्मार्ट साक्षात्कार संवाद जनरेटर | VoiceCanvas',
+  podcastPageTitle: 'AI पॉडकास्ट स्टूडियो - स्मार्ट साक्षात्कार संवाद जनरेटर | VoiceWove',
   podcastTitle: 'AI पॉडकास्ट जनरेटर',
   podcastDescription: 'सामग्री डालें, AI स्वचालित रूप से पेशेवर साक्षात्कार-शैली पॉडकास्ट संवाद बनाएगा',
   inputPodcastContent: 'पॉडकास्ट सामग्री डालें',
@@ -986,7 +986,7 @@ pleaseSelectNarratorVoice: 'Kérjük válassz narrátor hangot',
   noAudioSegmentsDesc: 'बनाने के लिए कोई ऑडियो खंड नहीं',
 
   // डाउनलोड फ़ाइल नाम
-  downloadFileName: 'VoiceCanvas-पॉडकास्ट-{speaker}-खंड{segment}.mp3',
+  downloadFileName: 'VoiceWove-पॉडकास्ट-{speaker}-खंड{segment}.mp3',
 
   // इंटरफ़ेस शीर्षक
   contentInputTitle: 'सामग्री इनपुट',
@@ -1000,7 +1000,7 @@ pleaseSelectNarratorVoice: 'Kérjük válassz narrátor hangot',
   dialogueSegmentsCount: 'कुल {count} संवाद खंड',
 
   // पूर्ण पॉडकास्ट फ़ाइल नाम
-  completePodcastFileName: 'VoiceCanvas-AI-पॉडकास्ट-पूर्ण-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-पॉडकास्ट-पूर्ण-{date}.wav',
 
   // ऑडियो नियंत्रण बटन
   pauseButton: 'रोकें',

@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const ko: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - 고급 AI 음성 합성 및 복제 다국어 플랫폼",
-  appPageTitle: "VoiceCanvas 스튜디오 - 텍스트 음성 변환 작업 공간",
-  voicePageTitle: "VoiceCanvas 음성 복제 - 맞춤형 AI 음성 복제 플랫폼",
-  storyPageTitle: "VoiceCanvas 이야기 - 텍스트 음성 생성 및 변환 AI 플랫폼",
-  pricingPageTitle: "VoiceCanvas 가격 정책 - 유연하고 투명한 구독 옵션",
-  longTextPageTitle: "VoiceCanvas 장문 처리 - 긴 글을 음성으로 변환하는 도구",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - 고급 AI 음성 합성 및 복제 다국어 플랫폼",
+  appPageTitle: "VoiceWove 스튜디오 - 텍스트 음성 변환 작업 공간",
+  voicePageTitle: "VoiceWove 음성 복제 - 맞춤형 AI 음성 복제 플랫폼",
+  storyPageTitle: "VoiceWove 이야기 - 텍스트 음성 생성 및 변환 AI 플랫폼",
+  pricingPageTitle: "VoiceWove 가격 정책 - 유연하고 투명한 구독 옵션",
+  longTextPageTitle: "VoiceWove 장문 처리 - 긴 글을 음성으로 변환하는 도구",
   inputPlaceholder: "읽을 텍스트를 입력하세요...",
   speed: "속도",
   voice: "음성",
@@ -40,7 +40,7 @@ export const ko: TranslationType = {
   on: "켬",
   off: "끔",
   characters: "글자 수",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "지금 시작하기",
   tryForFree: "무료로 체험하기",
   feature1Title: "고품질 음성",
@@ -762,7 +762,7 @@ pleaseSelectNarratorVoice: '내레이터 음성을 선택해주세요',
 
   // Voice Design page related translation keys
   "voiceDesign": "음색 디자인",
-  "voiceDesignPageTitle": "VoiceCanvas 음색 디자인 - AI 음색 맞춤 디자인 플랫폼",
+  "voiceDesignPageTitle": "VoiceWove 음색 디자인 - AI 음색 맞춤 디자인 플랫폼",
   "designVoice": "음색 디자인하기",
   "voiceDesignDescription": "언어, 억양, 음색 등 파라미터를 조정하여 개인 맞춤형 음성을 디자인합니다",
   "designedVoices": "디자인된 음색",
@@ -826,7 +826,7 @@ pleaseSelectNarratorVoice: '내레이터 음성을 선택해주세요',
 
   // AI 팟캐스트 관련 번역
   aiPodcast: 'AI 팟캐스트',
-  podcastPageTitle: 'AI 팟캐스트 스튜디오 - 지능형 인터뷰 대화 생성 | VoiceCanvas',
+  podcastPageTitle: 'AI 팟캐스트 스튜디오 - 지능형 인터뷰 대화 생성 | VoiceWove',
   podcastTitle: 'AI 팟캐스트 생성기',
   podcastDescription: '내용을 입력하면 AI가 전문적인 인터뷰 스타일 팟캐스트 대화를 자동 생성',
   inputPodcastContent: '팟캐스트 내용 입력',
@@ -986,7 +986,7 @@ pleaseSelectNarratorVoice: '내레이터 음성을 선택해주세요',
   noAudioSegmentsDesc: '생성 가능한 오디오 세그먼트 없음',
 
   // 다운로드 파일명
-  downloadFileName: 'VoiceCanvas-팟캐스트-{speaker}-세그먼트{segment}.mp3',
+  downloadFileName: 'VoiceWove-팟캐스트-{speaker}-세그먼트{segment}.mp3',
 
   // UI 제목
   contentInputTitle: '콘텐츠 입력',
@@ -994,7 +994,7 @@ pleaseSelectNarratorVoice: '내레이터 음성을 선택해주세요',
   backgroundDecoration: '배경 장식',
   mainContentArea: '메인 콘텐츠 영역',
   dialogueSegmentsCount: '총 {count}개 대화 세그먼트',
-  completePodcastFileName: 'VoiceCanvas-AI-팟캐스트-완전판-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-팟캐스트-완전판-{date}.wav',
   pauseButton: '일시정지',
   playButton: '재생',
   downloadButton: '다운로드',

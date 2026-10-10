@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const sv: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Avancerad AI-röstsyntes och kloningsplattform för flera språk",
-  appPageTitle: "VoiceCanvas Studio - Arbetsyta för text-till-tal",
-  voicePageTitle: "VoiceCanvas Röstkloning - Personlig AI-röstkloningsplattform",
-  storyPageTitle: "VoiceCanvas Historia - Platform för text-till-tal-generering och -konvertering med AI",
-  pricingPageTitle: "VoiceCanvas Prissättning - Flexibla och transparenta prenumerationsalternativ",
-  longTextPageTitle: "VoiceCanvas Bearbetning av långa texter - Verktyg för att omvandla långa artiklar till tal",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Avancerad AI-röstsyntes och kloningsplattform för flera språk",
+  appPageTitle: "VoiceWove Studio - Arbetsyta för text-till-tal",
+  voicePageTitle: "VoiceWove Röstkloning - Personlig AI-röstkloningsplattform",
+  storyPageTitle: "VoiceWove Historia - Platform för text-till-tal-generering och -konvertering med AI",
+  pricingPageTitle: "VoiceWove Prissättning - Flexibla och transparenta prenumerationsalternativ",
+  longTextPageTitle: "VoiceWove Bearbetning av långa texter - Verktyg för att omvandla långa artiklar till tal",
   inputPlaceholder: "Ange text att läsa upp...",
   speed: "Hastighet",
   voice: "Röst",
@@ -40,7 +40,7 @@ export const sv: TranslationType = {
   on: "På",
   off: "Av",
   characters: "tecken",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Prova Nu",
   tryForFree: "Testa Gratis",
   feature1Title: "Hög Kvalitetsröst",
@@ -82,7 +82,7 @@ export const sv: TranslationType = {
   dividerText: "eller",
   aiPowered: "AI-driven",
   languagesSupported: "50+ Språk",
-  copyright: "© {year} VoiceCanvas. Alla rättigheter förbehållna.",
+  copyright: "© {year} VoiceWove. Alla rättigheter förbehållna.",
   footerSlogan: "Skapat med ❤️ för bättre röstupplevelser",
   loginDescription: "Logga in för fler funktioner",
   registerDescription: "Skapa konto för att börja",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Välj AI-genererat eller manuellt inmatat
 
   // Voice Design page related translation keys
   "voiceDesign": "Tonfärgsdesign",
-  "voiceDesignPageTitle": "VoiceCanvas Tonfärgsdesign - Plattform för AI-anpassad röstdesign",
+  "voiceDesignPageTitle": "VoiceWove Tonfärgsdesign - Plattform för AI-anpassad röstdesign",
   "designVoice": "Designa tonfärg",
   "voiceDesignDescription": "Skapa en unik personlig röst genom att justera parametrar som språk, accent och tonfärg",
   "designedVoices": "Designade tonfärger",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Välj AI-genererat eller manuellt inmatat
 
   // AI-podcastöversättningar
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'AI Podcast Studio - Generering av Smart Intervjudialog | VoiceCanvas',
+  podcastPageTitle: 'AI Podcast Studio - Generering av Smart Intervjudialog | VoiceWove',
   podcastTitle: 'AI Podcast Generator',
   podcastDescription: 'Mata in innehåll, AI genererar professionella podcastdialoger i intervjuformat',
   inputPodcastContent: 'Ange podcastinnehåll',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Välj AI-genererat eller manuellt inmatat
   noAudioSegmentsDesc: 'Inga ljudsegment att generera',
 
   // Filnamn
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Gränssnittselement
   contentInputTitle: 'Inmatning av innehåll',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Välj AI-genererat eller manuellt inmatat
   backgroundDecoration: 'Bakgrundsdekoration',
   mainContentArea: 'Huvudinmatningsområde',
   dialogueSegmentsCount: 'Totalt {count} dialogsegment',
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Hel-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Hel-{date}.wav',
   pauseButton: 'Pausa',
   playButton: 'Spela upp',
   downloadButton: 'Ladda ner',

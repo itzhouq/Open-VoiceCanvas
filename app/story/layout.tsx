@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
   description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences. Support multiple character voices and advanced voice synthesis technology.',
-  metadataBase: new URL('https://voicecanvas.org'),
+  metadataBase: new URL('https://voicewove.com'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,16 +17,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
     description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences.',
-    url: 'https://voicecanvas.org/story',
-    siteName: 'VoiceCanvas',
+    url: 'https://voicewove.com/story',
+    siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicecanvas.org/images/story-og.png',
+        url: 'https://voicewove.com/images/story-og.png',
         width: 1200,
         height: 630,
-        alt: 'VoiceCanvas Story Interface',
+        alt: 'VoiceWove Story Interface',
         type: 'image/png'
       }
     ]
@@ -37,19 +37,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: {
       url: '/images/story-twitter.png',
-      alt: 'VoiceCanvas Story Interface',
+      alt: 'VoiceWove Story Interface',
       width: 1200,
       height: 630
     },
-    creator: '@VoiceCanvas',
-    site: '@VoiceCanvas'
+    creator: '@VoiceWove',
+    site: '@VoiceWove'
   },
   other: {
-    'og:image:secure_url': 'https://voicecanvas.org/images/story-og.png',
+    'og:image:secure_url': 'https://voicewove.com/images/story-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicecanvas.org',
-    'article:publisher': 'https://voicecanvas.org'
+    'article:author': 'https://voicewove.com',
+    'article:publisher': 'https://voicewove.com'
   }
 };
 

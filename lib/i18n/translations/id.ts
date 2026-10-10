@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const id: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Platform Sintesis dan Kloning Suara AI Multibahasa yang Canggih",
-  appPageTitle: "VoiceCanvas Studio - Ruang Kerja Teks-ke-Suara",
-  voicePageTitle: "VoiceCanvas Kloning Suara - Platform Kloning Suara AI yang Dipersonalisasi",
-  storyPageTitle: "VoiceCanvas Cerita - Platform untuk Generasi dan Konversi Teks ke Suara AI",
-  pricingPageTitle: "VoiceCanvas Paket Harga - Pilihan Langganan Fleksibel dan Transparan",
-  longTextPageTitle: "VoiceCanvas Pengolahan Teks Panjang - Alat untuk Mengubah Artikel Panjang Menjadi Suara",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Platform Sintesis dan Kloning Suara AI Multibahasa yang Canggih",
+  appPageTitle: "VoiceWove Studio - Ruang Kerja Teks-ke-Suara",
+  voicePageTitle: "VoiceWove Kloning Suara - Platform Kloning Suara AI yang Dipersonalisasi",
+  storyPageTitle: "VoiceWove Cerita - Platform untuk Generasi dan Konversi Teks ke Suara AI",
+  pricingPageTitle: "VoiceWove Paket Harga - Pilihan Langganan Fleksibel dan Transparan",
+  longTextPageTitle: "VoiceWove Pengolahan Teks Panjang - Alat untuk Mengubah Artikel Panjang Menjadi Suara",
   inputPlaceholder: "Masukkan teks untuk dibaca...",
   speed: "Kecepatan",
   voice: "Suara",
@@ -40,7 +40,7 @@ export const id: TranslationType = {
   on: "Aktif",
   off: "Nonaktif",
   characters: "karakter",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Coba Sekarang",
   tryForFree: "Coba Gratis",
   feature1Title: "Suara Berkualitas Tinggi",
@@ -82,7 +82,7 @@ export const id: TranslationType = {
   dividerText: "atau",
   aiPowered: "Ditenagai AI",
   languagesSupported: "50+ Bahasa Didukung",
-  copyright: "© {year} VoiceCanvas. Hak cipta dilindungi.",
+  copyright: "© {year} VoiceWove. Hak cipta dilindungi.",
   footerSlogan: "Dibuat dengan ❤️ untuk pengalaman suara lebih baik",
   loginDescription: "Masuk ke akun untuk mengakses fitur lebih",
   registerDescription: "Buat akun baru untuk mulai menggunakan layanan",
@@ -192,7 +192,7 @@ export const id: TranslationType = {
   
   // Plans
   trialPlan: "Uji Coba",
-  trialDesc: "Rasakan fitur dasar VoiceCanvas",
+  trialDesc: "Rasakan fitur dasar VoiceWove",
   yearlyPlan: "Paket Tahunan",
   yearlyDesc: "Cocok untuk pengguna berat, nilai terbaik",
   monthlyPlan: "Paket Bulanan",
@@ -762,7 +762,7 @@ pleaseSelectNarratorVoice: 'Pilih suara narator',
 
   // Voice Design page related translation keys
   "voiceDesign": "Desain Timbre Suara",
-  "voiceDesignPageTitle": "VoiceCanvas Desain Timbre Suara - Platform Kustomisasi dan Desain Suara AI",
+  "voiceDesignPageTitle": "VoiceWove Desain Timbre Suara - Platform Kustomisasi dan Desain Suara AI",
   "designVoice": "Desain Timbre Suara",
   "voiceDesignDescription": "Desain suara personalisasi unik dengan menyesuaikan parameter seperti bahasa, aksen, dan timbre suara",
   "designedVoices": "Timbre Suara yang Didesain",
@@ -826,7 +826,7 @@ pleaseSelectNarratorVoice: 'Pilih suara narator',
 
   // Terjemahan terkait AI Podcast
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'Studio AI Podcast - Pembuatan Dialog Wawancara Cerdas | VoiceCanvas',
+  podcastPageTitle: 'Studio AI Podcast - Pembuatan Dialog Wawancara Cerdas | VoiceWove',
   podcastTitle: 'Generator AI Podcast',
   podcastDescription: 'Masukkan konten, AI secara otomatis membuat dialog podcast profesional bergaya wawancara',
   inputPodcastContent: 'Masukkan konten podcast',
@@ -986,7 +986,7 @@ pleaseSelectNarratorVoice: 'Pilih suara narator',
   noAudioSegmentsDesc: 'Tidak ada segmen audio yang bisa dibuat',
 
   // Nama file unduhan
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segmen{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segmen{segment}.mp3',
 
   // Judul antarmuka
   contentInputTitle: 'Input konten',
@@ -1000,7 +1000,7 @@ pleaseSelectNarratorVoice: 'Pilih suara narator',
   dialogueSegmentsCount: 'Total {count} segmen dialog',
 
   // Nama file podcast lengkap
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Lengkap-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Lengkap-{date}.wav',
 
   // Kontrol audio
   pauseButton: 'Jeda',

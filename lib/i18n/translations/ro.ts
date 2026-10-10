@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const ro: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Platformă avansată de sinteză vocală și clonare AI multilingvă",
-  appPageTitle: "VoiceCanvas Studio - Spațiu de lucru text-la-vorbire",
-  voicePageTitle: "VoiceCanvas Clonare vocală - Platformă personalizată de clonare vocală AI",
-  storyPageTitle: "VoiceCanvas Istorie - Platformă pentru generare și conversie a textului în vorbire AI",
-  pricingPageTitle: "VoiceCanvas Planuri de prețuri - Opțiuni de abonament flexibile și transparente",
-  longTextPageTitle: "VoiceCanvas Prelucrare text lung - Unealtă pentru conversia articolelor lungi în vorbire",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Platformă avansată de sinteză vocală și clonare AI multilingvă",
+  appPageTitle: "VoiceWove Studio - Spațiu de lucru text-la-vorbire",
+  voicePageTitle: "VoiceWove Clonare vocală - Platformă personalizată de clonare vocală AI",
+  storyPageTitle: "VoiceWove Istorie - Platformă pentru generare și conversie a textului în vorbire AI",
+  pricingPageTitle: "VoiceWove Planuri de prețuri - Opțiuni de abonament flexibile și transparente",
+  longTextPageTitle: "VoiceWove Prelucrare text lung - Unealtă pentru conversia articolelor lungi în vorbire",
   inputPlaceholder: "Introduceți textul de citit...",
   speed: "Viteză",
   voice: "Voce",
@@ -40,7 +40,7 @@ export const ro: TranslationType = {
   on: "Pornit",
   off: "Oprit",
   characters: "caractere",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Începe Acum",
   tryForFree: "Testează Gratuit",
   feature1Title: "Voce de Calitate Superioară",
@@ -82,7 +82,7 @@ export const ro: TranslationType = {
   dividerText: "sau",
   aiPowered: "Cu Putere AI",
   languagesSupported: "50+ Limbi",
-  copyright: "© {year} VoiceCanvas. Toate drepturile rezervate.",
+  copyright: "© {year} VoiceWove. Toate drepturile rezervate.",
   footerSlogan: "Creat cu ❤️ pentru experiențe vocale mai bune",
   loginDescription: "Autentifică-te pentru mai multe funcții",
   registerDescription: "Creează cont nou pentru a începe",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Alegeți conținut generat de AI sau intr
 
   // Voice Design page related translation keys
   "voiceDesign": "Design de Timbră Vocală",
-  "voiceDesignPageTitle": "VoiceCanvas Design de Timbră - Platformă AI de Personalizare și Design Vocal",
+  "voiceDesignPageTitle": "VoiceWove Design de Timbră - Platformă AI de Personalizare și Design Vocal",
   "designVoice": "Proiectează Timbră",
   "voiceDesignDescription": "Proiectează o voce personalizată unică prin ajustarea parametrilor precum limbă, accent și timbră vocală",
   "designedVoices": "Timbri Proiectate",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Alegeți conținut generat de AI sau intr
 
   // Traduceri AI Podcast
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'Studio AI Podcast - Generare Dialog Interviu Inteligent | VoiceCanvas',
+  podcastPageTitle: 'Studio AI Podcast - Generare Dialog Interviu Inteligent | VoiceWove',
   podcastTitle: 'Generator AI Podcast',
   podcastDescription: 'Introdu conținut, AI generează automat dialoguri profesionale în format interviu',
   inputPodcastContent: 'Introdu conținut podcast',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Alegeți conținut generat de AI sau intr
   noAudioSegmentsDesc: 'Niciun segment audio de generat',
 
   // Nume fișiere
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Elemente interfață
   contentInputTitle: 'Introducere conținut',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Alegeți conținut generat de AI sau intr
   backgroundDecoration: 'Decor fundal',
   mainContentArea: 'Zonă conținut principal',
   dialogueSegmentsCount: 'Total {count} segmente dialog',
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Complet-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Complet-{date}.wav',
   pauseButton: 'Pauză',
   playButton: 'Redă',
   downloadButton: 'Descarcă',

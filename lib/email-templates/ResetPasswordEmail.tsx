@@ -71,7 +71,7 @@ export const ResetPasswordEmailTemplate: React.FC<ResetPasswordEmailProps> = ({
       color: '#666',
       textAlign: 'center',
     }}>
-      <p>&copy; {new Date().getFullYear()} VoiceCanvas. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} VoiceWove. All rights reserved.</p>
     </div>
   </div>
 ); 

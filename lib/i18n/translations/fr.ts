@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const fr: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Plateforme avancée de synthèse et de clonage vocal IA multilingue",
-  appPageTitle: "VoiceCanvas Studio - Espace de travail texte-à-parole",
-  voicePageTitle: "VoiceCanvas Clonage vocal - Plateforme de clonage vocal personnalisé IA",
-  storyPageTitle: "VoiceCanvas Histoire - Plateforme pour génération et conversion de texte en parole IA",
-  pricingPageTitle: "VoiceCanvas Plans tarifaires - Options d'abonnement flexibles et transparentes",
-  longTextPageTitle: "VoiceCanvas Traitement de texte long - Outil de conversion d'articles volumineux en parole",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Plateforme avancée de synthèse et de clonage vocal IA multilingue",
+  appPageTitle: "VoiceWove Studio - Espace de travail texte-à-parole",
+  voicePageTitle: "VoiceWove Clonage vocal - Plateforme de clonage vocal personnalisé IA",
+  storyPageTitle: "VoiceWove Histoire - Plateforme pour génération et conversion de texte en parole IA",
+  pricingPageTitle: "VoiceWove Plans tarifaires - Options d'abonnement flexibles et transparentes",
+  longTextPageTitle: "VoiceWove Traitement de texte long - Outil de conversion d'articles volumineux en parole",
   inputPlaceholder: "Saisir le texte à lire...",
   speed: "Vitesse",
   voice: "Voix",
@@ -40,7 +40,7 @@ export const fr: TranslationType = {
   on: "Activé",
   off: "Désactivé",
   characters: "caractères",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Essayer Maintenant",
   tryForFree: "Essai Gratuit",
   feature1Title: "Voix Haute Qualité",
@@ -82,7 +82,7 @@ export const fr: TranslationType = {
   dividerText: "ou",
   aiPowered: "Propulsé par IA",
   languagesSupported: "50+ Langues",
-  copyright: "© {year} VoiceCanvas. Tous droits réservés.",
+  copyright: "© {year} VoiceWove. Tous droits réservés.",
   footerSlogan: "Conçu avec ❤️ pour une meilleure expérience vocale",
   loginDescription: "Connectez-vous pour plus de fonctionnalités",
   registerDescription: "Créez un compte pour commencer",
@@ -760,7 +760,7 @@ pleaseSelectNarratorVoice: 'Veuillez sélectionner la voix du narrateur',
 
   // Voice Design page related translation keys
   "voiceDesign": "Conception de timbre vocal",
-  "voiceDesignPageTitle": "VoiceCanvas Conception de timbre vocal - Plateforme de personnalisation et de design vocal par IA",
+  "voiceDesignPageTitle": "VoiceWove Conception de timbre vocal - Plateforme de personnalisation et de design vocal par IA",
   "designVoice": "Concevoir un timbre vocal",
   "voiceDesignDescription": "Concevez une voix personnalisée unique en ajustant des paramètres comme la langue, l'accent et le timbre vocal",
   "designedVoices": "Timbres vocaux conçus",
@@ -824,7 +824,7 @@ pleaseSelectNarratorVoice: 'Veuillez sélectionner la voix du narrateur',
 
   // Traductions liées au podcast IA
   aiPodcast: 'Podcast IA',
-  podcastPageTitle: 'Studio de Podcast IA - Génération intelligente d\'interviews | VoiceCanvas',
+  podcastPageTitle: 'Studio de Podcast IA - Génération intelligente d\'interviews | VoiceWove',
   podcastTitle: 'Générateur de Podcast IA',
   podcastDescription: 'Saisissez du contenu, l\'IA génère automatiquement des dialogues de podcast professionnels au format interview',
   inputPodcastContent: 'Saisir le contenu du podcast',
@@ -984,7 +984,7 @@ pleaseSelectNarratorVoice: 'Veuillez sélectionner la voix du narrateur',
   noAudioSegmentsDesc: 'Aucun segment audio à générer',
 
   // Noms de fichiers
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Titres d'interface
   contentInputTitle: 'Saisie de contenu',
@@ -998,7 +998,7 @@ pleaseSelectNarratorVoice: 'Veuillez sélectionner la voix du narrateur',
   dialogueSegmentsCount: '{count} segments de dialogue',
 
   // Fichier podcast complet
-  completePodcastFileName: 'VoiceCanvas-PodcastIA-Complet-{date}.wav',
+  completePodcastFileName: 'VoiceWove-PodcastIA-Complet-{date}.wav',
 
   // Contrôles audio
   pauseButton: 'Pause',

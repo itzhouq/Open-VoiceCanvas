@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const zh: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - 先进的AI语音合成与克隆多语言平台",
-  appPageTitle: "VoiceCanvas 工作室 - 文本转语音工作空间",
-  voicePageTitle: "VoiceCanvas 声音克隆 - 个性化AI语音克隆平台",
-  storyPageTitle: "VoiceCanvas 故事配音 - AI故事配音与语音叙述平台",
-  pricingPageTitle: "VoiceCanvas 价格方案 - 灵活透明的订阅选择",
-  longTextPageTitle: "VoiceCanvas 长文本处理 - 大篇幅文章转语音工具",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - 先进的AI语音合成与克隆多语言平台",
+  appPageTitle: "VoiceWove 工作室 - 文本转语音工作空间",
+  voicePageTitle: "VoiceWove 声音克隆 - 个性化AI语音克隆平台",
+  storyPageTitle: "VoiceWove 故事配音 - AI故事配音与语音叙述平台",
+  pricingPageTitle: "VoiceWove 价格方案 - 灵活透明的订阅选择",
+  longTextPageTitle: "VoiceWove 长文本处理 - 大篇幅文章转语音工具",
   inputPlaceholder: "输入要朗读的文本...",
   speed: "语速",
   voice: "音色",
@@ -40,7 +40,7 @@ export const zh: TranslationType = {
   on: "开启",
   off: "关闭",
   characters: "字符",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "立即体验",
   tryForFree: "免费试用",
   feature1Title: "高品质语音",
@@ -82,7 +82,7 @@ export const zh: TranslationType = {
   dividerText: "或",
   aiPowered: "AI驱动",
   languagesSupported: "50+种语言",
-  copyright: "© {year} VoiceCanvas 版权所有",
+  copyright: "© {year} VoiceWove 版权所有",
   footerSlogan: "让每一个声音都充满生命力，用AI重新定义语音体验的无限可能",
   loginDescription: "登录账号以使用更多功能",
   registerDescription: "创建新账号开始使用服务",
@@ -765,7 +765,7 @@ export const zh: TranslationType = {
 
   // 音色设计页面相关翻译键
   voiceDesign: "音色设计",
-  voiceDesignPageTitle: "VoiceCanvas 音色设计 - AI音色定制与设计平台",
+  voiceDesignPageTitle: "VoiceWove 音色设计 - AI音色定制与设计平台",
   designVoice: "设计音色",
   voiceDesignDescription: "通过调节语言、口音、音色等参数，设计专属的个性化声音",
   designedVoices: "设计的音色",
@@ -832,7 +832,7 @@ export const zh: TranslationType = {
 
   // AI播客相关翻译
   aiPodcast: 'AI播客',
-  podcastPageTitle: 'AI播客工作室 - 智能访谈对话生成 | VoiceCanvas',
+  podcastPageTitle: 'AI播客工作室 - 智能访谈对话生成 | VoiceWove',
   podcastTitle: 'AI播客生成器',
   podcastDescription: '输入内容，AI自动生成专业的访谈式播客对话',
   inputPodcastContent: '输入播客内容',
@@ -992,7 +992,7 @@ export const zh: TranslationType = {
   noAudioSegmentsDesc: '没有可生成的音频段落',
 
   // 下载文件名
-  downloadFileName: 'VoiceCanvas-播客-{speaker}-第{segment}段.mp3',
+  downloadFileName: 'VoiceWove-播客-{speaker}-第{segment}段.mp3',
 
   // 界面标题
   contentInputTitle: '内容输入',
@@ -1006,7 +1006,7 @@ export const zh: TranslationType = {
   dialogueSegmentsCount: '共 {count} 个对话段落',
 
   // 完整播客下载文件名
-  completePodcastFileName: 'VoiceCanvas-AI播客-完整版-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI播客-完整版-{date}.wav',
 
   // 音频控制按钮
   pauseButton: '暂停',

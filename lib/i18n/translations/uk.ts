@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const uk: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Передова платформа синтезу та клонування голосу з підтримкою багатьох мов",
-  appPageTitle: "VoiceCanvas Студія - Робочий простір для перетворення тексту в мову",
-  voicePageTitle: "VoiceCanvas Клонування голосу - Персоналізована платформа клонування голосу зі штучним інтелектом",
-  storyPageTitle: "VoiceCanvas Історія - Платформа для генерації та перетворення тексту на мову з ІІ",
-  pricingPageTitle: "VoiceCanvas Цінові плани - Гнучкі та прозорі варіанти підписки",
-  longTextPageTitle: "VoiceCanvas Обробка довгих текстів - Інструмент для перетворення об’ємних статей у мову",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Передова платформа синтезу та клонування голосу з підтримкою багатьох мов",
+  appPageTitle: "VoiceWove Студія - Робочий простір для перетворення тексту в мову",
+  voicePageTitle: "VoiceWove Клонування голосу - Персоналізована платформа клонування голосу зі штучним інтелектом",
+  storyPageTitle: "VoiceWove Історія - Платформа для генерації та перетворення тексту на мову з ІІ",
+  pricingPageTitle: "VoiceWove Цінові плани - Гнучкі та прозорі варіанти підписки",
+  longTextPageTitle: "VoiceWove Обробка довгих текстів - Інструмент для перетворення об’ємних статей у мову",
   inputPlaceholder: "Введіть текст для читання...",
   speed: "Швидкість",
   voice: "Голос",
@@ -40,7 +40,7 @@ export const uk: TranslationType = {
   on: "Увімкнено",
   off: "Вимкнено",
   characters: "символів",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Спробувати зараз",
   tryForFree: "Спробувати безкоштовно",
   feature1Title: "Висока якість голосу",
@@ -82,7 +82,7 @@ export const uk: TranslationType = {
   dividerText: "або",
   aiPowered: "На основі ШІ",
   languagesSupported: "50+ мов",
-  copyright: "© {year} VoiceCanvas. Усі права захищені.",
+  copyright: "© {year} VoiceWove. Усі права захищені.",
   footerSlogan: "Створено з ❤️ для кращого голосового досвіду",
   loginDescription: "Увійдіть для доступу до всіх функцій",
   registerDescription: "Створіть обліківку для початку",
@@ -190,7 +190,7 @@ export const uk: TranslationType = {
   
   // Plans
   trialPlan: "Пробний",
-  trialDesc: "Базові функції VoiceCanvas",
+  trialDesc: "Базові функції VoiceWove",
   yearlyPlan: "Річний план",
   yearlyDesc: "Ідеально для постійних користувачів",
   monthlyPlan: "Місячний план",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Оберіть AI-генерацію аб
 
   // Voice Design page related translation keys
   "voiceDesign": "Дизайн тембру голосу",
-  "voiceDesignPageTitle": "VoiceCanvas Дизайн тембру - Платформа для налаштування та дизайну голосу з AI",
+  "voiceDesignPageTitle": "VoiceWove Дизайн тембру - Платформа для налаштування та дизайну голосу з AI",
   "designVoice": "Створити тембр голосу",
   "voiceDesignDescription": "Створюйте унікальний персоналізований голос, налаштовуючи параметри мови, акценту та тембру",
   "designedVoices": "Створені тембри",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Оберіть AI-генерацію аб
 
   // Переклади AI Подкасти
   aiPodcast: 'AI Подкаст',
-  podcastPageTitle: 'Студія AI Подкастів - Генерація Розумних Інтерв\'ю | VoiceCanvas',
+  podcastPageTitle: 'Студія AI Подкастів - Генерація Розумних Інтерв\'ю | VoiceWove',
   podcastTitle: 'Генератор AI Подкастів',
   podcastDescription: 'Введіть контент, AI автоматично створює професійні подкаст-діалоги у форматі інтерв\'ю',
   inputPodcastContent: 'Ввести контент подкасту',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Оберіть AI-генерацію аб
   noAudioSegmentsDesc: 'Немає сегментів для генерації',
 
   // Імена файлів
-  downloadFileName: 'VoiceCanvas-Подкаст-{speaker}-Сегмент{segment}.mp3',
+  downloadFileName: 'VoiceWove-Подкаст-{speaker}-Сегмент{segment}.mp3',
 
   // Елементи інтерфейсу
   contentInputTitle: 'Введення контенту',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Оберіть AI-генерацію аб
   backgroundDecoration: 'Фоновий декор',
   mainContentArea: 'Головна область контенту',
   dialogueSegmentsCount: 'Всього {count} сегментів діалогу',
-  completePodcastFileName: 'VoiceCanvas-AI-Подкаст-Повний-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Подкаст-Повний-{date}.wav',
   pauseButton: 'Пауза',
   playButton: 'Відтворити',
   downloadButton: 'Завантажити',

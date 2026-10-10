@@ -1,6 +1,6 @@
 {
-  "name": "VoiceCanvas",
-  "short_name": "VoiceCanvas",
+  "name": "VoiceWove",
+  "short_name": "VoiceWove",
   "description": "Advanced AI-Powered Multilingual Voice Synthesis Platform",
   "start_url": "/",
   "display": "standalone",

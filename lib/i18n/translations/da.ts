@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const da: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Avanceret AI stemmesyntese og kloning på tværs af sprog",
-  appPageTitle: "VoiceCanvas Studio - Arbejdsområde for tekst-til-tale",
-  voicePageTitle: "VoiceCanvas Stemme kloning - Personlig AI-stemme kloningsplatform",
-  storyPageTitle: "VoiceCanvas Story - AI-drevet historiegenerering og -dubbing",
-  pricingPageTitle: "VoiceCanvas Prisplaner - Fleksible og gennemsigtige abonnementsmuligheder",
-  longTextPageTitle: "VoiceCanvas Lang tekstbehandling - Værktøj til konvertering af lange tekster til tale",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Avanceret AI stemmesyntese og kloning på tværs af sprog",
+  appPageTitle: "VoiceWove Studio - Arbejdsområde for tekst-til-tale",
+  voicePageTitle: "VoiceWove Stemme kloning - Personlig AI-stemme kloningsplatform",
+  storyPageTitle: "VoiceWove Story - AI-drevet historiegenerering og -dubbing",
+  pricingPageTitle: "VoiceWove Prisplaner - Fleksible og gennemsigtige abonnementsmuligheder",
+  longTextPageTitle: "VoiceWove Lang tekstbehandling - Værktøj til konvertering af lange tekster til tale",
   inputPlaceholder: "Indtast tekst til oplæsning...",
   speed: "Hastighed",
   voice: "Stemme",
@@ -40,7 +40,7 @@ export const da: TranslationType = {
   on: "Til",
   off: "Fra",
   characters: "tegn",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Prøv Det Nu",
   tryForFree: "Prøv Gratis",
   feature1Title: "Højkvalitetsstemmer",
@@ -82,7 +82,7 @@ export const da: TranslationType = {
   dividerText: "eller",
   aiPowered: "AI-drevet",
   languagesSupported: "50+ Sprog",
-  copyright: " VoiceCanvas. Alle rettigheder forbeholdes.",
+  copyright: " VoiceWove. Alle rettigheder forbeholdes.",
   footerSlogan: "Skabt med for en bedre stemmeoplevelse",
   loginDescription: "Log ind for at få adgang til flere funktioner",
   registerDescription: "Opret ny konto for at begynde at bruge servicen",
@@ -190,7 +190,7 @@ export const da: TranslationType = {
   
   // Plans
   trialPlan: "Prøveversion",
-  trialDesc: "Oplev VoiceCanvas grundlæggende funktioner",
+  trialDesc: "Oplev VoiceWove grundlæggende funktioner",
   yearlyPlan: "Årlig Plan",
   yearlyDesc: "Perfekt til powerbrugere, bedste værdi",
   monthlyPlan: "Månedlig Plan",
@@ -760,7 +760,7 @@ pleaseSelectNarratorVoice: 'Vælg fortællerens stemme',
 
   // Voice Design page related translation keys
   "voiceDesign": "Tonedesign",
-  "voiceDesignPageTitle": "VoiceCanvas Tonedesign - AI-baseret platform til tilpasning og design af stemmer",
+  "voiceDesignPageTitle": "VoiceWove Tonedesign - AI-baseret platform til tilpasning og design af stemmer",
   "designVoice": "Design din stemme",
   "voiceDesignDescription": "Design en unik personaliseret stemme ved at justere parametre som sprog, accent og tonekvalitet",
   "designedVoices": "Designede stemmer",
@@ -824,7 +824,7 @@ pleaseSelectNarratorVoice: 'Vælg fortællerens stemme',
 
   // AI-podcastoversættelser
   aiPodcast: 'AI-podcast',
-  podcastPageTitle: 'AI-podcaststudio - Intelligente interviewdialoger | VoiceCanvas',
+  podcastPageTitle: 'AI-podcaststudio - Intelligente interviewdialoger | VoiceWove',
   podcastTitle: 'AI-podcastgenerator',
   podcastDescription: 'Indtast indhold, AI genererer professionelle interviewformede podcastdialoger',
   inputPodcastContent: 'Indtast podcastindhold',
@@ -984,7 +984,7 @@ pleaseSelectNarratorVoice: 'Vælg fortællerens stemme',
   noAudioSegmentsDesc: 'Ingen lydsegmenter at generere',
 
   // Download-filnavne
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Interface-titler
   contentInputTitle: 'Indholdinput',
@@ -998,7 +998,7 @@ pleaseSelectNarratorVoice: 'Vælg fortællerens stemme',
   dialogueSegmentsCount: '{count} dialogsegmenter i alt',
 
   // Fuld podcast download-filnavn
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Fuld-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Fuld-{date}.wav',
 
   // Lydkontrolknapper
   pauseButton: 'Pause',

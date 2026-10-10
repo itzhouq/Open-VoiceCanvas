@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const no: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Avansert AI-talegenerering og kloning for flere språk",
-  appPageTitle: "VoiceCanvas Studio - Arbeidsområde for tekst-til-tale",
-  voicePageTitle: "VoiceCanvas Stemmekloning - Personlig AI-stemmekloningsplattform",
-  storyPageTitle: "VoiceCanvas Historie - Platform for tekst-til-tale generering og konvertering med AI",
-  pricingPageTitle: "VoiceCanvas Prisplaner - Fleksible og transparente abonnementsvalg",
-  longTextPageTitle: "VoiceCanvas Langtekstbehandling - Verktøy for å konvertere lange artikler til tale",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Avansert AI-talegenerering og kloning for flere språk",
+  appPageTitle: "VoiceWove Studio - Arbeidsområde for tekst-til-tale",
+  voicePageTitle: "VoiceWove Stemmekloning - Personlig AI-stemmekloningsplattform",
+  storyPageTitle: "VoiceWove Historie - Platform for tekst-til-tale generering og konvertering med AI",
+  pricingPageTitle: "VoiceWove Prisplaner - Fleksible og transparente abonnementsvalg",
+  longTextPageTitle: "VoiceWove Langtekstbehandling - Verktøy for å konvertere lange artikler til tale",
   inputPlaceholder: "Skriv inn tekst for opplesing...",
   speed: "Hastighet",
   voice: "Stemme",
@@ -40,7 +40,7 @@ export const no: TranslationType = {
   on: "På",
   off: "Av",
   characters: "tegn",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Prøv nå",
   tryForFree: "Prøv gratis",
   feature1Title: "Høy kvalitet",
@@ -82,7 +82,7 @@ export const no: TranslationType = {
   dividerText: "eller",
   aiPowered: "Drevet av AI",
   languagesSupported: "50+ språk",
-  copyright: "© {year} VoiceCanvas. Alle rettigheter forbeholdt.",
+  copyright: "© {year} VoiceWove. Alle rettigheter forbeholdt.",
   footerSlogan: "Laget med ❤️ for bedre talegjenkjenning",
   loginDescription: "Logg inn for å få tilgang til flere funksjoner",
   registerDescription: "Opprett ny konto for å starte",
@@ -340,7 +340,7 @@ export const no: TranslationType = {
   updateQuotaError: "Feil ved oppdatering av tegntelling",
   speechSynthesisError: "Feil ved talesyntese",
   trialPlan: "Prøveversjon",
-  trialDesc: "Prøv VoiceCanvas grunnleggende funksjoner",
+  trialDesc: "Prøv VoiceWove grunnleggende funksjoner",
   yearlyPlan: "Årlig plan",
   yearlyDesc: "Best for tunge brukere, mest verdi",
   monthlyPlan: "Månedlig plan",
@@ -756,7 +756,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Velg AI-generert eller manuell inntasting
 
   // Voice Design page related translation keys
   "voiceDesign": "Stemmetone-design",
-  "voiceDesignPageTitle": "VoiceCanvas Stemmetone-design - AI-plattform for tilpasset stemmedesign",
+  "voiceDesignPageTitle": "VoiceWove Stemmetone-design - AI-plattform for tilpasset stemmedesign",
   "designVoice": "Design stemmetone",
   "voiceDesignDescription": "Design en unik personlig stemme ved å justere språk, aksent, stemmetone og andre parametere",
   "designedVoices": "Designede stemmetoner",
@@ -820,7 +820,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Velg AI-generert eller manuell inntasting
 
   // AI-podkastoversettelser
   aiPodcast: 'AI-podkast',
-  podcastPageTitle: 'AI Podkaststudio - Generering av intelligente samtaler | VoiceCanvas',
+  podcastPageTitle: 'AI Podkaststudio - Generering av intelligente samtaler | VoiceWove',
   podcastTitle: 'AI Podkastgenerator',
   podcastDescription: 'Skriv inn innhold, AI genererer profesjonelle podkastsamtaler i intervjuformat',
   inputPodcastContent: 'Skriv inn podkastinnhold',
@@ -980,7 +980,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Velg AI-generert eller manuell inntasting
   noAudioSegmentsDesc: 'Ingen lydsegmenter å generere',
 
   // Nedlastingsfilnavn
-  downloadFileName: 'VoiceCanvas-Podkast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podkast-{speaker}-Segment{segment}.mp3',
 
   // Grensesnitttitler
   contentInputTitle: 'Innholdsinnlegg',
@@ -988,7 +988,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Velg AI-generert eller manuell inntasting
   backgroundDecoration: 'Bakgrunnsdekorasjon',
   mainContentArea: 'Hovedinnholdsområde',
   dialogueSegmentsCount: 'Totalt {count} samtalesegmenter',
-  completePodcastFileName: 'VoiceCanvas-AI-Podkast-Fullstendig-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podkast-Fullstendig-{date}.wav',
   pauseButton: 'Pause',
   playButton: 'Spill av',
   downloadButton: 'Last ned',

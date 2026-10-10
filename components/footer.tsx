@@ -34,14 +34,14 @@ export function Footer() {
               >
                 <Image
                   src="/images/logo.png"
-                  alt="VoiceCanvas Logo"
+                  alt="VoiceWove Logo"
                   width={32}
                   height={32}
                   className="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
                 />
               </motion.div>
               <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-                VoiceCanvas
+                VoiceWove
               </span>
             </motion.div>
             
@@ -73,7 +73,7 @@ export function Footer() {
                 <Twitter className="w-4 h-4 text-muted-foreground" />
               </motion.a>
               <motion.a
-                href="https://voicecanvas.org" 
+                href="https://voicewove.com" 
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}

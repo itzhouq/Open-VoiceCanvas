@@ -1,6 +1,6 @@
-# Open-VoiceCanvas
+# Open-VoiceWove
 
-Open-VoiceCanvas 是一个功能强大的多语言语音合成与克隆平台，基于 Next.js 14 构建。它集成了多种顶尖的 AI 语音技术，为用户提供高质量的文字转语音 (TTS)、语音克隆、语音设计以及播客和故事生成服务。
+Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，基于 Next.js 14 构建。它集成了多种顶尖的 AI 语音技术，为用户提供高质量的文字转语音 (TTS)、语音克隆、语音设计以及播客和故事生成服务。
 
 ![Banner](public/images/og-image.png)
 
@@ -56,8 +56,8 @@ Open-VoiceCanvas 是一个功能强大的多语言语音合成与克隆平台，
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/ItusiAI/Open-VoiceCanvas.git
-cd Open-VoiceCanvas
+git clone https://github.com/ItusiAI/Open-VoiceWove.git
+cd Open-VoiceWove
 ```
 
 ### 2. 安装依赖
@@ -101,7 +101,7 @@ npm run dev
 ## � 项目结构
 
 ```
-Open-VoiceCanvas/
+Open-VoiceWove/
 ├── app/                 # Next.js App Router 页面与 API
 │   ├── api/             # 后端 API 路由
 │   ├── auth/            # 认证相关页面

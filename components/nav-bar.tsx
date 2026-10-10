@@ -97,7 +97,7 @@ export function NavBar() {
                 className="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-hover:scale-110"
               />
               <span className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x hidden md:inline-block">
-                VoiceCanvas
+                VoiceWove
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
             </Link>

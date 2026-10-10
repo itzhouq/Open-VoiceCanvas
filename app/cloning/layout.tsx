@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI Voice Cloning - Professional Voice Replication & Customization Service',
   description: 'Clone and customize your voice using advanced AI technology. Support for multiple languages including English, Chinese, Japanese, and Korean. Features real-time preview and personalization options. Perfect for voiceovers, education, and podcasting.',
-  metadataBase: new URL('https://voicecanvas.org'),
+  metadataBase: new URL('https://voicewove.com'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,16 +17,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Voice Cloning - Professional Voice Replication & Customization Service',
     description: 'Clone and customize your voice using advanced AI technology. Support for multiple languages including English, Chinese, Japanese, and Korean. Features real-time preview and personalization options.',
-    url: 'https://voicecanvas.org/cloning',
-    siteName: 'VoiceCanvas',
+    url: 'https://voicewove.com/cloning',
+    siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicecanvas.org/images/cloning-og.png',
+        url: 'https://voicewove.com/images/cloning-og.png',
         width: 1200,
         height: 630,
-        alt: 'VoiceCanvas Cloning Interface',
+        alt: 'VoiceWove Cloning Interface',
         type: 'image/png'
       }
     ]
@@ -37,19 +37,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: {
       url: '/images/cloning-twitter.png',
-      alt: 'VoiceCanvas Cloning Interface',
+      alt: 'VoiceWove Cloning Interface',
       width: 1200,
       height: 630
     },
-    creator: '@VoiceCanvas',
-    site: '@VoiceCanvas'
+    creator: '@VoiceWove',
+    site: '@VoiceWove'
   },
   other: {
-    'og:image:secure_url': 'https://voicecanvas.org/images/cloning-og.png',
+    'og:image:secure_url': 'https://voicewove.com/images/cloning-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicecanvas.org',
-    'article:publisher': 'https://voicecanvas.org'
+    'article:author': 'https://voicewove.com',
+    'article:publisher': 'https://voicewove.com'
   }
 };
 

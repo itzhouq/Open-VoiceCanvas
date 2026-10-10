@@ -31,12 +31,12 @@ export default function TermsOfService() {
           <CardContent className="pt-6 prose dark:prose-invert max-w-none">
             <h2>1. Acceptance of Terms</h2>
             <p>
-              Welcome to VoiceCanvas services. By accessing or using our website, applications, APIs, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our Services.
+              Welcome to VoiceWove services. By accessing or using our website, applications, APIs, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our Services.
             </p>
 
             <h2>2. Service Description</h2>
             <p>
-              VoiceCanvas provides text-to-speech and voice cloning services that allow users to convert text into speech output and create personalized voice models based on user-uploaded voice samples.
+              VoiceWove provides text-to-speech and voice cloning services that allow users to convert text into speech output and create personalized voice models based on user-uploaded voice samples.
             </p>
 
             <h2>3. User Accounts</h2>

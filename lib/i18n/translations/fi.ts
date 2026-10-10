@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const fi: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Edistynyt äänisynteesi ja monikielinen äänenklonaus tekoälyllä",
-  appPageTitle: "VoiceCanvas Studio - Teksti-puhe-työtila",
-  voicePageTitle: "VoiceCanvas Äänenklonaus - Personoitu tekoälypohjainen äänenklonausalusta",
-  storyPageTitle: "VoiceCanvas Historia - Teksti-puhe-generointi ja -muunnos tekoälyllä",
-  pricingPageTitle: "VoiceCanvas Hinnoittelusuunnitelmat - Joustavat ja läpinäkyvät tilausvaihtoehdot",
-  longTextPageTitle: "VoiceCanvas Pitkien tekstien käsittely - Työkalu laajojen artikkeleiden muuntamiseksi puheeksi",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Edistynyt äänisynteesi ja monikielinen äänenklonaus tekoälyllä",
+  appPageTitle: "VoiceWove Studio - Teksti-puhe-työtila",
+  voicePageTitle: "VoiceWove Äänenklonaus - Personoitu tekoälypohjainen äänenklonausalusta",
+  storyPageTitle: "VoiceWove Historia - Teksti-puhe-generointi ja -muunnos tekoälyllä",
+  pricingPageTitle: "VoiceWove Hinnoittelusuunnitelmat - Joustavat ja läpinäkyvät tilausvaihtoehdot",
+  longTextPageTitle: "VoiceWove Pitkien tekstien käsittely - Työkalu laajojen artikkeleiden muuntamiseksi puheeksi",
   inputPlaceholder: "Syötä luettava teksti...",
   speed: "Nopeus",
   voice: "Ääni",
@@ -40,7 +40,7 @@ export const fi: TranslationType = {
   on: "Päällä",
   off: "Pois",
   characters: "merkkiä",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Kokeile Nyt",
   tryForFree: "Kokeile Ilmaiseksi",
   feature1Title: "Korkealaatuinen Ääni",
@@ -82,7 +82,7 @@ export const fi: TranslationType = {
   dividerText: "tai",
   aiPowered: "Tekoälyllä toimiva",
   languagesSupported: "50+ Kieltä",
-  copyright: "© {year} VoiceCanvas. Kaikki oikeudet pidätetään.",
+  copyright: "© {year} VoiceWove. Kaikki oikeudet pidätetään.",
   footerSlogan: "Luotu ❤️:llä parempaa äänikokemusta varten",
   loginDescription: "Kirjaudu sisään saadaksesi enemmän ominaisuuksia",
   registerDescription: "Luo uusi tili aloittaaksesi",
@@ -192,7 +192,7 @@ export const fi: TranslationType = {
   
   // Plans
   trialPlan: "Kokeilu",
-  trialDesc: "Koe VoiceCanvasin perusominaisuudet",
+  trialDesc: "Koe VoiceWovein perusominaisuudet",
   yearlyPlan: "Vuosittainen Suunnitelma",
   yearlyDesc: "Tehokäyttäjille - paras arvo",
   monthlyPlan: "Kuukausittainen Suunnitelma",
@@ -762,7 +762,7 @@ pleaseSelectNarratorVoice: 'Valitse kertojaään',
 
   // Voice Design page related translation keys
   "voiceDesign": "Äänisävyn suunnittelu",
-  "voiceDesignPageTitle": "VoiceCanvas Äänisävyn suunnittelu - Äänisävyn mukauttamis- ja suunnitteluplattformi tekoälyllä",
+  "voiceDesignPageTitle": "VoiceWove Äänisävyn suunnittelu - Äänisävyn mukauttamis- ja suunnitteluplattformi tekoälyllä",
   "designVoice": "Suunnittele äänisävy",
   "voiceDesignDescription": "Suunnittele ainutlaatuinen henkilökohtainen ääni säätämällä kieltä, aksenttia, äänisävya ja muita parametreja",
   "designedVoices": "Suunnitellut äänisävyt",
@@ -826,7 +826,7 @@ pleaseSelectNarratorVoice: 'Valitse kertojaään',
 
   // AI-podcastiin liittyvät käännökset
   aiPodcast: 'AI-podcast',
-  podcastPageTitle: 'AI-podcast-studio - Älykäs haastattelugenerointi | VoiceCanvas',
+  podcastPageTitle: 'AI-podcast-studio - Älykäs haastattelugenerointi | VoiceWove',
   podcastTitle: 'AI-podcastgeneraattori',
   podcastDescription: 'Syötä sisältö, AI luo ammattimaisia haastattelutyylisiä podcast-keskusteluja',
   inputPodcastContent: 'Syötä podcast-sisältö',
@@ -986,7 +986,7 @@ pleaseSelectNarratorVoice: 'Valitse kertojaään',
   noAudioSegmentsDesc: 'Ei luotavia ääniosia',
 
   // Lataustiedostonimet
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Osa{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Osa{segment}.mp3',
 
   // Käyttöliittymän otsikot
   contentInputTitle: 'Sisällön syöttö',
@@ -1000,7 +1000,7 @@ pleaseSelectNarratorVoice: 'Valitse kertojaään',
   dialogueSegmentsCount: 'Yhteensä {count} keskustelukappaletta',
 
   // Kokonaisen podcastin tiedostonimi
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Kokonainen-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Kokonainen-{date}.wav',
 
   // Ääniohjauspainikkeet
   pauseButton: 'Tauko',

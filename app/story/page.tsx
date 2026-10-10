@@ -1143,7 +1143,7 @@ export default function StoryPage() {
       
       // 生成文件名（使用当前时间戳）
       const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
-      const fileName = `VoiceCanvas_Story_${timestamp}.wav`;
+      const fileName = `VoiceWove_Story_${timestamp}.wav`;
       link.download = fileName;
       
       // 触发下载
@@ -1457,7 +1457,7 @@ export default function StoryPage() {
             >
               <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
                 <BookOpen className="inline-block w-8 h-8 mr-2" />
-                VoiceCanvas Story
+                VoiceWove Story
               </CardTitle>
             </motion.div>
           </CardHeader>

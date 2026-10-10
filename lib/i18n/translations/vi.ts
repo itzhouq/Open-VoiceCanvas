@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const vi: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Nền tảng tổng hợp và nhân bản giọng nói AI đa ngôn ngữ tiên tiến",
-  appPageTitle: "VoiceCanvas Studio - Không gian làm việc chuyển văn bản thành giọng nói",
-  voicePageTitle: "VoiceCanvas Nhân bản giọng nói - Nền tảng nhân bản giọng nói AI cá nhân hóa",
-  storyPageTitle: "VoiceCanvas Câu chuyện - Nền tảng tạo và chuyển đổi văn bản thành giọng nói AI",
-  pricingPageTitle: "VoiceCanvas Gói giá - Lựa chọn đăng ký linh hoạt và minh bạch",
-  longTextPageTitle: "VoiceCanvas Xử lý văn bản dài - Công cụ chuyển đổi bài viết dài thành giọng nói",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Nền tảng tổng hợp và nhân bản giọng nói AI đa ngôn ngữ tiên tiến",
+  appPageTitle: "VoiceWove Studio - Không gian làm việc chuyển văn bản thành giọng nói",
+  voicePageTitle: "VoiceWove Nhân bản giọng nói - Nền tảng nhân bản giọng nói AI cá nhân hóa",
+  storyPageTitle: "VoiceWove Câu chuyện - Nền tảng tạo và chuyển đổi văn bản thành giọng nói AI",
+  pricingPageTitle: "VoiceWove Gói giá - Lựa chọn đăng ký linh hoạt và minh bạch",
+  longTextPageTitle: "VoiceWove Xử lý văn bản dài - Công cụ chuyển đổi bài viết dài thành giọng nói",
   inputPlaceholder: "Nhập văn bản cần đọc...",
   speed: "Tốc độ",
   voice: "Giọng nói",
@@ -40,7 +40,7 @@ export const vi: TranslationType = {
   on: "Bật",
   off: "Tắt",
   characters: "ký tự",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Dùng thử ngay",
   tryForFree: "Trải nghiệm miễn phí",
   feature1Title: "Chất lượng cao",
@@ -82,7 +82,7 @@ export const vi: TranslationType = {
   dividerText: "hoặc",
   aiPowered: "Công nghệ AI",
   languagesSupported: "50+ Ngôn ngữ",
-  copyright: "© {year} VoiceCanvas. Bảo lưu mọi quyền.",
+  copyright: "© {year} VoiceWove. Bảo lưu mọi quyền.",
   footerSlogan: "Được tạo bằng ❤️ cho trải nghiệm âm thanh tốt hơn",
   loginDescription: "Đăng nhập để truy cập thêm tính năng",
   registerDescription: "Tạo tài khoản mới để bắt đầu",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Chọn nội dung AI tạo hoặc nhập 
 
   // Voice Design page related translation keys
   "voiceDesign": "Thiết kế âm sắc",
-  "voiceDesignPageTitle": "VoiceCanvas Thiết kế âm sắc - Nền tảng tùy chỉnh và thiết kế giọng nói AI",
+  "voiceDesignPageTitle": "VoiceWove Thiết kế âm sắc - Nền tảng tùy chỉnh và thiết kế giọng nói AI",
   "designVoice": "Thiết kế âm sắc",
   "voiceDesignDescription": "Thiết kế giọng nói cá nhân hóa độc đáo bằng cách điều chỉnh các tham số ngôn ngữ, giọng điệu và âm sắc",
   "designedVoices": "Âm sắc đã thiết kế",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Chọn nội dung AI tạo hoặc nhập 
 
   // Bản dịch liên quan đến AI Podcast
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'Xưởng AI Podcast - Tạo Đối thoại Phỏng vấn Thông minh | VoiceCanvas',
+  podcastPageTitle: 'Xưởng AI Podcast - Tạo Đối thoại Phỏng vấn Thông minh | VoiceWove',
   podcastTitle: 'Trình tạo AI Podcast',
   podcastDescription: 'Nhập nội dung, AI tự động tạo đối thoại podcast chuyên nghiệp kiểu phỏng vấn',
   inputPodcastContent: 'Nhập nội dung podcast',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Chọn nội dung AI tạo hoặc nhập 
   noAudioSegmentsDesc: 'Không có đoạn âm thanh để tạo',
 
   // Tên file tải xuống
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Đoạn{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Đoạn{segment}.mp3',
 
   // Tiêu đề giao diện
   contentInputTitle: 'Nhập nội dung',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Chọn nội dung AI tạo hoặc nhập 
   backgroundDecoration: 'Trang trí nền',
   mainContentArea: 'Khu vực nhập nội dung chính',
   dialogueSegmentsCount: 'Tổng cộng {count} đoạn đối thoại',
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Đầy-đủ-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Đầy-đủ-{date}.wav',
   pauseButton: 'Tạm dừng',
   playButton: 'Phát',
   downloadButton: 'Tải xuống',

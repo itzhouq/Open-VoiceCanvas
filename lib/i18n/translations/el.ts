@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const el: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Προηγμένη σύνθεση και κλωνοποίηση φωνής με τεχνητή νοημοσύνη σε πολλαπλές γλώσσες",
-  appPageTitle: "VoiceCanvas Studio - Χώρος εργασίας κειμένου-σε-φωνή",
-  voicePageTitle: "VoiceCanvas Κλωνοποίηση φωνής - Πλατφόρμα εξατομικευμένης κλωνοποίησης φωνής με τεχνητή νοημοσύνη",
-  storyPageTitle: "VoiceCanvas Story - Πλατφόρμα για αυτόματη παραγωγή και μετατροπή κειμένου σε φωνή με τεχνητή νοημοσύνη",
-  pricingPageTitle: "VoiceCanvas Σχέδια τιμολόγησης - Ευέλικτες και διαφανείς επιλογές συνδρομής",
-  longTextPageTitle: "VoiceCanvas Επεξεργασία μεγάλων κειμένων - Εργαλείο μετατροπής εκτενών κειμένων σε φωνή",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Προηγμένη σύνθεση και κλωνοποίηση φωνής με τεχνητή νοημοσύνη σε πολλαπλές γλώσσες",
+  appPageTitle: "VoiceWove Studio - Χώρος εργασίας κειμένου-σε-φωνή",
+  voicePageTitle: "VoiceWove Κλωνοποίηση φωνής - Πλατφόρμα εξατομικευμένης κλωνοποίησης φωνής με τεχνητή νοημοσύνη",
+  storyPageTitle: "VoiceWove Story - Πλατφόρμα για αυτόματη παραγωγή και μετατροπή κειμένου σε φωνή με τεχνητή νοημοσύνη",
+  pricingPageTitle: "VoiceWove Σχέδια τιμολόγησης - Ευέλικτες και διαφανείς επιλογές συνδρομής",
+  longTextPageTitle: "VoiceWove Επεξεργασία μεγάλων κειμένων - Εργαλείο μετατροπής εκτενών κειμένων σε φωνή",
   inputPlaceholder: "Εισαγάγετε κείμενο για ανάγνωση...",
   speed: "Ταχύτητα",
   voice: "Φωνή",
@@ -40,7 +40,7 @@ export const el: TranslationType = {
   on: "Ενεργό",
   off: "Απενεργοποιημένο",
   characters: "χαρακτήρες",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Δοκιμάστε Τώρα",
   tryForFree: "Δωρεάν Δοκιμή",
   feature1Title: "Υψηλής Ποιότητας Φωνή",
@@ -82,7 +82,7 @@ export const el: TranslationType = {
   dividerText: "ή",
   aiPowered: "Τροφοδοτούμενο με AI",
   languagesSupported: "50+ Γλώσσες",
-  copyright: "© {year} VoiceCanvas. Με την επιφύλαξη παντός δικαιώματος.",
+  copyright: "© {year} VoiceWove. Με την επιφύλαξη παντός δικαιώματος.",
   footerSlogan: "Δημιουργήθηκε με ❤️ για καλύτερη φωνητική εμπειρία",
   loginDescription: "Συνδεθείτε για πρόσβαση σε περισσότερες λειτουργίες",
   registerDescription: "Δημιουργήστε νέο λογαριασμό",
@@ -171,7 +171,7 @@ export const el: TranslationType = {
   
   // Plans
   trialPlan: "Δοκιμαστική",
-  trialDesc: "Βασικές λειτουργίες VoiceCanvas",
+  trialDesc: "Βασικές λειτουργίες VoiceWove",
   yearlyPlan: "Ετήσιο Πρόγραμμα",
   yearlyDesc: "Ιδανικό για έμπειρους χρήστες",
   monthlyPlan: "Μηνιαίο Πρόγραμμα",
@@ -762,7 +762,7 @@ footerTagline: 'Δώστε ζωή σε κάθε φωνή και επαναπρο
 
     // Voice Design page related translation keys
   "voiceDesign": "Σχεδιασμός Τόνου",
-  "voiceDesignPageTitle": "VoiceCanvas Σχεδιασμός Τόνου - Πλατφόρμα Προσαρμογής και Σχεδιασμού Τόνου με ΤΝ",
+  "voiceDesignPageTitle": "VoiceWove Σχεδιασμός Τόνου - Πλατφόρμα Προσαρμογής και Σχεδιασμού Τόνου με ΤΝ",
   "designVoice": "Σχεδίαση Τόνου",
   "voiceDesignDescription": "Σχεδιάστε μια μοναδική προσωποποιημένη φωνή ρυθμίζοντας παραμέτρους όπως γλώσσα, προφορά και τόνος",
   "designedVoices": "Σχεδιασμένοι Τόνοι",
@@ -826,7 +826,7 @@ footerTagline: 'Δώστε ζωή σε κάθε φωνή και επαναπρο
 
   // Μεταφράσεις σχετικές με AI podcast
   aiPodcast: 'AI podcast',
-  podcastPageTitle: 'Στούντιο AI podcast - Δημιουργία έξυπνων συνεντεύξεων | VoiceCanvas',
+  podcastPageTitle: 'Στούντιο AI podcast - Δημιουργία έξυπνων συνεντεύξεων | VoiceWove',
   podcastTitle: 'Δημιουργός AI podcast',
   podcastDescription: 'Εισάγετε περιεχόμενο, το AI δημιουργεί αυτόματα επαγγελματικά podcast σε μορφή συνέντευξης',
   inputPodcastContent: 'Εισαγωγή περιεχομένου podcast',
@@ -986,7 +986,7 @@ footerTagline: 'Δώστε ζωή σε κάθε φωνή και επαναπρο
   noAudioSegmentsDesc: 'Δεν υπάρχουν τμήματα για δημιουργία ήχου',
 
   // Ονόματα αρχείων λήψης
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Τμήμα{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Τμήμα{segment}.mp3',
 
   // Τίτλοι διεπαφής
   contentInputTitle: 'Εισαγωγή περιεχομένου',
@@ -1000,7 +1000,7 @@ footerTagline: 'Δώστε ζωή σε κάθε φωνή και επαναπρο
   dialogueSegmentsCount: 'Σύνολο {count} τμημάτων διαλόγου',
 
   // Όνομα αρχείου πλήρους podcast
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Πλήρες-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Πλήρες-{date}.wav',
 
   // Κουμπιά ελέγχου ήχου
   pauseButton: 'Παύση',

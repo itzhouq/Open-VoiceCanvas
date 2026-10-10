@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const he: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - פלטפורמת סינתזת וקלונג קול מתקדמת מבוססת בינה מלאכותית רב-לשונית",
-  appPageTitle: "VoiceCanvas סטודיו - סביבת עבודה להמרת טקסט לקול",
-  voicePageTitle: "VoiceCanvas קלונג קול - פלטפורמת קלונג קול מותאמת אישית מבוססת בינה מלאכותית",
-  storyPageTitle: "VoiceCanvas סיבות - פלטפורמת סיבות מותאמת אישית מבוססת בינה מלאכותית",
-  pricingPageTitle: "VoiceCanvas תוכניות מחיר - אפשרויות מנוי גמישות ושקופות",
-  longTextPageTitle: "VoiceCanvas עיבוד טקסטים ארוכים - כלי להמרת מאמרים ארוכים לקול",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - פלטפורמת סינתזת וקלונג קול מתקדמת מבוססת בינה מלאכותית רב-לשונית",
+  appPageTitle: "VoiceWove סטודיו - סביבת עבודה להמרת טקסט לקול",
+  voicePageTitle: "VoiceWove קלונג קול - פלטפורמת קלונג קול מותאמת אישית מבוססת בינה מלאכותית",
+  storyPageTitle: "VoiceWove סיבות - פלטפורמת סיבות מותאמת אישית מבוססת בינה מלאכותית",
+  pricingPageTitle: "VoiceWove תוכניות מחיר - אפשרויות מנוי גמישות ושקופות",
+  longTextPageTitle: "VoiceWove עיבוד טקסטים ארוכים - כלי להמרת מאמרים ארוכים לקול",
   inputPlaceholder: "הזן טקסט להקראה...",
   speed: "מהירות",
   voice: "קול",
@@ -40,7 +40,7 @@ export const he: TranslationType = {
   on: "פועל",
   off: "כבוי",
   characters: "תווים",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "נסה עכשיו",
   tryForFree: "נסה בחינם",
   feature1Title: "איכות קול גבוהה",
@@ -82,7 +82,7 @@ export const he: TranslationType = {
   dividerText: "או",
   aiPowered: "מונע בינה מלאכותית",
   languagesSupported: "תמיכה ב-50+ שפות",
-  copyright: "© {year} VoiceCanvas. כל הזכויות שמורות.",
+  copyright: "© {year} VoiceWove. כל הזכויות שמורות.",
   footerSlogan: "נוצר ב-❤️ לחווית קול טובה יותר",
   loginDescription: "התחבר לחשבונך כדי לגשת לתכונות נוספות",
   registerDescription: "צור חשבון חדש כדי להתחיל להשתמש בשירות שלנו",
@@ -191,7 +191,7 @@ export const he: TranslationType = {
   
   // Plans
   trialPlan: "ניסיון",
-  trialDesc: "חווה את תכונות הבסיס של VoiceCanvas",
+  trialDesc: "חווה את תכונות הבסיס של VoiceWove",
   yearlyPlan: "תוכנית שנתית",
   yearlyDesc: "מושלם למשתמשים מתקדמים, ערך מצוין",
   monthlyPlan: "תוכנית חודשית",
@@ -761,7 +761,7 @@ pleaseSelectNarratorVoice: 'אנא בחר קול קריין',
 
   // Voice Design page related translation keys
   "voiceDesign": "עיצוב טון קול",
-  "voiceDesignPageTitle": "VoiceCanvas עיצוב טון קול - פלטפורמת התאמה ועיצוב קול מבוססת בינה מלאכותית",
+  "voiceDesignPageTitle": "VoiceWove עיצוב טון קול - פלטפורמת התאמה ועיצוב קול מבוססת בינה מלאכותית",
   "designVoice": "עיצוב טון קול",
   "voiceDesignDescription": "עיצוב קול אישי ייחודי על ידי התאמת פרמטרים כמו שפה, מבטא וטון קול",
   "designedVoices": "טוני קול מעוצבים",
@@ -825,7 +825,7 @@ pleaseSelectNarratorVoice: 'אנא בחר קול קריין',
 
   // תרגום AI Podcast
   aiPodcast: 'פודקאסט AI',
-  podcastPageTitle: 'סטודיו לפודקאסט AI - יצירת ראיונות חכמים | VoiceCanvas',
+  podcastPageTitle: 'סטודיו לפודקאסט AI - יצירת ראיונות חכמים | VoiceWove',
   podcastTitle: 'מחולל פודקאסט AI',
   podcastDescription: 'הזן תוכן, AI ייצור אוטומטית דיאלוגי פודקאסט מקצועיים בפורמט ראיון',
   inputPodcastContent: 'הזנת תוכן לפודקאסט',
@@ -985,7 +985,7 @@ pleaseSelectNarratorVoice: 'אנא בחר קול קריין',
   noAudioSegmentsDesc: 'אין קטעי אודיו ליצירה',
 
   // שמות קבצים
-  downloadFileName: 'VoiceCanvas-פודקאסט-{speaker}-קטע{segment}.mp3',
+  downloadFileName: 'VoiceWove-פודקאסט-{speaker}-קטע{segment}.mp3',
 
   // כותרות ממשק
   contentInputTitle: 'הזנת תוכן',
@@ -999,7 +999,7 @@ pleaseSelectNarratorVoice: 'אנא בחר קול קריין',
   dialogueSegmentsCount: 'סך הכל {count} קטעי דיאלוג',
 
   // קובץ פודקאסט מלא
-  completePodcastFileName: 'VoiceCanvas-פודקאסט-AI-מלא-{date}.wav',
+  completePodcastFileName: 'VoiceWove-פודקאסט-AI-מלא-{date}.wav',
 
   // פקדי אודיו
   pauseButton: 'השהייה',

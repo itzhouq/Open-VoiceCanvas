@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI Podcast Generator - Professional Interview-Style Podcast Content Creation Platform',
   description: 'Generate professional interview-style podcast content using AI technology. Supports intelligent interview dialogue generation between hosts and guests, combined with high-quality voice synthesis to create immersive podcast experiences.',
-  metadataBase: new URL('https://voicecanvas.org'),
+  metadataBase: new URL('https://voicewove.com'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,16 +17,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Podcast Generator - Professional Interview-Style Podcast Content Creation',
     description: 'Generate professional interview-style podcast content using AI technology. Supports intelligent interview dialogue generation between hosts and guests with high-quality voice synthesis.',
-    url: 'https://voicecanvas.org/podcast',
-    siteName: 'VoiceCanvas',
+    url: 'https://voicewove.com/podcast',
+    siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicecanvas.org/images/podcast-og.png',
+        url: 'https://voicewove.com/images/podcast-og.png',
         width: 1200,
         height: 630,
-        alt: 'VoiceCanvas AI Podcast Generator Interface',
+        alt: 'VoiceWove AI Podcast Generator Interface',
         type: 'image/png'
       }
     ]
@@ -37,19 +37,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: {
       url: '/images/podcast-twitter.png',
-      alt: 'VoiceCanvas AI Podcast Generator Interface',
+      alt: 'VoiceWove AI Podcast Generator Interface',
       width: 1200,
       height: 630
     },
-    creator: '@VoiceCanvas',
-    site: '@VoiceCanvas'
+    creator: '@VoiceWove',
+    site: '@VoiceWove'
   },
   other: {
-    'og:image:secure_url': 'https://voicecanvas.org/images/podcast-og.png',
+    'og:image:secure_url': 'https://voicewove.com/images/podcast-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicecanvas.org',
-    'article:publisher': 'https://voicecanvas.org'
+    'article:author': 'https://voicewove.com',
+    'article:publisher': 'https://voicewove.com'
   }
 };
 

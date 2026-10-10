@@ -18,10 +18,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voicecanvas.org'),
+  metadataBase: new URL('https://voicewove.com'),
   title: {
-    default: 'VoiceCanvas - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
-    template: '%s | VoiceCanvas'
+    default: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
+    template: '%s | VoiceWove'
   },
   description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
   keywords: [
@@ -244,31 +244,31 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://voicecanvas.org',
-    title: 'VoiceCanvas - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
+    url: 'https://voicewove.com',
+    title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
-    siteName: 'VoiceCanvas',
+    siteName: 'VoiceWove',
     images: [
       {
-        url: 'https://voicecanvas.org/images/og-image.png',
+        url: 'https://voicewove.com/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'VoiceCanvas - AI Voice Synthesis & Cloning Platform',
+        alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
       }
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VoiceCanvas - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
+    title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
     images: {
-      url: 'https://voicecanvas.org/images/og-image.png',
-      alt: 'VoiceCanvas - AI Voice Synthesis & Cloning Platform',
+      url: 'https://voicewove.com/images/og-image.png',
+      alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
       width: 1200,
       height: 630
     },
-    creator: '@VoiceCanvas',
-    site: '@VoiceCanvas',
+    creator: '@VoiceWove',
+    site: '@VoiceWove',
   },
   icons: {
     icon: '/favicon.ico',
@@ -281,7 +281,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://voicecanvas.org'
+    canonical: 'https://voicewove.com'
   },
 };
 

@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
           <CardContent className="pt-6 prose dark:prose-invert max-w-none">
             <h2>1. Introduction</h2>
             <p>
-              VoiceCanvas ("we," "our," or "the Company") respects your privacy. This Privacy Policy explains how we collect, use, disclose, process, and protect information that you provide to us through our website, applications, and related services (collectively, the "Services").
+              VoiceWove ("we," "our," or "the Company") respects your privacy. This Privacy Policy explains how we collect, use, disclose, process, and protect information that you provide to us through our website, applications, and related services (collectively, the "Services").
             </p>
 
             <h2>2. Information We Collect</h2>

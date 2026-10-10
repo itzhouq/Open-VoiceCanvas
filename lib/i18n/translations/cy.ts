@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const cy: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Platfform Synthesis Llais Amlieithog a Chlonio Llais wedi'i Bweru gan AI Uwch",
-  appPageTitle: "Stiwdio VoiceCanvas - Gweithle Testun-i-Leferydd",
-  voicePageTitle: "VoiceCanvas Clôn Llais - Platfform Clonio Llais Personol AI",
-  storyPageTitle: "VoiceCanvas Story - Platforma pro automatické generování a převod textu na řeč",
-  pricingPageTitle: "Prisiau VoiceCanvas - Opsiynau Tanysgrifio Hyblyg a Thryloyw",
-  longTextPageTitle: "VoiceCanvas Testun Hir - Offeryn Trosi Dogfennau Mawr i Leferydd",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Platfform Synthesis Llais Amlieithog a Chlonio Llais wedi'i Bweru gan AI Uwch",
+  appPageTitle: "Stiwdio VoiceWove - Gweithle Testun-i-Leferydd",
+  voicePageTitle: "VoiceWove Clôn Llais - Platfform Clonio Llais Personol AI",
+  storyPageTitle: "VoiceWove Story - Platforma pro automatické generování a převod textu na řeč",
+  pricingPageTitle: "Prisiau VoiceWove - Opsiynau Tanysgrifio Hyblyg a Thryloyw",
+  longTextPageTitle: "VoiceWove Testun Hir - Offeryn Trosi Dogfennau Mawr i Leferydd",
   inputPlaceholder: "Rhowch destun i'w ddarllen...",
   speed: "Cyflymder",
   voice: "Llais",
@@ -40,7 +40,7 @@ export const cy: TranslationType = {
   on: "YMLAEN",
   off: "DIFFODD",
   characters: "cymeriadau",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Rhowch gynnig arno Nawr",
   tryForFree: "Rhowch Gynnig Am Ddim",
   feature1Title: "Lais Uwchradd",
@@ -82,7 +82,7 @@ export const cy: TranslationType = {
   dividerText: "neu",
   aiPowered: "Wedi'i Bweru gan AI",
   languagesSupported: "50+ o Ieithoedd",
-  copyright: "© {year} VoiceCanvas. Cedwir pob hawl.",
+  copyright: "© {year} VoiceWove. Cedwir pob hawl.",
   footerSlogan: "Cynhyrchwyd gyda ❤️ ar gyfer profiad llais gwell",
   loginDescription: "Mewngofnodwch gyda'ch cyfrif i gael mynediad at fwy o nodweddion",
   registerDescription: "Crëwch gyfrif newydd i ddechrau defnyddio'n gwasanaeth",
@@ -192,7 +192,7 @@ export const cy: TranslationType = {
 
   // Plans
   trialPlan: "Treial",
-  trialDesc: "Profwch nodweddion sylfaenol VoiceCanvas",
+  trialDesc: "Profwch nodweddion sylfaenol VoiceWove",
   yearlyPlan: "Cynllun Blynyddol",
   yearlyDesc: "Perffaith ar gyfer defnyddwyr pwerus, gwerth gorau",
   monthlyPlan: "Cynllun Misol",
@@ -761,7 +761,7 @@ pleaseSelectNarratorVoice: 'Dewiswch lais y narator',
 
   // Voice Design page related translation keys
   "voiceDesign": "Dylunio Tonwedd",
-  "voiceDesignPageTitle": "VoiceCanvas Dylunio Tonwedd - Llwyfan Personoli a Dylunio Tonwedd AI",
+  "voiceDesignPageTitle": "VoiceWove Dylunio Tonwedd - Llwyfan Personoli a Dylunio Tonwedd AI",
   "designVoice": "Dylunio Tonwedd",
   "voiceDesignDescription": "Dyluniwch eich llais personol trwy addasu parametrau megis iaith, acen a thonwedd",
   "designedVoices": "Tonweddau a Ddyluniwyd",
@@ -825,7 +825,7 @@ pleaseSelectNarratorVoice: 'Dewiswch lais y narator',
 
   // Cyfieithu Podcast AI
   aiPodcast: 'Podcast AI',
-  podcastPageTitle: 'Stiwdio Podcast AI - Cynhyrchu Sgwrs Cyfweliadau Deallus | VoiceCanvas',
+  podcastPageTitle: 'Stiwdio Podcast AI - Cynhyrchu Sgwrs Cyfweliadau Deallus | VoiceWove',
   podcastTitle: 'Cynhyrchydd Podcast AI',
   podcastDescription: 'Rhowch gynnwys, bydd AI\'n cynhyrchu sgwrs broffesiynol podcast ar ffurf cyfweliad yn awtomatig',
   inputPodcastContent: 'Rhowch Gynnwys y Podcast',
@@ -985,7 +985,7 @@ pleaseSelectNarratorVoice: 'Dewiswch lais y narator',
   noAudioSegmentsDesc: 'Dim adrannau sain i\'w cynhyrchu',
 
   // Enwau ffeiliau lawrlwytho
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Adran{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Adran{segment}.mp3',
 
   // Teitliau rhyngwyneb
   contentInputTitle: 'Mewnbwn Cynnwys',
@@ -999,7 +999,7 @@ pleaseSelectNarratorVoice: 'Dewiswch lais y narator',
   dialogueSegmentsCount: '{count} adran sgwrs i gyd',
 
   // Enw ffeil podcast cyflawn
-  completePodcastFileName: 'VoiceCanvas-PodcastAI-Cyflawn-{date}.wav',
+  completePodcastFileName: 'VoiceWove-PodcastAI-Cyflawn-{date}.wav',
 
   // Botymau rheoli sain
   pauseButton: 'Oedi',

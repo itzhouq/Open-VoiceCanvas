@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const yue: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - 先進嘅AI語音合成同複製多語言平台",
-  appPageTitle: "VoiceCanvas 工作室 - 文字轉語音工作空間",
-  voicePageTitle: "VoiceCanvas 聲音複製 - 個人化AI語音複製平台",
-  storyPageTitle: "VoiceCanvas 故事 - 文字轉語音生成同轉換AI平台",
-  pricingPageTitle: "VoiceCanvas 價格方案 - 靈活透明嘅訂閱選擇",
-  longTextPageTitle: "VoiceCanvas 長文本處理 - 大篇幅文章轉語音工具",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - 先進嘅AI語音合成同複製多語言平台",
+  appPageTitle: "VoiceWove 工作室 - 文字轉語音工作空間",
+  voicePageTitle: "VoiceWove 聲音複製 - 個人化AI語音複製平台",
+  storyPageTitle: "VoiceWove 故事 - 文字轉語音生成同轉換AI平台",
+  pricingPageTitle: "VoiceWove 價格方案 - 靈活透明嘅訂閱選擇",
+  longTextPageTitle: "VoiceWove 長文本處理 - 大篇幅文章轉語音工具",
   inputPlaceholder: "輸入要讀嘅文字...",
   speed: "速度",
   voice: "聲線",
@@ -40,7 +40,7 @@ export const yue: TranslationType = {
   on: "開",
   off: "關",
   characters: "隻字",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "即試",
   tryForFree: "免費試用",
   feature1Title: "靚聲質素",
@@ -82,7 +82,7 @@ export const yue: TranslationType = {
   dividerText: "或者",
   aiPowered: "AI驅動",
   languagesSupported: "50+種語言",
-  copyright: "© {year} VoiceCanvas 版權所有",
+  copyright: "© {year} VoiceWove 版權所有",
   footerSlogan: "用心打造更好嘅語音體驗",
   loginDescription: "登入你嘅帳戶用更多功能",
   registerDescription: "開新帳戶開始使用",
@@ -759,7 +759,7 @@ pleaseSelectNarratorVoice: '請揀旁白把聲',
 
   // Voice Design page related translation keys
   "voiceDesign": "音色設計",
-  "voiceDesignPageTitle": "VoiceCanvas 音色設計 - AI音色定制同設計平台",
+  "voiceDesignPageTitle": "VoiceWove 音色設計 - AI音色定制同設計平台",
   "designVoice": "設計音色",
   "voiceDesignDescription": "通過調節語言、口音、音色等參數，設計專屬嘅個性化聲音",
   "designedVoices": "設計好嘅音色",
@@ -823,7 +823,7 @@ pleaseSelectNarratorVoice: '請揀旁白把聲',
 
   // AI 播客相關翻譯
   aiPodcast: 'AI 播客',
-  podcastPageTitle: 'AI 播客工作室 - 智能訪談對話生成 | VoiceCanvas',
+  podcastPageTitle: 'AI 播客工作室 - 智能訪談對話生成 | VoiceWove',
   podcastTitle: 'AI 播客生成器',
   podcastDescription: '輸入內容，AI 自動生成專業嘅訪談式播客對話',
   inputPodcastContent: '輸入播客內容',
@@ -983,7 +983,7 @@ pleaseSelectNarratorVoice: '請揀旁白把聲',
   noAudioSegmentsDesc: '冇可生成嘅音頻段落',
 
   // 下載文件名
-  downloadFileName: 'VoiceCanvas-播客-{speaker}-第{segment}段.mp3',
+  downloadFileName: 'VoiceWove-播客-{speaker}-第{segment}段.mp3',
 
   // 界面標題
   contentInputTitle: '內容輸入',
@@ -997,7 +997,7 @@ pleaseSelectNarratorVoice: '請揀旁白把聲',
   dialogueSegmentsCount: '共 {count} 個對話段落',
 
   // 完整播客下載文件名
-  completePodcastFileName: 'VoiceCanvas-AI播客-完整版-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI播客-完整版-{date}.wav',
 
   // 音頻控制按鈕
   pauseButton: '暫停',

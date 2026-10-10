@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const ja: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - 先進的なAI音声合成とクローン多言語プラットフォーム",
-  appPageTitle: "VoiceCanvas スタジオ - テキスト読み上げワークスペース",
-  voicePageTitle: "VoiceCanvas 音声クローン - パーソナライズされたAI音声クローンプラットフォーム",
-  storyPageTitle: "VoiceCanvas ストーリー - テキストから音声への生成と変換AIプラットフォーム",
-  pricingPageTitle: "VoiceCanvas 料金プラン - 柔軟で透明なサブスクリプションオプション",
-  longTextPageTitle: "VoiceCanvas 長文処理 - 長文記事を音声に変換するツール",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - 先進的なAI音声合成とクローン多言語プラットフォーム",
+  appPageTitle: "VoiceWove スタジオ - テキスト読み上げワークスペース",
+  voicePageTitle: "VoiceWove 音声クローン - パーソナライズされたAI音声クローンプラットフォーム",
+  storyPageTitle: "VoiceWove ストーリー - テキストから音声への生成と変換AIプラットフォーム",
+  pricingPageTitle: "VoiceWove 料金プラン - 柔軟で透明なサブスクリプションオプション",
+  longTextPageTitle: "VoiceWove 長文処理 - 長文記事を音声に変換するツール",
   inputPlaceholder: "読み上げるテキストを入力...",
   speed: "速度",
   voice: "声質",
@@ -40,7 +40,7 @@ export const ja: TranslationType = {
   on: "有効",
   off: "無効",
   characters: "文字",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "今すぐ試す",
   tryForFree: "無料で試す",
   feature1Title: "高品質な音声",
@@ -761,7 +761,7 @@ pleaseSelectNarratorVoice: 'ナレーターのボイスを選択してくださ�
 
   // Voice Design page related translation keys
   "voiceDesign": "音色デザイン",
-  "voiceDesignPageTitle": "VoiceCanvas 音色デザイン - AI音声カスタマイズ＆デザインフラットフォーム",
+  "voiceDesignPageTitle": "VoiceWove 音色デザイン - AI音声カスタマイズ＆デザインフラットフォーム",
   "designVoice": "音色をデザイン",
   "voiceDesignDescription": "言語、アクセント、音色などのパラメータを調整して、独自のパーソナライズド音声をデザイン",
   "designedVoices": "デザインされた音色",
@@ -825,7 +825,7 @@ pleaseSelectNarratorVoice: 'ナレーターのボイスを選択してくださ�
 
   // AIポッドキャスト関連翻訳
   aiPodcast: 'AIポッドキャスト',
-  podcastPageTitle: 'AIポッドキャストスタジオ - スマートインタビュー対話生成 | VoiceCanvas',
+  podcastPageTitle: 'AIポッドキャストスタジオ - スマートインタビュー対話生成 | VoiceWove',
   podcastTitle: 'AIポッドキャスト生成ツール',
   podcastDescription: '内容を入力すると、AIが専門的なインタビュースタイルのポッドキャスト対話を自動生成',
   inputPodcastContent: 'ポッドキャスト内容入力',
@@ -985,7 +985,7 @@ pleaseSelectNarratorVoice: 'ナレーターのボイスを選択してくださ�
   noAudioSegmentsDesc: '生成可能な音声セグメントがありません',
 
   // ダウンロードファイル名
-  downloadFileName: 'VoiceCanvas-ポッドキャスト-{speaker}-セグメント{segment}.mp3',
+  downloadFileName: 'VoiceWove-ポッドキャスト-{speaker}-セグメント{segment}.mp3',
 
   // UIタイトル
   contentInputTitle: 'コンテンツ入力',
@@ -993,7 +993,7 @@ pleaseSelectNarratorVoice: 'ナレーターのボイスを選択してくださ�
   backgroundDecoration: '背景装飾',
   mainContentArea: 'メインコンテンツエリア',
   dialogueSegmentsCount: '全 {count} 対話セグメント',
-  completePodcastFileName: 'VoiceCanvas-AI-ポッドキャスト-完全版-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-ポッドキャスト-完全版-{date}.wav',
   pauseButton: '一時停止',
   playButton: '再生',
   downloadButton: 'ダウンロード',

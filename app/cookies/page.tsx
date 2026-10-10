@@ -36,7 +36,7 @@ export default function CookiePolicy() {
 
             <h2>2. How We Use Cookies</h2>
             <p>
-              VoiceCanvas uses cookies to enhance your experience on our platform. We use cookies for the following purposes:
+              VoiceWove uses cookies to enhance your experience on our platform. We use cookies for the following purposes:
             </p>
             <ul>
               <li><strong>Essential Cookies:</strong> These cookies are necessary for the website to function properly. They enable core functionality such as security, network management, and accessibility.</li>
@@ -153,7 +153,7 @@ export default function CookiePolicy() {
             </p>
             <ul>
               <li>Email: wt@wmcircle.cn</li>
-              <li>Website: <a href="https://voicecanvas.org" className="text-primary hover:underline">https://voicecanvas.org</a></li>
+              <li>Website: <a href="https://voicewove.com" className="text-primary hover:underline">https://voicewove.com</a></li>
             </ul>
 
             <h2>10. Your Consent</h2>

@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const hi: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - उन्नत AI आवाज संश्लेषण और बहुभाषी क्लोनिंग प्लेटफॉर्म",
-  appPageTitle: "VoiceCanvas स्टूडियो - टेक्स्ट-टू-स्पीच कार्यक्षेत्र",
-  voicePageTitle: "VoiceCanvas आवाज क्लोनिंग - व्यक्तिगत AI आवाज क्लोनिंग प्लेटफॉर्म",
-  storyPageTitle: "VoiceCanvas कहानी - पाठ से आवाज बनाने और बदलने का प्लेटफॉर्म",
-  pricingPageTitle: "VoiceCanvas मूल्य योजना - लचीली और पारदर्शी सदस्यता विकल्प",
-  longTextPageTitle: "VoiceCanvas लंबे पाठ प्रसंस्करण - लंबे लेखों को आवाज में बदलने का उपकरण",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - उन्नत AI आवाज संश्लेषण और बहुभाषी क्लोनिंग प्लेटफॉर्म",
+  appPageTitle: "VoiceWove स्टूडियो - टेक्स्ट-टू-स्पीच कार्यक्षेत्र",
+  voicePageTitle: "VoiceWove आवाज क्लोनिंग - व्यक्तिगत AI आवाज क्लोनिंग प्लेटफॉर्म",
+  storyPageTitle: "VoiceWove कहानी - पाठ से आवाज बनाने और बदलने का प्लेटफॉर्म",
+  pricingPageTitle: "VoiceWove मूल्य योजना - लचीली और पारदर्शी सदस्यता विकल्प",
+  longTextPageTitle: "VoiceWove लंबे पाठ प्रसंस्करण - लंबे लेखों को आवाज में बदलने का उपकरण",
   inputPlaceholder: "पढ़ने के लिए टेक्स्ट डालें...",
   speed: "गति",
   voice: "आवाज़",
@@ -40,7 +40,7 @@ export const hi: TranslationType = {
   on: "चालू",
   off: "बंद",
   characters: "वर्ण",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "अभी आज़माएं",
   tryForFree: "मुफ्त में आज़माएं",
   feature1Title: "उच्च-गुणवत्ता वाणी",
@@ -761,7 +761,7 @@ pleaseSelectNarratorVoice: 'कृपया कथावाचक की आव�
 
   // Voice Design page related translation keys
   "voiceDesign": "आवाज़ डिज़ाइन",
-  "voiceDesignPageTitle": "VoiceCanvas आवाज़ डिज़ाइन - AI आवाज़ कस्टमाइज़ेशन और डिज़ाइन प्लेटफॉर्म",
+  "voiceDesignPageTitle": "VoiceWove आवाज़ डिज़ाइन - AI आवाज़ कस्टमाइज़ेशन और डिज़ाइन प्लेटफॉर्म",
   "designVoice": "आवाज़ डिज़ाइन करें",
   "voiceDesignDescription": "भाषा, उच्चारण, आवाज़ की गुणवत्ता जैसे मापदंडों को समायोजित करके अपनी अनोखी व्यक्तिगत आवाज़ डिज़ाइन करें",
   "designedVoices": "डिज़ाइन की गई आवाज़ें",
@@ -825,7 +825,7 @@ pleaseSelectNarratorVoice: 'कृपया कथावाचक की आव�
 
   // AI पॉडकास्ट अनुवाद
   aiPodcast: 'AI पॉडकास्ट',
-  podcastPageTitle: 'AI पॉडकास्ट स्टूडियो - स्मार्ट साक्षात्कार संवाद जनरेटर | VoiceCanvas',
+  podcastPageTitle: 'AI पॉडकास्ट स्टूडियो - स्मार्ट साक्षात्कार संवाद जनरेटर | VoiceWove',
   podcastTitle: 'AI पॉडकास्ट जनरेटर',
   podcastDescription: 'सामग्री डालें, AI स्वचालित रूप से पेशेवर साक्षात्कार-शैली पॉडकास्ट संवाद बनाएगा',
   inputPodcastContent: 'पॉडकास्ट सामग्री डालें',
@@ -985,7 +985,7 @@ pleaseSelectNarratorVoice: 'कृपया कथावाचक की आव�
   noAudioSegmentsDesc: 'बनाने के लिए कोई ऑडियो खंड नहीं',
 
   // डाउनलोड फ़ाइल नाम
-  downloadFileName: 'VoiceCanvas-पॉडकास्ट-{speaker}-खंड{segment}.mp3',
+  downloadFileName: 'VoiceWove-पॉडकास्ट-{speaker}-खंड{segment}.mp3',
 
   // इंटरफ़ेस शीर्षक
   contentInputTitle: 'सामग्री इनपुट',
@@ -999,7 +999,7 @@ pleaseSelectNarratorVoice: 'कृपया कथावाचक की आव�
   dialogueSegmentsCount: 'कुल {count} संवाद खंड',
 
   // पूर्ण पॉडकास्ट फ़ाइल नाम
-  completePodcastFileName: 'VoiceCanvas-AI-पॉडकास्ट-पूर्ण-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-पॉडकास्ट-पूर्ण-{date}.wav',
 
   // ऑडियो नियंत्रण बटन
   pauseButton: 'रोकें',

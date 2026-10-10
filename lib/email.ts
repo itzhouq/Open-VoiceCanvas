@@ -6,7 +6,7 @@ import React from 'react';
 
 // 初始化Resend
 const resendApiKey = process.env.RESEND_API_KEY;
-const fromEmail = process.env.EMAIL_FROM || 'noreply@voicecanvas.com';
+const fromEmail = process.env.EMAIL_FROM || 'noreply@voicewove.com';
 
 console.log('Resend配置:');
 console.log('- API KEY 存在:', !!resendApiKey);
@@ -40,7 +40,7 @@ function generateSimpleHtml(verificationUrl: string, name?: string): string {
           <h1>Verify Your Email Address</h1>
         </div>
         <p>Dear ${name || 'User'},</p>
-        <p>Thank you for registering with VoiceCanvas. Please click the button below to verify your email address:</p>
+        <p>Thank you for registering with VoiceWove. Please click the button below to verify your email address:</p>
         <p style="text-align: center; margin: 30px 0;">
           <a href="${verificationUrl}" class="button">Verify Email</a>
         </p>
@@ -49,7 +49,7 @@ function generateSimpleHtml(verificationUrl: string, name?: string): string {
         <p>This link will expire in 24 hours.</p>
         <div class="footer">
           <p>If you didn't request this verification, please ignore this email.</p>
-          <p>&copy; ${new Date().getFullYear()} VoiceCanvas. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} VoiceWove. All rights reserved.</p>
         </div>
       </div>
     </body>
@@ -88,7 +88,7 @@ function generateSimpleResetPasswordHtml(resetUrl: string, name?: string): strin
         <p>This link will expire in 1 hour for security reasons.</p>
         <p>If you did not request a password reset, please ignore this email or contact support if you have concerns.</p>
         <div class="footer">
-          <p>&copy; ${new Date().getFullYear()} VoiceCanvas. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} VoiceWove. All rights reserved.</p>
         </div>
       </div>
     </body>
@@ -127,7 +127,7 @@ export async function sendVerificationEmail(email: string, verificationUrl: stri
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: 'Verify Your VoiceCanvas Account',
+      subject: 'Verify Your VoiceWove Account',
       html: htmlContent,
     });
 
@@ -175,7 +175,7 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string, na
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: 'Reset Your VoiceCanvas Password',
+      subject: 'Reset Your VoiceWove Password',
       html: htmlContent,
     });
 

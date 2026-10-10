@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const de: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Fortschrittliche KI-Sprachsynthese und Klonierung in mehreren Sprachen",
-  appPageTitle: "VoiceCanvas Studio - Text-zu-Sprache-Arbeitsbereich",
-  voicePageTitle: "VoiceCanvas Stimmenklonierung - Personalisierte KI-Stimmenklonierungsplattform",
-  storyPageTitle: "VoiceCanvas Story - AI-gestützte Geschichte-Generierung und -Dubbing",
-  pricingPageTitle: "VoiceCanvas Preispläne - Flexible und transparente Abonnementoptionen",
-  longTextPageTitle: "VoiceCanvas Langtextverarbeitung - Tool zur Umwandlung von langen Texten in Sprache",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Fortschrittliche KI-Sprachsynthese und Klonierung in mehreren Sprachen",
+  appPageTitle: "VoiceWove Studio - Text-zu-Sprache-Arbeitsbereich",
+  voicePageTitle: "VoiceWove Stimmenklonierung - Personalisierte KI-Stimmenklonierungsplattform",
+  storyPageTitle: "VoiceWove Story - AI-gestützte Geschichte-Generierung und -Dubbing",
+  pricingPageTitle: "VoiceWove Preispläne - Flexible und transparente Abonnementoptionen",
+  longTextPageTitle: "VoiceWove Langtextverarbeitung - Tool zur Umwandlung von langen Texten in Sprache",
   inputPlaceholder: "Text zum Vorlesen eingeben...",
   speed: "Geschwindigkeit",
   voice: "Stimme",
@@ -40,7 +40,7 @@ export const de: TranslationType = {
   on: "Ein",
   off: "Aus",
   characters: "Zeichen",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Jetzt testen",
   tryForFree: "Kostenlos testen",
   feature1Title: "Hochwertige Stimmen",
@@ -82,7 +82,7 @@ export const de: TranslationType = {
   dividerText: "oder",
   aiPowered: "KI-gestützt",
   languagesSupported: "50+ Sprachen",
-  copyright: "© {year} VoiceCanvas. Alle Rechte vorbehalten.",
+  copyright: "© {year} VoiceWove. Alle Rechte vorbehalten.",
   footerSlogan: "Mit ❤️ entwickelt für bessere Sprach-Erlebnisse",
   loginDescription: "Anmelden für erweiterte Funktionen",
   registerDescription: "Neuen Account erstellen",
@@ -760,7 +760,7 @@ pleaseSelectNarratorVoice: 'Bitte wählen Sie die Erzählerstimme',
 
   // Voice Design page related translation keys
   "voiceDesign": "Klangdesign",
-  "voiceDesignPageTitle": "VoiceCanvas Klangdesign - KI-basierte Plattform für Stimmanpassung und Design",
+  "voiceDesignPageTitle": "VoiceWove Klangdesign - KI-basierte Plattform für Stimmanpassung und Design",
   "designVoice": "Stimme designen",
   "voiceDesignDescription": "Gestalten Sie Ihre persönliche Stimme durch Anpassung von Parametern wie Sprache, Akzent und Klangfarbe",
   "designedVoices": "Designte Stimmen",
@@ -824,7 +824,7 @@ pleaseSelectNarratorVoice: 'Bitte wählen Sie die Erzählerstimme',
 
   // AI-Podcast-Übersetzungen
   aiPodcast: 'AI-Podcast',
-  podcastPageTitle: 'AI-Podcast-Studio - Intelligente Interviewgenerierung | VoiceCanvas',
+  podcastPageTitle: 'AI-Podcast-Studio - Intelligente Interviewgenerierung | VoiceWove',
   podcastTitle: 'AI-Podcast-Generator',
   podcastDescription: 'Inhalt eingeben, AI generiert professionelle Interview-Podcasts',
   inputPodcastContent: 'Podcast-Inhalt eingeben',
@@ -984,7 +984,7 @@ pleaseSelectNarratorVoice: 'Bitte wählen Sie die Erzählerstimme',
   noAudioSegmentsDesc: 'Keine Audio-Segmente generierbar',
 
   // Dateinamen
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Oberflächentitel
   contentInputTitle: 'Inhaltseingabe',
@@ -998,7 +998,7 @@ pleaseSelectNarratorVoice: 'Bitte wählen Sie die Erzählerstimme',
   dialogueSegmentsCount: '{count} Dialogabschnitte',
 
   // Vollständiger Podcast-Dateiname
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Vollständig-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Vollständig-{date}.wav',
 
   // Audiosteuerung
   pauseButton: 'Pause',

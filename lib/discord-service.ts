@@ -32,7 +32,7 @@ export async function sendUserRegistrationNotification(user: {
     const embed = {
       title: '🎉 新用户注册',
       color: 0x7289DA,
-      description: `欢迎新用户加入VoiceCanvas！`,
+      description: `欢迎新用户加入VoiceWove！`,
       fields: [
         { name: '用户ID', value: ensureString(user.id), inline: true },
         { name: '用户名', value: ensureString(user.name), inline: true },
@@ -50,7 +50,7 @@ export async function sendUserRegistrationNotification(user: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: 'VoiceCanvas注册通知',
+        username: 'VoiceWove注册通知',
         embeds: [embed],
       }),
     });
@@ -80,7 +80,7 @@ export async function sendSubscriptionNotification(subscription: {
     const embed = {
       title: '💎 新订阅',
       color: 0x2ECC71,
-      description: `用户已订阅VoiceCanvas服务！`,
+      description: `用户已订阅VoiceWove服务！`,
       fields: [
         { name: '用户ID', value: ensureString(subscription.userId), inline: true },
         { name: '用户名', value: ensureString(subscription.userName), inline: true },
@@ -101,7 +101,7 @@ export async function sendSubscriptionNotification(subscription: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: 'VoiceCanvas订阅通知',
+        username: 'VoiceWove订阅通知',
         embeds: [embed],
       }),
     });

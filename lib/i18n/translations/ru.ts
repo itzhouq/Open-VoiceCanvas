@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const ru: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Передовая платформа синтеза и клонирования голоса с поддержкой нескольких языков",
-  appPageTitle: "VoiceCanvas Студия - Рабочее пространство для преобразования текста в речь",
-  voicePageTitle: "VoiceCanvas Клонирование голоса - Персонализированная платформа клонирования голоса с ИИ",
-  storyPageTitle: "VoiceCanvas История - Платформа для генерации и преобразования текста в речь с помощью ИИ",
-  pricingPageTitle: "VoiceCanvas Тарифы - Гибкие и прозрачные варианты подписки",
-  longTextPageTitle: "VoiceCanvas Обработка длинных текстов - Инструмент для преобразования объемных статей в речь",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Передовая платформа синтеза и клонирования голоса с поддержкой нескольких языков",
+  appPageTitle: "VoiceWove Студия - Рабочее пространство для преобразования текста в речь",
+  voicePageTitle: "VoiceWove Клонирование голоса - Персонализированная платформа клонирования голоса с ИИ",
+  storyPageTitle: "VoiceWove История - Платформа для генерации и преобразования текста в речь с помощью ИИ",
+  pricingPageTitle: "VoiceWove Тарифы - Гибкие и прозрачные варианты подписки",
+  longTextPageTitle: "VoiceWove Обработка длинных текстов - Инструмент для преобразования объемных статей в речь",
   inputPlaceholder: "Введите текст для озвучивания...",
   speed: "Скорость",
   voice: "Голос",
@@ -40,7 +40,7 @@ export const ru: TranslationType = {
   on: "Вкл",
   off: "Выкл",
   characters: "символы",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Попробовать сейчас",
   tryForFree: "Попробовать бесплатно",
   feature1Title: "Высокое качество голоса",
@@ -82,7 +82,7 @@ export const ru: TranslationType = {
   dividerText: "или",
   aiPowered: "На базе ИИ",
   languagesSupported: "50+ языков",
-  copyright: "© {year} VoiceCanvas. Все права защищены.",
+  copyright: "© {year} VoiceWove. Все права защищены.",
   footerSlogan: "Создано с ❤️ для лучшего аудиоопыта",
   loginDescription: "Войдите для доступа к функциям",
   registerDescription: "Создайте аккаунт для начала работы",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Выберите AI-генерацию и
 
   // Voice Design page related translation keys
   "voiceDesign": "Дизайн тембра голоса",
-  "voiceDesignPageTitle": "VoiceCanvas Дизайн тембра - Платформа для кастомизации и дизайна голоса с ИИ",
+  "voiceDesignPageTitle": "VoiceWove Дизайн тембра - Платформа для кастомизации и дизайна голоса с ИИ",
   "designVoice": "Создать тембр голоса",
   "voiceDesignDescription": "Создайте уникальный персонализированный голос, регулируя параметры языка, акцента и тембра",
   "designedVoices": "Созданные тембры",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Выберите AI-генерацию и
 
   // Переводы для AI Подкастов
   aiPodcast: 'AI Подкаст',
-  podcastPageTitle: 'Студия AI Подкастов - Генерация Умных Интервью | VoiceCanvas',
+  podcastPageTitle: 'Студия AI Подкастов - Генерация Умных Интервью | VoiceWove',
   podcastTitle: 'Генератор AI Подкастов',
   podcastDescription: 'Введите контент, ИИ автоматически создаст профессиональные диалоги в формате интервью',
   inputPodcastContent: 'Ввести контент подкаста',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Выберите AI-генерацию и
   noAudioSegmentsDesc: 'Нет сегментов для создания',
 
   // Имена файлов
-  downloadFileName: 'VoiceCanvas-Подкаст-{speaker}-Сегмент{segment}.mp3',
+  downloadFileName: 'VoiceWove-Подкаст-{speaker}-Сегмент{segment}.mp3',
 
   // Элементы интерфейса
   contentInputTitle: 'Ввод контента',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'Выберите AI-генерацию и
   backgroundDecoration: 'Фоновый декор',
   mainContentArea: 'Основная область контента',
   dialogueSegmentsCount: 'Всего {count} сегментов',
-  completePodcastFileName: 'VoiceCanvas-AI-Подкаст-Полный-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Подкаст-Полный-{date}.wav',
   pauseButton: 'Пауза',
   playButton: 'Воспроизвести',
   downloadButton: 'Скачать',

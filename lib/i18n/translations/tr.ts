@@ -1,13 +1,13 @@
 import type { TranslationType } from './types';
 
 export const tr: TranslationType = {
-  title: "VoiceCanvas",
-  pageTitle: "VoiceCanvas - Gelişmiş AI ses sentezi ve klonlama çok dilli platform",
-  appPageTitle: "VoiceCanvas Stüdyo - Metinden sese çalışma alanı",
-  voicePageTitle: "VoiceCanvas Ses Klonlama - Kişiselleştirilmiş AI ses klonlama platformu",
-  storyPageTitle: "VoiceCanvas Hikayeler - Metinleri seslere dönüştürme ve oluşturma AI platformu",
-  pricingPageTitle: "VoiceCanvas Fiyatlandırma - Esnek ve şeffaf abonelik seçenekleri",
-  longTextPageTitle: "VoiceCanvas Uzun Metin İşleme - Uzun makaleleri sese dönüştürme aracı",
+  title: "VoiceWove",
+  pageTitle: "VoiceWove - Gelişmiş AI ses sentezi ve klonlama çok dilli platform",
+  appPageTitle: "VoiceWove Stüdyo - Metinden sese çalışma alanı",
+  voicePageTitle: "VoiceWove Ses Klonlama - Kişiselleştirilmiş AI ses klonlama platformu",
+  storyPageTitle: "VoiceWove Hikayeler - Metinleri seslere dönüştürme ve oluşturma AI platformu",
+  pricingPageTitle: "VoiceWove Fiyatlandırma - Esnek ve şeffaf abonelik seçenekleri",
+  longTextPageTitle: "VoiceWove Uzun Metin İşleme - Uzun makaleleri sese dönüştürme aracı",
   inputPlaceholder: "Okunacak metni girin...",
   speed: "Hız",
   voice: "Ses",
@@ -40,7 +40,7 @@ export const tr: TranslationType = {
   on: "Açık",
   off: "Kapalı",
   characters: "karakter",
-  landingTitle: "VoiceCanvas",
+  landingTitle: "VoiceWove",
   startNow: "Hemen Dene",
   tryForFree: "Ücretsiz Dene",
   feature1Title: "Yüksek Kaliteli Ses",
@@ -82,7 +82,7 @@ export const tr: TranslationType = {
   dividerText: "veya",
   aiPowered: "AI Destekli",
   languagesSupported: "50+ Dil",
-  copyright: "© {year} VoiceCanvas. Tüm hakları saklıdır.",
+  copyright: "© {year} VoiceWove. Tüm hakları saklıdır.",
   footerSlogan: "Daha iyi ses deneyimi için ❤️ ile tasarlandı",
   loginDescription: "Daha fazla özellik için giriş yap",
   registerDescription: "Kullanmaya başlamak için kayıt ol",
@@ -759,7 +759,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'AI ile üretilmiş veya manuel metin seç
 
   // Voice Design page related translation keys
   "voiceDesign": "Ses Tonu Tasarımı",
-  "voiceDesignPageTitle": "VoiceCanvas Ses Tonu Tasarımı - AI Ses Özelleştirme ve Tasarım Platformu",
+  "voiceDesignPageTitle": "VoiceWove Ses Tonu Tasarımı - AI Ses Özelleştirme ve Tasarım Platformu",
   "designVoice": "Ses Tonu Tasarla",
   "voiceDesignDescription": "Dil, aksan, ses tonu gibi parametreleri ayarlayarak kişiye özel benzersiz bir ses tasarlayın",
   "designedVoices": "Tasarlanan Ses Tonları",
@@ -823,7 +823,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'AI ile üretilmiş veya manuel metin seç
 
   // AI Podcast çevirileri
   aiPodcast: 'AI Podcast',
-  podcastPageTitle: 'AI Podcast Stüdyosu - Akıllı Röportaj Diyalog Üretimi | VoiceCanvas',
+  podcastPageTitle: 'AI Podcast Stüdyosu - Akıllı Röportaj Diyalog Üretimi | VoiceWove',
   podcastTitle: 'AI Podcast Oluşturucu',
   podcastDescription: 'İçerik girin, AI profesyonel röportaj tarzı podcast diyaloglarını otomatik oluştursun',
   inputPodcastContent: 'Podcast içeriğini girin',
@@ -983,7 +983,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'AI ile üretilmiş veya manuel metin seç
   noAudioSegmentsDesc: 'Oluşturulacak ses segmenti yok',
 
   // Dosya isimleri
-  downloadFileName: 'VoiceCanvas-Podcast-{speaker}-Segment{segment}.mp3',
+  downloadFileName: 'VoiceWove-Podcast-{speaker}-Segment{segment}.mp3',
 
   // Arayüz öğeleri
   contentInputTitle: 'İçerik girişi',
@@ -991,7 +991,7 @@ faqHowToGenerateStoryVoiceoverAnswer: 'AI ile üretilmiş veya manuel metin seç
   backgroundDecoration: 'Arkaplan dekorasyonu',
   mainContentArea: 'Ana içerik alanı',
   dialogueSegmentsCount: 'Toplam {count} diyalog segmenti',
-  completePodcastFileName: 'VoiceCanvas-AI-Podcast-Tam-{date}.wav',
+  completePodcastFileName: 'VoiceWove-AI-Podcast-Tam-{date}.wav',
   pauseButton: 'Duraklat',
   playButton: 'Oynat',
   downloadButton: 'İndir',
