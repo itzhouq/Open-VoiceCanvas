@@ -595,7 +595,7 @@ please_login_again: 'Silakan masuk kembali dan coba lagi',
 session_fixed: 'Status login telah diperbaiki',
 please_continue: 'Silakan lanjutkan tindakan Anda',
 
-join_discord_community: 'Bergabunglah dengan komunitas Discord kami',
+join_discord_community: 'Bergabunglah dengan komunitas X kami',
 community_support: 'Dapatkan dukungan dari komunitas kami',
 
 // Clone Voice FAQ

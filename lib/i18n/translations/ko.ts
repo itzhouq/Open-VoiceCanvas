@@ -593,7 +593,7 @@ please_login_again: '다시 로그인한 후 다시 시도해 주세요',
 session_fixed: '로그인 상태가 복구되었습니다',
 please_continue: '작업을 계속해 주세요',
 
-join_discord_community: 'Discord 커뮤니티에 참여',
+join_discord_community: 'X 커뮤니티에 참여',
 community_support: '커뮤니티 지원 받기',
 
 // Clone Voice FAQ

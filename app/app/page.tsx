@@ -1243,15 +1243,15 @@ export default function Home() {
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
         >
           <a 
-            href="https://discord.gg/966GMKhQhs" 
+            href="https://x.com/itzhouq2026" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center w-14 h-14 rounded-full bg-background/80 backdrop-blur-sm border border-gray-200 dark:border-gray-800 shadow-xl hover:shadow-2xl hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 dark:focus:ring-gray-700"
             title={t('join_discord_community')}
           >
             <img 
-              src="/images/discord.png" 
-              alt="Discord" 
+              src="/images/x-logo.svg" 
+              alt="X" 
               className="w-11 h-11 object-contain"
             />
           </a>

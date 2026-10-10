@@ -592,7 +592,7 @@ please_login_again: 'Vă rugăm să vă conectați din nou și să încercați d
 session_fixed: 'Starea de conectare a fost restabilită',
 please_continue: 'Vă rugăm să continuați operațiunea dumneavoastră',
 
-join_discord_community: 'Înscrieți-vă în comunitatea noastră Discord',
+join_discord_community: 'Înscrieți-vă în comunitatea noastră X',
 community_support: 'Obțineți suport de la comunitate',
 
 // Clone Voice FAQ

@@ -592,7 +592,7 @@ please_login_again: 'Lütfen tekrar giriş yapın ve yeniden deneyin',
 session_fixed: 'Giriş durumu onarıldı',
 please_continue: 'Lütfen işleminize devam edin',
 
-join_discord_community: 'Discord topluluğumuza katılın',
+join_discord_community: 'X topluluğumuza katılın',
 community_support: 'Topluluk desteği alın',
 
 // Ses Klonlama SSS

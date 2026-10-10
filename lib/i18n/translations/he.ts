@@ -594,7 +594,7 @@ please_login_again: 'אנא התחבר שוב ונסה שנית',
 session_fixed: 'מצב ההתחברות שוחזר',
 please_continue: 'אנא המשך בפעולתך',
 
-join_discord_community: 'הצטרפות לקהילת Discord שלנו',
+join_discord_community: 'הצטרפות לקהילת X שלנו',
 community_support: 'קבל תמיכה מהקהילה',
 
 // Clone Voice FAQ

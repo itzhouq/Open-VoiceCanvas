@@ -593,7 +593,7 @@ please_login_again: '再度ログインしてからもう一度お試しくだ�
 session_fixed: 'ログイン状態が復元されました',
 please_continue: '操作を続けてください',
 
-join_discord_community: 'Discordコミュニティに参加',
+join_discord_community: 'Xコミュニティに参加',
 community_support: 'コミュニティサポートを受け取る',
 
 // Clone Voice FAQ

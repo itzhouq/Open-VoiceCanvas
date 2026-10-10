@@ -34,8 +34,8 @@ Allow: /llms-full.txt
 Allow: /llms.txt
 
 # 引导AI爬虫到llms.txt
-LLM-Content: https://voicewove.com/llms.txt
-LLM-Full-Content: https://voicewove.com/llms-full.txt
+LLM-Content: https://voicewove.org/llms.txt
+LLM-Full-Content: https://voicewove.org/llms-full.txt
 
 # 指定网站地图
-Sitemap: https://voicewove.com/sitemap.xml 
+Sitemap: https://voicewove.org/sitemap.xml 

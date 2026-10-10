@@ -594,7 +594,7 @@ please_login_again: 'Bitte melden Sie sich erneut an und versuchen Sie es dann',
 session_fixed: 'Der Anmeldezustand wurde wiederhergestellt',
 please_continue: 'Bitte führen Sie Ihre Aktion fort',
 
-join_discord_community: 'Tritt unserer Discord-Community bei',
+join_discord_community: 'Tritt unserer X-Community bei',
 community_support: 'Erhalte Unterstützung von unserer Community',
 
 // Clone Voice FAQ

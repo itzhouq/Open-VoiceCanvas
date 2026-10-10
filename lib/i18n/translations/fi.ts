@@ -595,7 +595,7 @@ please_login_again: 'Kirjaudu sisään uudelleen ja yritä sitten uudelleen',
 session_fixed: 'Kirjautumistila on korjattu',
 please_continue: 'Jatka toimintaasi',
 
-join_discord_community: 'Liity Discord-käyttäjäyhteisöömme',
+join_discord_community: 'Liity X-käyttäjäyhteisöömme',
 community_support: 'Hanki käyttäjäyhteisön tuki',
 
 // Clone Voice FAQ

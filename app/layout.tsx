@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voicewove.com'),
+  metadataBase: new URL('https://voicewove.org'),
   title: {
     default: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     template: '%s | VoiceWove'
@@ -227,9 +227,9 @@ export const metadata: Metadata = {
     '음성 클론',
     '맞춤형 음성',
   ],
-  authors: [{ name: 'ItusiAI' }],
-  creator: 'ItusiAI',
-  publisher: 'ItusiAI',
+  authors: [{ name: 'itzhouq', url: 'https://itzhouq.cn' }],
+  creator: 'itzhouq',
+  publisher: 'itzhouq',
   robots: {
     index: true,
     follow: true,
@@ -244,13 +244,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://voicewove.com',
+    url: 'https://voicewove.org',
     title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
     siteName: 'VoiceWove',
     images: [
       {
-        url: 'https://voicewove.com/images/og-image.png',
+        url: 'https://voicewove.org/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
@@ -262,7 +262,7 @@ export const metadata: Metadata = {
     title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
     images: {
-      url: 'https://voicewove.com/images/og-image.png',
+      url: 'https://voicewove.org/images/og-image.png',
       alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
       width: 1200,
       height: 630
@@ -281,7 +281,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://voicewove.com'
+    canonical: 'https://voicewove.org'
   },
 };
 

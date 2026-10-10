@@ -592,7 +592,7 @@ please_login_again: '請重新登入後再試',
 session_fixed: '登入狀態已修復',
 please_continue: '請繼續你嘅操作',
 
-join_discord_community: '加入我們的Discord社區',
+join_discord_community: '加入我們的X社區',
 community_support: '獲得社區支持',
 
 // Clone Voice FAQ

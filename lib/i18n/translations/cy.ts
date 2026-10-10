@@ -595,7 +595,7 @@ stripeError: 'Methodd gwasanaeth talu Stripe llwytho, rhowch gynnig arall arni y
 please_login_again: 'Mewngofnodwch eto cyn rhoi cynnig arall arni',
 session_fixed: 'Mae statws mewngofnodi wedi\'i atgyweirio',
 please_continue: 'Parhewch â\'ch gweithred',
-join_discord_community: 'Připojte se k naší komunitě na Discordu',
+join_discord_community: 'Připojte se k naší komunitě na Xu',
 community_support: 'Získejte podporu komunity',
 
 // Clone Voice FAQ

@@ -592,7 +592,7 @@ please_login_again: 'Пожалуйста, войдите снова и попр
 session_fixed: 'Статус входа восстановлен',
 please_continue: 'Продолжите выполнение операции',
 
-join_discord_community: 'Присоединитесь к нашей Discord-сообществу',
+join_discord_community: 'Присоединитесь к нашей X-сообществу',
 community_support: 'Получите поддержку от нашей сообщества',
 
 // Clone Voice FAQ

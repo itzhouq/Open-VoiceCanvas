@@ -614,7 +614,7 @@ export const en: TranslationType = {
   error_fetching_user: 'Error Fetching User Information',
   
   // Discord community
-  join_discord_community: 'Join Our Discord Community',
+  join_discord_community: 'Join Our X Community',
   community_support: 'Get Community Support',
 
   // Story Page

@@ -590,7 +590,7 @@ please_login_again: 'Vennligst logg inn på nytt og prøv igjen',
 session_fixed: 'Påloggingstatus er gjenopprettet',
 please_continue: 'Vennligst fortsett med handlingen din',
 
-join_discord_community: 'Tilslut til vores Discord-community',
+join_discord_community: 'Tilslut til vores X-community',
 community_support: 'Få support fra vores community',
 
 // Clone Voice FAQ

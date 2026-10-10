@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI Podcast Generator - Professional Interview-Style Podcast Content Creation Platform',
   description: 'Generate professional interview-style podcast content using AI technology. Supports intelligent interview dialogue generation between hosts and guests, combined with high-quality voice synthesis to create immersive podcast experiences.',
-  metadataBase: new URL('https://voicewove.com'),
+  metadataBase: new URL('https://voicewove.org'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Podcast Generator - Professional Interview-Style Podcast Content Creation',
     description: 'Generate professional interview-style podcast content using AI technology. Supports intelligent interview dialogue generation between hosts and guests with high-quality voice synthesis.',
-    url: 'https://voicewove.com/podcast',
+    url: 'https://voicewove.org/podcast',
     siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicewove.com/images/podcast-og.png',
+        url: 'https://voicewove.org/images/podcast-og.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove AI Podcast Generator Interface',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630
     },
-    creator: '@VoiceWove',
-    site: '@VoiceWove'
+    creator: '@itzhouq2026',
+    site: '@itzhouq2026'
   },
   other: {
-    'og:image:secure_url': 'https://voicewove.com/images/podcast-og.png',
+    'og:image:secure_url': 'https://voicewove.org/images/podcast-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicewove.com',
-    'article:publisher': 'https://voicewove.com'
+    'article:author': 'https://voicewove.org',
+    'article:publisher': 'https://voicewove.org'
   }
 };
 

@@ -592,7 +592,7 @@ please_login_again: 'يرجى تسجيل الدخول مرة أخرى والمح
 session_fixed: 'تم إصلاح حالة تسجيل الدخول',
 please_continue: 'يرجى متابعة عمليةك',
 
-join_discord_community: 'انضم إلى مجتمع Discord الخاص بنا',
+join_discord_community: 'انضم إلى مجتمع X الخاص بنا',
 community_support: 'احصل على دعم المجتمع',
 
 // استنساخ الصوت الأسئلة الشائعة

@@ -53,7 +53,7 @@ export function Footer() {
             {/* 社交链接 */}
             <div className="flex items-center gap-3">
               <motion.a
-                href="https://github.com/ItusiAI" 
+                href="https://github.com/itzhouq"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -63,7 +63,7 @@ export function Footer() {
                 <Github className="w-4 h-4 text-muted-foreground" />
               </motion.a>
               <motion.a
-                href="https://twitter.com/zyailive" 
+                href="https://x.com/itzhouq2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -73,7 +73,7 @@ export function Footer() {
                 <Twitter className="w-4 h-4 text-muted-foreground" />
               </motion.a>
               <motion.a
-                href="https://voicewove.com" 
+                href="https://voicewove.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -141,18 +141,18 @@ export function Footer() {
               <h3 className="font-semibold text-foreground">{t('footerLinks')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="https://itusi.cn" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    ITUSI
+                  <a href="https://itzhouq.cn" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    老周的博客
                   </a>
                 </li>
                 <li>
-                  <a href="https://aiartools.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    Aiartools
+                  <a href="https://tools.itzhouq.cn" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    在线工具箱
                   </a>
                 </li>
                 <li>
-                  <a href="https://pdf2md.site/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                    PDF2MD
+                  <a href="https://x.com/itzhouq2026" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    X (Twitter)
                   </a>
                 </li>
               </ul>

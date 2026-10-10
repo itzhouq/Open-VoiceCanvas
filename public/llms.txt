@@ -1,12 +1,12 @@
-# https://voicewove.com llms.txt
+# https://voicewove.org llms.txt
 
-- [Voice Cloning Solutions](https://voicewove.com/): AI-powered voice cloning and design for multilingual audio.
-- [VoiceWove Sitemap](https://voicewove.com/sitemap.xml): Explore VoiceWove sitemap for various resources and links.
-- [Voice Cloning](https://voicewove.com/cloning): Easily clone voices with uploaded audio recordings.
-- [Robots.txt Access Rules](https://voicewove.com/robots.txt): Robots.txt file allowing AI crawlers access to specific files.
-- [VoiceWove Voice Tools](https://voicewove.com/app): Create and customize voice content with VoiceWove tools.
-- [Voice Design Tool](https://voicewove.com/design): Create and customize voices for various applications easily.
-- [VoiceWove Story](https://voicewove.com/story): Create and generate stories using AI technology.
-- [VoiceWove Pricing](https://voicewove.com/pricing): Explore affordable voice cloning and design plans for everyone.
-- [Privacy Policy](https://voicewove.com/privacy): VoiceWove explains data collection, usage, and user rights.
-- [VoiceWove Terms](https://voicewove.com/terms): VoiceWove terms for using voice services and accounts.
+- [Voice Cloning Solutions](https://voicewove.org/): AI-powered voice cloning and design for multilingual audio.
+- [VoiceWove Sitemap](https://voicewove.org/sitemap.xml): Explore VoiceWove sitemap for various resources and links.
+- [Voice Cloning](https://voicewove.org/cloning): Easily clone voices with uploaded audio recordings.
+- [Robots.txt Access Rules](https://voicewove.org/robots.txt): Robots.txt file allowing AI crawlers access to specific files.
+- [VoiceWove Voice Tools](https://voicewove.org/app): Create and customize voice content with VoiceWove tools.
+- [Voice Design Tool](https://voicewove.org/design): Create and customize voices for various applications easily.
+- [VoiceWove Story](https://voicewove.org/story): Create and generate stories using AI technology.
+- [VoiceWove Pricing](https://voicewove.org/pricing): Explore affordable voice cloning and design plans for everyone.
+- [Privacy Policy](https://voicewove.org/privacy): VoiceWove explains data collection, usage, and user rights.
+- [VoiceWove Terms](https://voicewove.org/terms): VoiceWove terms for using voice services and accounts.

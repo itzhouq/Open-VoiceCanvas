@@ -592,7 +592,7 @@ please_login_again: 'Prosím, přihlaste se znovu a zkuste to znovu',
 session_fixed: 'Stav přihlášení byl opraven',
 please_continue: 'Pokračujte prosím ve své činnosti',
 
-join_discord_community: 'Připojte se k naší komunitě na Discordu',
+join_discord_community: 'Připojte se k naší komunitě na Xu',
 community_support: 'Získejte podporu komunity',
 
 // Clone Voice FAQ

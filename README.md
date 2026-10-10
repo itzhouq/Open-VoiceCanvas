@@ -56,7 +56,7 @@ Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，�
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/ItusiAI/Open-VoiceWove.git
+git clone https://github.com/itzhouq/Open-VoiceCanvas.git
 cd Open-VoiceWove
 ```
 
@@ -142,4 +142,4 @@ Open-VoiceWove/
 
 ## 📄 许可证
 
-[MIT](LICENSE) © ItusiAI
+[MIT](LICENSE) © itzhouq · 基于 [ItusiAI/Open-VoiceCanvas](https://github.com/ItusiAI/Open-VoiceCanvas) (MIT) 二次开发

@@ -592,7 +592,7 @@ please_login_again: 'Vui lòng đăng nhập lại và thử lại',
 session_fixed: 'Trạng thái đăng nhập đã được khôi phục',
 please_continue: 'Vui lòng tiếp tục thao tác của bạn',
 
-join_discord_community: 'Tham gia cộng đồng Discord của chúng tôi',
+join_discord_community: 'Tham gia cộng đồng X của chúng tôi',
 community_support: 'Nhận hỗ trợ từ cộng đồng',
 
 // Clone Voice FAQ

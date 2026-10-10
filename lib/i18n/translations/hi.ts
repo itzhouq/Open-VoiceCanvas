@@ -593,7 +593,7 @@ please_login_again: 'कृपया फिर से लॉगिन करे�
 session_fixed: 'लॉगिन स्थिति पुनर्स्थापित की गई है',
 please_continue: 'कृपया अपनी क्रिया जारी रखें',
 
-join_discord_community: 'हमारी Discord समुदाय में शामिल हों',
+join_discord_community: 'हमारी X समुदाय में शामिल हों',
 community_support: 'समुदाय का समर्थन प्राप्त करें',
 
 // Clone Voice FAQ

@@ -610,7 +610,7 @@ export const zh: TranslationType = {
   error_fetching_user: '获取用户信息错误',
   
   // Discord community
-  join_discord_community: '加入我们的Discord社区',
+  join_discord_community: '加入我们的X社区',
   
   // Back to top
   back_to_top: '返回顶部',

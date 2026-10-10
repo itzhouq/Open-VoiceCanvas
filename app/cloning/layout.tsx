@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'AI Voice Cloning - Professional Voice Replication & Customization Service',
   description: 'Clone and customize your voice using advanced AI technology. Support for multiple languages including English, Chinese, Japanese, and Korean. Features real-time preview and personalization options. Perfect for voiceovers, education, and podcasting.',
-  metadataBase: new URL('https://voicewove.com'),
+  metadataBase: new URL('https://voicewove.org'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Voice Cloning - Professional Voice Replication & Customization Service',
     description: 'Clone and customize your voice using advanced AI technology. Support for multiple languages including English, Chinese, Japanese, and Korean. Features real-time preview and personalization options.',
-    url: 'https://voicewove.com/cloning',
+    url: 'https://voicewove.org/cloning',
     siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicewove.com/images/cloning-og.png',
+        url: 'https://voicewove.org/images/cloning-og.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove Cloning Interface',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630
     },
-    creator: '@VoiceWove',
-    site: '@VoiceWove'
+    creator: '@itzhouq2026',
+    site: '@itzhouq2026'
   },
   other: {
-    'og:image:secure_url': 'https://voicewove.com/images/cloning-og.png',
+    'og:image:secure_url': 'https://voicewove.org/images/cloning-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicewove.com',
-    'article:publisher': 'https://voicewove.com'
+    'article:author': 'https://voicewove.org',
+    'article:publisher': 'https://voicewove.org'
   }
 };
 

@@ -595,7 +595,7 @@ please_login_again: 'Παρακαλώ συνδεθείτε ξανά και δο�
 session_fixed: 'Η κατάσταση σύνδεσης έχει αποκατασταθεί',
 please_continue: 'Παρακαλώ συνεχίστε την ενέργειά σας',
 
-join_discord_community: 'Συνδεθείτε στην κοινότητα Discord μας',
+join_discord_community: 'Συνδεθείτε στην κοινότητα X μας',
 community_support: 'Λάβετε υποστήριξη από την κοινότητα μας',
 
 // Clone Voice FAQ

@@ -593,7 +593,7 @@ please_login_again: 'Kérlek, jelentkezz be újra, és próbáld újra',
 session_fixed: 'A bejelentkezési állapot helyreállt',
 please_continue: 'Kérlek, folytasd a műveleted',
 
-join_discord_community: 'Csatlakozzunk a Discord közösségünkhöz',
+join_discord_community: 'Csatlakozzunk a X közösségünkhöz',
 community_support: 'Szerezd meg a közösség támogatását',
 
 // Clone Voice FAQ

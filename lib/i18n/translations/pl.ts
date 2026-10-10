@@ -592,7 +592,7 @@ please_login_again: 'Zaloguj się ponownie i spróbuj jeszcze raz',
 session_fixed: 'Status logowania został przywrócony',
 please_continue: 'Kontynuuj swoje działanie',
 
-join_discord_community: 'Dołącz do naszej społeczności Discord',
+join_discord_community: 'Dołącz do naszej społeczności X',
 community_support: 'Otrzymaj wsparcie społeczności',
 
 // Clone Voice FAQ

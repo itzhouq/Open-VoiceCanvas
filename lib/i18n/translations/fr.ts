@@ -593,7 +593,7 @@ please_login_again: 'Veuillez vous reconnecter et réessayer',
 session_fixed: 'L\'état de connexion a été rétabli',
 please_continue: 'Veuillez continuer votre opération',
 
-join_discord_community: 'Rejoignez notre communauté Discord',
+join_discord_community: 'Rejoignez notre communauté X',
 community_support: 'Obtenir le support de la communauté',
 
 // Clone Voice FAQ

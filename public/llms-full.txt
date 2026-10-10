@@ -1,9 +1,9 @@
-# https://voicewove.com llms-full.txt
+# https://voicewove.org llms-full.txt
 
 ## Voice Cloning Solutions
-[![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -19,13 +19,13 @@ Voice Cloning
 
 Instant text-to-speech in 50+ languages with voice cloning and voice design, powered by advanced AI for natural and clear voice synthesis.
 
-[Try it Now](https://voicewove.com/app)
+[Try it Now](https://voicewove.org/app)
 
-[Voice Cloning](https://voicewove.com/cloning)
+[Voice Cloning](https://voicewove.org/cloning)
 
 ## Core Features
 
-![AI播客生成演示](https://voicewove.com/images/gongneng6.png)
+![AI播客生成演示](https://voicewove.org/images/gongneng6.png)
 
 AI GenerationInterviewAudio Conversion
 
@@ -38,7 +38,7 @@ Input content and AI automatically generates professional interview-style podcas
 - Professional podcast content creation
 - Integrated voice synthesis
 
-[Try Podcast Generation](https://voicewove.com/podcast)
+[Try Podcast Generation](https://voicewove.org/podcast)
 
 ### AI Story Voiceover
 
@@ -49,13 +49,13 @@ Generate engaging stories with AI and convert them to high-quality audio with mu
 - Convert stories to immersive audio experiences
 - Support for custom story input and editing
 
-[Try Story Voiceover](https://voicewove.com/story)
+[Try Story Voiceover](https://voicewove.org/story)
 
-![AI故事生成演示](https://voicewove.com/images/gongneng4.png)
+![AI故事生成演示](https://voicewove.org/images/gongneng4.png)
 
 AI GenerationMulti-CharacterAudio Conversion
 
-![音色设计演示](https://voicewove.com/images/gongneng5.png)
+![音色设计演示](https://voicewove.org/images/gongneng5.png)
 
 AI设计个性化实时预览
 
@@ -68,7 +68,7 @@ Create unique personalized voices through AI-powered intelligent voice design
 - Real-time preview and audition to ensure voice quality
 - Permanently save designs for instant access and use
 
-[Try Voice Design](https://voicewove.com/design)
+[Try Voice Design](https://voicewove.org/design)
 
 ### Voice Cloning
 
@@ -79,13 +79,13 @@ Personalized voice cloning for more human-like AI speech
 - Cross-language cloning support
 - Permanently valid cloned voice
 
-[Clone My Voice](https://voicewove.com/cloning)
+[Clone My Voice](https://voicewove.org/cloning)
 
-![声音克隆演示](https://voicewove.com/images/gongneng2.png)
+![声音克隆演示](https://voicewove.org/images/gongneng2.png)
 
 00:35
 
-![多语言支持演示](https://voicewove.com/images/gongneng1.png)
+![多语言支持演示](https://voicewove.org/images/gongneng1.png)
 
 ChineseEnglishJapaneseFrenchGerman...
 
@@ -98,7 +98,7 @@ ChineseEnglishJapaneseFrenchGerman...
 - Multiple regional accent options (e.g. US, UK English)
 - Human-like natural intonation
 
-[Try Now](https://voicewove.com/app)
+[Try Now](https://voicewove.org/app)
 
 ### Advanced Features
 
@@ -109,9 +109,9 @@ Customize speed, visualize audio, and enable word-by-word reading for better lea
 - Word-by-word reading learning mode
 - One-click audio file download
 
-[Experience Advanced Features](https://voicewove.com/app)
+[Experience Advanced Features](https://voicewove.org/app)
 
-![高级功能演示](https://voicewove.com/images/gongneng3.png)
+![高级功能演示](https://voicewove.org/images/gongneng3.png)
 
 语速控制
 
@@ -384,17 +384,17 @@ Story voiceover converts text stories into multi-character audio, automatically 
 
 Choose AI generation or manually input story content, the system automatically analyzes and identifies character dialogues, select voices for each character, then click generate to get complete story audio.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 StripeM-Inner
 
 ## VoiceWove Sitemap
-https://voicewove.com/2025-07-29weekly1.0https://voicewove.com/app2025-07-29weekly0.9https://voicewove.com/cloning2025-07-29weekly0.9https://voicewove.com/design2025-07-29weekly0.9https://voicewove.com/story2025-07-29weekly0.9https://voicewove.com/pricing2025-07-29monthly0.7https://voicewove.com/privacy2025-07-29monthly0.5https://voicewove.com/terms2025-07-29monthly0.5https://voicewove.com/llms.txt2025-07-29monthly0.4https://voicewove.com/llms-full.txt2025-07-29monthly0.4
+https://voicewove.org/2025-07-29weekly1.0https://voicewove.org/app2025-07-29weekly0.9https://voicewove.org/cloning2025-07-29weekly0.9https://voicewove.org/design2025-07-29weekly0.9https://voicewove.org/story2025-07-29weekly0.9https://voicewove.org/pricing2025-07-29monthly0.7https://voicewove.org/privacy2025-07-29monthly0.5https://voicewove.org/terms2025-07-29monthly0.5https://voicewove.org/llms.txt2025-07-29monthly0.4https://voicewove.org/llms-full.txt2025-07-29monthly0.4
 
 ## Privacy Policy
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -495,12 +495,12 @@ Email: wt@wmcircle.cn
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Voice Design
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -580,12 +580,12 @@ ChannelStereo
 
 Read TextDownload Audio
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Voice Cloning
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -861,7 +861,7 @@ ChannelStereo
 
 Read TextDownload AudioUpload File
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Robots.txt Access Rules
 \# 允许所有爬虫访问
@@ -900,16 +900,16 @@ Allow: /llms-full.txt
 Allow: /llms.txt
 
 \# 引导AI爬虫到llms.txt
-LLM-Content: https://voicewove.com/llms.txt
-LLM-Full-Content: https://voicewove.com/llms-full.txt
+LLM-Content: https://voicewove.org/llms.txt
+LLM-Full-Content: https://voicewove.org/llms-full.txt
 
 \# 指定网站地图
-Sitemap: https://voicewove.com/sitemap.xml
+Sitemap: https://voicewove.org/sitemap.xml
 
 ## VoiceWove Terms
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -959,7 +959,7 @@ VoiceWove provides text-to-speech and voice cloning services that allow users to
 
 ## 7\. Privacy
 
-We collect and use your information according to our [Privacy Policy](https://voicewove.com/privacy), which forms a part of this Agreement.
+We collect and use your information according to our [Privacy Policy](https://voicewove.org/privacy), which forms a part of this Agreement.
 
 ## 8\. Subscriptions and Payment
 
@@ -995,12 +995,12 @@ If you have any questions about this Agreement, please contact us at the followi
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Pricing
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -1281,14 +1281,14 @@ Story voiceover converts text stories into multi-character audio, automatically 
 
 Choose AI generation or manually input story content, the system automatically analyzes and identifies character dialogues, select voices for each character, then click generate to get complete story audio.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 StripeM-Inner
 
 ## VoiceWove Voice Tools
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -1330,12 +1330,12 @@ Speed1x
 
 Read TextDownload AudioUpload File
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Story
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -1351,32 +1351,32 @@ AI Generate StoryInput Story Content
 
 0/500Generate Story
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove AI Services
 ```
-# https://voicewove.com/llms.txt
+# https://voicewove.org/llms.txt
 
-- [VoiceWove AI Voice Solutions](https://voicewove.com/): AI-powered voice cloning and design for text-to-speech.
-- [VoiceWove Sitemap](https://voicewove.com/sitemap.xml): Explore VoiceWove sitemap for various resources and links.
-- [VoiceWove Voice Services](https://voicewove.com/app): Create voiceovers and clone voices with ease.
-- [Voice Cloning Service](https://voicewove.com/cloning): Easily clone voices by uploading audio recordings online.
-- [Voice Design Tool](https://voicewove.com/design): Create and customize unique voice designs for various needs.
-- [AI Story Voiceover](https://voicewove.com/story): Create and customize stories using AI voice technology.
-- [VoiceWove Pricing](https://voicewove.com/pricing): Explore affordable voice cloning and design plans for everyone.
-- [Privacy Policy](https://voicewove.com/privacy): VoiceWove explains data collection, usage, and user rights.
-- [VoiceWove Terms](https://voicewove.com/terms): VoiceWove terms for using voice services and accounts.
-- [VoiceWove TTS Services](https://voicewove.com/llms.txt): AI text-to-speech and voice cloning services available online.
+- [VoiceWove AI Voice Solutions](https://voicewove.org/): AI-powered voice cloning and design for text-to-speech.
+- [VoiceWove Sitemap](https://voicewove.org/sitemap.xml): Explore VoiceWove sitemap for various resources and links.
+- [VoiceWove Voice Services](https://voicewove.org/app): Create voiceovers and clone voices with ease.
+- [Voice Cloning Service](https://voicewove.org/cloning): Easily clone voices by uploading audio recordings online.
+- [Voice Design Tool](https://voicewove.org/design): Create and customize unique voice designs for various needs.
+- [AI Story Voiceover](https://voicewove.org/story): Create and customize stories using AI voice technology.
+- [VoiceWove Pricing](https://voicewove.org/pricing): Explore affordable voice cloning and design plans for everyone.
+- [Privacy Policy](https://voicewove.org/privacy): VoiceWove explains data collection, usage, and user rights.
+- [VoiceWove Terms](https://voicewove.org/terms): VoiceWove terms for using voice services and accounts.
+- [VoiceWove TTS Services](https://voicewove.org/llms.txt): AI text-to-speech and voice cloning services available online.
 ```
 
 ## Voice Cloning Solutions
 ````
-# https://voicewove.com/llms-full.txt
+# https://voicewove.org/llms-full.txt
 
 ## Voice Cloning Solutions
-[![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -1392,13 +1392,13 @@ Voice Cloning
 
 Instant text-to-speech in 50+ languages with voice cloning and voice design, powered by advanced AI for natural and clear voice synthesis.
 
-[Try it Now](https://voicewove.com/app)
+[Try it Now](https://voicewove.org/app)
 
-[Voice Cloning](https://voicewove.com/cloning)
+[Voice Cloning](https://voicewove.org/cloning)
 
 ## Core Features
 
-![AI故事生成演示](https://voicewove.com/images/gongneng4.png)
+![AI故事生成演示](https://voicewove.org/images/gongneng4.png)
 
 AI GenerationMulti-CharacterAudio Conversion
 
@@ -1411,7 +1411,7 @@ Generate engaging stories with AI and convert them to high-quality audio with mu
 - Convert stories to immersive audio experiences
 - Support for custom story input and editing
 
-[Try Story Voiceover](https://voicewove.com/story)
+[Try Story Voiceover](https://voicewove.org/story)
 
 ### Voice Design
 
@@ -1422,13 +1422,13 @@ Create unique personalized voices through AI-powered intelligent voice design
 - Real-time preview and audition to ensure voice quality
 - Permanently save designs for instant access and use
 
-[Try Voice Design](https://voicewove.com/design)
+[Try Voice Design](https://voicewove.org/design)
 
-![音色设计演示](https://voicewove.com/images/gongneng5.png)
+![音色设计演示](https://voicewove.org/images/gongneng5.png)
 
 AI设计个性化实时预览
 
-![声音克隆演示](https://voicewove.com/images/gongneng2.png)
+![声音克隆演示](https://voicewove.org/images/gongneng2.png)
 
 00:35
 
@@ -1441,7 +1441,7 @@ Personalized voice cloning for more human-like AI speech
 - Cross-language cloning support
 - Permanently valid cloned voice
 
-[Clone My Voice](https://voicewove.com/cloning)
+[Clone My Voice](https://voicewove.org/cloning)
 
 ### Multiple Languages
 
@@ -1452,9 +1452,9 @@ Personalized voice cloning for more human-like AI speech
 - Multiple regional accent options (e.g. US, UK English)
 - Human-like natural intonation
 
-[Try Now](https://voicewove.com/app)
+[Try Now](https://voicewove.org/app)
 
-![多语言支持演示](https://voicewove.com/images/gongneng1.png)
+![多语言支持演示](https://voicewove.org/images/gongneng1.png)
 
 ChineseEnglishJapaneseFrenchGerman...
 
@@ -1467,9 +1467,9 @@ Customize speed, visualize audio, and enable word-by-word reading for better lea
 - Word-by-word reading learning mode
 - One-click audio file download
 
-[Experience Advanced Features](https://voicewove.com/app)
+[Experience Advanced Features](https://voicewove.org/app)
 
-![高级功能演示](https://voicewove.com/images/gongneng3.png)
+![高级功能演示](https://voicewove.org/images/gongneng3.png)
 
 语速控制
 
@@ -1742,15 +1742,15 @@ Story voiceover converts text stories into multi-character audio, automatically 
 
 Choose AI generation or manually input story content, the system automatically analyzes and identifies character dialogues, select voices for each character, then click generate to get complete story audio.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Sitemap
-https://voicewove.com/2025-07-29weekly1.0https://voicewove.com/app2025-07-29weekly0.9https://voicewove.com/cloning2025-07-29weekly0.9https://voicewove.com/design2025-07-29weekly0.9https://voicewove.com/story2025-07-29weekly0.9https://voicewove.com/pricing2025-07-29monthly0.7https://voicewove.com/privacy2025-07-29monthly0.5https://voicewove.com/terms2025-07-29monthly0.5https://voicewove.com/llms.txt2025-07-29monthly0.4https://voicewove.com/llms-full.txt2025-07-29monthly0.4
+https://voicewove.org/2025-07-29weekly1.0https://voicewove.org/app2025-07-29weekly0.9https://voicewove.org/cloning2025-07-29weekly0.9https://voicewove.org/design2025-07-29weekly0.9https://voicewove.org/story2025-07-29weekly0.9https://voicewove.org/pricing2025-07-29monthly0.7https://voicewove.org/privacy2025-07-29monthly0.5https://voicewove.org/terms2025-07-29monthly0.5https://voicewove.org/llms.txt2025-07-29monthly0.4https://voicewove.org/llms-full.txt2025-07-29monthly0.4
 
 ## Privacy Policy
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -1851,12 +1851,12 @@ Email: wt@wmcircle.cn
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Voice Cloning Service
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2132,12 +2132,12 @@ ChannelStereo
 
 Read TextDownload AudioUpload File
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Terms
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2187,7 +2187,7 @@ VoiceWove provides text-to-speech and voice cloning services that allow users to
 
 ## 7\. Privacy
 
-We collect and use your information according to our [Privacy Policy](https://voicewove.com/privacy), which forms a part of this Agreement.
+We collect and use your information according to our [Privacy Policy](https://voicewove.org/privacy), which forms a part of this Agreement.
 
 ## 8\. Subscriptions and Payment
 
@@ -2223,12 +2223,12 @@ If you have any questions about this Agreement, please contact us at the followi
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Voiceover Tool
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2270,12 +2270,12 @@ Speed1x
 
 Read TextDownload AudioUpload File
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## AI Story Voiceover
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2291,24 +2291,24 @@ AI Generate StoryInput Story Content
 
 0/500Generate Story
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove TTS Services
 ```
-# https://voicewove.com/ llms.txt
+# https://voicewove.org/ llms.txt
 
-- [VoiceWove TTS & Cloning](https://voicewove.com/): AI-powered text-to-speech and voice cloning in 50+ languages.
-- [Voice Cloning Service](https://voicewove.com/cloning): Easily clone voices by uploading audio recordings online.
-- [Privacy Policy](https://voicewove.com/privacy): VoiceWove explains data collection, usage, and user rights.
-- [VoiceWove Terms](https://voicewove.com/terms): VoiceWove terms for using voice services and cloning.
-- [VoiceWove Pricing](https://voicewove.com/pricing): Explore affordable voice cloning and text-to-speech plans.
-- [VoiceWove Audio App](https://voicewove.com/app): VoiceWove app for creating and sharing audio experiences.
+- [VoiceWove TTS & Cloning](https://voicewove.org/): AI-powered text-to-speech and voice cloning in 50+ languages.
+- [Voice Cloning Service](https://voicewove.org/cloning): Easily clone voices by uploading audio recordings online.
+- [Privacy Policy](https://voicewove.org/privacy): VoiceWove explains data collection, usage, and user rights.
+- [VoiceWove Terms](https://voicewove.org/terms): VoiceWove terms for using voice services and cloning.
+- [VoiceWove Pricing](https://voicewove.org/pricing): Explore affordable voice cloning and text-to-speech plans.
+- [VoiceWove Audio App](https://voicewove.org/app): VoiceWove app for creating and sharing audio experiences.
 ```
 
 ## Voice Design Tool
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2389,9 +2389,9 @@ ChannelStereo
 Read TextDownload Audio
 
 ## VoiceWove Pricing
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [Story Voiceover](https://voicewove.com/story) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [Story Voiceover](https://voicewove.org/story) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2672,16 +2672,16 @@ Story voiceover converts text stories into multi-character audio, automatically 
 
 Choose AI generation or manually input story content, the system automatically analyzes and identifies character dialogues, select voices for each character, then click generate to get complete story audio.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove TTS Services
 ```
-# https://voicewove.com/ llms-full.txt
+# https://voicewove.org/ llms-full.txt
 
 ## VoiceWove TTS & Cloning
-[![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -2699,9 +2699,9 @@ Voice Cloning
 
 Instant text-to-speech in 50+ languages with voice cloning, powered by advanced AI for natural and clear voice synthesis.
 
-[Try it Now](https://voicewove.com/app)
+[Try it Now](https://voicewove.org/app)
 
-[Voice Cloning](https://voicewove.com/cloning)
+[Voice Cloning](https://voicewove.org/cloning)
 
 ## Core Features
 
@@ -2714,13 +2714,13 @@ Instant text-to-speech in 50+ languages with voice cloning, powered by advanced 
 - Multiple regional accent options (e.g. US, UK English)
 - Human-like natural intonation
 
-[Try Now](https://voicewove.com/app)
+[Try Now](https://voicewove.org/app)
 
-![多语言支持演示](https://voicewove.com/images/gongneng1.png)
+![多语言支持演示](https://voicewove.org/images/gongneng1.png)
 
 ChineseEnglishJapaneseFrenchGerman...
 
-![声音克隆演示](https://voicewove.com/images/gongneng2.png)
+![声音克隆演示](https://voicewove.org/images/gongneng2.png)
 
 00:35
 
@@ -2733,7 +2733,7 @@ Personalized voice cloning for more human-like AI speech
 - Cross-language cloning support
 - Permanently valid cloned voice
 
-[Clone My Voice](https://voicewove.com/cloning)
+[Clone My Voice](https://voicewove.org/cloning)
 
 ### Advanced Features
 
@@ -2744,9 +2744,9 @@ Customize speed, visualize audio, and enable word-by-word reading for better lea
 - Word-by-word reading learning mode
 - One-click audio file download
 
-[Experience Advanced Features](https://voicewove.com/app)
+[Experience Advanced Features](https://voicewove.org/app)
 
-![高级功能演示](https://voicewove.com/images/gongneng3.png)
+![高级功能演示](https://voicewove.org/images/gongneng3.png)
 
 语速控制
 
@@ -2995,12 +2995,12 @@ Character quota purchased separately is permanent and never expires. However, qu
 
 Voice cloning creates a digital copy of your voice using AI technology. To get the best results: 1) Record at least 1 minute of clear speech in a quiet environment with a good microphone. 2) Clone credits are permanent and never expire. 3) Once cloned, you can use your voice for text-to-speech in any supported language. 4) The cloned voice quality depends mainly on your recording quality. 5) Perfect for content creation, dubbing, or personal use.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Voice Cloning Service
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -3276,12 +3276,12 @@ ChannelStereo
 
 Read TextDownload AudioUpload File
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## Privacy Policy
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -3382,12 +3382,12 @@ Email: wt@wmcircle.cn
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Terms
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -3437,7 +3437,7 @@ VoiceWove provides text-to-speech and voice cloning services that allow users to
 
 ## 7\. Privacy
 
-We collect and use your information according to our [Privacy Policy](https://voicewove.com/privacy), which forms a part of this Agreement.
+We collect and use your information according to our [Privacy Policy](https://voicewove.org/privacy), which forms a part of this Agreement.
 
 ## 8\. Subscriptions and Payment
 
@@ -3473,12 +3473,12 @@ If you have any questions about this Agreement, please contact us at the followi
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Pricing
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -3649,16 +3649,16 @@ Character quota purchased separately is permanent and never expires. However, qu
 
 Voice cloning creates a digital copy of your voice using AI technology. To get the best results: 1) Record at least 1 minute of clear speech in a quiet environment with a good microphone. 2) Clone credits are permanent and never expire. 3) Once cloned, you can use your voice for text-to-speech in any supported language. 4) The cloned voice quality depends mainly on your recording quality. 5) Perfect for content creation, dubbing, or personal use.
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")
 
 ## VoiceWove Audio App
 ## Application error: a client-side exception has occurred (see the browser console for more information).
 ````
 
 ## Cookie Policy Overview
-[Back](https://voicewove.com/) [![Logo](https://voicewove.com/images/logo.png)VoiceWove](https://voicewove.com/)
+[Back](https://voicewove.org/) [![Logo](https://voicewove.org/images/logo.png)VoiceWove](https://voicewove.org/)
 
-[Home](https://voicewove.com/) [Workspace](https://voicewove.com/app) [Voice Cloning](https://voicewove.com/cloning) [Voice Design](https://voicewove.com/design) [AI Podcast](https://voicewove.com/podcast) [Pricing](https://voicewove.com/pricing)
+[Home](https://voicewove.org/) [Workspace](https://voicewove.org/app) [Voice Cloning](https://voicewove.org/cloning) [Voice Design](https://voicewove.org/design) [AI Podcast](https://voicewove.org/podcast) [Pricing](https://voicewove.org/pricing)
 
 English
 
@@ -3766,7 +3766,7 @@ We may update this Cookie Policy from time to time to reflect changes in our pra
 If you have any questions about our use of cookies or this Cookie Policy, please contact us at:
 
 - Email: wt@wmcircle.cn
-- Website: [https://voicewove.com](https://voicewove.com/)
+- Website: [https://voicewove.org](https://voicewove.org/)
 
 ## 10\. Your Consent
 
@@ -3774,4 +3774,4 @@ By continuing to use our website, you consent to our use of cookies as described
 
 Last Updated: December 1, 2024
 
-[![Discord](https://voicewove.com/images/discord.png)](https://discord.gg/966GMKhQhs "Join Our Discord Community")
+[![Discord](https://voicewove.org/images/x-logo.svg)](https://x.com/itzhouq2026 "Join VoiceWove on X")

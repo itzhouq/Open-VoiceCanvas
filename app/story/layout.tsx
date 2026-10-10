@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
   description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences. Support multiple character voices and advanced voice synthesis technology.',
-  metadataBase: new URL('https://voicewove.com'),
+  metadataBase: new URL('https://voicewove.org'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
     description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences.',
-    url: 'https://voicewove.com/story',
+    url: 'https://voicewove.org/story',
     siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicewove.com/images/story-og.png',
+        url: 'https://voicewove.org/images/story-og.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove Story Interface',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630
     },
-    creator: '@VoiceWove',
-    site: '@VoiceWove'
+    creator: '@itzhouq2026',
+    site: '@itzhouq2026'
   },
   other: {
-    'og:image:secure_url': 'https://voicewove.com/images/story-og.png',
+    'og:image:secure_url': 'https://voicewove.org/images/story-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicewove.com',
-    'article:publisher': 'https://voicewove.com'
+    'article:author': 'https://voicewove.org',
+    'article:publisher': 'https://voicewove.org'
   }
 };
 
