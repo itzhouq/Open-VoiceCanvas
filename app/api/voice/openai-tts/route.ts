@@ -5,6 +5,7 @@ import { openai, TTS_MODEL } from '@/lib/openai';
 import { createId } from '@paralleldrive/cuid2';
 import { rateLimit } from '@/lib/rate-limit';
 import { prisma } from '@/lib/prisma';
+import { assertSynthesisAccess } from '@/lib/quota';
 
 export const dynamic = 'force-dynamic';
 
@@ -78,6 +79,15 @@ export async function POST(request: Request) {
     if (!text) {
       console.log('No text provided');
       return NextResponse.json({ error: ERROR_MESSAGES.noText }, { status: 400 });
+    }
+
+    // 服务端门禁：登录强制 + 剩余配额预检（商业化）
+    const access = await assertSynthesisAccess(
+      session?.user?.email && session.user.email !== 'anonymous' ? session.user.email : null,
+      String(text).length
+    );
+    if (!access.ok) {
+      return NextResponse.json({ error: access.error }, { status: access.status });
     }
 
     // 验证声音选项

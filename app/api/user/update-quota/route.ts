@@ -20,6 +20,15 @@ export async function POST(req: Request) {
     const { usedCharacters } = await req.json();
     console.log('使用字符数：', usedCharacters);
 
+    // 服务端校验上报值：必须是 1~100000 之间的有限数字，防止恶意刷量/注入非法值
+    const amount = Number(usedCharacters);
+    if (!Number.isFinite(amount) || !Number.isInteger(amount) || amount <= 0 || amount > 100000) {
+      return NextResponse.json(
+        { error: '无效的字符用量' },
+        { status: 400 }
+      );
+    }
+
     // 查找用户
     const user = await prisma.users.findUnique({
       where: { email: session.user.email },
@@ -53,7 +62,7 @@ export async function POST(req: Request) {
       where: { userId: user.id },
       data: {
         usedCharacters: {
-          increment: usedCharacters
+          increment: amount
         },
         lastUpdated: new Date()
       }

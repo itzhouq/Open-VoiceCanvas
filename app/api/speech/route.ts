@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { rateLimit } from '@/lib/rate-limit';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
+import { assertSynthesisAccess } from '@/lib/quota';
 
 export const dynamic = 'force-dynamic';
 
@@ -62,6 +63,12 @@ export async function POST(req: Request) {
     // 验证必需参数
     if (!text) {
       return NextResponse.json({ error: '文本内容不能为空' }, { status: 400 });
+    }
+
+    // 服务端门禁：登录强制 + 剩余配额预检（商业化）
+    const access = await assertSynthesisAccess(session?.user?.email, String(text).length);
+    if (!access.ok) {
+      return NextResponse.json({ error: access.error }, { status: access.status });
     }
 
     // 检查参数有效性

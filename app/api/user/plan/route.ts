@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
 import { authOptions } from '@/lib/auth';
+import { TRIAL_TEMPORARY_QUOTA, trialExpiry } from '@/lib/quota';
 
 export async function GET() {
   try {
@@ -112,7 +113,7 @@ export async function GET() {
       }
     }
 
-    // 如果没有找到配额记录，创建一个默认的
+    // 如果没有找到配额记录，创建一个默认的（试用参数可通过环境变量配置）
     if (!characterQuota) {
       console.log('创建默认配额...');
       characterQuota = await prisma.characterQuota.create({
@@ -120,9 +121,9 @@ export async function GET() {
           id: crypto.randomUUID(),
           userId: user.id,
           permanentQuota: 0,
-          temporaryQuota: 1000, // 保持默认1000字符配额
+          temporaryQuota: TRIAL_TEMPORARY_QUOTA,
           usedCharacters: 0,
-          quotaExpiry: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7天后过期
+          quotaExpiry: trialExpiry(),
           lastUpdated: new Date(),
         },
       });
@@ -138,7 +139,7 @@ export async function GET() {
           userId: user.id,
           planType: 'trial', // 保持默认trial类型
           startDate: new Date(),
-          endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7天试用期
+          endDate: trialExpiry(), // 试用期
           status: 'active',
         },
       });

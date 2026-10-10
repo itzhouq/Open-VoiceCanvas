@@ -6,6 +6,7 @@ import type { LanguageCode, VoiceId } from '@aws-sdk/client-polly';
 import { pollyClient } from '@/lib/aws-config';
 import { rateLimit } from '@/lib/rate-limit';
 import { languageCodeMap } from '@/lib/polly-service';
+import { assertSynthesisAccess } from '@/lib/quota';
 
 export const dynamic = 'force-dynamic';
 
@@ -62,6 +63,12 @@ export async function POST(req: Request) {
         { error: `文本长度不能超过 ${MAX_TEXT_LENGTH} 字符` },
         { status: 400 }
       );
+    }
+
+    // 服务端门禁：登录强制 + 剩余配额预检（商业化）
+    const access = await assertSynthesisAccess(session?.user?.email, text.length);
+    if (!access.ok) {
+      return NextResponse.json({ error: access.error }, { status: access.status });
     }
 
     if (!voiceId || typeof voiceId !== 'string') {
