@@ -31,7 +31,7 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
     // 探测服务端可用的 OAuth provider（NextAuth 内置端点）
     fetch('/api/auth/providers')
       .then(res => (res.ok ? res.json() : {}))
-      .then(providers => {
+      .then((providers: Record<string, unknown>) => {
         setOauthAvailable({
           github: !!providers?.github,
           google: !!providers?.google,
