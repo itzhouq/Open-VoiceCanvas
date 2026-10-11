@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createUser, getUserByEmail } from '@/lib/db';
+import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
 import { z } from 'zod';
 import { createVerificationTokenAndSendEmail } from '@/lib/verification';
@@ -51,20 +52,34 @@ export async function POST(req: Request) {
       throw new Error('用户创建失败');
     }
 
+    // 邮件验证开关：EMAIL_VERIFICATION_ENABLED=true 时走验证邮件流程；
+    // 未开启（如 Resend 域名未验证期间）直接激活账号，避免注册漏斗死胡同
+    let emailSent = false;
+    if (process.env.EMAIL_VERIFICATION_ENABLED === 'true') {
+      try {
+        console.log('创建验证令牌并发送验证邮件...');
+        await createVerificationTokenAndSendEmail(user.id, email, name);
+        emailSent = true;
+        console.log('验证邮件发送成功');
+      } catch (emailError) {
+        console.error('发送验证邮件失败:', emailError);
+      }
+    } else {
+      try {
+        await prisma.users.update({
+          where: { id: user.id },
+          data: { status: 'active', emailVerified: new Date() },
+        });
+        console.log('邮件验证未开启，账号已直接激活');
+      } catch (activateError) {
+        console.error('直接激活失败:', activateError);
+      }
+    }
+
     // 验证用户是否真的创建成功
     const createdUser = await getUserByEmail(email);
     if (!createdUser) {
       throw new Error('用户创建后无法查询到');
-    }
-
-    try {
-      // 创建验证令牌并发送验证邮件
-      console.log('创建验证令牌并发送邮件...');
-      await createVerificationTokenAndSendEmail(user.id, email, name);
-      console.log('验证邮件发送成功');
-    } catch (emailError) {
-      console.error('发送验证邮件失败:', emailError);
-      // 即使发送邮件失败，用户也已经创建，继续返回成功
     }
 
     // 发送Discord通知
@@ -89,14 +104,18 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json(
-      { 
-        message: '注册成功，请查收验证邮件激活账户',
+      {
+        message: emailSent
+          ? '注册成功，请查收验证邮件激活账户'
+          : '注册成功，账号已激活，请直接登录',
         user: {
           id: user.id,
           email: user.email,
           name: user.name,
         },
-        redirect: '/auth/login?registered=true&verification=email'
+        redirect: emailSent
+          ? '/auth/login?registered=true&verification=email'
+          : '/auth/login?registered=true'
       },
       { status: 201 }
     );
