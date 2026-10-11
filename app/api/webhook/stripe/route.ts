@@ -4,9 +4,19 @@ import Stripe from 'stripe';
 import { prisma } from '@/lib/prisma';
 import { sendSubscriptionNotification } from '@/lib/discord-service';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-06-30.basil',
-});
+// 惰性初始化：未配置 STRIPE_SECRET_KEY 时不阻断构建（支付切换 Creem 后此文件将被替换）
+let stripe: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripe) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error('STRIPE_SECRET_KEY is not configured');
+    }
+    stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-06-30.basil',
+    });
+  }
+  return stripe;
+}
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
@@ -29,7 +39,7 @@ export async function POST(req: Request) {
       }
 
       try {
-        event = stripe.webhooks.constructEvent(body, sig, endpointSecret);
+        event = getStripe().webhooks.constructEvent(body, sig, endpointSecret);
       } catch (err) {
         console.error('Webhook 签名验证失败:', err);
         return NextResponse.json(
@@ -103,7 +113,7 @@ export async function POST(req: Request) {
           }
           console.log('找到用户:', user.id, '邮箱:', user.email, '当前订阅状态:', user.subscription);
 
-          const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+          const lineItems = await getStripe().checkout.sessions.listLineItems(session.id);
           console.log('订单项目:', JSON.stringify(lineItems, null, 2));
           
           const priceId = lineItems.data[0]?.price?.id;
@@ -375,7 +385,7 @@ export async function POST(req: Request) {
           const subscription = event.data.object as Stripe.Subscription;
           
           // 查找用户
-          const metadataItems = await stripe.subscriptionItems.list({
+          const metadataItems = await getStripe().subscriptionItems.list({
             subscription: subscription.id,
             limit: 1,
           });
@@ -387,7 +397,7 @@ export async function POST(req: Request) {
           if (metadataItems.data.length > 0) {
             const priceId = metadataItems.data[0].price?.id;
             if (priceId) {
-              const prices = await stripe.prices.retrieve(priceId);
+              const prices = await getStripe().prices.retrieve(priceId);
               userId = prices?.metadata?.userId;
               userEmail = prices?.metadata?.userEmail;
             }
@@ -414,7 +424,7 @@ export async function POST(req: Request) {
           // 如果通过元数据没找到用户，尝试使用客户邮箱
           if (!user) {
             const customerId = subscription.customer as string;
-            const customer = await stripe.customers.retrieve(customerId) as Stripe.Customer;
+            const customer = await getStripe().customers.retrieve(customerId) as Stripe.Customer;
             const email = customer.email;
             
             if (email) {
@@ -445,7 +455,7 @@ export async function POST(req: Request) {
           const subscription = event.data.object as Stripe.Subscription;
           
           // 查找用户
-          const metadataItems = await stripe.subscriptionItems.list({
+          const metadataItems = await getStripe().subscriptionItems.list({
             subscription: subscription.id,
             limit: 1,
           });
@@ -457,7 +467,7 @@ export async function POST(req: Request) {
           if (metadataItems.data.length > 0) {
             const priceId = metadataItems.data[0].price?.id;
             if (priceId) {
-              const prices = await stripe.prices.retrieve(priceId);
+              const prices = await getStripe().prices.retrieve(priceId);
               userId = prices?.metadata?.userId;
               userEmail = prices?.metadata?.userEmail;
             }
@@ -484,7 +494,7 @@ export async function POST(req: Request) {
           // 如果通过元数据没找到用户，尝试使用客户邮箱
           if (!user) {
             const customerId = subscription.customer as string;
-            const customer = await stripe.customers.retrieve(customerId) as Stripe.Customer;
+            const customer = await getStripe().customers.retrieve(customerId) as Stripe.Customer;
             const email = customer.email;
             
             if (email) {
@@ -544,7 +554,7 @@ export async function POST(req: Request) {
           // 如果通过发票元数据没找到用户，尝试使用客户邮箱
           if (!user) {
             const customerId = invoice.customer as string;
-            const customer = await stripe.customers.retrieve(customerId) as Stripe.Customer;
+            const customer = await getStripe().customers.retrieve(customerId) as Stripe.Customer;
             const email = customer.email;
             
             if (email) {
@@ -561,7 +571,7 @@ export async function POST(req: Request) {
 
           // 如果是订阅续费，更新字符配额
           if ((invoice as any).subscription) {
-            const subscription = await stripe.subscriptions.retrieve((invoice as any).subscription as string);
+            const subscription = await getStripe().subscriptions.retrieve((invoice as any).subscription as string);
             const priceId = subscription.items.data[0]?.price.id;
             if (priceId) {
               const planDetails = getPlanDetailsFromPriceId(priceId);
@@ -661,7 +671,7 @@ export async function POST(req: Request) {
           console.log('处理 invoice.payment_failed 事件');
           const invoice = event.data.object as Stripe.Invoice;
           const customerId = invoice.customer as string;
-          const customer = await stripe.customers.retrieve(customerId) as Stripe.Customer;
+          const customer = await getStripe().customers.retrieve(customerId) as Stripe.Customer;
           const email = customer.email;
 
           if (!email) {

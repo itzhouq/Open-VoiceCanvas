@@ -3,9 +3,19 @@ import Stripe from 'stripe';
 import { validateUserSession } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-06-30.basil',
-});
+// 惰性初始化：未配置 STRIPE_SECRET_KEY 时不阻断构建（支付切换 Creem 后此文件将被替换）
+let stripe: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripe) {
+    if (!process.env.STRIPE_SECRET_KEY) {
+      throw new Error('STRIPE_SECRET_KEY is not configured');
+    }
+    stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-06-30.basil',
+    });
+  }
+  return stripe;
+}
 
 const PLAN_PRICES = {
   yearly: process.env.STRIPE_YEARLY_PRICE_ID,
@@ -98,7 +108,7 @@ export async function POST(req: Request) {
     console.log('支付模式:', mode);
     
     console.log('创建Stripe支付会话...');
-    const checkoutSession = await stripe.checkout.sessions.create({
+    const checkoutSession = await getStripe().checkout.sessions.create({
       ...(mode === 'payment' ? { submit_type: 'pay' } : {}),
       payment_method_types: ['card'],
       billing_address_collection: 'auto',
