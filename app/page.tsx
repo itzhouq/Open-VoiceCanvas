@@ -19,7 +19,6 @@ import { AuthDialog } from "@/components/auth-dialog";
 import { useSession } from "next-auth/react";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
-import { loadStripe } from '@stripe/stripe-js';
 
 // 从pricing页面导入的函数
 const payAsYouGo = [
@@ -225,33 +224,6 @@ const getClonePackages = () => {
       ]
     }
   ];
-};
-
-// 添加stripe初始化代码
-let stripePromise: Promise<any> | null = null;
-
-const getStripe = () => {
-  if (!stripePromise) {
-    const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-    
-    if (!publishableKey) {
-      console.error('Stripe publishable key is not configured');
-      throw new Error('支付系统配置错误');
-    }
-
-    if (!publishableKey.startsWith('pk_')) {
-      console.error('Invalid Stripe publishable key');
-      throw new Error('支付系统配置错误');
-    }
-
-    stripePromise = loadStripe(publishableKey)
-      .catch(error => {
-        console.error('Stripe 加载失败:', error);
-        stripePromise = null; // 重置 Promise 以便下次重试
-        throw error;
-      });
-  }
-  return stripePromise;
 };
 
 export default function LandingPage() {
@@ -483,28 +455,6 @@ export default function LandingPage() {
     }
 
     try {
-      // 最多重试3次
-      let retries = 3;
-      let stripe = null;
-      
-      while (retries > 0 && !stripe) {
-        try {
-          stripe = await getStripe();
-        } catch (error) {
-          console.error(`Stripe 加载失败，剩余重试次数: ${retries - 1}`, error);
-          retries--;
-          if (retries === 0) {
-            throw new Error(t('paymentSystemLoadFailed'));
-          }
-          // 等待1秒后重试
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        }
-      }
-
-      if (!stripe) {
-        throw new Error(t('paymentSystemLoadFailed'));
-      }
-
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
@@ -520,23 +470,13 @@ export default function LandingPage() {
         throw new Error(error.error || t('checkoutCreationFailed'));
       }
 
-      const { sessionId } = await response.json();
-      
-      if (!sessionId) {
+      const { url } = await response.json();
+
+      if (!url) {
         throw new Error(t('invalidPaymentSession'));
       }
 
-      // 添加超时处理
-      const redirectPromise = stripe.redirectToCheckout({ sessionId });
-      const timeoutPromise = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error(t('paymentTimeout'))), 10000)
-      );
-
-      const result = await Promise.race([redirectPromise, timeoutPromise]);
-
-      if (result.error) {
-        throw new Error(result.error.message);
-      }
+      window.location.href = url;
     } catch (error) {
       console.error('支付错误:', error);
       toast({

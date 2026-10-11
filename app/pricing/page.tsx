@@ -6,7 +6,6 @@ import { Check, Star, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { NavBar } from "@/components/nav-bar";
 import { useRouter, useSearchParams } from "next/navigation";
-import { loadStripe } from '@stripe/stripe-js';
 import { useToast } from "@/components/ui/use-toast";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -15,33 +14,6 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { PricingTitleUpdater } from "./title-updater";
 import { ChevronUp } from "lucide-react";
-
-// 初始化 Stripe 的 Promise，添加重试机制
-let stripePromise: Promise<any> | null = null;
-
-const getStripe = () => {
-  if (!stripePromise) {
-    const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-    
-    if (!publishableKey) {
-      console.error('Stripe publishable key is not configured');
-      throw new Error('支付系统配置错误');
-    }
-
-    if (!publishableKey.startsWith('pk_')) {
-      console.error('Invalid Stripe publishable key');
-      throw new Error('支付系统配置错误');
-    }
-
-    stripePromise = loadStripe(publishableKey)
-      .catch(error => {
-        console.error('Stripe 加载失败:', error);
-        stripePromise = null; // 重置 Promise 以便下次重试
-        throw error;
-      });
-  }
-  return stripePromise;
-};
 
 const plans = [
   {
@@ -317,28 +289,7 @@ export default function PricingPage() {
         }
       }
 
-      // 最多重试3次
-      let retries = 3;
-      let stripe = null;
-      
-      while (retries > 0 && !stripe) {
-        try {
-          stripe = await getStripe();
-        } catch (error) {
-          console.error(`Stripe 加载失败，剩余重试次数: ${retries - 1}`, error);
-          retries--;
-          if (retries === 0) {
-            throw new Error(t('stripeLoadError'));
-          }
-          // 等待1秒后重试
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        }
-      }
-
-      if (!stripe) {
-        throw new Error(t('stripeLoadError'));
-      }
-
+      // Creem 托管收银台：直接跳转 checkout_url
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
@@ -354,23 +305,13 @@ export default function PricingPage() {
         throw new Error(error.error || t('checkoutError'));
       }
 
-      const { sessionId } = await response.json();
-      
-      if (!sessionId) {
-        throw new Error(t('invalidSessionId'));
+      const { url } = await response.json();
+
+      if (!url) {
+        throw new Error(t('checkoutError'));
       }
 
-      // 添加超时处理
-      const redirectPromise = stripe.redirectToCheckout({ sessionId });
-      const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error(t('checkoutTimeout'))), 10000)
-      );
-
-      const result = await Promise.race([redirectPromise, timeoutPromise]);
-
-      if (result.error) {
-        throw new Error(result.error.message);
-      }
+      window.location.href = url;
     } catch (error) {
       console.error('支付错误:', error);
       toast({
@@ -409,12 +350,6 @@ export default function PricingPage() {
         }
       }
       
-      const stripe = await getStripe();
-      
-      if (!stripe) {
-        throw new Error(t('stripeError'));
-      }
-      
       // 检查当前用户状态
       const sessionRes = await fetch('/api/user/session');
       if (!sessionRes.ok) {
@@ -438,7 +373,7 @@ export default function PricingPage() {
 
       if (!response.ok) {
         const error = await response.json();
-        
+
         // 检查是否是用户数据不完整的错误
         if (error.error === '用户数据不完整' || error.error.includes('不完整')) {
           throw new Error(t('profileIncomplete') || '请先完善您的个人资料信息');
@@ -447,19 +382,8 @@ export default function PricingPage() {
         }
       }
 
-      const { sessionId } = await response.json();
-      
-      // 添加超时处理
-      const redirectPromise = stripe.redirectToCheckout({ sessionId });
-      const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error(t('checkoutTimeout'))), 10000)
-      );
-
-      const result = await Promise.race([redirectPromise, timeoutPromise]);
-
-      if (result.error) {
-        throw new Error(result.error.message || t('checkoutError'));
-      }
+      const { url } = await response.json();
+      window.location.href = url;
     } catch (error) {
       console.error('克隆包购买错误:', error);
       toast({
