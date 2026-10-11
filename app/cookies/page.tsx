@@ -153,7 +153,7 @@ export default function CookiePolicy() {
             </p>
             <ul>
               <li>Email: wt@wmcircle.cn</li>
-              <li>Website: <a href="https://voicewove.org" className="text-primary hover:underline">https://voicewove.org</a></li>
+              <li>Website: <a href="https://voicewove.com" className="text-primary hover:underline">https://voicewove.com</a></li>
             </ul>
 
             <h2>10. Your Consent</h2>

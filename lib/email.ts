@@ -6,7 +6,7 @@ import React from 'react';
 
 // 初始化Resend
 const resendApiKey = process.env.RESEND_API_KEY;
-const fromEmail = process.env.EMAIL_FROM || 'noreply@voicewove.org';
+const fromEmail = process.env.EMAIL_FROM || 'noreply@voicewove.com';
 
 console.log('Resend配置:');
 console.log('- API KEY 存在:', !!resendApiKey);

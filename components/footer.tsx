@@ -73,7 +73,7 @@ export function Footer() {
                 <Twitter className="w-4 h-4 text-muted-foreground" />
               </motion.a>
               <motion.a
-                href="https://voicewove.org"
+                href="https://voicewove.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}

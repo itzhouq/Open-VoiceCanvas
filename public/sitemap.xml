@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 主页 -->
   <url>
-    <loc>https://voicewove.org/</loc>
+    <loc>https://voicewove.com/</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
 
   <!-- 工作区/应用页面 -->
   <url>
-    <loc>https://voicewove.org/app</loc>
+    <loc>https://voicewove.com/app</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -18,7 +18,7 @@
 
   <!-- 语音克隆页面 -->
   <url>
-    <loc>https://voicewove.org/cloning</loc>
+    <loc>https://voicewove.com/cloning</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -26,7 +26,7 @@
 
   <!-- 音色设计页面 -->
   <url>
-    <loc>https://voicewove.org/design</loc>
+    <loc>https://voicewove.com/design</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -34,7 +34,7 @@
 
   <!-- AI故事生成与配音页面 -->
   <url>
-    <loc>https://voicewove.org/story</loc>
+    <loc>https://voicewove.com/story</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -42,7 +42,7 @@
 
   <!-- AI播客生成页面 -->
   <url>
-    <loc>https://voicewove.org/podcast</loc>
+    <loc>https://voicewove.com/podcast</loc>
     <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -50,7 +50,7 @@
 
   <!-- 价格页面 -->
   <url>
-    <loc>https://voicewove.org/pricing</loc>
+    <loc>https://voicewove.com/pricing</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -58,7 +58,7 @@
 
   <!-- 隐私政策 -->
   <url>
-    <loc>https://voicewove.org/privacy</loc>
+    <loc>https://voicewove.com/privacy</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -66,7 +66,7 @@
 
   <!-- 服务条款 -->
   <url>
-    <loc>https://voicewove.org/terms</loc>
+    <loc>https://voicewove.com/terms</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -74,14 +74,14 @@
 
   <!-- AI爬虫内容文件 -->
   <url>
-    <loc>https://voicewove.org/llms.txt</loc>
+    <loc>https://voicewove.com/llms.txt</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://voicewove.org/llms-full.txt</loc>
+    <loc>https://voicewove.com/llms-full.txt</loc>
     <lastmod>2025-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

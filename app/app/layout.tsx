@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'VoiceWove Studio - Professional AI Voice Synthesis & Voice Cloning Workspace',
   description: 'Create professional-grade voice content with our advanced AI voice synthesis and cloning studio. Features real-time preview, multi-voice support, precise control over speed, pitch, and personalized voice cloning capabilities.',
-  metadataBase: new URL('https://voicewove.org'),
+  metadataBase: new URL('https://voicewove.com'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VoiceWove Studio - Professional AI Voice Synthesis & Voice Cloning Workspace',
     description: 'Create professional-grade voice content with our advanced AI voice synthesis and cloning studio. Features real-time preview, multi-voice support, precise control over speed, pitch, and personalized voice cloning capabilities.',
-    url: 'https://voicewove.org/app',
+    url: 'https://voicewove.com/app',
     siteName: 'VoiceWove',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://voicewove.org/images/studio-og.png',
+        url: 'https://voicewove.com/images/studio-og.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove Studio - AI Voice Synthesis & Cloning Platform',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Create professional-grade voice content with our advanced AI voice synthesis and cloning studio. Features real-time preview, multi-voice support, precise control over speed, pitch, and personalized voice cloning capabilities.',
     card: 'summary_large_image',
     images: {
-      url: 'https://voicewove.org/images/studio-og.png',
+      url: 'https://voicewove.com/images/studio-og.png',
       alt: 'VoiceWove Studio - AI Voice Synthesis & Cloning Platform',
       width: 1200,
       height: 630
@@ -45,11 +45,11 @@ export const metadata: Metadata = {
     site: '@itzhouq2026'
   },
   other: {
-    'og:image:secure_url': 'https://voicewove.org/images/studio-og.png',
+    'og:image:secure_url': 'https://voicewove.com/images/studio-og.png',
     'pinterest-rich-pin': 'true',
     'fb:app_id': '',
-    'article:author': 'https://voicewove.org',
-    'article:publisher': 'https://voicewove.org'
+    'article:author': 'https://voicewove.com',
+    'article:publisher': 'https://voicewove.com'
   }
 };
 

@@ -2,6 +2,8 @@
 
 Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，基于 Next.js 14 构建。它集成了多种顶尖的 AI 语音技术，为用户提供高质量的文字转语音 (TTS)、语音克隆、语音设计以及播客和故事生成服务。
 
+> 🌐 在线体验：**https://voicewove.com** · 作者：[itzhouq](https://itzhouq.cn) · X：[@itzhouq2026](https://x.com/itzhouq2026)
+
 ![Banner](public/images/og-image.png)
 
 ## 🌟 主要功能

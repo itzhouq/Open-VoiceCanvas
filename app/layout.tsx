@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voicewove.org'),
+  metadataBase: new URL('https://voicewove.com'),
   title: {
     default: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     template: '%s | VoiceWove'
@@ -244,13 +244,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://voicewove.org',
+    url: 'https://voicewove.com',
     title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
     siteName: 'VoiceWove',
     images: [
       {
-        url: 'https://voicewove.org/images/og-image.png',
+        url: 'https://voicewove.com/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
@@ -262,7 +262,7 @@ export const metadata: Metadata = {
     title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
     description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
     images: {
-      url: 'https://voicewove.org/images/og-image.png',
+      url: 'https://voicewove.com/images/og-image.png',
       alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
       width: 1200,
       height: 630
@@ -281,7 +281,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://voicewove.org'
+    canonical: 'https://voicewove.com'
   },
 };
 
