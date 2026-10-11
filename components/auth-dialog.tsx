@@ -22,8 +22,23 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [isGithubLoading, setIsGithubLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  // 服务端实际注册了哪些 OAuth provider（未配置凭据时隐藏对应按钮）
+  const [oauthAvailable, setOauthAvailable] = useState({ github: false, google: false });
   const { toast } = useToast();
   const { t } = useLanguage();
+
+  useEffect(() => {
+    // 探测服务端可用的 OAuth provider（NextAuth 内置端点）
+    fetch('/api/auth/providers')
+      .then(res => (res.ok ? res.json() : {}))
+      .then(providers => {
+        setOauthAvailable({
+          github: !!providers?.github,
+          google: !!providers?.google,
+        });
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const handleSwitchToRegister = () => {
@@ -166,48 +181,56 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-3">
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full relative"
-              onClick={handleGithubLogin}
-              disabled={isGithubLoading || isGoogleLoading || isLoading}
-            >
-              {isGithubLoading ? (
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              ) : (
-                <Github className="mr-2 h-4 w-4" />
+          {(oauthAvailable.github || oauthAvailable.google) && (
+            <div className="space-y-3">
+              {oauthAvailable.github && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full relative"
+                  onClick={handleGithubLogin}
+                  disabled={isGithubLoading || isGoogleLoading || isLoading}
+                >
+                  {isGithubLoading ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Github className="mr-2 h-4 w-4" />
+                  )}
+                  {t('githubLogin')}
+                </Button>
               )}
-              {t('githubLogin')}
-            </Button>
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full relative"
-              onClick={handleGoogleLogin}
-              disabled={isGithubLoading || isGoogleLoading || isLoading}
-            >
-              {isGoogleLoading ? (
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              ) : (
-                <Chrome className="mr-2 h-4 w-4" />
+              {oauthAvailable.google && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full relative"
+                  onClick={handleGoogleLogin}
+                  disabled={isGithubLoading || isGoogleLoading || isLoading}
+                >
+                  {isGoogleLoading ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Chrome className="mr-2 h-4 w-4" />
+                  )}
+                  {t('googleLogin')}
+                </Button>
               )}
-              {t('googleLogin')}
-            </Button>
-          </div>
-          
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-border" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">
-                {t('dividerText')}
-              </span>
+          )}
+
+          {(oauthAvailable.github || oauthAvailable.google) && (
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t border-border" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">
+                  {t('dividerText')}
+                </span>
+              </div>
             </div>
-          </div>
-          
+          )}
+
           <div className="space-y-2">
             <Label htmlFor="email">{t('email')}</Label>
             <Input
