@@ -1,7 +1,9 @@
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import bcrypt from "bcryptjs";
 import { prisma } from "./prisma";
 import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
@@ -9,6 +11,39 @@ import { getServerSession } from "next-auth";
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
+    CredentialsProvider({
+      name: 'credentials',
+      credentials: {
+        email: { label: 'Email', type: 'email' },
+        password: { label: 'Password', type: 'password' },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) {
+          return null;
+        }
+
+        const user = await prisma.users.findUnique({
+          where: { email: credentials.email },
+        });
+
+        // OAuth 用户没有密码，引导其使用社交登录
+        if (!user || !user.password) {
+          return null;
+        }
+
+        const isValid = await bcrypt.compare(credentials.password, user.password);
+        if (!isValid) {
+          return null;
+        }
+
+        // 未验证邮箱的账号拒绝登录（注册后需点击验证邮件）
+        if (user.status !== 'active') {
+          throw new Error('EMAIL_NOT_VERIFIED');
+        }
+
+        return { id: user.id, email: user.email, name: user.name, image: user.image };
+      },
+    }),
     GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID!,
       clientSecret: process.env.GITHUB_CLIENT_SECRET!,

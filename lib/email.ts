@@ -16,7 +16,17 @@ if (!resendApiKey) {
   console.error('RESEND_API_KEY 未配置，邮件功能将不可用');
 }
 
-const resend = new Resend(resendApiKey);
+// 惰性实例化：未配置 Key 时不抛错，仅在实际发信时失败
+let resend: Resend | null = null;
+function getResendClient(): Resend {
+  if (!resend) {
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY 未配置，邮件功能不可用');
+    }
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 // 生成简单HTML邮件（英文版本）
 function generateSimpleHtml(verificationUrl: string, name?: string): string {
@@ -124,7 +134,7 @@ export async function sendVerificationEmail(email: string, verificationUrl: stri
     console.log('- To:', email);
     console.log('- HTML length:', htmlContent.length);
     
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResendClient().emails.send({
       from: fromEmail,
       to: email,
       subject: 'Verify Your VoiceWove Account',
@@ -172,7 +182,7 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string, na
     console.log('- To:', email);
     console.log('- HTML length:', htmlContent.length);
     
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResendClient().emails.send({
       from: fromEmail,
       to: email,
       subject: 'Reset Your VoiceWove Password',

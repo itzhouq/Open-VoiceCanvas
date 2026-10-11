@@ -109,7 +109,7 @@ export async function POST(req: Request) {
       text,
       stream: false,
       voice_setting: {
-        voice_id: voiceId || "female-qn-qingse",
+        voice_id: voiceId || "female-shaonv",
         speed: speed || 1,
         vol: vol || 1,
         pitch: pitch || 0

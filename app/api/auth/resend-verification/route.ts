@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     }
 
     // 创建新的验证令牌并发送验证邮件
-    await createVerificationTokenAndSendEmail(user.id, user.email, user.name);
+    await createVerificationTokenAndSendEmail(user.id, user.email, user.name ?? undefined);
 
     return NextResponse.json(
       { success: true, message: '验证邮件已发送，请查收' },
