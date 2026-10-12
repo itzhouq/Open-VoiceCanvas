@@ -90,6 +90,33 @@ export default function PrivacyPolicy() {
               <li>With your consent: In other cases where you have consented.</li>
             </ul>
 
+            <h3>5.1 Third-Party AI Service Providers</h3>
+            <p>
+              To deliver the Services, we rely on the following third-party processors. When you submit text for speech synthesis or generate a story, the relevant content is transmitted to these providers solely to perform the requested processing:
+            </p>
+            <ul>
+              <li><strong>MiniMax</strong> — text-to-speech synthesis and voice cloning model provider. Your text input and uploaded audio samples are processed by MiniMax to generate audio.</li>
+              <li><strong>DeepSeek</strong> — large language model provider. Text prompts submitted for story generation are processed by DeepSeek to create story content.</li>
+              <li><strong>Google</strong> — if you sign in with Google, we receive your Google account name, email address, and profile picture solely to create and authenticate your account.</li>
+              <li><strong>Resend</strong> — email delivery provider, used to send account verification and notification emails.</li>
+              <li><strong>Creem</strong> — merchant of record and payment processor for subscription and one-time purchases.</li>
+              <li><strong>Vercel, Neon, and Cloudflare</strong> — infrastructure, database, and CDN providers used to host and operate the Services.</li>
+            </ul>
+            <p>
+              These providers process your information only on our instructions and are bound by contractual confidentiality obligations. We do not sell your personal information or your generated content.
+            </p>
+
+            <h3>5.2 Google API Services User Data — Limited Use Disclosure</h3>
+            <p>
+              VoiceWove's use and transfer to any other app of information received from Google APIs will adhere to the
+              <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer"> Google API Services User Data Policy</a>, including the Limited Use requirements.
+            </p>
+
+            <h3>5.3 Prohibited Use and AI-Generated Content Policy</h3>
+            <p>
+              VoiceWove strictly prohibits the use of the Services to create, generate, or distribute AI-generated non-consensual intimate imagery (AI NCII) or any other unlawful, harmful, or abusive content. We do not use Google APIs to generate, host, or distribute such content, and we suspend accounts that attempt to do so. Voice cloning features may only be used with audio of a voice you own or are authorized to use.
+            </p>
+
             <h2>6. Data Security</h2>
             <p>
               We implement appropriate technical and organizational measures to protect your information against accidental loss, unauthorized access, use, alteration, and disclosure. However, no method of Internet transmission or electronic storage is 100% secure.
@@ -134,11 +161,12 @@ export default function PrivacyPolicy() {
             <h2>12. Contact Us</h2>
             <p>
               If you have any questions or concerns about this Privacy Policy, please contact us at:<br />
-              Email: wt@wmcircle.cn
+              Email: support@voicewove.com<br />
+              Website: <a href="https://voicewove.com" target="_blank" rel="noopener noreferrer">https://voicewove.com</a>
             </p>
 
             <p className="mt-8 text-sm text-muted-foreground">
-              Last Updated: December 1, 2024
+              Last Updated: October 12, 2026
             </p>
           </CardContent>
         </Card>

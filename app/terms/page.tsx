@@ -100,11 +100,11 @@ export default function TermsOfService() {
 
             <h2>12. Contact Us</h2>
             <p>
-              If you have any questions about this Agreement, please contact us at the following email address: wt@wmcircle.cn
+              If you have any questions about this Agreement, please contact us at the following email address: support@voicewove.com
             </p>
 
             <p className="mt-8 text-sm text-muted-foreground">
-              Last Updated: December 1, 2024
+              Last Updated: October 12, 2026
             </p>
           </CardContent>
         </Card>
