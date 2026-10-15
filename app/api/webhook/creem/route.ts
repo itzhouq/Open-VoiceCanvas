@@ -130,7 +130,7 @@ export async function POST(req: Request) {
               type: planType || 'unknown',
               amount: Math.round((amount / 100) * 100),
               status: 'paid',
-              packageId: obj.product?.id || obj.id || event.id,
+              packageId: obj.order?.id || obj.id || event.id, // Creem 订单号（退款事件凭此回查）
             },
           });
         } catch (paymentError) {
@@ -157,6 +157,21 @@ export async function POST(req: Request) {
             status: 'active',
           },
         });
+        // 续费支付流水（退款回查依赖）
+        try {
+          const renewAmount = obj.order?.amount ?? obj.amount ?? 0;
+          await prisma.payment.create({
+            data: {
+              userId,
+              type: `${metadata.planType || 'monthly'}-renewal`,
+              amount: Math.round((renewAmount / 100) * 100),
+              status: 'paid',
+              packageId: obj.order?.id || obj.id || event.id,
+            },
+          });
+        } catch (e) {
+          console.error('续费流水记录失败:', e);
+        }
         break;
       }
 
@@ -180,6 +195,71 @@ export async function POST(req: Request) {
             },
           });
         }
+        break;
+      }
+
+      // 退款 → 回收已发放权益（按订单号回查发放记录）
+      case 'refund.created': {
+        const checkoutId = obj.checkout_id || obj.checkout?.id || '';
+        const orderId = obj.order_id || obj.order?.id || '';
+        if (!checkoutId && !orderId) {
+          console.warn('refund.created 缺少订单标识, event:', event.id);
+          break;
+        }
+        // payment 表 packageId 存的是发放时的订单号
+        const payment = await prisma.payment.findFirst({
+          where: {
+            OR: [{ packageId: orderId }, { packageId: checkoutId }],
+            status: 'paid',
+          },
+          orderBy: { createdAt: 'desc' },
+        });
+        if (!payment) {
+          console.warn('refund.created 未匹配到支付记录:', { orderId, checkoutId });
+          break;
+        }
+        const planType = payment.type;
+        const packClones = CLONE_PACKS[planType] ?? 0;
+        const packChars = CHARACTER_PACKS[planType] ?? 0;
+
+        await prisma.$transaction(async (tx) => {
+          if (packClones > 0) {
+            // 克隆包：扣回剩余额度，不为负
+            const user = await tx.users.findUnique({ where: { id: payment.userId } });
+            const remaining = Math.max(0, (user?.remaining_clones ?? 0) - packClones);
+            await tx.users.update({
+              where: { id: payment.userId },
+              data: {
+                remaining_clones: remaining,
+                total_clones: Math.max(packClones, (user?.total_clones ?? 0) - packClones),
+              },
+            });
+          } else if (packChars > 0) {
+            // 字符包：扣回未用完的永久配额，不为负
+            const quota = await tx.characterQuota.findUnique({ where: { userId: payment.userId } });
+            if (quota) {
+              await tx.characterQuota.update({
+                where: { userId: payment.userId },
+                data: { permanentQuota: Math.max(0, quota.permanentQuota - packChars) },
+              });
+            }
+          } else if (planType === 'monthly' || planType === 'yearly') {
+            // 订阅退款：立即失效订阅并清空临时配额
+            await tx.subscription.updateMany({
+              where: { userId: payment.userId },
+              data: { status: 'expired' },
+            });
+            await tx.characterQuota.updateMany({
+              where: { userId: payment.userId },
+              data: { temporaryQuota: 0, quotaExpiry: null },
+            });
+          }
+          await tx.payment.update({
+            where: { id: payment.id },
+            data: { status: 'refunded' },
+          });
+        });
+        console.log('退款处理完成:', { paymentId: payment.id, userId: payment.userId, planType });
         break;
       }
 
