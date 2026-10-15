@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Inter } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { getServerSession } from "next-auth";
 import { Footer } from "@/components/footer";
@@ -9,7 +9,8 @@ import { GoogleAnalytics } from "@/components/google-analytics";
 import { UmamiAnalytics } from "@/components/umami-analytics";
 import { TitleUpdater } from './title-updater';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", weight: ["600", "700", "800"] });
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -298,7 +299,7 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <UmamiAnalytics />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${sora.variable}`}>
         <Providers session={session}>
           <div className="flex flex-col min-h-screen">
             <div className="flex-1">
