@@ -600,7 +600,8 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* 用户评价部分 */}
+        {/* 用户评价部分 — 暂时隐藏（Creem 合规要求：不得展示无法核实的虚构评价），有真实用户反馈后恢复 */}
+        {false && (
         <div className="mt-16">
           <div className="bg-gradient-to-b from-background via-teal-500/5 to-background py-8 md:py-16 overflow-hidden">
             <div className="container mx-auto px-4">
@@ -721,6 +722,8 @@ export default function PricingPage() {
             </div>
           </div>
         </div>
+
+        )}
 
         {/* FAQ部分 */}
         <div className="mt-16">

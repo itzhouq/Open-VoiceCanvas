@@ -1391,7 +1391,8 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section — 暂时隐藏（Creem 合规要求：不得展示无法核实的虚构评价），有真实用户反馈后恢复 */}
+      {false && (
       <div className="bg-gradient-to-b from-background via-teal-500/5 to-background py-8 md:py-16 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -1510,6 +1511,8 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+
+      )}
 
       {/* FAQ部分 */}
       <div className="mt-16">
