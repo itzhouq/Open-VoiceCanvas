@@ -3,6 +3,7 @@ import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { createUser, getUserByEmail } from "@/lib/db";
+import { notifyFeishu } from "@/lib/feishu-notify";
 import bcrypt from "bcryptjs";
 
 declare module "next-auth" {
@@ -87,6 +88,16 @@ const handler = NextAuth({
             provider: account?.provider,
             providerId: account?.providerAccountId,
           });
+          // 关键事件 → 飞书：新用户注册
+          notifyFeishu({
+            title: '🎉 VoiceWove 新用户注册',
+            level: 'info',
+            desc: `OAuth 登录并自动注册（${account?.provider ?? 'unknown'}）`,
+            fields: [
+              { label: '邮箱', value: user.email ?? '—' },
+              { label: '昵称', value: user.name || '—' },
+            ],
+          }).catch(() => {});
           return true;
         }
         

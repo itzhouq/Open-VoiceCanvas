@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createUser, getUserByEmail } from '@/lib/db';
+import { notifyFeishu } from '@/lib/feishu-notify';
 import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
 import { z } from 'zod';
@@ -51,6 +52,17 @@ export async function POST(req: Request) {
     if (!user) {
       throw new Error('用户创建失败');
     }
+
+    // 关键事件 → 飞书：新用户注册
+    notifyFeishu({
+      title: '🎉 VoiceWove 新用户注册',
+      level: 'info',
+      desc: '邮箱注册成功（待邮箱验证激活）',
+      fields: [
+        { label: '邮箱', value: email },
+        { label: '昵称', value: name || '—' },
+      ],
+    }).catch(() => {});
 
     // 邮件验证开关：EMAIL_VERIFICATION_ENABLED=true 时走验证邮件流程；
     // 未开启（如 Resend 域名未验证期间）直接激活账号，避免注册漏斗死胡同

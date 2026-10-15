@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import * as crypto from 'crypto';
 import { prisma } from '@/lib/prisma';
 import { SUBSCRIPTION_PLANS, CHARACTER_PACKS, CLONE_PACKS } from '@/lib/creem';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 // Creem webhook：支付完成后发放/回收授权
 // 事件：checkout.completed / subscription.paid / subscription.expired /
@@ -136,6 +137,23 @@ export async function POST(req: Request) {
         } catch (paymentError) {
           console.error('支付流水记录失败:', paymentError);
         }
+
+        // 关键事件 → 飞书
+        try {
+          const payer = await prisma.users.findUnique({ where: { id: userId } });
+          const amountYuan = ((obj.order?.amount ?? obj.amount ?? 0) / 100).toFixed(2);
+          await notifyFeishu({
+            title: '💰 VoiceWove 收款成功',
+            level: 'info',
+            desc: `用户完成一笔**真实支付**，权益已自动发放`,
+            fields: [
+              { label: '产品', value: planType || 'unknown' },
+              { label: '金额', value: `$${amountYuan}` },
+              { label: '用户', value: payer?.email || userId },
+            ],
+          });
+        } catch {}
+
         break;
       }
 
@@ -180,6 +198,12 @@ export async function POST(req: Request) {
       case 'subscription.canceled':
       case 'subscription.paused': {
         if (!userId) break;
+        notifyFeishu({
+          title: '📉 VoiceWove 订阅失效',
+          level: 'warn',
+          desc: `事件类型: ${event.eventType}`,
+          fields: [{ label: '用户', value: userId }],
+        }).catch(() => {});
         await prisma.subscription.updateMany({
           where: { userId },
           data: { status: 'expired' },
@@ -260,6 +284,20 @@ export async function POST(req: Request) {
           });
         });
         console.log('退款处理完成:', { paymentId: payment.id, userId: payment.userId, planType });
+        try {
+          const payer = await prisma.users.findUnique({ where: { id: payment.userId } });
+          const amountYuan = ((obj.amount ?? 0) / 100).toFixed(2);
+          await notifyFeishu({
+            title: '↩️ VoiceWove 退款处理完成',
+            level: 'warn',
+            desc: '用户订单已退款，权益已按订单回收',
+            fields: [
+              { label: '产品', value: planType },
+              { label: '退款金额', value: `$${amountYuan}` },
+              { label: '用户', value: payer?.email || payment.userId },
+            ],
+          });
+        } catch {}
         break;
       }
 
