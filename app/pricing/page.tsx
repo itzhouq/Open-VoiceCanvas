@@ -192,19 +192,6 @@ export default function PricingPage() {
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
-  // 检查 Stripe 配置
-  useEffect(() => {
-    const publishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-    if (!publishableKey || !publishableKey.startsWith('pk_')) {
-      console.error('Stripe publishable key is not properly configured');
-      toast({
-        title: t('error'),
-        description: t('paymentSystemError'),
-        variant: "destructive",
-      });
-    }
-  }, []);
-
   const getClonePackages = () => [
     {
       id: 'clone1',
