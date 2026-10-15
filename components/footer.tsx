@@ -85,8 +85,8 @@ export function Footer() {
             </div>
           </div>
           
-          {/* 右侧：三个导航栏 */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+          {/* 右侧：四个导航栏 */}
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 lg:gap-8">
             {/* 功能导航 */}
             <div className="space-y-3">
               <h3 className="font-semibold text-foreground">{t('footerFeatures')}</h3>
@@ -136,6 +136,33 @@ export function Footer() {
               </ul>
             </div>
             
+            {/* SEO 落地页内链 */}
+            <div className="space-y-3">
+              <h3 className="font-semibold text-foreground">Guides</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/ai-story-voiceover" className="hover:text-primary transition-colors">
+                    AI Story Voiceover
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/voice-cloning" className="hover:text-primary transition-colors">
+                    Voice Cloning
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/free-text-to-speech" className="hover:text-primary transition-colors">
+                    Free Text to Speech
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai-podcast-generator" className="hover:text-primary transition-colors">
+                    AI Podcast Generator
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* 友情链接 */}
             <div className="space-y-3">
               <h3 className="font-semibold text-foreground">{t('footerLinks')}</h3>
