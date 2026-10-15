@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { UmamiAnalytics } from "@/components/umami-analytics";
 import { CfWebAnalytics } from "@/components/cf-web-analytics";
+import { MicrosoftClarity } from "@/components/microsoft-clarity";
 import { TitleUpdater } from './title-updater';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -300,6 +301,7 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <UmamiAnalytics />
         <CfWebAnalytics />
+        <MicrosoftClarity />
       </head>
       <body className={`${inter.className} ${sora.variable}`}>
         <Providers session={session}>
