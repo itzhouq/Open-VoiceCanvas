@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { UmamiAnalytics } from "@/components/umami-analytics";
+import { CfWebAnalytics } from "@/components/cf-web-analytics";
 import { TitleUpdater } from './title-updater';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -298,6 +299,7 @@ export default async function RootLayout({
       <head>
         <GoogleAnalytics />
         <UmamiAnalytics />
+        <CfWebAnalytics />
       </head>
       <body className={`${inter.className} ${sora.variable}`}>
         <Providers session={session}>
