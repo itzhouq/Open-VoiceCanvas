@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }[] = [
     { path: '', priority: 1.0, changeFrequency: 'weekly' },
     { path: '/ai-story-voiceover', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/voice-cloning', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/free-text-to-speech', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/ai-podcast-generator', priority: 0.9, changeFrequency: 'weekly' },
     { path: '/pricing', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/story', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/cloning', priority: 0.8, changeFrequency: 'weekly' },
