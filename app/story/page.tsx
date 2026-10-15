@@ -1448,14 +1448,14 @@ export default function StoryPage() {
       <NavBar />
       <main className="container mx-auto px-4 py-4 md:py-8 space-y-4 md:space-y-8">
         <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-blue-500/5 to-pink-500/5 rounded-xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-teal-500/5 via-cyan-500/5 to-cyan-500/5 rounded-xl"></div>
           <CardHeader className="border-b border-primary/10 pb-4 md:pb-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
+              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent text-center">
                 <BookOpen className="inline-block w-8 h-8 mr-2" />
                 VoiceWove Story
               </CardTitle>
@@ -1472,7 +1472,7 @@ export default function StoryPage() {
               >
                 <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                       {t('selectInputMethod')}
                     </CardTitle>
                   </CardHeader>
@@ -1481,7 +1481,7 @@ export default function StoryPage() {
                       <Button
                         variant={inputMode === 'generate' ? 'default' : 'outline'}
                         onClick={() => handleInputModeChange('generate')}
-                        className={inputMode === 'generate' ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500' : ''}
+                        className={inputMode === 'generate' ? 'bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500' : ''}
                       >
                         <Wand2 className="w-4 h-4 mr-2" />
                         {t('aiGenerateStory')}
@@ -1489,7 +1489,7 @@ export default function StoryPage() {
                       <Button
                         variant={inputMode === 'input' ? 'default' : 'outline'}
                         onClick={() => handleInputModeChange('input')}
-                        className={inputMode === 'input' ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500' : ''}
+                        className={inputMode === 'input' ? 'bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500' : ''}
                       >
                         <BookOpen className="w-4 h-4 mr-2" />
                         {t('inputStoryContent')}
@@ -1508,7 +1508,7 @@ export default function StoryPage() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                         {t('storyRequirement')}
                       </CardTitle>
                     </CardHeader>
@@ -1528,7 +1528,7 @@ export default function StoryPage() {
                           <Button
                             onClick={generateStory}
                             disabled={isGenerating || !storyRequirement.trim()}
-                            className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
+                            className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600"
                           >
                             {isGenerating ? (
                               <>
@@ -1558,7 +1558,7 @@ export default function StoryPage() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                         {t('inputStoryContent')}
                       </CardTitle>
                     </CardHeader>
@@ -1590,7 +1590,7 @@ export default function StoryPage() {
                           <Button
                             onClick={useUserStory}
                             disabled={!userStory.trim()}
-                            className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
+                            className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600"
                           >
                             <BookOpen className="w-4 h-4 mr-2" />
                             {t('confirmStoryContent')}
@@ -1612,14 +1612,14 @@ export default function StoryPage() {
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-3">
                       <div className="flex justify-between items-center">
-                        <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                           {inputMode === 'generate' ? t('generatedStory') : t('yourStory')}
                         </CardTitle>
                         <RequireAuth>
                           <Button
                             onClick={analyzeStory}
                             disabled={isAnalyzing}
-                            className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
+                            className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600"
                           >
                             {isAnalyzing ? (
                               <>
@@ -1661,7 +1661,7 @@ export default function StoryPage() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                         {t('characterVoiceSettings')}
                       </CardTitle>
                     </CardHeader>
@@ -1926,7 +1926,7 @@ export default function StoryPage() {
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-3">
                       <div className="flex justify-between items-center">
-                        <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                           {t('storyVoiceover')}
                         </CardTitle>
                         <div className="flex gap-2">
@@ -1934,7 +1934,7 @@ export default function StoryPage() {
                             <Button
                               onClick={analyzeStory}
                               disabled={isAnalyzing}
-                              className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
+                              className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600"
                             >
                               {isAnalyzing ? (
                                 <>
@@ -2139,7 +2139,7 @@ export default function StoryPage() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardContent className="pt-6">
-                      <div className="w-full bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-4 rounded-lg border border-primary/10">
+                      <div className="w-full bg-gradient-to-r from-cyan-500/5 to-teal-500/5 p-4 rounded-lg border border-primary/10">
                         <AudioVisualizer 
                           audioContext={audioVisualizer.audioContext}
                           audioSource={audioVisualizer.source}

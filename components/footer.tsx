@@ -40,7 +40,7 @@ export function Footer() {
                   className="w-8 h-8 transition-transform duration-300 group-hover:scale-110"
                 />
               </motion.div>
-              <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 VoiceWove
               </span>
             </motion.div>

@@ -68,7 +68,7 @@ export function InsufficientCreditsDialog({
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handlePurchase}
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+            className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-600 hover:to-teal-700"
           >
             <ShoppingCart className="mr-2 h-4 w-4" />
             {t('buyCredits')}

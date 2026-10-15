@@ -393,14 +393,14 @@ export default function VoiceDesign() {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4 py-4 md:py-8 space-y-4 md:space-y-8">
         <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-blue-500/5 to-pink-500/5 rounded-xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-teal-500/5 via-cyan-500/5 to-cyan-500/5 rounded-xl"></div>
           <CardHeader className="border-b border-primary/10 pb-4 md:pb-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
+              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent text-center">
                 {t('voiceDesign')}
               </CardTitle>
             </motion.div>
@@ -414,7 +414,7 @@ export default function VoiceDesign() {
               >
                 <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md hover:shadow-lg transition-all duration-300">
                   <CardHeader className="space-y-1 md:space-y-2 pb-3">
-                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                       {t('designVoice')}
                     </CardTitle>
                   </CardHeader>
@@ -493,7 +493,7 @@ export default function VoiceDesign() {
                           >
                             <Button
                               onClick={handlePreview}
-                              className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-12 text-white hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg text-base font-semibold"
+                              className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 h-12 text-white hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg text-base font-semibold"
                               disabled={isProcessing}
                             >
                               {isProcessing ? (
@@ -525,7 +525,7 @@ export default function VoiceDesign() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md hover:shadow-lg transition-all duration-300">
                     <CardHeader className="space-y-1 md:space-y-2 pb-3">
-                      <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                         {t('serviceSettings')}
                       </CardTitle>
                     </CardHeader>
@@ -615,7 +615,7 @@ export default function VoiceDesign() {
                         <div className="space-y-1.5">
                           <div className="flex justify-between">
                             <Label>{t('speed')}</Label>
-                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{speed}x</span>
+                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{speed}x</span>
                           </div>
                           <Slider
                             value={[speed]}
@@ -631,7 +631,7 @@ export default function VoiceDesign() {
                         <div className="space-y-1.5 md:space-y-2">
                           <div className="flex justify-between">
                             <Label>{t('volume')}</Label>
-                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{vol}</span>
+                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{vol}</span>
                           </div>
                           <Slider
                             value={[vol]}
@@ -647,7 +647,7 @@ export default function VoiceDesign() {
                         <div className="space-y-1.5 md:space-y-2">
                           <div className="flex justify-between">
                             <Label>{t('pitch')}</Label>
-                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{pitch}</span>
+                            <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{pitch}</span>
                           </div>
                           <Slider
                             value={[pitch]}
@@ -757,7 +757,7 @@ export default function VoiceDesign() {
                 >
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md hover:shadow-lg transition-all duration-300">
                     <CardHeader className="space-y-1 md:space-y-2 pb-3">
-                      <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                         {t('readText')}
                       </CardTitle>
                     </CardHeader>
@@ -780,7 +780,7 @@ export default function VoiceDesign() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3 }}
-                        className="w-full bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-2 rounded-lg border border-primary/10"
+                        className="w-full bg-gradient-to-r from-cyan-500/5 to-teal-500/5 p-2 rounded-lg border border-primary/10"
                       >
                         <AudioVisualizer
                           audioContext={audioVisualizer.audioContext}
@@ -796,7 +796,7 @@ export default function VoiceDesign() {
                       <RequireAuth>
                         <Button
                           onClick={handleSpeak}
-                          className="flex-1 h-9 text-sm bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 rounded-md shadow-sm hover:shadow-md"
+                          className="flex-1 h-9 text-sm bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 rounded-md shadow-sm hover:shadow-md"
                           disabled={isProcessing}
                         >
                           {isProcessing ? (

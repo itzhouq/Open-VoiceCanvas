@@ -24,7 +24,7 @@ export default function TermsOfService() {
       <div className="container mx-auto px-4 py-8">
         <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg">
           <CardHeader className="border-b border-primary/10 pb-4 md:pb-6">
-            <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
+            <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent text-center">
               {t('termsOfService')}
             </CardTitle>
           </CardHeader>

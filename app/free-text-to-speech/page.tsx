@@ -59,10 +59,10 @@ export default function FreeTextToSpeechPage() {
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <header className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-purple-500 mb-3">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">
             VoiceWove · Free Text to Speech
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
             Free Text to Speech — Natural AI Voices in 40+ Languages
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -72,7 +72,7 @@ export default function FreeTextToSpeechPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/app"
-              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
+              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
             >
               Convert Text to Speech — Free
             </Link>
@@ -160,14 +160,14 @@ export default function FreeTextToSpeechPage() {
           </div>
         </section>
 
-        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-purple-500/5 to-pink-500/5">
+        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
           <h2 className="text-2xl font-bold mb-3">Start Converting Text — Free</h2>
           <p className="text-muted-foreground mb-6">
             10,000 characters on the house. Studio-quality audio in your browser, in under a minute.
           </p>
           <Link
             href="/app"
-            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
+            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
           >
             Try Free Text to Speech
           </Link>

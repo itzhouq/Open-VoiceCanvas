@@ -846,19 +846,19 @@ export default function Home() {
           <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(96,165,250,0.05),transparent)] dark:bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.05),transparent)]"></div>
           
           <Card className="backdrop-blur-sm bg-background/90 border-primary/10 shadow-xl rounded-xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-teal-500/5 to-cyan-500/5 rounded-xl"></div>
             <CardHeader className="border-b border-primary/10 pb-4 md:pb-6 flex justify-center items-center relative z-10">
-              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center relative">
+              <CardTitle className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent text-center relative">
                 {t('title')}
-                <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500/0 via-purple-500/50 to-pink-500/0"></div>
+                <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-500/0 via-teal-500/50 to-cyan-500/0"></div>
               </CardTitle>
             </CardHeader>
             <CardContent className="pt-6 md:pt-8 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
                 <Card className="backdrop-blur-sm bg-background/95 border-primary/10 shadow-lg rounded-lg transition-all duration-300 hover:shadow-xl hover:border-primary/20">
                   <CardHeader className="space-y-1 md:space-y-2">
-                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent flex items-center">
-                      <Settings className="h-5 w-5 mr-2 text-blue-500" />
+                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent flex items-center">
+                      <Settings className="h-5 w-5 mr-2 text-cyan-500" />
                       {t('serviceSettings')}
                     </CardTitle>
                   </CardHeader>
@@ -970,7 +970,7 @@ export default function Home() {
                           <Switch
                             checked={isWordByWord}
                             onCheckedChange={setIsWordByWord}
-                            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-blue-500 data-[state=checked]:to-purple-500"
+                            className="data-[state=checked]:bg-gradient-to-r data-[state=checked]:from-cyan-500 data-[state=checked]:to-teal-500"
                           />
                         </div>
                       </div>
@@ -978,7 +978,7 @@ export default function Home() {
                       <div className="space-y-1.5 md:space-y-2">
                         <div className="flex justify-between">
                           <Label>{t('speed')}</Label>
-                          <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{speed}x</span>
+                          <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{speed}x</span>
                         </div>
                         <Slider
                           value={[speed]}
@@ -997,7 +997,7 @@ export default function Home() {
                           <div className="space-y-1.5 md:space-y-2">
                             <div className="flex justify-between">
                               <Label>{t('volume')}</Label>
-                              <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{vol}</span>
+                              <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{vol}</span>
                             </div>
                             <Slider
                               value={[vol]}
@@ -1013,7 +1013,7 @@ export default function Home() {
                           <div className="space-y-1.5 md:space-y-2">
                             <div className="flex justify-between">
                               <Label>{t('pitch')}</Label>
-                              <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{pitch}</span>
+                              <span className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{pitch}</span>
                             </div>
                             <Slider
                               value={[pitch]}
@@ -1116,8 +1116,8 @@ export default function Home() {
 
                 <Card className="backdrop-blur-sm bg-background/95 border-primary/10 shadow-lg rounded-lg transition-all duration-300 hover:shadow-xl hover:border-primary/20">
                   <CardHeader className="space-y-1 md:space-y-2">
-                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent flex items-center">
-                      <Volume2 className="h-5 w-5 mr-2 text-purple-500" />
+                    <CardTitle className="text-lg md:text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent flex items-center">
+                      <Volume2 className="h-5 w-5 mr-2 text-teal-500" />
                       {t('readText')}
                     </CardTitle>
                   </CardHeader>
@@ -1140,7 +1140,7 @@ export default function Home() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3 }}
-                        className="w-full bg-gradient-to-r from-blue-500/5 to-purple-500/5 p-3 md:p-4 rounded-xl border border-primary/10"
+                        className="w-full bg-gradient-to-r from-cyan-500/5 to-teal-500/5 p-3 md:p-4 rounded-xl border border-primary/10"
                       >
                         <AudioVisualizer 
                           audioContext={audioVisualizer.audioContext}
@@ -1156,7 +1156,7 @@ export default function Home() {
                       <RequireAuth>
                         <Button 
                           onClick={handleSpeak} 
-                          className="flex-1 h-9 md:h-10 text-sm bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 rounded-md shadow-md hover:shadow-lg hover:shadow-purple-500/20"
+                          className="flex-1 h-9 md:h-10 text-sm bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 rounded-md shadow-md hover:shadow-lg hover:shadow-teal-500/20"
                         >
                           <Volume2 className="mr-2 h-4 w-4" />
                           {t('readText')}

@@ -122,7 +122,7 @@ export default function VerifyEmail() {
           {status === VerificationStatus.SUCCESS && (
             <Button 
               onClick={() => router.push('/')}
-              className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
             >
               {t('goToHomepage')}
             </Button>
@@ -131,7 +131,7 @@ export default function VerifyEmail() {
             <div className="flex flex-col gap-2 w-full">
               <Button 
                 asChild
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
               >
                 <Link href="/">
                   {t('goToHomepage')}

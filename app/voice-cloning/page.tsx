@@ -59,10 +59,10 @@ export default function VoiceCloningPage() {
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <header className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-purple-500 mb-3">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">
             VoiceWove · AI Voice Cloning
           </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
             Free Voice Cloning Online — Speak Any Text in Your Own Voice
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -72,7 +72,7 @@ export default function VoiceCloningPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/cloning"
-              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
+              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
             >
               Clone Your Voice — Free Trial
             </Link>
@@ -141,7 +141,7 @@ export default function VoiceCloningPage() {
               'Type any text and hear it in your cloned voice — download as MP3, in 40+ languages.',
             ].map((step, i) => (
               <li key={i} className="flex gap-4 items-start">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white flex items-center justify-center font-bold">
+                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white flex items-center justify-center font-bold">
                   {i + 1}
                 </span>
                 <p className="text-muted-foreground leading-relaxed pt-1">{step}</p>
@@ -162,14 +162,14 @@ export default function VoiceCloningPage() {
           </div>
         </section>
 
-        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-purple-500/5 to-pink-500/5">
+        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
           <h2 className="text-2xl font-bold mb-3">Hear Yourself Speak Any Language</h2>
           <p className="text-muted-foreground mb-6">
             Start with a free trial, then grab a clone pack from $3 — slots never expire.
           </p>
           <Link
             href="/cloning"
-            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-500 to-pink-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
+            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
           >
             Start Voice Cloning — Free
           </Link>

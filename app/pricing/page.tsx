@@ -405,24 +405,24 @@ export default function PricingPage() {
         return (
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground line-through">$9.99</span>
-            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">$5.99</span>
+            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$5.99</span>
             <span className="text-muted-foreground">{t('perMonth')}</span>
-            <Badge className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white border-0">{t('save')} $4</Badge>
+            <Badge className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('save')} $4</Badge>
           </div>
         );
       case 'yearly':
         return (
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground line-through">$99.9</span>
-            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">$49.9</span>
+            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$49.9</span>
             <span className="text-muted-foreground">{t('perYear')}</span>
-            <Badge className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white border-0">{t('save')} $50</Badge>
+            <Badge className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('save')} $50</Badge>
           </div>
         );
       case 'trial':
         return (
           <div>
-            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{t('free')}</span>
+            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{t('free')}</span>
           </div>
         );
       default:
@@ -470,7 +470,7 @@ export default function PricingPage() {
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x">{t('pricingTitle')}</h1>
+          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 animate-gradient-x">{t('pricingTitle')}</h1>
           <p className="text-xl text-muted-foreground">{t('pricingSubtitle')}</p>
         </div>
 
@@ -480,15 +480,15 @@ export default function PricingPage() {
             <Card key={plan.type} className={`p-6 relative ${plan.type === 'yearly' ? 'border-primary shadow-lg' : ''}`}>
               {plan.type === 'yearly' && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                  <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                     {t('mostPopular')}
                   </span>
                 </div>
               )}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
               <div className="relative">
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{getPlanName(plan.type)}</h3>
+                  <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{getPlanName(plan.type)}</h3>
                   <p className="text-muted-foreground">{getPlanDesc(plan.type)}</p>
                 </div>
                 <div className="mb-6">
@@ -503,7 +503,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <Button 
-                  className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white" 
+                  className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white" 
                   variant={plan.type === 'yearly' ? "default" : "outline"}
                   onClick={() => handlePlanClick(plan.type)}
                 >
@@ -517,7 +517,7 @@ export default function PricingPage() {
         {/* 克隆次数购买部分 */}
         <div id="clone-packages" className="mt-16">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
               {t('clonePackagesTitle')}
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -530,22 +530,22 @@ export default function PricingPage() {
               <Card key={pkg.id} className={`p-6 relative ${pkg.id === 'clone50' ? 'border-primary shadow-lg' : ''}`}>
                 {pkg.id === 'clone50' && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                    <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                       {t('mostPopular')}
                     </span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                 <div className="relative">
                   <div className="mb-4">
-                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{pkg.name}</h3>
+                    <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{pkg.name}</h3>
                     <p className="text-muted-foreground">{pkg.description}</p>
                   </div>
                   <div className="mb-6">
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-muted-foreground line-through">{pkg.originalPrice}</span>
-                      <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{pkg.price}</span>
-                      <Badge className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white border-0">{t('save')} {pkg.saveAmount}</Badge>
+                      <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{pkg.price}</span>
+                      <Badge className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('save')} {pkg.saveAmount}</Badge>
                     </div>
                   </div>
                   <ul className="space-y-3 mb-6">
@@ -557,7 +557,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <Button 
-                    className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white" 
+                    className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white" 
                     onClick={() => handleClonePackagePurchase(pkg.id)}
                   >
                     {t('buyNow')}
@@ -570,25 +570,25 @@ export default function PricingPage() {
 
         {/* 按量付费方案 */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">{t('payAsYouGo')}</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">{t('payAsYouGo')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {payAsYouGo.map((plan) => (
               <Card key={plan.type} className={`p-6 relative ${plan.popular ? 'border-primary shadow-lg' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                    <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                       {t('bestValue')}
                     </span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                 <div className="relative text-center">
-                  <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{t(plan.type)}</h3>
+                  <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{t(plan.type)}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{plan.price}</span>
+                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{plan.price}</span>
                   </div>
                   <Button 
-                    className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white" 
+                    className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white" 
                     variant={plan.popular ? "default" : "outline"}
                     onClick={() => handlePlanClick(plan.type)}
                   >
@@ -602,10 +602,10 @@ export default function PricingPage() {
 
         {/* 用户评价部分 */}
         <div className="mt-16">
-          <div className="bg-gradient-to-b from-background via-purple-500/5 to-background py-8 md:py-16 overflow-hidden">
+          <div className="bg-gradient-to-b from-background via-teal-500/5 to-background py-8 md:py-16 overflow-hidden">
             <div className="container mx-auto px-4">
               <motion.h2
-                className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+                className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -636,11 +636,11 @@ export default function PricingPage() {
                           transition={{ duration: 0.2 }}
                           className="h-full"
                         >
-                          <Card className="p-2 md:p-3 h-[180px] bg-background/60 backdrop-blur border border-purple-500/10 relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-purple-500/[0.03] to-pink-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                          <Card className="p-2 md:p-3 h-[180px] bg-background/60 backdrop-blur border border-teal-500/10 relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-teal-500/[0.03] to-cyan-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                             
                             {/* 装饰性引号 */}
-                            <div className="absolute top-1 right-1 text-3xl text-purple-500/10 font-serif">"</div>
+                            <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">"</div>
                             
                             <div className="relative flex flex-col h-full">
                               <div className="flex-grow overflow-hidden">
@@ -649,8 +649,8 @@ export default function PricingPage() {
                                 </p>
                               </div>
                               
-                              <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-purple-500/10">
-                                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 flex items-center justify-center text-purple-700 dark:text-purple-300 font-semibold text-xs border border-purple-500/10 flex-shrink-0">
+                              <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-teal-500/10">
+                                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 flex items-center justify-center text-teal-700 dark:text-teal-300 font-semibold text-xs border border-teal-500/10 flex-shrink-0">
                                   {testimonial.avatar}
                                 </div>
                                 <div className="min-w-0">
@@ -670,7 +670,7 @@ export default function PricingPage() {
                                       animate={{ opacity: 1, y: 0 }}
                                       transition={{ delay: i * 0.05, duration: 0.1 }}
                                     >
-                                      <Star className="h-3 w-3 fill-purple-500 text-purple-500" />
+                                      <Star className="h-3 w-3 fill-teal-500 text-teal-500" />
                                     </motion.div>
                                   ))}
                                 </div>
@@ -683,24 +683,24 @@ export default function PricingPage() {
                   </motion.div>
                 </div>
                 <motion.button
-                  className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-purple-500/20 shadow-sm hover:bg-purple-500/5 transition-all duration-300 z-10"
+                  className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-teal-500/20 shadow-sm hover:bg-teal-500/5 transition-all duration-300 z-10"
                   onClick={() => setActiveTestimonialIndex((current) => 
                     current === 0 ? testimonials.length - (isMobile ? 1 : 3) : current - 1
                   )}
                   whileHover={{ scale: 1.1, x: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <ArrowRight className="h-4 w-4 md:h-5 md:w-5 rotate-180 text-purple-700 dark:text-purple-300" />
+                  <ArrowRight className="h-4 w-4 md:h-5 md:w-5 rotate-180 text-teal-700 dark:text-teal-300" />
                 </motion.button>
                 <motion.button
-                  className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-purple-500/20 shadow-sm hover:bg-purple-500/5 transition-all duration-300 z-10"
+                  className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-teal-500/20 shadow-sm hover:bg-teal-500/5 transition-all duration-300 z-10"
                   onClick={() => setActiveTestimonialIndex((current) => 
                     current === testimonials.length - (isMobile ? 1 : 3) ? 0 : current + 1
                   )}
                   whileHover={{ scale: 1.1, x: 2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-purple-700 dark:text-purple-300" />
+                  <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-teal-700 dark:text-teal-300" />
                 </motion.button>
               </div>
               <div className="flex justify-center gap-2 mt-6 md:mt-10">
@@ -709,8 +709,8 @@ export default function PricingPage() {
                     key={index}
                     className={`w-8 h-1.5 md:h-2 rounded-full transition-all duration-300 ${
                       index === activeTestimonialIndex 
-                        ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500' 
-                        : 'bg-purple-200 dark:bg-purple-900/20'
+                        ? 'bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500' 
+                        : 'bg-teal-200 dark:bg-teal-900/20'
                     }`}
                     onClick={() => setActiveTestimonialIndex(index)}
                     whileHover={{ scaleX: 1.2 }}
@@ -726,7 +726,7 @@ export default function PricingPage() {
         <div className="mt-16">
           <div className="container mx-auto px-4">
             <motion.h2
-              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

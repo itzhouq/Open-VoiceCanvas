@@ -153,7 +153,7 @@ export default function ResetPasswordForm() {
               <p className="mb-4">{t('requestNewResetLink') || 'Please request a new password reset link.'}</p>
               <Button 
                 asChild 
-                className="mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300"
+                className="mt-2 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
               >
                 <Link href="/forgot-password">
                   {t('forgotPassword') || 'Forgot Password'}
@@ -187,7 +187,7 @@ export default function ResetPasswordForm() {
                 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
                   disabled={isLoading}
                 >
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

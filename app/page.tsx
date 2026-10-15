@@ -110,14 +110,14 @@ const getPlanPrice = (type: string) => {
     case 'trial':
       return (
         <div className="flex items-end gap-1">
-          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{t('free')}</span>
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{t('free')}</span>
         </div>
       );
     case 'monthly':
       return (
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground line-through">$9.99</span>
-          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">$5.99</span>
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$5.99</span>
           <span className="text-muted-foreground">{t('perMonth')}</span>
         </div>
       );
@@ -125,7 +125,7 @@ const getPlanPrice = (type: string) => {
       return (
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground line-through">$99.9</span>
-          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">$49.9</span>
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$49.9</span>
           <span className="text-muted-foreground">{t('perYear')}</span>
         </div>
       );
@@ -512,7 +512,7 @@ export default function LandingPage() {
             
             {/* 流动渐变效果 */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30"
+              className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-teal-500/30 to-cyan-500/30"
               animate={{
                 x: ['-100%', '100%'],
                 opacity: [0.3, 0.6, 0.3],
@@ -577,7 +577,7 @@ export default function LandingPage() {
           transition={{ duration: 0.8 }}
         >
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 animate-gradient-x">
             {t('landingTitle')}
           </span>
               </h1>
@@ -585,10 +585,10 @@ export default function LandingPage() {
               {/* 打字机效果 */}
               <div className="mt-2 md:mt-4 mb-6 md:mb-8 h-auto min-h-[3rem] md:min-h-[2.5rem] flex items-center justify-center">
                 <p className="text-lg md:text-xl text-center font-bold w-full px-4 mx-auto whitespace-normal md:whitespace-nowrap md:w-auto overflow-hidden text-ellipsis md:overflow-visible md:text-clip">
-                  <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x">
+                  <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 animate-gradient-x">
                     {typedText}
                     <motion.span 
-                      className="absolute inline-block w-[2px] h-[1.2em] ml-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"
+                      className="absolute inline-block w-[2px] h-[1.2em] ml-1 bg-gradient-to-b from-cyan-500 via-teal-500 to-cyan-500"
                       animate={{ opacity: [1, 0] }}
                       transition={{ duration: 0.8, repeat: Infinity, ease: "linear", repeatType: "reverse" }}
                     />
@@ -612,10 +612,10 @@ export default function LandingPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.5 }}
-                    className="flex items-center px-3 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/20 backdrop-blur-sm"
+                    className="flex items-center px-3 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-teal-500/20 border border-cyan-500/20 backdrop-blur-sm"
                   >
-                    <Globe2 className="h-4 w-4 mr-2 text-blue-400" />
-                    <span className="text-sm font-medium text-blue-400">{t('aiPowered')}</span>
+                    <Globe2 className="h-4 w-4 mr-2 text-cyan-400" />
+                    <span className="text-sm font-medium text-cyan-400">{t('aiPowered')}</span>
                   </motion.div>
                 )}
                 
@@ -640,10 +640,10 @@ export default function LandingPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.5 }}
-                    className="flex items-center px-3 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/20 backdrop-blur-sm"
+                    className="flex items-center px-3 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/20 backdrop-blur-sm"
                   >
-                    <Palette className="h-4 w-4 mr-2 text-purple-400" />
-                    <span className="text-sm font-medium text-purple-400">{t('voiceDesignTag')}</span>
+                    <Palette className="h-4 w-4 mr-2 text-teal-400" />
+                    <span className="text-sm font-medium text-teal-400">{t('voiceDesignTag')}</span>
                   </motion.div>
                 )}
 
@@ -670,7 +670,7 @@ export default function LandingPage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500/90 via-purple-500/90 to-pink-500/90">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500/90 via-teal-500/90 to-cyan-500/90">
           {t('landingSubtitle')}
               </span>
         </motion.p>
@@ -688,7 +688,7 @@ export default function LandingPage() {
                 <Link href="/app/" className="w-full block">
             <Button 
               size="lg" 
-                    className="w-full sm:w-auto h-10 md:h-12 text-sm md:text-base gap-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 group"
+                    className="w-full sm:w-auto h-10 md:h-12 text-sm md:text-base gap-2 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 group"
             >
               <Rocket className="h-4 w-4 md:h-5 md:w-5 animate-pulse" />
                     <span>{t('startNow')}</span>
@@ -736,10 +736,10 @@ export default function LandingPage() {
       </div>
 
       {/* 功能展示部分 */}
-      <div className="py-12 md:py-20 bg-gradient-to-b from-background via-purple-500/5 to-background">
+      <div className="py-12 md:py-20 bg-gradient-to-b from-background via-teal-500/5 to-background">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-12 md:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-12 md:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -757,7 +757,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-full md:w-1/2">
-              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 p-1">
+              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 p-1">
                 <div className="aspect-video relative rounded-lg overflow-hidden shadow-xl">
                   <img
                     src="/images/gongneng6.png"
@@ -770,7 +770,7 @@ export default function LandingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-4 md:p-6">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white">
+                      <div className="h-8 w-8 rounded-full bg-cyan-500 flex items-center justify-center text-white">
                         <Radio className="h-4 w-4" />
                       </div>
                       <div className="flex gap-2">
@@ -784,8 +784,8 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-lg p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+              <div className="bg-gradient-to-r from-cyan-500/5 to-teal-500/5 rounded-lg p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                   {t('podcastFeatureTitle')}
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground mb-6">
@@ -793,25 +793,25 @@ export default function LandingPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('aiInterviewGenerationItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('hostGuestDialogueItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('professionalPodcastItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('voiceSynthesisIntegrationItem')}</span>
                   </li>
                 </ul>
                 <div className="mt-6">
                   <Link href="/podcast" className="inline-flex">
-                    <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600">
+                    <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600">
                       {t('tryPodcastFeature')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -830,8 +830,8 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-full md:w-1/2 order-2 md:order-1">
-              <div className="bg-gradient-to-r from-orange-500/5 to-pink-500/5 rounded-lg p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500">
+              <div className="bg-gradient-to-r from-orange-500/5 to-cyan-500/5 rounded-lg p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-cyan-500">
                   {t('storyFeatureTitle')}
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground mb-6">
@@ -857,7 +857,7 @@ export default function LandingPage() {
                 </ul>
                 <div className="mt-6">
                   <Link href="/story" className="inline-flex">
-                    <Button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:from-orange-600 hover:to-pink-600">
+                    <Button className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white hover:from-orange-600 hover:to-cyan-600">
                       {t('tryStoryFeature')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -866,7 +866,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
-              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 p-1">
+              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-orange-500/10 via-red-500/10 to-cyan-500/10 p-1">
                 <div className="aspect-video relative rounded-lg overflow-hidden shadow-xl">
                   <img
                     src="/images/gongneng4.png"
@@ -904,7 +904,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-full md:w-1/2">
-              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-rose-500/10 p-1">
+              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-rose-500/10 p-1">
                 <div className="aspect-video relative rounded-lg overflow-hidden shadow-xl">
                   <img
                     src="/images/gongneng5.png"
@@ -917,7 +917,7 @@ export default function LandingPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-4 md:p-6">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-purple-500 flex items-center justify-center text-white">
+                      <div className="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center text-white">
                         <Palette className="h-4 w-4" />
                       </div>
                       <div className="flex gap-2">
@@ -931,8 +931,8 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-lg p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+              <div className="bg-gradient-to-r from-teal-500/5 to-cyan-500/5 rounded-lg p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                   {t('voiceDesignFeatureTitle')}
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground mb-6">
@@ -940,25 +940,25 @@ export default function LandingPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-teal-500 mr-2 mt-0.5" />
                     <span>{t('voiceDesignItem1')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-teal-500 mr-2 mt-0.5" />
                     <span>{t('voiceDesignItem2')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-teal-500 mr-2 mt-0.5" />
                     <span>{t('voiceDesignItem3')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-purple-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-teal-500 mr-2 mt-0.5" />
                     <span>{t('voiceDesignItem4')}</span>
                   </li>
                 </ul>
                 <div className="mt-6">
                   <Link href="/design" className="inline-flex">
-                    <Button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600">
+                    <Button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600">
                       {t('tryVoiceDesign')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -1049,7 +1049,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-full md:w-1/2">
-              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 p-1">
+              <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 p-1">
                 <div className="aspect-video relative rounded-lg overflow-hidden shadow-xl">
                   <img
                     src="/images/gongneng1.png"
@@ -1080,8 +1080,8 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-lg p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+              <div className="bg-gradient-to-r from-cyan-500/5 to-teal-500/5 rounded-lg p-6 md:p-8">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                   {t('feature2Title')}
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground mb-6">
@@ -1089,25 +1089,25 @@ export default function LandingPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('multiLanguageSupportItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('multiLanguageVoicesItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('multiLanguageAccentsItem')}</span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="h-5 w-5 text-blue-500 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-cyan-500 mr-2 mt-0.5" />
                     <span>{t('naturalSpeechItem')}</span>
                   </li>
                 </ul>
                 <div className="mt-6">
                   <Link href="/app" className="inline-flex">
-                    <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600">
+                    <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600">
                       {t('tryFeatureNow')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -1200,7 +1200,7 @@ export default function LandingPage() {
       <div className="py-10 md:py-16 bg-gradient-to-b from-background via-rose-500/5 to-background">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1229,15 +1229,15 @@ export default function LandingPage() {
                 <Card className={`p-6 relative ${plan.type === 'yearly' ? 'border-primary shadow-lg' : ''} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
                   {plan.type === 'yearly' && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                      <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                         {t('mostPopular')}
                       </span>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                     <div className="relative">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{getPlanName(plan.type)}</h3>
+                      <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{getPlanName(plan.type)}</h3>
                       <p className="text-muted-foreground">{getPlanDesc(plan.type)}</p>
                       </div>
                     <div className="mb-6">
@@ -1252,7 +1252,7 @@ export default function LandingPage() {
                       ))}
                     </ul>
                     <Button 
-                      className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300" 
+                      className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300" 
                       variant={plan.type === 'yearly' ? "default" : "outline"}
                       onClick={() => handlePlanClick(plan.type)}
                     >
@@ -1267,7 +1267,7 @@ export default function LandingPage() {
           {/* 克隆次数购买部分 */}
           <div className="mt-16">
             <motion.h2
-              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1297,21 +1297,21 @@ export default function LandingPage() {
                   <Card className={`p-6 relative ${pkg.id === 'clone50' ? 'border-primary shadow-lg' : ''} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
                     {pkg.id === 'clone50' && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                        <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                           {t('mostPopular')}
                         </span>
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                     <div className="relative">
                       <div className="mb-4">
-                        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{pkg.name}</h3>
+                        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{pkg.name}</h3>
                         <p className="text-muted-foreground">{pkg.description}</p>
                       </div>
                       <div className="mb-6">
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-muted-foreground line-through">{pkg.originalPrice}</span>
-                          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{pkg.price}</span>
+                          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{pkg.price}</span>
                       </div>
                     </div>
                       <ul className="space-y-3 mb-6">
@@ -1323,7 +1323,7 @@ export default function LandingPage() {
                         ))}
                       </ul>
                       <Button 
-                        className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300" 
+                        className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300" 
                         onClick={() => handlePlanClick(pkg.id)}
                       >
                         {t('buyNow')}
@@ -1338,7 +1338,7 @@ export default function LandingPage() {
           {/* 按量付费方案 */}
           <div className="mt-16">
             <motion.h2
-              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+              className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1364,19 +1364,19 @@ export default function LandingPage() {
                   <Card className={`p-6 relative ${plan.popular ? 'border-primary shadow-lg' : ''} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
                     {plan.popular && (
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                        <span className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm">
                           {t('bestValue')}
                         </span>
                   </div>
                 )}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                     <div className="relative text-center">
-                      <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{t(plan.type)}</h3>
+                      <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{t(plan.type)}</h3>
                       <div className="mb-6">
-                        <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">{plan.price}</span>
+                        <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{plan.price}</span>
                       </div>
                       <Button 
-                        className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300" 
+                        className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300" 
                         variant={plan.popular ? "default" : "outline"}
                         onClick={() => handlePlanClick(plan.type)}
                       >
@@ -1392,10 +1392,10 @@ export default function LandingPage() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-gradient-to-b from-background via-purple-500/5 to-background py-8 md:py-16 overflow-hidden">
+      <div className="bg-gradient-to-b from-background via-teal-500/5 to-background py-8 md:py-16 overflow-hidden">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1426,11 +1426,11 @@ export default function LandingPage() {
                       transition={{ duration: 0.2 }}
                       className="h-full"
                     >
-                      <Card className="p-2 md:p-3 h-[180px] bg-background/60 backdrop-blur border border-purple-500/10 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] via-purple-500/[0.03] to-pink-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+                      <Card className="p-2 md:p-3 h-[180px] bg-background/60 backdrop-blur border border-teal-500/10 relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-teal-500/[0.03] to-cyan-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                         
                         {/* 装饰性引号 */}
-                        <div className="absolute top-1 right-1 text-3xl text-purple-500/10 font-serif">"</div>
+                        <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">"</div>
                         
                         <div className="relative flex flex-col h-full">
                           <div className="flex-grow overflow-hidden">
@@ -1439,8 +1439,8 @@ export default function LandingPage() {
                             </p>
                           </div>
                           
-                          <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-purple-500/10">
-                            <div className="h-6 w-6 rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 flex items-center justify-center text-purple-700 dark:text-purple-300 font-semibold text-xs border border-purple-500/10 flex-shrink-0">
+                          <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-teal-500/10">
+                            <div className="h-6 w-6 rounded-full bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 flex items-center justify-center text-teal-700 dark:text-teal-300 font-semibold text-xs border border-teal-500/10 flex-shrink-0">
                           {testimonial.avatar}
                         </div>
                             <div className="min-w-0">
@@ -1460,7 +1460,7 @@ export default function LandingPage() {
                                   animate={{ opacity: 1, y: 0 }}
                                   transition={{ delay: i * 0.05, duration: 0.1 }}
                                 >
-                                  <Star className="h-3 w-3 fill-purple-500 text-purple-500" />
+                                  <Star className="h-3 w-3 fill-teal-500 text-teal-500" />
                                 </motion.div>
                         ))}
                       </div>
@@ -1473,24 +1473,24 @@ export default function LandingPage() {
               </motion.div>
             </div>
             <motion.button
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-purple-500/20 shadow-sm hover:bg-purple-500/5 transition-all duration-300 z-10"
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-teal-500/20 shadow-sm hover:bg-teal-500/5 transition-all duration-300 z-10"
               onClick={() => setActiveTestimonialIndex((current) => 
                 current === 0 ? testimonials.length - (isMobile ? 1 : 3) : current - 1
               )}
               whileHover={{ scale: 1.1, x: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowRight className="h-4 w-4 md:h-5 md:w-5 rotate-180 text-purple-700 dark:text-purple-300" />
+              <ArrowRight className="h-4 w-4 md:h-5 md:w-5 rotate-180 text-teal-700 dark:text-teal-300" />
             </motion.button>
             <motion.button
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-purple-500/20 shadow-sm hover:bg-purple-500/5 transition-all duration-300 z-10"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 md:p-3 rounded-full bg-background/80 backdrop-blur-sm border border-teal-500/20 shadow-sm hover:bg-teal-500/5 transition-all duration-300 z-10"
               onClick={() => setActiveTestimonialIndex((current) => 
                 current === testimonials.length - (isMobile ? 1 : 3) ? 0 : current + 1
               )}
               whileHover={{ scale: 1.1, x: 2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-purple-700 dark:text-purple-300" />
+              <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-teal-700 dark:text-teal-300" />
             </motion.button>
           </div>
           <div className="flex justify-center gap-2 mt-6 md:mt-10">
@@ -1499,8 +1499,8 @@ export default function LandingPage() {
                 key={index}
                 className={`w-8 h-1.5 md:h-2 rounded-full transition-all duration-300 ${
                   index === activeTestimonialIndex 
-                    ? 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500' 
-                    : 'bg-purple-200 dark:bg-purple-900/20'
+                    ? 'bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500' 
+                    : 'bg-teal-200 dark:bg-teal-900/20'
                 }`}
                 onClick={() => setActiveTestimonialIndex(index)}
                 whileHover={{ scaleX: 1.2 }}
@@ -1515,7 +1515,7 @@ export default function LandingPage() {
       <div className="mt-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

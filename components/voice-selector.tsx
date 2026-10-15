@@ -59,7 +59,7 @@ export function VoiceSelector({
                   <div className="flex items-center space-x-2">
                     <div>
                       <p className="font-medium">{voice.name}</p>
-                      <Badge className="text-xs mt-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white border-0">{t('clonedVoice')}</Badge>
+                      <Badge className="text-xs mt-1 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('clonedVoice')}</Badge>
                     </div>
                   </div>
                 </CardContent>

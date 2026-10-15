@@ -257,7 +257,7 @@ export default function ProfilePage() {
           transition={{ duration: 0.5 }}
           className="relative"
         >
-          <h1 className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x relative">
+          <h1 className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 animate-gradient-x relative">
             {t('profile')}
             <AnimatePresence>
               {showConfetti && (
@@ -291,8 +291,8 @@ export default function ProfilePage() {
             <Card className="group hover:shadow-lg transition-all duration-300 hover:border-primary/50 bg-gradient-to-br from-background to-background/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <User className="h-5 w-5 text-blue-500 group-hover:animate-bounce" />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                  <User className="h-5 w-5 text-cyan-500 group-hover:animate-bounce" />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                     {t('basicInfo')}
                   </span>
                 </CardTitle>
@@ -300,14 +300,14 @@ export default function ProfilePage() {
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between group/item hover:bg-primary/5 p-2 rounded-lg transition-colors">
                   <div className="flex items-center gap-2">
-                    <User className="h-4 w-4 text-blue-400 group-hover/item:text-blue-500 transition-colors" />
+                    <User className="h-4 w-4 text-cyan-400 group-hover/item:text-cyan-500 transition-colors" />
                     <span className="text-muted-foreground group-hover/item:text-primary transition-colors">{t('username')}</span>
                   </div>
                   <span className="font-medium">{user.name || t('notSet')}</span>
                 </div>
                 <div className="flex items-center justify-between group/item hover:bg-primary/5 p-2 rounded-lg transition-colors">
                   <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-purple-400 group-hover/item:text-purple-500 transition-colors" />
+                    <Mail className="h-4 w-4 text-teal-400 group-hover/item:text-teal-500 transition-colors" />
                     <span className="text-muted-foreground group-hover/item:text-primary transition-colors">{t('email')}</span>
                   </div>
                   <span className="font-medium">{user.email || t('notSet')}</span>
@@ -321,8 +321,8 @@ export default function ProfilePage() {
               <Card className="group hover:shadow-lg transition-all duration-300 hover:border-primary/50 bg-gradient-to-br from-background to-background/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <CreditCard className="h-5 w-5 text-purple-500 group-hover:animate-bounce" />
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                    <CreditCard className="h-5 w-5 text-teal-500 group-hover:animate-bounce" />
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                       {t('subscription')}
                     </span>
                   </CardTitle>
@@ -337,32 +337,32 @@ export default function ProfilePage() {
                           </span>
                           <Badge 
                             variant={userPlan.subscription.status === 'active' ? "default" : "destructive"}
-                            className={userPlan.subscription.status === 'active' ? "animate-gradient-x bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white" : ""}
+                            className={userPlan.subscription.status === 'active' ? "animate-gradient-x bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white" : ""}
                           >
                             {userPlan.subscription.status === 'active' ? t('active') : t('inactive')}
                           </Badge>
                         </div>
                         <div className="relative h-2">
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 rounded-full opacity-20"></div>
                           <Progress value={userPlan.subscription.status === 'active' ? 100 : 0} className="relative z-10" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-teal-500/10 hover:from-cyan-500/20 hover:to-teal-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('currentPlan')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                             {getPlanName(userPlan.subscription.planType)}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-teal-500/10 to-cyan-500/10 hover:from-teal-500/20 hover:to-cyan-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('planStatus')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                             {userPlan.subscription.status === 'active' ? t('active') : t('inactive')}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-pink-500/10 to-red-500/10 hover:from-pink-500/20 hover:to-red-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-red-500/10 hover:from-cyan-500/20 hover:to-red-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('expiryDate')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                             {formatDate(userPlan.subscription.endDate)}
                           </span>
                         </div>
@@ -383,26 +383,26 @@ export default function ProfilePage() {
                           <Badge variant="destructive">{t('notActivated')}</Badge>
                         </div>
                         <div className="relative h-2">
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 rounded-full opacity-20"></div>
                           <Progress value={0} className="relative z-10" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-teal-500/10 hover:from-cyan-500/20 hover:to-teal-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('currentPlan')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                             {t('notSubscribed')}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-teal-500/10 to-cyan-500/10 hover:from-teal-500/20 hover:to-cyan-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('planStatus')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                             {t('notActivated')}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-pink-500/10 to-red-500/10 hover:from-pink-500/20 hover:to-red-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-red-500/10 hover:from-cyan-500/20 hover:to-red-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('expiryDate')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                             -
                           </span>
                         </div>
@@ -424,8 +424,8 @@ export default function ProfilePage() {
               <Card className="group hover:shadow-lg transition-all duration-300 hover:border-primary/50 bg-gradient-to-br from-background to-background/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Activity className="h-5 w-5 text-pink-500 group-hover:animate-bounce" />
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                    <Activity className="h-5 w-5 text-cyan-500 group-hover:animate-bounce" />
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                       {t('cloneQuota')}
                     </span>
                   </CardTitle>
@@ -441,26 +441,26 @@ export default function ProfilePage() {
                           <span className="font-medium">{Math.round(getClonePercentage())}%</span>
                         </div>
                         <div className="relative h-2">
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 rounded-full opacity-20"></div>
                           <Progress value={getClonePercentage()} className="relative z-10" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-teal-500/10 hover:from-cyan-500/20 hover:to-teal-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('totalClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                             {formatNumber(userPlan.cloneQuota.total_clones)}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-teal-500/10 to-cyan-500/10 hover:from-teal-500/20 hover:to-cyan-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('usedClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                             {formatNumber(userPlan.cloneQuota.used_clones)}
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-pink-500/10 to-red-500/10 hover:from-pink-500/20 hover:to-red-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-red-500/10 hover:from-cyan-500/20 hover:to-red-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('remainingClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                             {formatNumber(userPlan.cloneQuota.remaining_clones)}
                           </span>
                         </div>
@@ -481,26 +481,26 @@ export default function ProfilePage() {
                           <span className="font-medium">0%</span>
                         </div>
                         <div className="relative h-2">
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 rounded-full opacity-20"></div>
                           <Progress value={0} className="relative z-10" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-teal-500/10 hover:from-cyan-500/20 hover:to-teal-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('totalClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                             0
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-teal-500/10 to-cyan-500/10 hover:from-teal-500/20 hover:to-cyan-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('usedClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                             0
                           </span>
                         </div>
-                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-pink-500/10 to-red-500/10 hover:from-pink-500/20 hover:to-red-500/20 transition-colors">
+                        <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-red-500/10 hover:from-cyan-500/20 hover:to-red-500/20 transition-colors">
                           <span className="text-muted-foreground text-sm">{t('remainingClones')}</span>
-                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                          <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                             0
                           </span>
                         </div>
@@ -523,8 +523,8 @@ export default function ProfilePage() {
             <Card className="group hover:shadow-lg transition-all duration-300 hover:border-primary/50 bg-gradient-to-br from-background to-background/50 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Activity className="h-5 w-5 text-pink-500 group-hover:animate-bounce" />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                  <Activity className="h-5 w-5 text-cyan-500 group-hover:animate-bounce" />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                     {t('characterQuota')}
                   </span>
                 </CardTitle>
@@ -540,26 +540,26 @@ export default function ProfilePage() {
                         <span className="font-medium">{Math.round(getQuotaPercentage())}%</span>
                       </div>
                       <div className="relative h-2">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-20"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 rounded-full opacity-20"></div>
                         <Progress value={getQuotaPercentage()} className="relative z-10" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 transition-colors">
+                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-teal-500/10 hover:from-cyan-500/20 hover:to-teal-500/20 transition-colors">
                         <span className="text-muted-foreground text-sm">{t('totalQuota')}</span>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">
                           {formatNumber(userPlan.characterQuota.permanentQuota + userPlan.characterQuota.temporaryQuota)}
                         </span>
                       </div>
-                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 transition-colors">
+                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-teal-500/10 to-cyan-500/10 hover:from-teal-500/20 hover:to-cyan-500/20 transition-colors">
                         <span className="text-muted-foreground text-sm">{t('usedQuota')}</span>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">
                           {formatNumber(userPlan.characterQuota.usedCharacters)}
                         </span>
                       </div>
-                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-pink-500/10 to-red-500/10 hover:from-pink-500/20 hover:to-red-500/20 transition-colors">
+                      <div className="flex flex-col gap-1 p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-red-500/10 hover:from-cyan-500/20 hover:to-red-500/20 transition-colors">
                         <span className="text-muted-foreground text-sm">{t('remainingQuota')}</span>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-red-500">
+                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-red-500">
                           {formatNumber(userPlan.characterQuota.permanentQuota + userPlan.characterQuota.temporaryQuota - userPlan.characterQuota.usedCharacters)}
                         </span>
                       </div>

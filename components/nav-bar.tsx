@@ -88,7 +88,7 @@ export function NavBar() {
               href="/" 
               className="flex items-center gap-2 group relative px-2 md:px-3 py-1"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
               <Image
                 src="/images/logo.png"
                 alt="Logo"
@@ -96,10 +96,10 @@ export function NavBar() {
                 height={32}
                 className="w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 group-hover:scale-110"
               />
-              <span className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-x hidden md:inline-block">
+              <span className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 animate-gradient-x hidden md:inline-block">
                 VoiceWove
               </span>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-teal-500/20 to-cyan-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
             </Link>
           </div>
 
@@ -108,55 +108,55 @@ export function NavBar() {
               href="/"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('home')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               href="/app"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('workspace')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               href="/cloning"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('voiceCloning')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               href="/design"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('voiceDesign')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               href="/podcast"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('aiPodcast')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
             <Link
               href="/pricing"
               className="text-base font-bold relative group"
             >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
                 {t('pricing')}
               </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 transition-all duration-300 group-hover:w-full"></div>
             </Link>
           </div>
 
@@ -224,17 +224,17 @@ export function NavBar() {
                     variant="ghost" 
                     className="h-8 md:h-10 px-1 md:px-2 flex items-center gap-2 group relative"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     <Avatar className="h-6 w-6 md:h-8 md:w-8 ring-2 ring-offset-2 ring-offset-background ring-primary/10 group-hover:ring-primary/30 transition-all duration-300">
                       <AvatarImage src={session.user.image || ""} />
                       <AvatarFallback>
                         <User className="h-3 w-3 md:h-4 md:w-4" />
                       </AvatarFallback>
                     </Avatar>
-                    <span className="hidden md:inline-block text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 group-hover:opacity-80 transition-opacity duration-300">
+                    <span className="hidden md:inline-block text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 group-hover:opacity-80 transition-opacity duration-300">
                       {session.user.name}
                     </span>
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-teal-500/20 to-cyan-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
@@ -282,7 +282,7 @@ export function NavBar() {
                     const event = new CustomEvent('switch-to-register');
                     document.dispatchEvent(event);
                   }}
-                  className="text-xs md:text-sm px-2 md:px-4 h-8 md:h-10 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300"
+                  className="text-xs md:text-sm px-2 md:px-4 h-8 md:h-10 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
                 >
                   {t('register')}
                 </Button>

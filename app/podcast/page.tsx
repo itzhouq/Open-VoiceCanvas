@@ -1156,14 +1156,14 @@ export default function PodcastPage() {
         <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative">
           {/* 背景装饰 */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl" />
-            <div className="absolute top-40 right-20 w-48 h-48 bg-purple-500/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-500/5 rounded-full blur-3xl" />
+            <div className="absolute top-20 left-10 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl" />
+            <div className="absolute top-40 right-20 w-48 h-48 bg-teal-500/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto px-4 py-4 md:py-8 space-y-4 md:space-y-8 relative z-10">
             <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-blue-500/5 to-pink-500/5 rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-teal-500/5 via-cyan-500/5 to-cyan-500/5 rounded-xl"></div>
               <CardHeader className="pb-4 md:pb-6 relative z-10">
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -1172,12 +1172,12 @@ export default function PodcastPage() {
                 >
                   <div className="text-center space-y-4">
                     <div className="flex items-center justify-center gap-3">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10">
-                        <Radio className="w-8 h-8 text-blue-500" />
+                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10">
+                        <Radio className="w-8 h-8 text-cyan-500" />
                       </div>
                     </div>
                     <div>
-                      <CardTitle className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3">
+                      <CardTitle className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent mb-3">
                         {t('aiPodcast')}
                       </CardTitle>
                       <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -1201,11 +1201,11 @@ export default function PodcastPage() {
                   <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-md">
                     <CardHeader className="pb-4">
                       <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-                          <MessageSquare className="w-5 h-5 text-blue-500" />
+                        <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500/10 to-teal-500/10">
+                          <MessageSquare className="w-5 h-5 text-cyan-500" />
                         </div>
                         <div>
-                          <CardTitle className="text-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                          <CardTitle className="text-xl bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                             {t('contentInputTitle')}
                           </CardTitle>
                           <p className="text-sm text-muted-foreground mt-1">
@@ -1253,14 +1253,14 @@ export default function PodcastPage() {
                       </div>
 
                       {/* 音色选择区域 */}
-                      <Card className="bg-gradient-to-r from-blue-50/50 via-purple-50/50 to-pink-50/50 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-pink-900/10 border-primary/10">
+                      <Card className="bg-gradient-to-r from-blue-50/50 via-teal-50/50 to-cyan-50/50 dark:from-blue-900/10 dark:via-teal-900/10 dark:to-cyan-900/10 border-primary/10">
                         <CardHeader className="pb-4">
                           <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-                              <Volume2 className="w-5 h-5 text-blue-500" />
+                            <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500/10 to-teal-500/10">
+                              <Volume2 className="w-5 h-5 text-cyan-500" />
                             </div>
                             <div>
-                              <CardTitle className="text-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                              <CardTitle className="text-lg bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
                                 {t('podcastVoiceSettings')}
                               </CardTitle>
                               <p className="text-sm text-muted-foreground mt-1">
@@ -1313,8 +1313,8 @@ export default function PodcastPage() {
                             {/* 主持人音色选择 */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 rounded-full bg-blue-500" />
-                                <label className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                                <div className="w-3 h-3 rounded-full bg-cyan-500" />
+                                <label className="text-sm font-semibold text-cyan-600 dark:text-cyan-400">
                                   {t('hostVoice')}
                                 </label>
                               </div>
@@ -1330,8 +1330,8 @@ export default function PodcastPage() {
                                         <div className="flex items-center gap-3">
                                           <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
                                             selectedVoice.gender === 'male'
-                                              ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                                              : 'bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400'
+                                              ? 'bg-blue-100 text-cyan-600 dark:bg-blue-900/30 dark:text-cyan-400'
+                                              : 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400'
                                           }`}>
                                             {selectedVoice.gender === 'male' ? '♂' : '♀'}
                                           </div>
@@ -1353,15 +1353,15 @@ export default function PodcastPage() {
                                             <div className="flex items-center gap-3">
                                               <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
                                                 voice.gender === 'male'
-                                                  ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                                                  : 'bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400'
+                                                  ? 'bg-blue-100 text-cyan-600 dark:bg-blue-900/30 dark:text-cyan-400'
+                                                  : 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400'
                                               }`}>
                                                 {voice.gender === 'male' ? '♂' : '♀'}
                                               </div>
                                               <span>{voice.name || t(`voice-${voice.id}`)}</span>
                                             </div>
                                             {hostVoice === voice.id && (
-                                              <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                                              <CheckCircle2 className="w-4 h-4 text-cyan-500" />
                                             )}
                                           </div>
                                         </SelectItem>
@@ -1375,8 +1375,8 @@ export default function PodcastPage() {
                             {/* 嘉宾音色选择 */}
                             <div className="space-y-3">
                               <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 rounded-full bg-purple-500" />
-                                <label className="text-sm font-semibold text-purple-600 dark:text-purple-400">
+                                <div className="w-3 h-3 rounded-full bg-teal-500" />
+                                <label className="text-sm font-semibold text-teal-600 dark:text-teal-400">
                                   {t('guestVoice')}
                                 </label>
                               </div>
@@ -1392,8 +1392,8 @@ export default function PodcastPage() {
                                         <div className="flex items-center gap-3">
                                           <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
                                             selectedVoice.gender === 'male'
-                                              ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                                              : 'bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400'
+                                              ? 'bg-blue-100 text-cyan-600 dark:bg-blue-900/30 dark:text-cyan-400'
+                                              : 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400'
                                           }`}>
                                             {selectedVoice.gender === 'male' ? '♂' : '♀'}
                                           </div>
@@ -1415,15 +1415,15 @@ export default function PodcastPage() {
                                             <div className="flex items-center gap-3">
                                               <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
                                                 voice.gender === 'male'
-                                                  ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400'
-                                                  : 'bg-pink-100 text-pink-600 dark:bg-pink-900/30 dark:text-pink-400'
+                                                  ? 'bg-blue-100 text-cyan-600 dark:bg-blue-900/30 dark:text-cyan-400'
+                                                  : 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400'
                                               }`}>
                                                 {voice.gender === 'male' ? '♂' : '♀'}
                                               </div>
                                               <span>{voice.name || t(`voice-${voice.id}`)}</span>
                                             </div>
                                             {guestVoice === voice.id && (
-                                              <CheckCircle2 className="w-4 h-4 text-purple-500" />
+                                              <CheckCircle2 className="w-4 h-4 text-teal-500" />
                                             )}
                                           </div>
                                         </SelectItem>
@@ -1441,7 +1441,7 @@ export default function PodcastPage() {
                         onClick={generateDialogue}
                         disabled={isGenerating || !content.trim()}
                         size="lg"
-                        className="w-full h-12 text-base bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+                        className="w-full h-12 text-base bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25"
                       >
                         {isGenerating ? (
                           <>
@@ -1529,15 +1529,15 @@ export default function PodcastPage() {
                           >
                             <div className={`${editingIndex === index ? 'w-[85%]' : 'max-w-[85%]'} relative ${
                               segment.speaker === 'host'
-                                ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/30 dark:to-blue-800/20 border border-blue-200/50 dark:border-blue-700/30'
-                                : 'bg-gradient-to-br from-purple-50 to-purple-100/50 dark:from-purple-900/30 dark:to-purple-800/20 border border-purple-200/50 dark:border-purple-700/30'
+                                ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/30 dark:to-blue-800/20 border border-cyan-200/50 dark:border-cyan-700/30'
+                                : 'bg-gradient-to-br from-teal-50 to-teal-100/50 dark:from-teal-900/30 dark:to-teal-800/20 border border-teal-200/50 dark:border-teal-700/30'
                             } p-4 rounded-2xl shadow-sm`}>
                               <div className="flex items-center justify-between mb-3">
                                 <div className="flex items-center gap-2">
                                   <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
                                     segment.speaker === 'host'
-                                      ? 'bg-blue-500 text-white'
-                                      : 'bg-purple-500 text-white'
+                                      ? 'bg-cyan-500 text-white'
+                                      : 'bg-teal-500 text-white'
                                   }`}>
                                     {segment.speaker === 'host' ? (
                                       <Mic className="w-3 h-3" />
@@ -1615,11 +1615,11 @@ export default function PodcastPage() {
                       <CardHeader className="pb-4">
                         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                           <div className="flex items-center gap-3">
-                            <div className="p-2 rounded-lg bg-gradient-to-r from-green-500/10 to-blue-500/10">
+                            <div className="p-2 rounded-lg bg-gradient-to-r from-green-500/10 to-cyan-500/10">
                               <Users className="w-5 h-5 text-green-500" />
                             </div>
                             <div>
-                              <CardTitle className="text-xl bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                              <CardTitle className="text-xl bg-gradient-to-r from-green-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
                                 {t('podcastContent')}
                               </CardTitle>
                               <p className="text-sm text-muted-foreground mt-1">
@@ -1630,7 +1630,7 @@ export default function PodcastPage() {
                           <Button
                             onClick={generateAllAudio}
                             disabled={isGeneratingAudio.size > 0 || isMergingAudio}
-                            className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white"
+                            className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white"
                           >
                             <Volume2 className="w-4 h-4 mr-2" />
                             {isMergingAudio ? t('generatingPodcast') : isGeneratingAudio.size > 0 ? t('podcastGenerating') : t('generateAllAudio')}
@@ -1641,14 +1641,14 @@ export default function PodcastPage() {
                         {/* 合成音频控制区域 - 置顶显示 */}
                         {mergedAudioUrl && (
                           <div className="mb-6">
-                            <Card className="bg-gradient-to-r from-purple-50/50 via-pink-50/50 to-orange-50/50 dark:from-purple-900/10 dark:via-pink-900/10 dark:to-orange-900/10 border-purple-200/50 dark:border-purple-700/30">
+                            <Card className="bg-gradient-to-r from-teal-50/50 via-cyan-50/50 to-orange-50/50 dark:from-teal-900/10 dark:via-cyan-900/10 dark:to-orange-900/10 border-teal-200/50 dark:border-teal-700/30">
                               <CardHeader className="pb-3">
                                 <div className="flex items-center gap-3">
-                                  <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-                                    <Radio className="w-5 h-5 text-purple-500" />
+                                  <div className="p-2 rounded-lg bg-gradient-to-r from-teal-500/10 to-cyan-500/10">
+                                    <Radio className="w-5 h-5 text-teal-500" />
                                   </div>
                                   <div>
-                                    <CardTitle className="text-lg bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
+                                    <CardTitle className="text-lg bg-gradient-to-r from-teal-500 via-cyan-500 to-orange-500 bg-clip-text text-transparent">
                                       {t('completePodcastAudio')}
                                     </CardTitle>
                                     <p className="text-sm text-muted-foreground mt-1">
@@ -1696,16 +1696,16 @@ export default function PodcastPage() {
                           >
                             <div className={`${editingIndex === index ? 'w-[85%]' : 'max-w-[85%]'} relative ${
                               segment.speaker === 'host'
-                                ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/30 dark:to-blue-800/20 border border-blue-200/50 dark:border-blue-700/30'
-                                : 'bg-gradient-to-br from-purple-50 to-purple-100/50 dark:from-purple-900/30 dark:to-purple-800/20 border border-purple-200/50 dark:border-purple-700/30'
+                                ? 'bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/30 dark:to-blue-800/20 border border-cyan-200/50 dark:border-cyan-700/30'
+                                : 'bg-gradient-to-br from-teal-50 to-teal-100/50 dark:from-teal-900/30 dark:to-teal-800/20 border border-teal-200/50 dark:border-teal-700/30'
                             } p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300`}>
                               {/* 角色标识 */}
                               <div className="flex items-center justify-between mb-3">
                                 <div className="flex items-center gap-3">
                                   <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                                     segment.speaker === 'host'
-                                      ? 'bg-blue-500 text-white'
-                                      : 'bg-purple-500 text-white'
+                                      ? 'bg-cyan-500 text-white'
+                                      : 'bg-teal-500 text-white'
                                   }`}>
                                     {segment.speaker === 'host' ? (
                                       <Mic className="w-4 h-4" />
@@ -1718,7 +1718,7 @@ export default function PodcastPage() {
                                       {segment.speaker === 'host' ? t('podcastHost') : t('podcastGuest')}
                                     </span>
                                     <div className={`w-12 h-0.5 mt-1 ${
-                                      segment.speaker === 'host' ? 'bg-blue-500' : 'bg-purple-500'
+                                      segment.speaker === 'host' ? 'bg-cyan-500' : 'bg-teal-500'
                                     }`} />
                                   </div>
                                 </div>
@@ -1826,8 +1826,8 @@ export default function PodcastPage() {
                                       disabled={isGeneratingAudio.has(index)}
                                       className={`h-9 px-4 ${
                                         segment.speaker === 'host'
-                                          ? 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700'
-                                          : 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700'
+                                          ? 'bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700'
+                                          : 'bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700'
                                       } text-white transition-all duration-300`}
                                     >
                                       {isGeneratingAudio.has(index) ? (
