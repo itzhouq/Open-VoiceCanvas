@@ -269,8 +269,8 @@ export default function Home() {
   const { toast } = useToast();
   const [lastGeneratedAudio, setLastGeneratedAudio] = useState<ArrayBuffer | null>(null);
   const { speak, isLoading, error, SUPPORTED_LANGUAGES } = useSpeech();
-  const [speechService, setSpeechService] = useState<SpeechService>('aws');
-  const [selectedProvider, setSelectedProvider] = useState<'aws' | 'minimax' | 'openai'>('aws');
+  const [speechService, setSpeechService] = useState<SpeechService>('minimax');
+  const [selectedProvider, setSelectedProvider] = useState<'aws' | 'minimax' | 'openai'>('minimax');
   const prevSpeechServiceRef = useRef(speechService);
   const [audioVisualizer, setAudioVisualizer] = useState<{
     audioContext: AudioContext;
@@ -874,10 +874,8 @@ export default function Home() {
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="aws">AWS Polly</SelectItem>
-                            <SelectItem value="aws-ntts">AWS Polly NTTS</SelectItem>
+                            {/* 仅展示已配置凭据的服务；接入 AWS/OpenAI 后在此恢复选项 */}
                             <SelectItem value="minimax">Minimax</SelectItem>
-                            <SelectItem value="openai">OpenAI TTS</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
