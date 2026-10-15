@@ -286,7 +286,7 @@ export async function POST(req: Request) {
         console.log('退款处理完成:', { paymentId: payment.id, userId: payment.userId, planType });
         try {
           const payer = await prisma.users.findUnique({ where: { id: payment.userId } });
-          const amountYuan = ((obj.amount ?? 0) / 100).toFixed(2);
+          const amountYuan = ((payment.amount ?? obj.amount ?? obj.order?.amount ?? 0) / 100).toFixed(2); // 优先用本地流水（payload 字段结构不稳定）
           await notifyFeishu({
             title: '↩️ VoiceWove 退款处理完成',
             level: 'warn',
