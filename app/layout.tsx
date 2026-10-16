@@ -270,8 +270,8 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630
     },
-    creator: '@VoiceWove',
-    site: '@VoiceWove',
+    creator: '@itzhouq2026',
+    site: '@itzhouq2026',
   },
   icons: {
     icon: '/favicon.ico',
