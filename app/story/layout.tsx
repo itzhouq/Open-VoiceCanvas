@@ -59,5 +59,13 @@ export default function StoryLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+    return (
+    <>
+      <div className="bg-gradient-to-r from-teal-600/90 to-emerald-600/90 px-4 py-2 text-center">
+        <h1 className="text-sm font-semibold text-white sm:text-base">AI Story Voiceover Generator</h1>
+        <p className="mt-0.5 text-xs text-teal-50">Paste a story, assign a voice to every character, export multi-character narration in 40+ languages.</p>
+      </div>
+      {children}
+    </>
+  )
 } 

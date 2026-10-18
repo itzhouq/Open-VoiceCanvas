@@ -17,7 +17,6 @@ import { RequireAuth } from "@/components/require-auth";
 import { VoiceOption } from "@/lib/voice-config";
 import { AudioVisualizer } from "@/components/audio-visualizer";
 import { InsufficientCreditsDialog } from "@/components/InsufficientCreditsDialog";
-import { PageH1 } from "@/components/page-h1";
 import { NavBar } from "@/components/nav-bar";
 import { VoiceDesignTitleUpdater } from "./title-updater";
 
@@ -391,7 +390,6 @@ export default function VoiceDesign() {
     <>
       <VoiceDesignTitleUpdater />
       <NavBar />
-      <PageH1 title="AI Voice Design" sub="Design and customize unique AI voices, then use them across story voiceover, podcasts and text-to-speech." />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4 py-4 md:py-8 space-y-4 md:space-y-8">
         <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg overflow-hidden">
