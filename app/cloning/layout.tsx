@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'AI Voice Cloning - Professional Voice Replication & Customization Service',
   description: 'Clone and customize your voice using advanced AI technology. Support for multiple languages including English, Chinese, Japanese, and Korean. Features real-time preview and personalization options. Perfect for voiceovers, education, and podcasting.',
   metadataBase: new URL('https://voicewove.com'),
+  alternates: { canonical: 'https://voicewove.com/cloning' },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

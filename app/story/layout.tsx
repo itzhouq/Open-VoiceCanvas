@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
   description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences. Support multiple character voices and advanced voice synthesis technology.',
   metadataBase: new URL('https://voicewove.com'),
+  alternates: { canonical: 'https://voicewove.com/story' },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

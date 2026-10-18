@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'AI Podcast Generator - Professional Interview-Style Podcast Content Creation Platform',
   description: 'Generate professional interview-style podcast content using AI technology. Supports intelligent interview dialogue generation between hosts and guests, combined with high-quality voice synthesis to create immersive podcast experiences.',
   metadataBase: new URL('https://voicewove.com'),
+  alternates: { canonical: 'https://voicewove.com/podcast' },
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
