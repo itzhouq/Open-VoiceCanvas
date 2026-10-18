@@ -23,10 +23,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://voicewove.com'),
   title: {
-    default: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
+    default: 'VoiceWove — AI Text to Speech & Voice Cloning, 40+ Languages',
     template: '%s | VoiceWove'
   },
-  description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
+  description: 'AI text-to-speech & voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning. Free trial — 10,000 characters, no credit card.',
   keywords: [
     // 英文关键词
     'text to speech',
@@ -248,8 +248,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://voicewove.com',
-    title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
-    description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
+    title: 'VoiceWove — AI Text to Speech & Voice Cloning, 40+ Languages',
+    description: 'AI text-to-speech & voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning. Free trial — 10,000 characters, no credit card.',
     siteName: 'VoiceWove',
     images: [
       {
@@ -262,8 +262,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VoiceWove - Advanced AI-Powered Multilingual Voice Synthesis & Voice Cloning Platform',
-    description: 'Experience state-of-the-art neural voice synthesis and voice cloning in 40+ languages. Professional-grade text-to-speech platform with advanced AI technology, offering crystal-clear audio quality, natural language processing, and personalized voice cloning capabilities.',
+    title: 'VoiceWove — AI Text to Speech & Voice Cloning, 40+ Languages',
+    description: 'AI text-to-speech & voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning. Free trial — 10,000 characters, no credit card.',
     images: {
       url: 'https://voicewove.com/images/og-image.png',
       alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',
@@ -298,6 +298,10 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={__html: JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://voicewove.com/#organization", "name": "VoiceWove", "url": "https://voicewove.com", "logo": "https://voicewove.com/images/logo.png", "sameAs": ["https://x.com/itzhouq2026"]}, {"@type": "WebSite", "@id": "https://voicewove.com/#website", "url": "https://voicewove.com", "name": "VoiceWove", "publisher": {"@id": "https://voicewove.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://voicewove.com/#app", "name": "VoiceWove", "applicationCategory": "MultimediaApplication", "operatingSystem": "Web", "url": "https://voicewove.com", "description": "AI text-to-speech and voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning, MP3 export.", "offers": [{"@type": "Offer", "name": "Monthly", "price": "5.99", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Yearly", "price": "49.90", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Voice Clone Pack", "price": "3.00", "priceCurrency": "USD"}]}]})}
+        />
         <GoogleAnalytics />
         <UmamiAnalytics />
         <CfWebAnalytics />
