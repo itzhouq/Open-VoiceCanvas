@@ -20,6 +20,41 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
+const ORG_WEB_APP_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://voicewove.com/#organization',
+      name: 'VoiceWove',
+      url: 'https://voicewove.com',
+      logo: 'https://voicewove.com/images/logo.png',
+      sameAs: ['https://x.com/itzhouq2026'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://voicewove.com/#website',
+      url: 'https://voicewove.com',
+      name: 'VoiceWove',
+      publisher: { '@id': 'https://voicewove.com/#organization' },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://voicewove.com/#app',
+      name: 'VoiceWove',
+      applicationCategory: 'MultimediaApplication',
+      operatingSystem: 'Web',
+      url: 'https://voicewove.com',
+      description: 'AI text-to-speech and voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning, MP3 export.',
+      offers: [
+        { '@type': 'Offer', name: 'Monthly', price: '5.99', priceCurrency: 'USD' },
+        { '@type': 'Offer', name: 'Yearly', price: '49.90', priceCurrency: 'USD' },
+        { '@type': 'Offer', name: 'Voice Clone Pack', price: '3.00', priceCurrency: 'USD' },
+      ],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://voicewove.com'),
   title: {
@@ -300,7 +335,7 @@ export default async function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={__html: JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://voicewove.com/#organization", "name": "VoiceWove", "url": "https://voicewove.com", "logo": "https://voicewove.com/images/logo.png", "sameAs": ["https://x.com/itzhouq2026"]}, {"@type": "WebSite", "@id": "https://voicewove.com/#website", "url": "https://voicewove.com", "name": "VoiceWove", "publisher": {"@id": "https://voicewove.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://voicewove.com/#app", "name": "VoiceWove", "applicationCategory": "MultimediaApplication", "operatingSystem": "Web", "url": "https://voicewove.com", "description": "AI text-to-speech and voice cloning: 200+ neural voices, multi-character story voiceover, cross-language cloning, MP3 export.", "offers": [{"@type": "Offer", "name": "Monthly", "price": "5.99", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Yearly", "price": "49.90", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Voice Clone Pack", "price": "3.00", "priceCurrency": "USD"}]}]})}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_WEB_APP_SCHEMA) }}
         />
         <GoogleAnalytics />
         <UmamiAnalytics />
