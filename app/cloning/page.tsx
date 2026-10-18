@@ -12,6 +12,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { synthesizeSpeech, playMinimaxAudio, downloadAudio } from "@/lib/polly-service";
 import { AudioVisualizer } from "@/components/audio-visualizer";
+import { PageH1 } from "@/components/page-h1";
 import { NavBar } from "@/components/nav-bar";
 import { motion } from "framer-motion";
 import { RequireAuth } from "@/components/require-auth";
@@ -790,6 +791,7 @@ export default function Cloning() {
     <div className="min-h-screen">
       <VoiceTitleUpdater />
       <NavBar />
+      <PageH1 title="AI Voice Cloning" sub="Upload a short audio sample and clone your voice — then speak any text in 40+ languages with your own AI voice." />
       <main className="container mx-auto px-4 py-4 md:py-8 space-y-4 md:space-y-8">
         <Card className="backdrop-blur-sm bg-background/80 border-primary/10 shadow-lg overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-teal-500/5 via-cyan-500/5 to-cyan-500/5 rounded-xl"></div>

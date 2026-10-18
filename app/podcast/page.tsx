@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { PageH1 } from "@/components/page-h1";
 import { NavBar } from "@/components/nav-bar";
 import { RequireAuth } from "@/components/require-auth";
 import { useToast } from "@/hooks/use-toast";
@@ -1153,6 +1154,7 @@ export default function PodcastPage() {
       <div className="min-h-screen">
         <PodcastTitleUpdater />
         <NavBar />
+      <PageH1 title="AI Podcast Generator" sub="Turn any topic or document into a conversational podcast episode with distinct AI voices — export MP3 in 40+ languages." />
         <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative">
           {/* 背景装饰 */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
