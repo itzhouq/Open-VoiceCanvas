@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { NavBar } from '@/components/nav-bar';
 
 export const metadata: Metadata = {
-  title: 'AI Story Voiceover — Multi-Character Story Narration in 40+ Languages | VoiceWove',
-  description: 'Turn any story into a professional multi-voice audio drama with AI story voiceover. Assign a different AI voice to every character, add narration, and export in minutes. Free trial, no credit card required.',
+  title: 'AI Story Voiceover — Every Character, A Different Voice | VoiceWove',
+  description: 'Turn any story into a multi-voice audio drama: a different AI voice for every character, 40+ languages, clean MP3 export. Try free — 10,000 characters, no credit card.',
   alternates: { canonical: 'https://voicewove.com/ai-story-voiceover' },
   openGraph: {
     title: 'AI Story Voiceover — Multi-Character Story Narration | VoiceWove',

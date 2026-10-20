@@ -133,6 +133,31 @@ export default function VoiceCloningPage() {
         </section>
 
         <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">What Can You Use a Cloned Voice For?</h2>
+          <ul className="space-y-3 text-muted-foreground leading-relaxed">
+            <li><strong className="text-foreground">YouTube & video narration</strong> — keep a consistent voice across every video without ever recording.</li>
+            <li><strong className="text-foreground">Audiobooks & serialized stories</strong> — narrate chapters on your own schedule; revisions never need a re-record.</li>
+            <li><strong className="text-foreground">Course & e-learning narration</strong> — update lessons by editing text, then regenerate audio in minutes.</li>
+            <li><strong className="text-foreground">Multilingual content</strong> — publish the same material in 40+ languages, all in your voice.</li>
+            <li><strong className="text-foreground">Podcast intros & segments</strong> — drop your voice into any project even when you have no time to record.</li>
+          </ul>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">Tips for a Clean Voice Sample</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            The quality of your clone depends mostly on the 30 seconds you record. You don&apos;t need
+            expensive gear — just follow these four rules:
+          </p>
+          <ul className="space-y-3 text-muted-foreground leading-relaxed">
+            <li><strong className="text-foreground">Quiet room, no echo.</strong> A closet full of clothes beats an empty living room.</li>
+            <li><strong className="text-foreground">Keep the mic 15–20 cm away</strong> and speak at your natural pace and volume.</li>
+            <li><strong className="text-foreground">Read continuous sentences</strong> — a paragraph beats a word list; the model learns rhythm too.</li>
+            <li><strong className="text-foreground">Avoid background music or other voices</strong> — the model should hear only you.</li>
+          </ul>
+        </section>
+
+        <section className="mb-14">
           <h2 className="text-2xl font-bold mb-6">3 Steps to Clone Your Voice</h2>
           <ol className="space-y-4">
             {[
