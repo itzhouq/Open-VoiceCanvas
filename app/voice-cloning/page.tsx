@@ -187,6 +187,27 @@ export default function VoiceCloningPage() {
           </div>
         </section>
 
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">Use Your Cloned Voice Everywhere</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Once created, your voice works across every VoiceWove tool:
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Story Voiceover</p>
+              <p className="text-sm text-muted-foreground mt-1">Multi-character narration with your voice as the narrator.</p>
+            </a>
+            <a href="/ai-podcast-generator" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Podcast Generator</p>
+              <p className="text-sm text-muted-foreground mt-1">Two-host podcast episodes, one of them you.</p>
+            </a>
+            <a href="/free-text-to-speech" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">Free Text to Speech</p>
+              <p className="text-sm text-muted-foreground mt-1">Try the full engine free — 10,000 characters, no card.</p>
+            </a>
+          </div>
+        </section>
+
         <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
           <h2 className="text-2xl font-bold mb-3">Hear Yourself Speak Any Language</h2>
           <p className="text-muted-foreground mb-6">
