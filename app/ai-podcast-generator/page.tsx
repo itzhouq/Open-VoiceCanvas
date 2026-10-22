@@ -133,6 +133,17 @@ export default function AiPodcastGeneratorPage() {
         </section>
 
         <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">Podcast Ideas to Start With</h2>
+          <ul className="space-y-3 text-muted-foreground leading-relaxed">
+            <li><strong className="text-foreground">Niche explainers</strong> — pick a topic your audience keeps asking about; a two-host Q&amp;A beats a wall of text.</li>
+            <li><strong className="text-foreground">Paper &amp; report recaps</strong> — turn dense research or industry reports into a 10-minute conversation.</li>
+            <li><strong className="text-foreground">Serialized learning</strong> — break a course or book into weekly dialogue episodes; listeners retain dialogue better than lectures.</li>
+            <li><strong className="text-foreground">News roundups</strong> — paste the week&apos;s headlines, get a digest episode in your feed&apos;s language.</li>
+            <li><strong className="text-foreground">Fiction &amp; story recaps</strong> — narrate and discuss stories with distinct host voices for each perspective.</li>
+          </ul>
+        </section>
+
+        <section className="mb-14">
           <h2 className="text-2xl font-bold mb-6">How It Works — 3 Steps</h2>
           <ol className="space-y-4">
             {[
@@ -148,6 +159,24 @@ export default function AiPodcastGeneratorPage() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">More Ways to Create Audio</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Story Voiceover</p>
+              <p className="text-sm text-muted-foreground mt-1">Multi-character audio dramas with a voice for every character.</p>
+            </a>
+            <a href="/voice-cloning" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Voice Cloning</p>
+              <p className="text-sm text-muted-foreground mt-1">Clone your voice and host episodes yourself — in 40+ languages.</p>
+            </a>
+            <a href="/free-text-to-speech" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">Free Text to Speech</p>
+              <p className="text-sm text-muted-foreground mt-1">Try the full engine free — 10,000 characters, no card.</p>
+            </a>
+          </div>
         </section>
 
         <section className="mb-14">
