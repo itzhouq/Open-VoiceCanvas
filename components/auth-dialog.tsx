@@ -10,6 +10,7 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { Github, Chrome, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { signIn } from "next-auth/react";
+import { EmailVerificationDialog } from "./email-verification-dialog";
 import Link from "next/link";
 
 interface AuthDialogProps {
@@ -24,6 +25,7 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   // 服务端实际注册了哪些 OAuth provider（未配置凭据时隐藏对应按钮）
   const [oauthAvailable, setOauthAvailable] = useState({ github: false, google: false });
+  const [verifyDialog, setVerifyDialog] = useState<{ open: boolean; email: string }>({ open: false, email: '' });
   const { toast } = useToast();
   const { t } = useLanguage();
 
@@ -87,6 +89,11 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
         });
 
         if (result?.error) {
+          if (result.error === 'EMAIL_NOT_VERIFIED') {
+            setVerifyDialog({ open: true, email });
+            setIsLoading(false);
+            return;
+          }
           throw new Error(result.error);
         }
 
@@ -115,24 +122,8 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
           throw new Error(data.error || t('registerError'));
         }
 
-        // 注册即登录：直接以该账号进入工具台（验证邮件后台照发，不再阻断试用）
-        const { signIn } = await import('next-auth/react');
-        const result = await signIn('credentials', {
-          redirect: false,
-          email,
-          password,
-        });
-        if (result?.error) {
-          // 自动登录失败（理论不该发生）退回原流程
-          toast({ title: t('registerSuccess'), description: t('verifyEmailPrompt') || '请查收验证邮件以完成注册' });
-          onClose();
-          return;
-        }
-        toast({
-          title: t('registerSuccess'),
-          description: 'Welcome! We\'ve loaded a sample story for you — hit Speak to hear it.',
-        });
-        window.location.href = '/app?welcome=1';
+        // 注册成功 → 醒目验证引导弹窗（验证邮件已发送；未验证不登录）
+        setVerifyDialog({ open: true, email });
       }
     } catch (error: any) {
       console.error('认证错误:', error);
@@ -181,6 +172,7 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
   };
 
   return (
+    <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -315,5 +307,17 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
         </form>
       </DialogContent>
     </Dialog>
+
+      {/* 醒目邮箱验证引导弹窗（模态拦截，不点击不消失） */}
+      <EmailVerificationDialog
+        open={verifyDialog.open}
+        email={verifyDialog.email}
+        onVerified={() => {
+          setVerifyDialog({ open: false, email: "" });
+          setIsLogin(true);
+        }}
+        onDismiss={() => setVerifyDialog({ open: false, email: "" })}
+      />
+    </>
   );
 } 

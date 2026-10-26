@@ -44,7 +44,10 @@ const handler = NextAuth({
           throw new Error("密码错误");
         }
 
-        // 未验证用户允许登录试用（onboarding 优先）；验证邮件照发，激活后转正式状态
+        // 未验证用户要求先验证邮箱（注册后由前端弹醒目验证引导弹窗）
+        if (!user.emailVerified && user.status !== 'active') {
+          throw new Error('EMAIL_NOT_VERIFIED');
+        }
 
         return {
           id: user.id.toString(),

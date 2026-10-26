@@ -36,7 +36,10 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        // 未验证用户允许登录试用（trial-first，与 route.ts 内联 authorize 一致）
+        // 未验证用户要求先验证邮箱（与 route.ts 内联 authorize 一致）
+        if (!user.emailVerified && user.status !== 'active') {
+          throw new Error('EMAIL_NOT_VERIFIED');
+        }
 
         return { id: user.id, email: user.email, name: user.name, image: user.image };
       },
