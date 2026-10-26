@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, CheckCircle, XCircle } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/language-context';
+import { signIn } from 'next-auth/react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 enum VerificationStatus {
   LOADING = 'loading',
@@ -22,6 +25,9 @@ export default function VerifyEmail() {
   const router = useRouter();
   const token = searchParams.get('token');
   const verificationAttempted = useRef(false);
+  const [verifiedEmail, setVerifiedEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [loginLoading, setLoginLoading] = useState(false);
 
   useEffect(() => {
     async function verifyToken() {
@@ -51,6 +57,7 @@ export default function VerifyEmail() {
         if (response.ok && data.success) {
           setStatus(VerificationStatus.SUCCESS);
           setMessage(t('verificationSuccessful'));
+          if (data.email) setVerifiedEmail(data.email);
           
           // 存储验证状态到 sessionStorage 避免刷新后重复验证
           sessionStorage.setItem('email_verification_status', 'success');
@@ -120,12 +127,57 @@ export default function VerifyEmail() {
         </CardContent>
         <CardFooter className="flex justify-center">
           {status === VerificationStatus.SUCCESS && (
-            <Button 
-              onClick={() => router.push('/')}
-              className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
-            >
-              {t('goToHomepage')}
-            </Button>
+            <div className="w-full space-y-4">
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  if (loginLoading) return;
+                  setLoginLoading(true);
+                  const result = await signIn('credentials', {
+                    redirect: false,
+                    email: verifiedEmail,
+                    password: loginPassword,
+                  });
+                  setLoginLoading(false);
+                  if (result?.error) {
+                    alert(result.error === 'EMAIL_NOT_VERIFIED' ? 'Please verify first (click the email link again).' : result.error);
+                    return;
+                  }
+                  router.push('/app?welcome=1');
+                }}
+                className="w-full space-y-3 text-left"
+              >
+                <div className="space-y-1.5">
+                  <Label htmlFor="ve-email" className="text-sm">Email</Label>
+                  <Input id="ve-email" type="email" value={verifiedEmail} readOnly className="bg-muted/50" />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="ve-password" className="text-sm">Password</Label>
+                  <Input
+                    id="ve-password"
+                    type="password"
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
+                    placeholder="Your password"
+                    required
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  disabled={loginLoading || !loginPassword}
+                  className="w-full bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300"
+                >
+                  {loginLoading ? 'Signing in…' : 'Log in & Start Creating'}
+                </Button>
+              </form>
+              <Button
+                variant="ghost"
+                onClick={() => router.push('/')}
+                className="w-full text-muted-foreground"
+              >
+                {t('goToHomepage')}
+              </Button>
+            </div>
           )}
           {status === VerificationStatus.ERROR && (
             <div className="flex flex-col gap-2 w-full">

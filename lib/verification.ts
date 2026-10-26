@@ -85,7 +85,7 @@ export async function createVerificationTokenAndSendEmail(
 }
 
 // 验证令牌
-export async function verifyEmailToken(token: string): Promise<{ success: boolean; userId?: string; error?: string }> {
+export async function verifyEmailToken(token: string): Promise<{ success: boolean; userId?: string; email?: string; error?: string }> {
   try {
     console.log('Verifying email token:', token);
     
@@ -148,7 +148,7 @@ export async function verifyEmailToken(token: string): Promise<{ success: boolea
       await prisma.$executeRaw`DELETE FROM "VerificationToken" WHERE token = ${token}`;
       
       // 返回成功而不是错误，因为用户确实已经验证过了
-      return { success: true, userId: user.id };
+      return { success: true, userId: user.id, email: user.email };
     }
 
     // 更新用户邮箱验证状态
@@ -165,7 +165,7 @@ export async function verifyEmailToken(token: string): Promise<{ success: boolea
     
     console.log('Email verification successful for user:', user.id);
 
-    return { success: true, userId: user.id };
+    return { success: true, userId: user.id, email: user.email };
   } catch (error) {
     console.error('Failed to verify email token:', error);
     return { success: false, error: 'Error occurred during verification' };

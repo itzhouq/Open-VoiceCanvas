@@ -24,7 +24,7 @@ export async function GET(request: Request) {
     }
 
     return NextResponse.json(
-      { success: true, message: '邮箱验证成功' },
+      { success: true, message: '邮箱验证成功', email: result.email },
       { status: 200 }
     );
   } catch (error) {
