@@ -27,14 +27,19 @@ export function MicrosoftClarity() {
   return (
     <Script id="microsoft-clarity" strategy="afterInteractive">
       {`
-        (function (c, l, a, r, i, t, y) {
-          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-          t = l.createElement(r);
-          t.async = 1;
-          t.src = 'https://www.clarity.ms/tag/' + i;
-          y = l.getElementsByTagName(r)[0];
-          y.parentNode.insertBefore(t, y);
-        })(window, document, 'clarity', 'script', '${NEXT_PUBLIC_CLARITY_ID}');
+        // SSR HTML 解析即执行（早于 hydration），hostname 自检必须放在脚本内——
+        // Vercel preview 域名直接退出，不加载 clarity（根治 bot 会话污染）
+        (function () {
+          if (location.hostname !== '${PROD_HOSTNAME}') return;
+          (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+          })(window, document, 'clarity', 'script', '${NEXT_PUBLIC_CLARITY_ID}');
+        })();
       `}
     </Script>
   );
