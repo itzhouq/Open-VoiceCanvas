@@ -287,8 +287,16 @@ export default function PricingPage() {
         }),
       });
 
-      if (!response.ok) {
+        if (!response.ok) {
         const error = await response.json();
+        if (error.needsVerification) {
+          toast({
+            title: 'Verify your email to continue',
+            description: 'Check your inbox for the verification link, or resend it on the next page.',
+          });
+          router.push('/auth/resend-verification');
+          return;
+        }
         throw new Error(error.error || t('checkoutError'));
       }
 
@@ -301,6 +309,14 @@ export default function PricingPage() {
       window.location.href = url;
     } catch (error) {
       console.error('支付错误:', error);
+      if (error instanceof Error && error.message.includes('verify your email')) {
+        toast({
+          title: 'Verify your email to continue',
+          description: 'Check your inbox for the verification link, or resend it on the next page.',
+        });
+        router.push('/auth/resend-verification');
+        return;
+      }
       toast({
         title: t('error'),
         description: error instanceof Error ? error.message : t('unknownError'),
@@ -373,6 +389,14 @@ export default function PricingPage() {
       window.location.href = url;
     } catch (error) {
       console.error('克隆包购买错误:', error);
+      if (error instanceof Error && error.message.includes('verify your email')) {
+        toast({
+          title: 'Verify your email to continue',
+          description: 'Check your inbox for the verification link, or resend it on the next page.',
+        });
+        router.push('/auth/resend-verification');
+        return;
+      }
       toast({
         title: t('error'),
         description: error instanceof Error ? error.message : t('unknownError'),

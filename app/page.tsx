@@ -479,6 +479,14 @@ export default function LandingPage() {
       window.location.href = url;
     } catch (error) {
       console.error('支付错误:', error);
+      if (error instanceof Error && error.message.includes('verify your email')) {
+        toast({
+          title: 'Verify your email to continue',
+          description: 'Check your inbox for the verification link, or resend it on the next page.',
+        });
+        router.push('/auth/resend-verification');
+        return;
+      }
       toast({
         title: t('error'),
         description: error instanceof Error ? error.message : t('unknownError'),

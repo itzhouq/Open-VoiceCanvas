@@ -36,10 +36,7 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        // 未验证邮箱的账号拒绝登录（注册后需点击验证邮件）
-        if (user.status !== 'active') {
-          throw new Error('EMAIL_NOT_VERIFIED');
-        }
+        // 未验证用户允许登录试用（trial-first，与 route.ts 内联 authorize 一致）
 
         return { id: user.id, email: user.email, name: user.name, image: user.image };
       },
@@ -272,8 +269,9 @@ export async function validateUserSession() {
     console.log(`用户状态不是active: ${user.status}`);
     return {
       valid: false,
-      error: '您的账户未激活，请先验证邮箱',
+      error: 'Please verify your email before purchasing — check your inbox or resend the verification email.',
       status: 403,
+      needsVerification: true,
       session,
       user
     };

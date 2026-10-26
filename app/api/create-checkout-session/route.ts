@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     const sessionResult = await validateUserSession();
     if (!sessionResult.valid || !sessionResult.user) {
       return NextResponse.json(
-        { error: sessionResult.error || '用户验证失败' },
+        { error: sessionResult.error || '用户验证失败', needsVerification: sessionResult.needsVerification === true },
         { status: sessionResult.status || 400 }
       );
     }
