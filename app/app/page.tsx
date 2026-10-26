@@ -20,6 +20,7 @@ import { NavBar } from "@/components/nav-bar";
 import { motion } from "framer-motion";
 import { RequireAuth } from "@/components/require-auth";
 import { useSession } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
 import { useAnalytics } from '@/hooks/use-analytics';
 import { VoiceSelector } from '@/components/voice-selector';
 import { VoiceId } from "@aws-sdk/client-polly";
@@ -373,6 +374,24 @@ export default function Home() {
       });
     }
   }, [speechService]);
+
+  // Onboarding: ?welcome=1 新用户直通——预填示例文本，引导一键试听
+  const searchParams = useSearchParams();
+  const welcomeDoneRef = useRef(false);
+  useEffect(() => {
+    if (!session || searchParams.get('welcome') !== '1' || welcomeDoneRef.current) return;
+    welcomeDoneRef.current = true;
+    if (text && text.trim()) return;
+    setText(
+      'Welcome to VoiceWove. This short sample was loaded for you the moment you signed up. Paste any story here, assign a different AI voice to every character, and hear it come alive in more than forty languages. Press the Speak button below to hear this introduction read aloud.'
+    );
+    toast({
+      title: '🎉 Your free trial is ready',
+      description: 'We loaded a sample story — press Speak to hear it in seconds. 10,000 characters are on us.',
+      duration: 8000,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session, searchParams]);
 
   const handleSpeak = async () => {
     if (isProcessing) return;

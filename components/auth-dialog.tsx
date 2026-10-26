@@ -115,13 +115,24 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
           throw new Error(data.error || t('registerError'));
         }
 
-        // 显示注册成功消息
+        // 注册即登录：直接以该账号进入工具台（验证邮件后台照发，不再阻断试用）
+        const { signIn } = await import('next-auth/react');
+        const result = await signIn('credentials', {
+          redirect: false,
+          email,
+          password,
+        });
+        if (result?.error) {
+          // 自动登录失败（理论不该发生）退回原流程
+          toast({ title: t('registerSuccess'), description: t('verifyEmailPrompt') || '请查收验证邮件以完成注册' });
+          onClose();
+          return;
+        }
         toast({
           title: t('registerSuccess'),
-          description: t('verifyEmailPrompt') || '请查收验证邮件以完成注册',
+          description: 'Welcome! We\'ve loaded a sample story for you — hit Speak to hear it.',
         });
-
-        onClose();
+        window.location.href = '/app?welcome=1';
       }
     } catch (error: any) {
       console.error('认证错误:', error);

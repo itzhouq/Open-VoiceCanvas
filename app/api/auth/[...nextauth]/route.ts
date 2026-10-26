@@ -44,10 +44,7 @@ const handler = NextAuth({
           throw new Error("密码错误");
         }
 
-        // 检查邮箱是否已验证
-        if (!user.emailVerified && user.status !== 'active') {
-          throw new Error("请先验证您的邮箱");
-        }
+        // 未验证用户允许登录试用（onboarding 优先）；验证邮件照发，激活后转正式状态
 
         return {
           id: user.id.toString(),
@@ -134,8 +131,8 @@ const handler = NextAuth({
       else if (url.startsWith(baseUrl)) {
         return url;
       }
-      // 默认重定向到个人中心
-      return `${baseUrl}/profile`;
+      // 默认重定向到工具台（onboarding 直通）
+      return `${baseUrl}/app`;
     },
   },
   pages: {
