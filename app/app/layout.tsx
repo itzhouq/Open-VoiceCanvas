@@ -58,5 +58,13 @@ export default function AppLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <div className="bg-gradient-to-r from-teal-600/90 to-emerald-600/90 px-4 py-2 text-center">
+        <h1 className="text-sm font-semibold text-white sm:text-base">Free Text to Speech Online — Type, Speak, Download</h1>
+        <p className="mt-0.5 text-xs text-teal-50">Studio-quality text to speech software in your browser: 40+ languages, natural AI voices, 10,000 characters free.</p>
+      </div>
+      {children}
+    </>
+  );
 } 
