@@ -17,6 +17,7 @@ import { getSupportedLanguages, getVoicesByLanguage, VoiceOption } from "@/lib/v
 import { useSpeech } from '@/hooks/use-speech';
 import { AudioVisualizer } from "@/components/audio-visualizer";
 import { NavBar } from "@/components/nav-bar";
+import { PageH1 } from "@/components/page-h1";
 import { motion } from "framer-motion";
 import { RequireAuth } from "@/components/require-auth";
 import { useSession } from "next-auth/react";
@@ -860,6 +861,10 @@ export default function Home() {
       <AppTitleUpdater />
       <div className="min-h-screen flex flex-col pb-16">
         <NavBar />
+        <PageH1
+          title="Free Text to Speech Online — Type, Speak, Download"
+          sub="Studio-quality text to speech software in your browser: 40+ languages, natural AI voices, 10,000 characters free. No install, no credit card."
+        />
         <main className="container mx-auto px-4 py-6 md:py-10 space-y-6 md:space-y-10">
           {/* 背景光效 */}
           <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(96,165,250,0.05),transparent)] dark:bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.05),transparent)]"></div>

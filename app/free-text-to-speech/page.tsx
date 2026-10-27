@@ -103,6 +103,17 @@ export default function FreeTextToSpeechPage() {
         </section>
 
         <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">Popular Ways People Use Text to Speech</h2>
+          <ul className="space-y-3 text-muted-foreground leading-relaxed">
+            <li><strong className="text-foreground">Listening instead of reading</strong> — turn articles, papers and newsletters into audio for your commute or workout.</li>
+            <li><strong className="text-foreground">Proofreading by ear</strong> — hearing your own text catches awkward phrasing your eyes skip over.</li>
+            <li><strong className="text-foreground">E-learning &amp; study notes</strong> — convert lecture notes into review audio you can play on repeat.</li>
+            <li><strong className="text-foreground">Accessibility</strong> — a readable, natural-sounding voice for low-vision or dyslexic readers.</li>
+            <li><strong className="text-foreground">Content production</strong> — narration drafts for videos and podcasts before committing to a studio take.</li>
+          </ul>
+        </section>
+
+        <section className="mb-14">
           <h2 className="text-2xl font-bold mb-6">What&apos;s Included Free</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -157,6 +168,24 @@ export default function FreeTextToSpeechPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6">Beyond Plain Text to Speech</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Story Voiceover</p>
+              <p className="text-sm text-muted-foreground mt-1">Multi-character audio dramas — a different voice for every character.</p>
+            </a>
+            <a href="/voice-cloning" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Voice Cloning</p>
+              <p className="text-sm text-muted-foreground mt-1">Clone your own voice and speak any text in 40+ languages.</p>
+            </a>
+            <a href="/ai-podcast-generator" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
+              <p className="font-bold">AI Podcast Generator</p>
+              <p className="text-sm text-muted-foreground mt-1">Two-host podcast episodes from any topic or document.</p>
+            </a>
           </div>
         </section>
 
