@@ -9,6 +9,14 @@ const resendSchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    // 配置守卫：未开启邮箱验证时无需重发，直接提示登录
+    if (process.env.EMAIL_VERIFICATION_ENABLED !== 'true') {
+      return NextResponse.json(
+        { success: false, error: 'Email verification is not required on this site. You can log in directly.' },
+        { status: 400 }
+      );
+    }
+
     const body = await request.json();
     const { email } = resendSchema.parse(body);
 

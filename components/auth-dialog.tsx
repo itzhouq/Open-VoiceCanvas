@@ -122,8 +122,33 @@ export function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
           throw new Error(data.error || t('registerError'));
         }
 
-        // 注册成功 → 醒目验证引导弹窗（验证邮件已发送；未验证不登录）
-        setVerifyDialog({ open: true, email });
+        if (data.verificationRequired) {
+          // 验证模式：注册成功 → 醒目验证引导弹窗（验证邮件已发送；未验证不登录）
+          setVerifyDialog({ open: true, email });
+        } else {
+          // 免验证模式（EMAIL_VERIFICATION_ENABLED 未开启，注册即激活）：自动登录直达，避免多余一步
+          const result = await signIn('credentials', {
+            redirect: false,
+            email,
+            password,
+          });
+
+          if (result?.error) {
+            // 兜底：自动登录失败则回到登录表单，让用户手动登录
+            setIsLogin(true);
+            toast({
+              title: t('registerSuccess'),
+              description: t('loginSuccess'),
+            });
+            return;
+          }
+
+          toast({
+            title: t('registerSuccess'),
+            description: t('welcomeBack'),
+          });
+          onClose();
+        }
       }
     } catch (error: any) {
       console.error('认证错误:', error);

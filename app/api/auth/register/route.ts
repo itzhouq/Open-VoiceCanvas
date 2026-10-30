@@ -57,7 +57,9 @@ export async function POST(req: Request) {
     notifyFeishu({
       title: '🎉 VoiceWove 新用户注册',
       level: 'info',
-      desc: '邮箱注册成功（待邮箱验证激活）',
+      desc: process.env.EMAIL_VERIFICATION_ENABLED === 'true'
+        ? '邮箱注册成功（待邮箱验证激活）'
+        : '邮箱注册成功（免验证，已直接激活）',
       fields: [
         { label: '邮箱', value: email },
         { label: '昵称', value: name || '—' },
@@ -120,6 +122,8 @@ export async function POST(req: Request) {
         message: emailSent
           ? '注册成功，请查收验证邮件激活账户'
           : '注册成功，账号已激活，请直接登录',
+        // 是否需要邮箱验证 = EMAIL_VERIFICATION_ENABLED 配置项（未开启时账号注册即激活）
+        verificationRequired: emailSent,
         user: {
           id: user.id,
           email: user.email,
