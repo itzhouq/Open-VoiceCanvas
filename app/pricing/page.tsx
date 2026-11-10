@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/language-context";
+import { useTrialOffer } from "@/components/product-facts-provider";
+import { CHARACTER_PACKS, CLONE_PACKS, PRODUCT_PRICES_USD, SUBSCRIPTION_PLANS } from "@/lib/product-catalog";
 import { NavBar } from "@/components/nav-bar";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
@@ -14,13 +16,14 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { PricingTitleUpdater } from "./title-updater";
 import { ChevronUp } from "lucide-react";
+import { PricingGuide } from '@/components/pricing-guide';
 
 const plans = [
   {
     type: "trial",
     features: [
-      "freeChars|amount=1000",
-      "trialPeriod|days=7",
+      "freeChars",
+      "trialPeriod",
       "languageSupport",
       "basicSpeedControl",
       "basicVoiceSelection",
@@ -31,7 +34,7 @@ const plans = [
   {
     type: "yearly",
     features: [
-      "yearlyQuota|amount=1500000",
+      `yearlyQuota|amount=${SUBSCRIPTION_PLANS.yearly.characters}`,
       "languageSupport",
       "fullSpeedControl",
       "allVoices",
@@ -46,7 +49,7 @@ const plans = [
   {
     type: "monthly",
     features: [
-      "monthlyQuota|amount=100000",
+      `monthlyQuota|amount=${SUBSCRIPTION_PLANS.monthly.characters}`,
       "languageSupport",
       "fullSpeedControl",
       "allVoices",
@@ -62,23 +65,24 @@ const plans = [
 const payAsYouGo = [
   {
     type: "tenThousandChars",
-    price: "$6",
+    price: `$${PRODUCT_PRICES_USD.tenThousandChars}`,
     popular: false
   },
   {
     type: "millionChars",
-    price: "$55",
+    price: `$${PRODUCT_PRICES_USD.millionChars}`,
     popular: true
   },
   {
     type: "threeMillionChars",
-    price: "$150",
+    price: `$${PRODUCT_PRICES_USD.threeMillionChars}`,
     popular: false
   }
 ];
 
 export default function PricingPage() {
   const { t } = useLanguage();
+  const trialOffer = useTrialOffer();
   const router = useRouter();
   const { toast } = useToast();
   const { data: session } = useSession();
@@ -197,12 +201,12 @@ export default function PricingPage() {
       id: 'clone1',
       name: t('clonePackageBasic'),
       originalPrice: '$5',
-      price: '$3',
+      price: `$${PRODUCT_PRICES_USD.clone1}`,
       saveAmount: '$2',
-      clones: 1,
+      clones: CLONE_PACKS.clone1,
       description: t('clonePackageBasicDesc'),
       features: [
-        t('cloneFeature1Times', { count: 1 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone1 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -213,12 +217,12 @@ export default function PricingPage() {
       id: 'clone50',
       name: t('clonePackagePro'),
       originalPrice: '$299',
-      price: '$150',
+      price: `$${PRODUCT_PRICES_USD.clone50}`,
       saveAmount: '$149',
-      clones: 50,
+      clones: CLONE_PACKS.clone50,
       description: t('clonePackageProDesc'),
       features: [
-        t('cloneFeature1Times', { count: 50 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone50 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -229,12 +233,12 @@ export default function PricingPage() {
       id: 'clone10',
       name: t('clonePackageAdvanced'),
       originalPrice: '$59',
-      price: '$30',
+      price: `$${PRODUCT_PRICES_USD.clone10}`,
       saveAmount: '$29',
-      clones: 10,
+      clones: CLONE_PACKS.clone10,
       description: t('clonePackageAdvancedDesc'),
       features: [
-        t('cloneFeature1Times', { count: 10 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone10 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -429,7 +433,7 @@ export default function PricingPage() {
         return (
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground line-through">$9.99</span>
-            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$5.99</span>
+            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">${PRODUCT_PRICES_USD.monthly.toFixed(2)}</span>
             <span className="text-muted-foreground">{t('perMonth')}</span>
             <Badge className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('save')} $4</Badge>
           </div>
@@ -438,7 +442,7 @@ export default function PricingPage() {
         return (
           <div className="flex items-center gap-2">
             <span className="text-sm text-muted-foreground line-through">$99.9</span>
-            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$49.9</span>
+            <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">${PRODUCT_PRICES_USD.yearly.toFixed(2)}</span>
             <span className="text-muted-foreground">{t('perYear')}</span>
             <Badge className="bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 text-white border-0">{t('save')} $50</Badge>
           </div>
@@ -473,6 +477,8 @@ export default function PricingPage() {
 
   const translateFeature = (feature: string) => {
     const [key, params] = feature.split('|');
+    if (key === 'freeChars') return t(key, { amount: trialOffer.characters.toLocaleString('en-US') });
+    if (key === 'trialPeriod') return t(key, { days: trialOffer.days });
     if (params) {
       const paramObj = Object.fromEntries(
         params.split(',').map(p => {
@@ -522,7 +528,7 @@ export default function PricingPage() {
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                       <Check className="h-5 w-5 text-primary mr-2" />
-                      <span>{translateFeature(feature)}</span>
+                      <span id={feature === 'freeChars' ? 'trial-allowance' : feature === 'trialPeriod' ? 'trial-duration' : undefined}>{translateFeature(feature)}</span>
                     </li>
                   ))}
                 </ul>
@@ -593,7 +599,7 @@ export default function PricingPage() {
         </div>
 
         {/* 按量付费方案 */}
-        <div className="mt-16">
+        <div id="character-packs" className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">{t('payAsYouGo')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {payAsYouGo.map((plan) => (
@@ -607,7 +613,7 @@ export default function PricingPage() {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                 <div className="relative text-center">
-                  <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{t(plan.type)}</h3>
+                  <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{CHARACTER_PACKS[plan.type].toLocaleString('en-US')} {t('characters')}</h3>
                   <div className="mb-6">
                     <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{plan.price}</span>
                   </div>
@@ -623,6 +629,8 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
+
+        <PricingGuide trialOffer={trialOffer} />
 
         {/* 用户评价部分 — 暂时隐藏（Creem 合规要求：不得展示无法核实的虚构评价），有真实用户反馈后恢复 */}
         {false && (
@@ -665,7 +673,7 @@ export default function PricingPage() {
                             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-teal-500/[0.03] to-cyan-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                             
                             {/* 装饰性引号 */}
-                            <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">"</div>
+                            <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">&quot;</div>
                             
                             <div className="relative flex flex-col h-full">
                               <div className="flex-grow overflow-hidden">
@@ -770,7 +778,7 @@ export default function PricingPage() {
             >
               <div className="bg-background/60 backdrop-blur border border-primary/10 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-xl font-bold mb-2">{t('faqTrialFeatures')}</h3>
-                <p className="text-muted-foreground">{t('faqTrialFeaturesAnswer')}</p>
+                <p id="trial-details" className="text-muted-foreground">{t('faqTrialFeaturesAnswer', { amount: trialOffer.characters.toLocaleString('en-US'), days: trialOffer.days })}</p>
               </div>
               <div className="bg-background/60 backdrop-blur border border-primary/10 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <h3 className="text-xl font-bold mb-2">{t('faqHowToTry')}</h3>
@@ -826,4 +834,4 @@ export default function PricingPage() {
       </motion.div>
     </div>
   );
-} 
+}

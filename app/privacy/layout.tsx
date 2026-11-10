@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+
+const title = 'Privacy Policy';
+const description = 'Read how VoiceWove collects and handles account, text and voice data, including service providers and options for contacting us about your data.';
+const url = 'https://voicewove.com/privacy';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | VoiceWove',
-  description: 'How VoiceWove handles your data: what we collect, third-party AI processors (MiniMax, DeepSeek), Google API Limited Use compliance, and your rights.',
-  metadataBase: new URL('https://voicewove.com'),
-  alternates: { canonical: 'https://voicewove.com/privacy' },
-  robots: { index: true, follow: true },
-}
+  title,
+  description,
+  alternates: { canonical: url },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: { title: `${title} | VoiceWove`, description, url, siteName: 'VoiceWove', type: 'website' },
+  twitter: { card: 'summary', title: `${title} | VoiceWove`, description },
+};
 
 export default function PrivacyLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return children;
 }

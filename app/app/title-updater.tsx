@@ -1,15 +1,5 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useLanguage } from '@/lib/i18n/language-context';
-
+// Route metadata owns the title, including during client navigation.
+// Keep this export compatible with existing page imports without mutating document.title.
 export function AppTitleUpdater() {
-  const { t, language } = useLanguage();
-
-  useEffect(() => {
-    // 根据当前语言更新App页面标题
-    document.title = t('appPageTitle');
-  }, [language, t]);
-
-  return null; // 这是一个无渲染组件，只处理页面标题更新
-} 
+  return null;
+}

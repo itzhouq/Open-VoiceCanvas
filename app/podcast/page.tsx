@@ -1,12 +1,13 @@
 'use client';
 
+import { PODCAST_BATCH_CHARACTER_MULTIPLIER } from '@/lib/product-catalog';
+
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { PageH1 } from "@/components/page-h1";
 import { NavBar } from "@/components/nav-bar";
 import { RequireAuth } from "@/components/require-auth";
 import { useToast } from "@/hooks/use-toast";
@@ -29,15 +30,6 @@ import {
   CheckCircle2,
   ChevronUp
 } from "lucide-react";
-
-// 播客页面标题更新器
-function PodcastTitleUpdater() {
-  const { t } = useLanguage();
-  useEffect(() => {
-    document.title = t('podcastPageTitle');
-  }, [t]);
-  return null;
-}
 
 interface DialogueSegment {
   speaker: 'host' | 'guest';
@@ -388,7 +380,7 @@ export default function PodcastPage() {
     const confirmedDialogue = [...previewDialogue];
 
     // 计算总字符数
-    const totalCharacters = confirmedDialogue.reduce((total, segment) => total + segment.text.length, 0) * 2;
+    const totalCharacters = confirmedDialogue.reduce((total, segment) => total + segment.text.length, 0) * PODCAST_BATCH_CHARACTER_MULTIPLIER;
 
     // 检查用户字符配额
     try {
@@ -1152,9 +1144,7 @@ export default function PodcastPage() {
   return (
     <RequireAuth>
       <div className="min-h-screen">
-        <PodcastTitleUpdater />
         <NavBar />
-      <PageH1 title="AI Podcast Generator" sub="Turn any topic or document into a conversational podcast episode with distinct AI voices — export MP3 in 40+ languages." />
         <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 relative">
           {/* 背景装饰 */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -46,7 +46,7 @@ export const no: TranslationType = {
   feature1Title: "Høy kvalitet",
   feature1Desc: "Krystallklar talesyntese med naturlig intonasjon og rytme",
   feature2Title: "Flerspråklig",
-  feature2Desc: "50+ språk med både mannlige og kvinnelige stemmer, perfekt for globalt innhold",
+  feature2Desc: "Velg blant tilgjengelige språk og stemmer til innholdet ditt.",
   feature3Title: "Avanserte funksjoner",
   feature3Desc: "Tilpass hastighet, visualiser lyd og aktivér ord-for-ord lesing for bedre læring",
   ctaTitle: "Bruk tekst-til-tale verktøyet vårt i dag",
@@ -81,7 +81,7 @@ export const no: TranslationType = {
   googleLogin: "Fortsett med Google",
   dividerText: "eller",
   aiPowered: "Drevet av AI",
-  languagesSupported: "50+ språk",
+  languagesSupported: "Støtte for flere språk",
   copyright: "© {year} VoiceWove. Alle rettigheter forbeholdt.",
   footerSlogan: "Laget med ❤️ for bedre talegjenkjenning",
   loginDescription: "Logg inn for å få tilgang til flere funksjoner",
@@ -221,7 +221,7 @@ export const no: TranslationType = {
   trialPeriod: "{days} dagers prøveperiode",
   yearlyQuota: "{amount} tegn per år",
   monthlyQuota: "{amount} tegn per måned",
-  languageSupport: "50+ språk støttet",
+  languageSupport: "Støtte for flere språk",
   basicSpeedControl: "Grunnleggende hastighetskontroll",
   basicVoiceSelection: "Grunnleggende stemmevalg",
   textInputOnly: "Kun tekstinntasting",
@@ -244,20 +244,20 @@ export const no: TranslationType = {
   
   // Betal per bruk
   payAsYouGo: "Betal per bruk",
-  tenThousandChars: "100 000 tegn",
+  tenThousandChars: "10 000 tegn",
   millionChars: "1 million tegn",
   threeMillionChars: "3 millioner tegn",
   
   // FAQ
   faq: "Ofte stilte spørsmål",
   faqTrialFeatures: "Hva inkluderer prøveversjonen?",
-  faqTrialFeaturesAnswer: "Prøveversjonen inkluderer 7 dager med 1000 tegn, støtte for 50+ språk, grunnleggende hastighetskontroll og stemmevalg.",
+  faqTrialFeaturesAnswer: "Prøv tekst-til-tale med {amount} tegn i {days} dager. Velg blant tilgjengelige stemmer og juster talehastigheten.",
   faqHowToTry: "Hvordan starter jeg prøveperioden?",
   faqHowToTryAnswer: "Registrer deg for å få tilgang uten betalingskort. Du kan oppgradere når som helst.",
   faqQuotaCalc: "Hvordan beregnes tegnkvoten?",
   faqQuotaCalcAnswer: "Tegn telles inkludert mellomrom og tegnsetting.",
   faqPayment: "Hvilke betalingsmetoder godtas?",
-  faqPaymentAnswer: "Vi tar imot alle større kort, WeChat Pay, Alipay og mer. Alle transaksjoner er krypterte.",
+  faqPaymentAnswer: "Tilgjengelige betalingsmetoder vises ved betaling.",
   faqQuotaType: "Forskjell på kjøpt kvote og abonnementskvote?",
   faqQuotaTypeAnswer: "Kjøpt kvote varer evig, abonnementskvote utløper med medlemskapet.",
   
@@ -454,7 +454,7 @@ export const no: TranslationType = {
       save: "Lagre",
     
       // Hjemmeside - Stemmeklonering
-      landingSubtitle: "Tekst-til-tale i sanntid for over 50 språk med stemmeklonering og stemmedesign, basert på avansert AI-teknologi for klar og naturlig talegenerering.",
+      landingSubtitle: "Gjør tekst om til tale, klon stemmer du har tillatelse til å bruke, og design stemmer i nettleseren.",
       feature4Title: "Stemmeklonering",
       feature4Desc: "Personlig stemmeklonering som gjør AI-stemmer mer menneskelige",
     
@@ -522,7 +522,7 @@ export const no: TranslationType = {
     verificationError: "Feil oppsto under verifisering",
 
     // Kjernefunksjoner
-multiLanguageSupportItem: "Støtter 50+ språk og dialekter",
+multiLanguageSupportItem: "Tilgjengelige språk avhenger av den valgte stemmen",
 multiLanguageVoicesItem: "Flere mannlige/kvinnelige stemmer per språk",
 multiLanguageAccentsItem: "Regionale aksentvalg (f.eks. amerikansk, britisk engelsk)",
 naturalSpeechItem: "Menneskelig naturlig intonasjon",
@@ -556,7 +556,7 @@ termsOfService: "Bruksvilkår",
 privacyPolicy: "Personvernerklæring",
 legalLinks: "Juridiske bestemmelser",
 
-    demoPhrase1: "Konverter tekst til naturlig tale, 50+ språk og stemmer",
+    demoPhrase1: "Gjør tekst om til naturlig tale med en stemme du velger",
     demoPhrase2: "Klone stemmen din, sanntidstilpassing av tale",
 
     agreementPrefix: "Ved å registrere deg godtar du våre",

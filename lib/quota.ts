@@ -1,8 +1,7 @@
 import { prisma } from '@/lib/prisma';
+import { TRIAL_TEMPORARY_QUOTA, TRIAL_DAYS } from '@/lib/trial-offer';
 
-// 试用套餐参数（可通过环境变量覆盖）
-export const TRIAL_TEMPORARY_QUOTA = parseInt(process.env.TRIAL_TEMPORARY_QUOTA || '10000', 10);
-export const TRIAL_DAYS = parseInt(process.env.TRIAL_DAYS || '7', 10);
+export { TRIAL_TEMPORARY_QUOTA, TRIAL_DAYS };
 
 export function trialExpiry(): Date {
   return new Date(Date.now() + TRIAL_DAYS * 24 * 60 * 60 * 1000);

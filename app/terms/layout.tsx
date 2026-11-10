@@ -1,13 +1,18 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+
+const title = 'Terms of Service';
+const description = 'Read the terms for VoiceWove accounts, payments, generated audio, voice-cloning consent and acceptable use.';
+const url = 'https://voicewove.com/terms';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | VoiceWove',
-  description: 'Terms for using VoiceWove: accounts, subscriptions and one-time packs, acceptable use (including voice-cloning consent rules), and commercial rights for generated audio.',
-  metadataBase: new URL('https://voicewove.com'),
-  alternates: { canonical: 'https://voicewove.com/terms' },
-  robots: { index: true, follow: true },
-}
+  title,
+  description,
+  alternates: { canonical: url },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: { title: `${title} | VoiceWove`, description, url, siteName: 'VoiceWove', type: 'website' },
+  twitter: { card: 'summary', title: `${title} | VoiceWove`, description },
+};
 
 export default function TermsLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return children;
 }

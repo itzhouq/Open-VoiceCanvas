@@ -8,7 +8,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/profile', '/app/', '/auth/'],
+        // Account pages must remain crawlable so their noindex metadata can be read.
+        disallow: ['/api/'],
       },
     ],
     sitemap: 'https://voicewove.com/sitemap.xml',

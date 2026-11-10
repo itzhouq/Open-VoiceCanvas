@@ -1,218 +1,119 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { NavBar } from '@/components/nav-bar';
+import { GeoLandingPage, type LandingFaq } from '@/components/geo-landing-page';
+import { TRIAL_OFFER } from '@/lib/trial-offer';
+import { PODCAST_BATCH_CHARACTER_MULTIPLIER, PRODUCT_PRICES_USD } from '@/lib/product-catalog';
+
+const trialCharacters = TRIAL_OFFER.characters.toLocaleString('en-US');
+const title = 'AI Podcast Generator with Editable Host and Guest Voices';
+const description = `Turn a topic or pasted text into a host-and-guest podcast script. Edit dialogue, choose voices and export the full episode as WAV. ${TRIAL_OFFER.days}-day speech trial.`;
 
 export const metadata: Metadata = {
-  title: 'AI Podcast Generator — Turn Any Topic or Document into a Podcast | VoiceWove',
-  description: 'Generate podcast-style audio from any topic, script or document with AI. Multi-voice conversations, 40+ languages, MP3 export. Free trial — no credit card required.',
+  title,
+  description,
   alternates: { canonical: 'https://voicewove.com/ai-podcast-generator' },
   openGraph: {
-    title: 'AI Podcast Generator — Topic to Podcast Audio in Minutes | VoiceWove',
-    description: 'Turn any topic or document into a podcast-style conversation with AI voices. 40+ languages, MP3 export, free trial.',
+    title,
+    description,
     url: 'https://voicewove.com/ai-podcast-generator',
     siteName: 'VoiceWove',
     type: 'website',
   },
 };
 
-const faqs = [
+const faqs: LandingFaq[] = [
   {
-    q: 'What is an AI podcast generator?',
-    a: 'An AI podcast generator turns written content — a topic, an article, a script or a document — into podcast-style audio automatically. VoiceWove generates a natural conversational script, then performs it with distinct AI voices for each speaker, ready to publish as an episode.',
+    q: 'How many characters does a podcast use?',
+    a: `The initial full-episode generation uses ${PODCAST_BATCH_CHARACTER_MULTIPLIER} times the total character count of the confirmed dialogue. For example, 1,000 dialogue characters use ${1000 * PODCAST_BATCH_CHARACTER_MULTIPLIER} quota characters. Editing or regenerating an individual segment uses that segment’s character count once. Budget for revisions as well as the first version.`,
   },
   {
-    q: 'Do I need recording equipment?',
-    a: 'No microphone, no audio interface, no editing software. The entire production — script writing, voice performance, audio export — happens in your browser.',
+    q: 'How can I turn an article into a two-speaker podcast?',
+    a: 'Paste the article text or your topic notes into the podcast workspace. VoiceWove prepares a host-and-guest dialogue that you can review and edit. Choose a voice for each speaker, generate the audio, then download the complete episode as WAV.',
   },
   {
-    q: 'Can it sound like two people talking?',
-    a: 'Yes. VoiceWove assigns different AI voices to each speaker with natural back-and-forth pacing, so the result sounds like a real conversation rather than a single narrator.',
+    q: 'Can I choose the host and guest voices?',
+    a: 'Yes. The podcast workspace has separate voice choices for the host and guest. Review the available system voices or saved voices, then test a short exchange to check that the two speakers are easy to distinguish.',
   },
   {
-    q: 'Which languages are supported?',
-    a: '40+ languages. You can also generate an episode in one language and re-produce it in another to reach international audiences with the same effort.',
+    q: 'Can I edit the script or replace one audio segment?',
+    a: 'Yes. Review and edit the generated dialogue before creating audio. You can regenerate individual segments and combine the current audio into a complete episode. New speech generation uses character quota, so leave room in your balance for revisions.',
   },
   {
-    q: 'Who owns the generated episodes?',
-    a: 'You do. Publish generated episodes on Spotify, Apple Podcasts, YouTube or anywhere else — commercial use is allowed on paid plans.',
+    q: 'Does it accept PDF or Word uploads?',
+    a: 'The podcast workspace takes a topic or pasted text, up to 10,000 characters. To use a PDF, Word document or web article, first copy the relevant text into the input. The podcast form does not directly import those files or fetch a webpage from its URL.',
+  },
+  {
+    q: 'Is the podcast export MP3 or WAV?',
+    a: 'The complete combined podcast downloads as WAV. Individual generated speech segments can be downloaded as MP3. If your podcast host requires a single MP3, convert the combined WAV with an audio editor before uploading.',
+  },
+  {
+    q: 'Is the AI podcast generator free to try?',
+    a: `New accounts receive ${trialCharacters} speech-synthesis characters for ${TRIAL_OFFER.days} days without a credit card. Generation requires an account and sufficient quota. The trial is shared with other speech workflows; creating a cloned voice requires separate clone/design credits.`,
+  },
+  {
+    q: 'Can I publish the result on Spotify, YouTube or Apple Podcasts?',
+    a: 'You can download the audio and prepare it for your chosen publishing service; VoiceWove does not publish the episode for you. Review the destination’s policies, your rights to the source material and voices, and our Terms of Service. Buying quota alone does not settle those permissions.',
+  },
+  {
+    q: 'Will the generated conversation preserve every fact from my source?',
+    a: 'Review the dialogue before synthesis. Generated scripts can omit details or introduce mistakes, so check names, figures, quotations and claims against the source. Edit the script to reflect what you want to say before generating the final audio.',
+  },
+  {
+    q: 'Can I produce the episode in another language?',
+    a: 'Use the language options available in the podcast workspace and review the generated text before synthesis. Prepare or edit the script in your target language, then test the selected voices. Check pronunciation and meaning before creating the complete episode.',
   },
 ];
 
 export default function AiPodcastGeneratorPage() {
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <NavBar />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <header className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">
-            VoiceWove · AI Podcast Generator
-          </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
-            AI Podcast Generator — From Topic to Episode in Minutes
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Give it a topic or paste a document. VoiceWove writes the conversational script and
-            performs it with distinct AI voices — a publishable podcast episode, in 40+ languages,
-            without touching a microphone.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/podcast"
-              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
-            >
-              Generate Your First Episode — Free
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-muted transition"
-            >
-              See Pricing
-            </Link>
-          </div>
-          <p className="text-xs text-muted-foreground mt-3">
-            Free 7-day trial · 10,000 characters · No credit card required
-          </p>
-        </header>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-4">The NotebookLM Effect, for Your Own Content</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Multi-speaker AI podcasts went mainstream when tools started turning documents into
-            two-host conversations. The problem: you can&apos;t control the voices, the language, or
-            publish the output.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            VoiceWove gives you a full pipeline you control: generate the dialogue script from your
-            topic, choose which AI voices play which host, tune the delivery, and export clean MP3
-            you own outright — in 40+ languages.
-          </p>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">What You Can Produce</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: '🗞️ Topic Explainer Episodes',
-                body: 'Feed it a subject and get a natural two-host breakdown — perfect for daily or weekly shows.',
-              },
-              {
-                title: '📄 Document-to-Podcast',
-                body: 'Turn reports, papers or long articles into conversational audio your audience will actually finish.',
-              },
-              {
-                title: '🧑‍🏫 Educational Series',
-                body: 'Course chapters and study material as engaging dialogue — ideal for e-learning and internal training.',
-              },
-              {
-                title: '🌍 Multilingual Feeds',
-                body: 'Same episode, multiple languages. Grow international listeners without re-recording anything.',
-              },
-            ].map((f) => (
-              <div key={f.title} className="rounded-lg border border-border p-5 bg-card hover:shadow-md transition">
-                <h3 className="font-bold mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Podcast Ideas to Start With</h2>
-          <ul className="space-y-3 text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Niche explainers</strong> — pick a topic your audience keeps asking about; a two-host Q&amp;A beats a wall of text.</li>
-            <li><strong className="text-foreground">Paper &amp; report recaps</strong> — turn dense research or industry reports into a 10-minute conversation.</li>
-            <li><strong className="text-foreground">Serialized learning</strong> — break a course or book into weekly dialogue episodes; listeners retain dialogue better than lectures.</li>
-            <li><strong className="text-foreground">News roundups</strong> — paste the week&apos;s headlines, get a digest episode in your feed&apos;s language.</li>
-            <li><strong className="text-foreground">Fiction &amp; story recaps</strong> — narrate and discuss stories with distinct host voices for each perspective.</li>
-          </ul>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">How It Works — 3 Steps</h2>
-          <ol className="space-y-4">
-            {[
-              'Enter a topic or paste your source material — article, notes, or script.',
-              'AI writes the multi-speaker conversation; pick distinct voices for each host and adjust pacing.',
-              'Generate the episode and export MP3 — ready for Spotify, Apple Podcasts, YouTube or RSS.',
-            ].map((step, i) => (
-              <li key={i} className="flex gap-4 items-start">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white flex items-center justify-center font-bold">
-                  {i + 1}
-                </span>
-                <p className="text-muted-foreground leading-relaxed pt-1">{step}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">More Ways to Create Audio</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
-            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Story Voiceover</p>
-              <p className="text-sm text-muted-foreground mt-1">Multi-character audio dramas with a voice for every character.</p>
-            </a>
-            <a href="/voice-cloning" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Voice Cloning</p>
-              <p className="text-sm text-muted-foreground mt-1">Clone your voice and host episodes yourself — in 40+ languages.</p>
-            </a>
-            <a href="/free-text-to-speech" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">Free Text to Speech</p>
-              <p className="text-sm text-muted-foreground mt-1">Try the full engine free — 10,000 characters, no card.</p>
-            </a>
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-5">
-            {faqs.map((f) => (
-              <div key={f.q} className="border-b border-border pb-5">
-                <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
-          <h2 className="text-2xl font-bold mb-3">Your Podcast, Without the Studio</h2>
-          <p className="text-muted-foreground mb-6">
-            Generate your first episode free — script, voices and export included.
-          </p>
-          <Link
-            href="/podcast"
-            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
-          >
-            Generate a Podcast Episode — Free
-          </Link>
-        </section>
-      </main>
-
-      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        <p>
-          © {new Date().getFullYear()} VoiceWove ·{' '}
-          <Link href="/pricing" className="hover:underline">Pricing</Link> ·{' '}
-          <Link href="/privacy" className="hover:underline">Privacy</Link> ·{' '}
-          <Link href="/terms" className="hover:underline">Terms</Link>
-        </p>
-      </footer>
-    </div>
+    <GeoLandingPage
+      eyebrow="AI Podcast Generator"
+      title="Turn Your Notes into a Host-and-Guest Podcast"
+      description="Paste a topic or source text, review an AI-generated dialogue, and choose a voice for each speaker. Edit the conversation and download the complete episode as WAV."
+      offerNote={`${trialCharacters} synthesis characters · ${TRIAL_OFFER.days}-day trial · Account required · No credit card required`}
+      primaryAction={{ href: '/podcast', label: 'Try the Podcast Generator' }}
+      introduction={{
+        title: 'How Can I Make a Podcast from Written Content?',
+        paragraphs: [
+          'VoiceWove turns a topic or pasted text into a conversation between a host and a guest. Review the proposed dialogue, choose each speaker’s voice, and generate the segments. It is useful for lesson recaps, topic explainers and drafts of conversational episodes.',
+          'You control the script and voice assignments before creating the finished audio. Check facts against your source, revise any awkward lines, and combine the generated segments when the conversation is ready.',
+        ],
+      }}
+      features={[
+        { title: 'Start with a topic or text', body: 'Paste notes or text from a document to prepare a host-and-guest dialogue.' },
+        { title: 'Choose each speaker', body: 'Select the host and guest voices separately so listeners can follow the conversation.' },
+        { title: 'Review before recording', body: 'Edit the script, check facts and change wording before generating speech.' },
+        { title: 'Keep the audio files', body: 'Download individual MP3 segments or the complete WAV for editing and publishing preparation.' },
+      ]}
+      specifications={[
+        { label: 'Input', value: 'Topic notes or pasted text, up to 10,000 characters. Copy text from PDFs, Word files or articles first.' },
+        { label: 'Speakers', value: 'A host and a guest with separate voice assignments.' },
+        { label: 'Editing', value: 'Review and edit dialogue, then generate or regenerate individual speech segments.' },
+        { label: 'Output', value: 'WAV for the combined episode; MP3 for individual speech segments.' },
+        { label: 'Trial quota', value: `${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days. Revisions and other speech workflows share your quota.` },
+        { label: 'Character usage', value: `Initial full episode: ${PODCAST_BATCH_CHARACTER_MULTIPLIER} times the confirmed dialogue length. Individual segment edits and regeneration: the segment’s character count once.` },
+        { label: 'Paid options', value: `Subscriptions from $${PRODUCT_PRICES_USD.monthly}/month or one-time character packs from $${PRODUCT_PRICES_USD.tenThousandChars}. Clone/design credits are separate.` },
+        { label: 'Publishing', value: 'Download and upload to your chosen host yourself, subject to content rights and that service’s requirements.' },
+      ]}
+      steps={[
+        'Sign in and paste a topic or the relevant text from your document. Keep the input within the displayed character limit.',
+        'Generate the dialogue and review it against your source. Edit the wording and choose a voice for the host and guest.',
+        'Generate and listen to the speech segments. Revise any that need changes, then download the complete episode as WAV.',
+      ]}
+      example={{
+        title: 'A Topic Brief You Can Try',
+        description: 'Paste this brief into the podcast input. Review the proposed host-and-guest dialogue before generating audio.',
+        script: 'Create a short conversation for students about planning a reading habit. The host asks how to choose a realistic reading goal. The guest suggests setting aside a small amount of time, choosing an interesting book, and keeping notes about what they read. End by inviting listeners to pick one book and a time to begin. Keep the advice practical and avoid invented research statistics.',
+      }}
+      faqs={faqs}
+      related={[
+        { href: '/ai-story-voiceover', title: 'Story Voiceover', description: 'Create narration with a cast of story characters.' },
+        { href: '/free-text-to-speech', title: 'Text to Speech', description: 'Read your prepared script as a single-voice MP3.' },
+        { href: '/voice-cloning', title: 'Voice Cloning', description: 'Check the requirements for using your own recorded voice.' },
+      ]}
+      closing={{
+        title: 'Draft Your First Conversation',
+        description: `Start with a short topic using your ${trialCharacters}-character trial. Review the dialogue and test the voices before creating a longer episode.`,
+      }}
+    />
   );
 }

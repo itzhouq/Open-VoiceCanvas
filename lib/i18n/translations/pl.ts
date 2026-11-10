@@ -46,7 +46,7 @@ export const pl: TranslationType = {
   feature1Title: "Wysokiej Jakości Głos",
   feature1Desc: "Krystalicznie czysta synteza mowy z naturalną intonacją i rytmem",
   feature2Title: "Wiele Języków",
-  feature2Desc: "50+ języków z głosami męskimi i żeńskimi, idealne dla globalnych treści",
+  feature2Desc: "Wybierz spośród dostępnych języków i głosów do swoich treści.",
   feature3Title: "Zaawansowane Funkcje",
   feature3Desc: "Dostosuj prędkość, wizualizuj dźwięk i aktywuj czytanie słowo po słowie",
   ctaTitle: "Rozpocznij Korzystanie z Naszego Narzędzia Tekst-Mowa Już Dziś",
@@ -81,7 +81,7 @@ export const pl: TranslationType = {
   googleLogin: "Kontynuuj przez Google",
   dividerText: "lub",
   aiPowered: "Napędzane przez AI",
-  languagesSupported: "50+ Języków",
+  languagesSupported: "Obsługa wielu języków",
   copyright: "© {year} VoiceWove. Wszelkie prawa zastrzeżone.",
   footerSlogan: "Stworzone z ❤️ dla lepszych doświadczeń głosowych",
   loginDescription: "Zaloguj się, aby uzyskać dostęp do funkcji",
@@ -230,7 +230,7 @@ export const pl: TranslationType = {
   trialPeriod: "{days}-dniowy okres próbny",
   yearlyQuota: "{amount} znaków/rok",
   monthlyQuota: "{amount} znaków/miesiąc",
-  languageSupport: "50+ języków obsługiwanych",
+  languageSupport: "Obsługa wielu języków",
   basicSpeedControl: "Podstawowa kontrola prędkości",
   basicVoiceSelection: "Podstawowy wybór głosu",
   textInputOnly: "Tylko wprowadzanie tekstu",
@@ -253,20 +253,20 @@ export const pl: TranslationType = {
 
   // Płatność zgodnie z użyciem
   payAsYouGo: "Płać w miarę użycia",
-  tenThousandChars: "100 tys. znaków",
+  tenThousandChars: "10 000 znaków",
   millionChars: "1 mln znaków",
   threeMillionChars: "3 mln znaków",
 
   // FAQ
   faq: "Częste Pytania",
   faqTrialFeatures: "Co zawiera wersja próbna?",
-  faqTrialFeaturesAnswer: "7-dniowy okres z 1000 znaków, 50+ języków i podstawowymi funkcjami.",
+  faqTrialFeaturesAnswer: "Wypróbuj zamianę tekstu na mowę: {amount} znaków przez {days} dni. Wybierz dostępny głos i dostosuj tempo mowy.",
   faqHowToTry: "Jak rozpocząć test?",
   faqHowToTryAnswer: "Zarejestruj się bez karty kredytowej. W każdej chwili możesz ulepszyć plan.",
   faqQuotaCalc: "Jak liczone są znaki?",
   faqQuotaCalcAnswer: "Uwzględniane są wszystkie znaki, w tym spacje i przecinki.",
   faqPayment: "Akceptowane metody płatności?",
-  faqPaymentAnswer: "Karty debetowe/kredytowe, WeChat Pay, Alipay. Wszystkie transakcje szyfrowane.",
+  faqPaymentAnswer: "Dostępne metody płatności są wyświetlane podczas finalizacji zakupu.",
   faqQuotaType: "Różnice między zakupionym a subskrypcyjnym limitem?",
   faqQuotaTypeAnswer: "Zakupiony limit jest stały, subskrypcyjny tymczasowy.",
 
@@ -456,7 +456,7 @@ export const pl: TranslationType = {
       save: "Zapisz",
     
       // Strona główna - Klonowanie głosu
-      landingSubtitle: "Konwersja tekstu na mowę w czasie rzeczywistym w 50+ językach z funkcją klonowania głosu i projektowania głosu, wykorzystująca zaawansowaną technologię AI do syntezy naturalnego dźwięku.",
+      landingSubtitle: "Zamieniaj tekst na mowę, klonuj głosy, do których używania masz zgodę, i projektuj głosy w przeglądarce.",
       feature4Title: "Klonowanie głosu",
       feature4Desc: "Personalizowane klony głosu nadające AI bardziej ludzki charakter",
     
@@ -524,7 +524,7 @@ export const pl: TranslationType = {
     verificationError: "Wystąpił błąd podczas weryfikacji",
 
     // Lista głównych funkcji
-multiLanguageSupportItem: "Obsługa 50+ języków i dialektów",
+multiLanguageSupportItem: "Dostępne języki zależą od wybranego głosu",
 multiLanguageVoicesItem: "Różne głosy męskie i żeńskie dla każdego języka",
 multiLanguageAccentsItem: "Wybór akcentów regionalnych (np. angielski amerykański, brytyjski)",
 naturalSpeechItem: "Naturalna intonacja na poziomie ludzkim",
@@ -558,7 +558,7 @@ termsOfService: "Regulamin",
 privacyPolicy: "Polityka Prywatności",
 legalLinks: "Postanowienia Prawne",
 
-    demoPhrase1: "Konwertuj tekst na naturalną mowę, 50+ języków i głosów",
+    demoPhrase1: "Zamień tekst w naturalną mowę, wybierając odpowiedni głos",
     demoPhrase2: "Klonuj swój głos, personalizacja głosu w czasie rzeczywistym",
 
     agreementPrefix: "Rejestrując się, wyrażasz zgodę na nasze",

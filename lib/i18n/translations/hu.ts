@@ -46,7 +46,7 @@ export const hu: TranslationType = {
   feature1Title: "Kiváló Minőségű Hang",
   feature1Desc: "Természetes hangsúllyal és ritmussal végzett hangszintézis",
   feature2Title: "Többnyelvű Támogatás",
-  feature2Desc: "50+ nyelv férfi és női hangokkal, ideális globális tartalmakhoz",
+  feature2Desc: "Válasszon az elérhető nyelvek és hangok közül a tartalmához.",
   feature3Title: "Haladó Funkciók",
   feature3Desc: "Sebesség testreszabása, hangvizualizáció és szóról szóra olvasás a tanulás segítésére",
   ctaTitle: "Kezdje El Szöveg-Beszéd Eszközünk Használatát Ma",
@@ -81,7 +81,7 @@ export const hu: TranslationType = {
   googleLogin: "Folytatás Googlelel",
   dividerText: "vagy",
   aiPowered: "Művi Intelligencia",
-  languagesSupported: "50+ Támogatott Nyelv",
+  languagesSupported: "Többnyelvű támogatás",
   copyright: "© {year} VoiceWove. Minden jog fenntartva.",
   footerSlogan: "Szívvel készítve egy jobb hangélményért",
   loginDescription: "Jelentkezzen be további funkciók eléréséhez",
@@ -230,7 +230,7 @@ export const hu: TranslationType = {
   trialPeriod: "{days} napos próbaidőszak",
   yearlyQuota: "Évi {amount} karakter",
   monthlyQuota: "Havi {amount} karakter",
-  languageSupport: "50+ támogatott nyelv",
+  languageSupport: "Többnyelvű támogatás",
   basicSpeedControl: "Alap sebességszabályozás",
   basicVoiceSelection: "Alap hangválaszték",
   textInputOnly: "Csak szöveges bevitel",
@@ -253,20 +253,20 @@ export const hu: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Használatalapú Fizetés",
-  tenThousandChars: "100K karakter",
+  tenThousandChars: "10 000 karakter",
   millionChars: "1M karakter",
   threeMillionChars: "3M karakter",
   
   // FAQ
   faq: "Gyakran Ismételt Kérdések",
   faqTrialFeatures: "Mit tartalmaz a próbaverzió?",
-  faqTrialFeaturesAnswer: "7 nap, 1000 karakter, 50+ nyelv, alap sebesség- és hangbeállítások",
+  faqTrialFeaturesAnswer: "Próbálja ki a szövegfelolvasást {amount} karakterrel, {days} napig. Válasszon az elérhető hangok közül, és állítsa be a beszéd sebességét.",
   faqHowToTry: "Hogyan kezdjem el a próbaverziót?",
   faqHowToTryAnswer: "Regisztráljon bankszámla nélkül is. Bármikor frissíthet fizetős csomagra.",
   faqQuotaCalc: "Hogyan számítják a karakterkvótát?",
   faqQuotaCalcAnswer: "A ténylegesen bevitt szöveg karaktereit számoljuk, szóközökkel és írásjelekkel együtt.",
   faqPayment: "Milyen fizetési módok elfogadottak?",
-  faqPaymentAnswer: "Bankkártya, WeChat Pay, Alipay stb. Minden tranzakció titkosított.",
+  faqPaymentAnswer: "Az elérhető fizetési módok a fizetési oldalon láthatók.",
   faqQuotaType: "Mi a különbség vásárolt és előfizetéses kvóta között?",
   faqQuotaTypeAnswer: "Vásárolt kvóta állandó, előfizetéses időkorlátos. Igényeinek megfelelően válasszon.",
   
@@ -456,7 +456,7 @@ export const hu: TranslationType = {
       save: "Mentés",
     
       // Kezdőlap - Hangklónozás
-      landingSubtitle: "Valós idejű szöveg-beszéd konverzió 50+ nyelven, hangklónozással és hangtervezéssel, fejlett AI technológiával kivitelezve tisztán és természetesen.",
+      landingSubtitle: "Alakítson szöveget beszéddé, klónozzon olyan hangokat, amelyek használatára engedélye van, és tervezzen hangokat a böngészőjében.",
       feature4Title: "Hangklónozás",
       feature4Desc: "Személyre szabott hangklónozás, hogy az AI melegebben beszéljen",
     
@@ -525,7 +525,7 @@ export const hu: TranslationType = {
   verificationError: "Hiba történt az ellenőrzés során",
 
   // Alapfunkciók listája
-multiLanguageSupportItem: "50+ nyelv és dialektus támogatása",
+multiLanguageSupportItem: "Az elérhető nyelvek a kiválasztott hangtól függenek",
 multiLanguageVoicesItem: "Több férfi/női hang minden nyelvhez",
 multiLanguageAccentsItem: "Regionális akcentusok (pl. amerikai, brit angol)",
 naturalSpeechItem: "Emberi szintű természetes hangsúlyozás",
@@ -559,7 +559,7 @@ termsOfService: "Felhasználási Feltételek",
 privacyPolicy: "Adatvédelmi Szabályzat",
 legalLinks: "Jogi Rendelkezések",
 
-    demoPhrase1: "Szöveget alakítson át természetes beszéddé, 50+ nyelv és hangváltozat",
+    demoPhrase1: "Alakítson szöveget természetes beszéddé egy választott hanggal",
     demoPhrase2: "Klónozza a hangját, valós idejű beszédtestreszabás",
 
     agreementPrefix: "Regisztrációval elfogadja",

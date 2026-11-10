@@ -46,7 +46,7 @@ export const hi: TranslationType = {
   feature1Title: "उच्च-गुणवत्ता वाणी",
   feature1Desc: "स्वाभाविक लय और स्वर के साथ स्पष्ट ध्वनि संश्लेषण",
   feature2Title: "एकाधिक भाषाएं",
-  feature2Desc: "वैश्विक सामग्री के लिए 50+ भाषाएं और लिंग-आधारित आवाज़ें",
+  feature2Desc: "अपनी सामग्री के लिए उपलब्ध भाषाओं और आवाज़ों में से चुनें।",
   feature3Title: "उन्नत सुविधाएं",
   feature3Desc: "गति अनुकूलन, ऑडियो विज़ुअलाइज़ेशन और सीखने हेतु शब्द-दर-शब्द पठन",
   ctaTitle: "आज ही हमारे टेक्स्ट-टू-स्पीच टूल का प्रयोग शुरू करें",
@@ -81,7 +81,7 @@ export const hi: TranslationType = {
   googleLogin: "Google से जारी रखें",
   dividerText: "या",
   aiPowered: "AI संचालित",
-  languagesSupported: "50+ भाषाएं",
+  languagesSupported: "बहुभाषी समर्थन",
   copyright: "© {year} वॉइसकैनवास. सर्वाधिकार सुरक्षित।",
   footerSlogan: "बेहतर वॉइस अनुभव के लिए ❤️ से निर्मित",
   loginDescription: "अधिक सुविधाओं के लिए खाते में लॉग इन करें",
@@ -230,7 +230,7 @@ export const hi: TranslationType = {
   trialPeriod: "{days}-दिन का ट्रायल",
   yearlyQuota: "प्रति वर्ष {amount} वर्ण",
   monthlyQuota: "प्रति माह {amount} वर्ण",
-  languageSupport: "50+ भाषाएँ समर्थित",
+  languageSupport: "बहुभाषी समर्थन",
   basicSpeedControl: "मूल गति नियंत्रण",
   basicVoiceSelection: "मूल आवाज़ चयन",
   textInputOnly: "केवल टेक्स्ट इनपुट",
@@ -253,20 +253,20 @@ export const hi: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "पे-एज़-यू-गो",
-  tenThousandChars: "100K वर्ण",
+  tenThousandChars: "10,000 वर्ण",
   millionChars: "1M वर्ण",
   threeMillionChars: "3M वर्ण",
   
   // FAQ
   faq: "अक्सर पूछे जाने वाले प्रश्न",
   faqTrialFeatures: "ट्रायल में कौन सी सुविधाएँ शामिल हैं?",
-  faqTrialFeaturesAnswer: "7-दिवसीय ट्रायल, 1000 वर्ण, 50+ भाषाएं, मूल गति नियंत्रण और आवाज़ चयन उपलब्ध",
+  faqTrialFeaturesAnswer: "{days} दिनों के लिए {amount} वर्णों के साथ टेक्स्ट-टू-स्पीच आज़माएँ। उपलब्ध आवाज़ों में से चुनें और बोलने की गति समायोजित करें।",
   faqHowToTry: "ट्रायल कैसे शुरू करें?",
   faqHowToTryAnswer: "निःशुल्क खाता पंजीकरण करें। क्रेडिट कार्ड की आवश्यकता नहीं",
   faqQuotaCalc: "वर्ण कोटा गणना कैसे होती है?",
   faqQuotaCalcAnswer: "वास्तविक इनपुट टेक्स्ट के वर्ण गिने जाते हैं",
   faqPayment: "कौन से भुगतान विकल्प स्वीकार हैं?",
-  faqPaymentAnswer: "डेबिट/क्रेडिट कार्ड, WeChat Pay, Alipay आदि स्वीकार। सभी लेनदेन सुरक्षित",
+  faqPaymentAnswer: "उपलब्ध भुगतान विधियाँ चेकआउट पेज पर दिखाई जाती हैं।",
   faqQuotaType: "खरीदे गए और सदस्यता कोटा में अंतर?",
   faqQuotaTypeAnswer: "खरीदे गए कोटा स्थायी होते हैं, सदस्यता कोटा अस्थायी",
   
@@ -456,7 +456,7 @@ export const hi: TranslationType = {
       save: "सहेजें",
     
       // होमपेज वॉइस क्लोनिंग अनुभाग
-      landingSubtitle: "50 से अधिक भाषाओं में तत्काल पाठ-से-वाक् रूपांतरण, स्वर क्लोनिंग और आवाज़ डिज़ाइन समर्थित, उन्नत एआई प्रौद्योगिकी द्वारा स्पष्ट एवं प्राकृतिक वाक् संश्लेषण",
+      landingSubtitle: "अपने ब्राउज़र में टेक्स्ट को आवाज़ में बदलें, अनुमति प्राप्त आवाज़ों का क्लोन बनाएँ और नई आवाज़ें डिज़ाइन करें।",
       feature4Title: "स्वर प्रतिकृति",
       feature4Desc: "व्यक्तिगतकृत स्वर क्लोनिंग जो एआई वार्तालाप को अधिक मानवीय बनाता है",
     
@@ -525,7 +525,7 @@ resendVerificationEmail: "सत्यापन ईमेल पुनः भे
 verificationError: "सत्यापन प्रक्रिया में त्रुटि आई",
 
 // मुख्य सुविधाएँ सूची
-multiLanguageSupportItem: "50+ भाषाओं और बोलियों का समर्थन",
+multiLanguageSupportItem: "उपलब्ध भाषाएँ चुनी गई आवाज़ पर निर्भर करती हैं",
 multiLanguageVoicesItem: "प्रत्येक भाषा में कई पुरुष/महिला स्वर",
 multiLanguageAccentsItem: "क्षेत्रीय उच्चारण विकल्प (जैसे अमेरिकी, ब्रिटिश अंग्रेज़ी)",
 naturalSpeechItem: "मानव-स्तरीय प्राकृतिक स्वराभास",
@@ -559,7 +559,7 @@ termsOfService: "उपयोगकर्ता समझौता",
 privacyPolicy: "गोपनीयता नीति",
 legalLinks: "कानूनी प्रावधान",
 
-    demoPhrase1: "टेक्स्ट को स्वाभाविक आवाज़ में बदलें, 50+ भाषाएँ और स्वर",
+    demoPhrase1: "अपनी पसंद की आवाज़ के साथ टेक्स्ट को स्वाभाविक वाणी में बदलें",
     demoPhrase2: "अपनी आवाज़ का क्लोन बनाएँ, रीयल-टाइम स्वर अनुकूलन",
 
     agreementPrefix: "पंजीकरण करके आप हमारे",

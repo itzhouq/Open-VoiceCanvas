@@ -46,7 +46,7 @@ export const cs: TranslationType = {
   feature1Title: "Vysoce kvalitní hlas",
   feature1Desc: "Křišťálově čistá syntéza hlasu s přirozenou intonací a rytmem",
   feature2Title: "Několik jazyků",
-  feature2Desc: "50+ jazyků s mužskými i ženskými hlasy, ideální pro globální obsah",
+  feature2Desc: "Vyberte si z dostupných jazyků a hlasů pro svůj obsah.",
   feature3Title: "Pokročilé funkce",
   feature3Desc: "Přizpůsobte rychlost, vizualizujte audio a povolte čtení po slovech pro lepší učení",
   ctaTitle: "Začněte používat náš nástroj pro převod textu na řeč ještě dnes",
@@ -81,7 +81,7 @@ export const cs: TranslationType = {
   googleLogin: "Pokračovat s Google",
   dividerText: "nebo",
   aiPowered: "Poháněno AI",
-  languagesSupported: "50+ jazyků",
+  languagesSupported: "Podpora více jazyků",
   copyright: " {year} VoiceWove. Všechna práva vyhrazena.",
   footerSlogan: "Vytvořeno s pro lepší hlasový zážitek",
   loginDescription: "Přihlaste se ke svému účtu pro přístup k dalším funkcím",
@@ -230,7 +230,7 @@ export const cs: TranslationType = {
   trialPeriod: "{days}-denní zkouška",
   yearlyQuota: "{amount} znaků ročně",
   monthlyQuota: "{amount} znaků měsíčně",
-  languageSupport: "Podpora 50+ jazyků",
+  languageSupport: "Podpora více jazyků",
   basicSpeedControl: "Základní ovládání rychlosti",
   basicVoiceSelection: "Základní výběr hlasu",
   textInputOnly: "Pouze textový vstup",
@@ -253,20 +253,20 @@ export const cs: TranslationType = {
 
   // Pay As You Go
   payAsYouGo: "Platba za použití",
-  tenThousandChars: "100 000 znaků",
+  tenThousandChars: "10 000 znaků",
   millionChars: "1 milion znaků",
   threeMillionChars: "3 miliony znaků",
 
   // FAQ
   faq: "Často kladené otázky",
   faqTrialFeatures: "Jaké funkce jsou zahrnuty ve zkušební verzi?",
-  faqTrialFeaturesAnswer: "Zkušební verze obsahuje 7denní období s 1000 znaky, podporu 50+ jazyků, základní ovládání rychlosti a výběr hlasu. Můžete si vyzkoušet základní funkce prostřednictvím textového vstupu.",
+  faqTrialFeaturesAnswer: "Vyzkoušejte převod textu na řeč s {amount} znaky po dobu {days} dní. Vyberte si z dostupných hlasů a upravte rychlost řeči.",
   faqHowToTry: "Jak začít se zkušební verzí?",
   faqHowToTryAnswer: "Stačí se zaregistrovat a získat zkušební přístup bez nutnosti kreditní karty. Během zkušebního období můžete kdykoli přejít na placený plán pro více funkcí a vyšší kvóty.",
   faqQuotaCalc: "Jak se počítá kvóta znaků?",
   faqQuotaCalcAnswer: "Kvóta znaků se počítá na základě skutečného zadaného textu včetně mezer a interpunkce.",
   faqPayment: "Jaké platební metody přijímáte?",
-  faqPaymentAnswer: "Přijímáme různé platební metody: debetní karty, kreditní karty, WeChat Pay, Alipay a další. Najdete v pinnámi vhodnou možnost bez ohlední na vaši lokalitu. Všechny platební kanály jsou šifrované.",
+  faqPaymentAnswer: "Dostupné platební metody se zobrazují při placení.",
   faqQuotaType: "Jaký je rozdíl mezi zakoupenou kvótou a kvótou z předplatného?",
   faqQuotaTypeAnswer: "Samostatně zakoupená kvóta je trvalá a nikdy nevyprší. Kvóta z předplatného je dočasná a vyprší s koncem předplatného. Doporučujeme zvolit metodu, která nejlépe vyhovuje vašim potřebám.",
 
@@ -456,7 +456,7 @@ export const cs: TranslationType = {
       save: "Uložit",
   
       // Hlavní stránka - klonování hlasu
-      landingSubtitle: "Okamžitý převod textu na řeč ve více než 50 jazycích s podporou klonování hlasu a designu hlasu, využívající pokročilou technologii AI pro jasnou a přirozenou syntézu řeči.",
+      landingSubtitle: "Převádějte text na řeč, klonujte hlasy, k jejichž použití máte svolení, a navrhujte hlasy v prohlížeči.",
       feature4Title: "Klonování hlasu",
       feature4Desc: "Personalizované klonování hlasu pro biocomputerovější projev AI",
   
@@ -525,7 +525,7 @@ export const cs: TranslationType = {
    verificationError: "Během ověřování došlo k chybě",
 
    // Položky základních funkcí
-multiLanguageSupportItem: "Podpora 50+ jazyků a dialektů",
+multiLanguageSupportItem: "Dostupné jazyky závisejí na vybraném hlasu",
 multiLanguageVoicesItem: "Více mužských a ženských hlasů pro každý jazyk",
 multiLanguageAccentsItem: "Výběr regionálních přízvuků (např. americká, britská angličtina)",
 naturalSpeechItem: "Přirozená intonace na lidské úrovni",
@@ -559,7 +559,7 @@ termsOfService: "Uživatelská smlouva",
 privacyPolicy: "Zásady ochrany osobních údajů",
 legalLinks: "Právní ustanovení",
 
-    demoPhrase1: "Převod textu na přirozenou řeč, více než 50 jazyků a zvukových podob",
+    demoPhrase1: "Převeďte text na přirozenou řeč s hlasem podle svého výběru",
     demoPhrase2: "Klonování vašeho hlasu s možností okamžité úpravy řeči",
 
     agreementPrefix: "Registrací souhlasíte s našimi",

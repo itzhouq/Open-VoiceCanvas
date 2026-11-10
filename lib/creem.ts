@@ -26,25 +26,8 @@ export const CREEM_PRODUCTS: Record<string, string> = {
   clone50: process.env.CREEM_PRODUCT_CLONE_50 || '',
 };
 
-// 订阅类 planType → 周期信息
-export const SUBSCRIPTION_PLANS: Record<string, { months: number; characters: number }> = {
-  monthly: { months: 1, characters: 100000 },
-  yearly: { months: 12, characters: 1500000 },
-};
-
-// 一次性字符包 → 永久配额增加量
-export const CHARACTER_PACKS: Record<string, number> = {
-  tenThousandChars: 10000,
-  millionChars: 1000000,
-  threeMillionChars: 3000000,
-};
-
-// 一次性克隆包 → 克隆次数
-export const CLONE_PACKS: Record<string, number> = {
-  clone1: 1,
-  clone10: 10,
-  clone50: 50,
-};
+// The public catalog and payment fulfillment share the same entitlement maps.
+export { SUBSCRIPTION_PLANS, CHARACTER_PACKS, CLONE_PACKS } from '@/lib/product-catalog';
 
 export function isCreemConfigured(): boolean {
   return !!process.env.CREEM_API_KEY;

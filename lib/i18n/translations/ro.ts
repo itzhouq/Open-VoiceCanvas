@@ -46,7 +46,7 @@ export const ro: TranslationType = {
   feature1Title: "Voce de Calitate Superioară",
   feature1Desc: "Sinteză vocală clară cu intonație și ritm natural",
   feature2Title: "Multiple Limbi",
-  feature2Desc: "Peste 50 limbi cu voci masculine și feminine, perfecte pentru conținut global",
+  feature2Desc: "Alege dintre limbile și vocile disponibile pentru conținutul tău.",
   feature3Title: "Funcții Avansate",
   feature3Desc: "Personalizează viteza, vizualizează audio și activează citirea cuvânt cu cuvânt",
   ctaTitle: "Începe să Folosești Unealta noastră Text-la-Vorbire Astăzi",
@@ -81,7 +81,7 @@ export const ro: TranslationType = {
   googleLogin: "Continuă cu Google",
   dividerText: "sau",
   aiPowered: "Cu Putere AI",
-  languagesSupported: "50+ Limbi",
+  languagesSupported: "Suport multilingv",
   copyright: "© {year} VoiceWove. Toate drepturile rezervate.",
   footerSlogan: "Creat cu ❤️ pentru experiențe vocale mai bune",
   loginDescription: "Autentifică-te pentru mai multe funcții",
@@ -230,7 +230,7 @@ export const ro: TranslationType = {
   trialPeriod: "Perioadă probă de {days} zile",
   yearlyQuota: "{amount} caractere/an",
   monthlyQuota: "{amount} caractere/lună",
-  languageSupport: "Peste 50 limbi suportate",
+  languageSupport: "Suport multilingv",
   basicSpeedControl: "Control viteză de bază",
   basicVoiceSelection: "Selecție voci de bază",
   textInputOnly: "Doar introducere text",
@@ -253,20 +253,20 @@ export const ro: TranslationType = {
 
   // Plată la Utilizare
   payAsYouGo: "Plătești pe măsură ce folosești",
-  tenThousandChars: "100 mii caractere",
+  tenThousandChars: "10.000 de caractere",
   millionChars: "1 milion caractere",
   threeMillionChars: "3 milioane caractere",
 
   // Întrebări Frecvente
   faq: "Întrebări Frecvente",
   faqTrialFeatures: "Ce include perioada de probă?",
-  faqTrialFeaturesAnswer: "Include 7 zile cu 1000 caractere și suport pentru 50+ limbi",
+  faqTrialFeaturesAnswer: "Încearcă transformarea textului în vorbire cu {amount} caractere timp de {days} zile. Alege dintre vocile disponibile și ajustează viteza vorbirii.",
   faqHowToTry: "Cum încep perioada de probă?",
   faqHowToTryAnswer: "Înregistrează-te fără card de credit. Poți upgrada oricând",
   faqQuotaCalc: "Cum se calculează cota?",
   faqQuotaCalcAnswer: "Inclusiv spații și semne de punctuație",
   faqPayment: "Metode de plată acceptate?",
-  faqPaymentAnswer: "Carduri, WeChat Pay, Alipay. Toate tranzacțiile sunt criptate",
+  faqPaymentAnswer: "Metodele de plată disponibile sunt afișate la finalizarea comenzii.",
   faqQuotaType: "Diferența dintre cota cumpărată și cea din abonament?",
   faqQuotaTypeAnswer: "Cota cumpărată este permanentă, cea din abonament temporară",
 
@@ -456,7 +456,7 @@ export const ro: TranslationType = {
       save: "Salvare",
     
       // Pagina principală - Clonare vocală
-      landingSubtitle: "Conversie text-voce în timp real pentru 50+ limbi cu clonare vocală și design vocal, bazată pe tehnologie AI avansată pentru sinteză vocală clară și naturală.",
+      landingSubtitle: "Transformă textul în vorbire, clonează voci pe care ai permisiunea să le folosești și creează voci în browser.",
       feature4Title: "Clonare vocală",
       feature4Desc: "Clonare vocală personalizată pentru o voce AI mai umană",
     
@@ -524,7 +524,7 @@ export const ro: TranslationType = {
     verificationError: "A apărut o eroare în timpul verificării",
 
     // Lista funcționalităților principale
-multiLanguageSupportItem: "Suportă peste 50 de limbi și dialecte",
+multiLanguageSupportItem: "Limbile disponibile depind de vocea selectată",
 multiLanguageVoicesItem: "Voci masculine/feminine multiple pentru fiecare limbă",
 multiLanguageAccentsItem: "Opțiuni accente regionale (ex: engleză americană, britanică)",
 naturalSpeechItem: "Intonație naturală la nivel uman",
@@ -558,7 +558,7 @@ termsOfService: "Termenii de Utilizare",
 privacyPolicy: "Politica de Confidențialitate",
 legalLinks: "Clauze Legale",
 
-    demoPhrase1: "Convertește text în voce naturală, peste 50 de limbi și voci",
+    demoPhrase1: "Transformă textul în vorbire naturală cu o voce la alegere",
     demoPhrase2: "Clonați vocea cu personalizare vocală în timp real",
 
     agreementPrefix: "Prin înregistrare, sunteți de acord cu",

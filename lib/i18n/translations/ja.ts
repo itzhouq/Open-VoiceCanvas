@@ -46,7 +46,7 @@ export const ja: TranslationType = {
   feature1Title: "高品質な音声",
   feature1Desc: "自然な抑揚とリズムを備えたクリアな音声合成",
   feature2Title: "多言語対応",
-  feature2Desc: "50言語以上の男女音声対応でグローバルコンテンツ作成に最適",
+  feature2Desc: "コンテンツに合わせて、利用可能な言語と音声を選べます。",
   feature3Title: "高度な機能",
   feature3Desc: "速度調節、音声可視化、単語ごとの読み上げ機能で学習効果向上",
   ctaTitle: "今すぐテキスト読み上げツールをお試しください",
@@ -81,7 +81,7 @@ export const ja: TranslationType = {
   googleLogin: "Googleで続行",
   dividerText: "または",
   aiPowered: "AI搭載",
-  languagesSupported: "50+ 言語対応",
+  languagesSupported: "多言語対応",
   copyright: "© {year} ボイスキャンバス 全著作権所有",
   footerSlogan: "より良い音声体験を❤️で創造",
   loginDescription: "機能をフル活用するにはログインしてください",
@@ -230,7 +230,7 @@ export const ja: TranslationType = {
   trialPeriod: "{days}日間トライアル",
   yearlyQuota: "年{amount}文字",
   monthlyQuota: "月{amount}文字",
-  languageSupport: "50+言語対応",
+  languageSupport: "多言語対応",
   basicSpeedControl: "基本速度調節",
   basicVoiceSelection: "基本声質選択",
   textInputOnly: "テキスト入力のみ",
@@ -253,20 +253,20 @@ export const ja: TranslationType = {
 
   // 従量課金
   payAsYouGo: "従量制",
-  tenThousandChars: "10万文字",
+  tenThousandChars: "10,000文字",
   millionChars: "100万文字",
   threeMillionChars: "300万文字",
 
   // FAQ
   faq: "よくある質問",
   faqTrialFeatures: "トライアルで利用可能な機能は？",
-  faqTrialFeaturesAnswer: "トライアルでは1000文字/7日間利用可能。50+言語対応、基本速度調節、声質選択が含まれます。コア機能をテキスト入力で体験可能です",
+  faqTrialFeaturesAnswer: "トライアルでは{days}日間、{amount}文字分のテキスト読み上げを試せます。利用可能な音声を選び、読み上げ速度を調整できます。",
   faqHowToTry: "トライアル開始方法は？",
   faqHowToTryAnswer: "クレジットカード不要でアカウント登録後すぐ開始。期間中いつでも有料プランにアップグレード可能です",
   faqQuotaCalc: "文字数計算方法は？",
   faqQuotaCalcAnswer: "スペースや句読点を含む実際の入力文字数で計算",
   faqPayment: "対応決済方法は？",
-  faqPaymentAnswer: "デビット/クレジットカード、WeChat Pay、Alipay等、地域を問わず適切な決済方法を選択可能。全チャネル暗号化済み",
+  faqPaymentAnswer: "利用可能なお支払い方法は決済画面に表示されます。",
   faqQuotaType: "購入クォータと特典クォータの違いは？",
   faqQuotaTypeAnswer: "個別購入クォータは永久有効。プラン付帯クォータは期間限定。用途に合わせて選択を",
 
@@ -456,7 +456,7 @@ export const ja: TranslationType = {
       save: "节省",
     
       // ホームページ音声クローン関連
-      landingSubtitle: "50言語以上に対応したリアルタイムテキスト音声変換、音声クローンと音声デザイン機能をサポート。先進的なAI技術による自然な音声合成を実現",
+      landingSubtitle: "ブラウザーでテキストを音声に変換し、使用権限のある声をクローンしたり、音声をデザインしたりできます。",
       feature4Title: "音声クローン",
       feature4Desc: "パーソナライズされた音声クローンでAIの音声に温かみを追加",
       
@@ -525,7 +525,7 @@ export const ja: TranslationType = {
   verificationError: "認証処理中にエラーが発生しました",
 
   // コア機能リスト
-multiLanguageSupportItem: "50+言語と方言に対応",
+multiLanguageSupportItem: "利用可能な言語は選択した音声によって異なります",
 multiLanguageVoicesItem: "各言語ごとの男女複数音声",
 multiLanguageAccentsItem: "地域別アクセント選択（例：米国英語、英国英語）",
 naturalSpeechItem: "人間レベルの自然な抑揚",
@@ -559,7 +559,7 @@ termsOfService: "利用規約",
 privacyPolicy: "プライバシーポリシー",
 legalLinks: "法的規定",
 
-    demoPhrase1: "テキストを自然な音声に変換、50以上の言語と音声タイプ",
+    demoPhrase1: "好みの音声を選び、テキストを自然な音声に変換",
     demoPhrase2: "音声クローニング機能、リアルタイム音声カスタマイズ",
 
     agreementPrefix: "登録することで、あなたは私たちの",

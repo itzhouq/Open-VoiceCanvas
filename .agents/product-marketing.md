@@ -1,14 +1,24 @@
 # Product Marketing Context
 
-**Document version:** v1
-**Last updated:** 2026-10-18
+**Document version:** v2
+**Last updated:** 2026-11-10
+
+## Current factual baseline
+
+Public prices and entitlement maps now live in `lib/product-catalog.ts`. Trial allowance and duration come from `lib/trial-offer.ts`, shared with the server quota logic; environment values can override the defaults. Marketing pages and generated `/llms-full.txt` must use these sources instead of copying numbers from old material.
+
+Text-to-speech and cloning-workspace speech download as MP3; combined story and podcast audio downloads as WAV. Initial full-episode podcast generation consumes twice the confirmed dialogue character count; individual segment edits/regeneration use the segment count once. Clone/design credits are consumed when a voice is created, not reusable voice slots. The trial does not include a free clone/design credit under current account defaults.
+
+Do not claim fixed language/voice counts without testing the enabled tools. Do not promise unrestricted commercial use or complete provider-side deletion: the cloning tool currently restricts cloned voices to personal, non-commercial use, and removing an account voice record does not prove erasure of all samples, provider models and backups. Refer to the Terms, tool restrictions and Privacy Policy.
+
+Account counts, launch goals and payment-test results recorded below are historical launch context from October 2026, not current production verification. Current AI citation/mention rates have not been measured. Named competitor comparisons require current sources and a dated task-based test.
 
 ## Product Overview
-**One-liner:** AI text-to-speech & voice cloning platform — multi-character story voiceover in 40+ languages.
-**What it does:** VoiceWove turns text into natural-sounding speech with 200+ neural voices. Its signature capability is multi-character story voiceover: assign a different AI voice to the narrator and every character, and get one coherent audio track. It also clones a user's voice from a 10–30 second sample (usable across 40+ languages) and generates conversational podcast episodes from topics or documents.
+**One-liner:** Browser-based text-to-speech, multi-character story narration, two-host podcasts and voice cloning for creators.
+**What it does:** VoiceWove lets users prepare a script, select available voices, generate audio and download it. The story workflow supports separate narrator/character assignments; the podcast workflow supports editable host-and-guest dialogue from a topic or pasted text. Clone only an owned or authorized voice, with the recording requirements and usage restrictions shown in the tool.
 **Product category:** AI Text-to-Speech / Voice AI (searched as "ai text to speech", "voice cloning online", "ai story voiceover")
 **Product type:** SaaS (web app, no install; browser-only)
-**Business model:** Freemium — 7-day free trial (10,000 characters, no credit card); subscriptions $5.99/mo, $49.90/yr; one-time character packs $6/$55/$150 and voice-clone packs $3/$30/$150 (never expire). Payments by Creem (Merchant of Record).
+**Business model:** Account-based synthesis trial; monthly/annual subscriptions; one-time character packs and separate clone/design credits. Payments by Creem. Use the shared product configuration for current figures. Characters are not words or minutes of audio, and each workflow's quota rules must be stated.
 
 ## Target Audience
 **Target companies:** Solo creators and small content teams; no company-size constraints (self-serve).
@@ -30,7 +40,7 @@ B2C/self-serve — single decision-maker per purchase. See Target Audience.
 ## Problems & Pain Points
 **Core problem:** Professional multi-voice audio is expensive and slow; free TTS tools sound robotic, cap length, and watermark output.
 **Why alternatives fall short:**
-- NotebookLM-style tools: impressive conversations but no voice control, no clean export, no publish rights
+- Document-to-podcast alternatives: compare current voice controls, input formats, exports and permissions using official sources and the same task; do not infer limitations from old comparisons
 - Single-voice TTS: one narrator can't perform dialogue; robotic delivery
 - Recording yourself: needs equipment, editing time, and confidence; no cross-language reach
 - Hiring voice actors: $100s per project, days of turnaround, re-records on every edit
@@ -38,35 +48,35 @@ B2C/self-serve — single decision-maker per purchase. See Target Audience.
 **Emotional tension:** "My content is good but it sounds amateur" — embarrassment publishing with a bad voice, or fear of using their own voice on camera.
 
 ## Competitive Landscape
-**Direct:** ElevenLabs — best-in-class voice quality but pricier at scale; voice cloning gated behind higher tiers. Murf / Play.ht — solid TTS but multi-character story workflow is clunky or absent. Speechify — consumer reading focus, weak on creative multi-voice output.
-**Secondary:** NotebookLM (document→podcast) — no voice choice, no commercial clarity, no export control. General AI chatbots writing scripts — no audio.
+**Direct candidates to research:** ElevenLabs, Murf, Play.ht and Speechify. Do not claim superiority or missing capabilities without current evidence.
+**Secondary candidates to research:** NotebookLM and script-generation assistants. Compare the specific task, voice controls, input/output formats, prices and permissions with a verification date.
 **Indirect:** Manual recording + Audition/Descript — full control but heavy time and skill cost.
-**Our angle vs all:** controllable multi-character workflow + one-time packs that never expire + clean MP3 ownership, at indie-friendly prices.
+**Our angle to evaluate:** controllable multi-character workflow and one-time usage packs alongside subscriptions, with clear formats and usage conditions.
 
 ## Differentiation
 **Key differentiators:**
 - Multi-character voiceover as a first-class workflow (not a bolt-on)
-- Cloned voices work across 40+ languages
+- Test a cloned voice on a short passage in the selected target language before a longer project
 - One-time packs that never expire (no forced subscription)
 - Real free trial (10,000 chars, no card) with the same engine as paid tiers
-- Full commercial rights on paid plans; no watermarks
-**How we do it differently:** Story-first UX: paste script → assign voices per character → single-track export. Podcast generator and TTS share the same voice system.
-**Why that's better:** Creators ship faster (minutes not days) and own their output.
+- State the usage restrictions for the selected voice; payment buys quota, not rights to third-party voices or scripts
+**How it works:** Story-first UX: paste script → assign voices per character → combined WAV export. Check each tool's available voices and formats separately.
+**Why it helps:** Creators can revise a script and its voices in one workflow; speed and quality require measured examples, not blanket promises.
 **Why customers choose us:** Price-to-features for solo creators; trial generosity; instant multi-voice capability.
 
 ## Objections
 | Objection | Response |
 |-----------|----------|
 | "AI voices sound robotic" | Neural voices with natural intonation — try the free 10K-char trial on your own script before paying |
-| "Is voice cloning legal/safe?" | Only clone voices you own or are authorized to use; consent policy enforced; delete your voice model anytime |
+| "Is voice cloning legal/safe?" | Only clone voices you own or are authorized to use; follow the tool restrictions and Terms; ask support about the scope of a data-deletion request |
 | "Why not just use (free tool X)?" | Free tools cap length, watermark output, and give you one robotic voice; the trial uses the full engine, no watermark |
-| "Will my cloned voice leak?" | Voice model is private to your account; deletable on demand |
+| "What happens to my recording?" | Explain the processors and retention rules in the Privacy Policy; account-list deletion is not a guarantee of immediate provider-model erasure |
 
 **Anti-persona:** Enterprises needing SSO/compliance pipelines; users wanting to clone celebrities or impersonate people (strictly prohibited, enforced).
 
 ## Switching Dynamics
 **Push:** Robotic free tools; expensive voice actors; editing grind; one-voice limitation.
-**Pull:** Multi-voice in one click; 10K free chars to prove it; cross-language clone; MP3 ownership.
+**Pull:** Narrator/character voice assignment, an account-based synthesis trial, and one-time usage packs. Test the selected voice and language before a longer project.
 **Habit:** Sticking with free TTS bookmarks or manual recording workflows.
 **Anxiety:** "Will it sound natural on MY script?"; payment trust on a new site (mitigated: Creem MoR, visible pricing, free trial first).
 
@@ -84,7 +94,7 @@ B2C/self-serve — single decision-maker per purchase. See Target Audience.
 | Term | Meaning |
 |------|---------|
 | Character pack | One-time purchase of synthesis characters (never expires) |
-| Voice slot | One cloned-voice model owned permanently |
+| Clone/design credit | A credit consumed when a voice is created; deleting a saved voice does not restore it |
 | Story voiceover | Multi-character narration of a script |
 
 ## Brand Voice
@@ -101,11 +111,11 @@ B2C/self-serve — single decision-maker per purchase. See Target Audience.
 - Errors: state what happened, what to do, no blame
 - Sales: benefit + concrete proof, no pressure
 - Social: first-person indie-hacker voice, progress public
-**Terms we own:** story voiceover, multi-character voiceover, voice slots
+**Terms to use:** story voiceover, multi-character voiceover, clone/design credits
 **Never use:** "unlimited" (we meter), "free forever" (trial model), celebrity-name cloning references
 
 ## Proof Points
-**Metrics:** Payment/refund full lifecycle production-verified (real $3 transaction, live webhook → entitlement grant → refund clawback, all DB-confirmed); 200+ voices / 40+ languages; Google brand verification passed; Creem KYC approved after real compliance review.
+**Historical launch records (October 2026):** A real $3 payment/refund lifecycle was recorded as verified, along with Google brand verification and Creem KYC approval. These are historical records, not current production checks. Fixed voice/language counts have been removed pending tool-specific verification.
 **Customers:** Early — production account base is new (sprint started 2026-10-16).
 **Testimonials:** To be collected (template testimonials removed for compliance — do not invent).
 **Value themes:**
@@ -113,7 +123,7 @@ B2C/self-serve — single decision-maker per purchase. See Target Audience.
 |-------|-------|
 | Instant multi-voice | Story tool assigns voices per character, single export |
 | Generous free tier | 10,000 chars / 7 days, no card |
-| Ownership | Clean MP3, commercial rights, no watermark |
+| Output and permissions | MP3 from TTS/cloning, combined WAV from stories/podcasts; follow the rights and restrictions for the selected voice |
 | Trust | Real KYC'd payments via Creem MoR; public privacy/terms |
 
 ## Goals
@@ -134,4 +144,5 @@ Not currently running ads. Skip until organic signal exists.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v2 (2026-11-10) — Aligned quota sources, output formats, podcast billing and consumed voice credits; removed unsupported competitor and permission claims. Historical launch measurements are not current verification.
 - v1 (2026-10-18) — Initial context. Drafted from codebase + launch data (fork→live in 5 days; pricing, competitors, brand voice, 30-day goal).

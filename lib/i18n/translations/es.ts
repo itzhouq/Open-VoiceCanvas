@@ -46,7 +46,7 @@ export const es: TranslationType = {
   feature1Title: "Voz de Alta Calidad",
   feature1Desc: "Síntesis de voz cristalina con entonación y ritmo naturales",
   feature2Title: "Múltiples Idiomas",
-  feature2Desc: "50+ idiomas con voces masculinas y femeninas, perfecto para contenido global",
+  feature2Desc: "Elige entre los idiomas y las voces disponibles para tu contenido.",
   feature3Title: "Funciones Avanzadas",
   feature3Desc: "Personaliza velocidad, visualiza audio y activa lectura palabra por palabra para mejor aprendizaje",
   ctaTitle: "Comienza a Usar Nuestra Herramienta Texto-a-Voz Hoy",
@@ -81,7 +81,7 @@ export const es: TranslationType = {
   googleLogin: "Continuar con Google",
   dividerText: "o",
   aiPowered: "Con Tecnología AI",
-  languagesSupported: "50+ Idiomas",
+  languagesSupported: "Compatibilidad multilingüe",
   copyright: "© {year} VoiceWove. Todos los derechos reservados.",
   footerSlogan: "Creado con ❤️ para mejores experiencias vocales",
   loginDescription: "Inicia sesión para más funciones",
@@ -230,7 +230,7 @@ export const es: TranslationType = {
   trialPeriod: "Prueba de {days} días",
   yearlyQuota: "{amount} caracteres/año",
   monthlyQuota: "{amount} caracteres/mes",
-  languageSupport: "50+ idiomas soportados",
+  languageSupport: "Compatibilidad multilingüe",
   basicSpeedControl: "Control básico de velocidad",
   basicVoiceSelection: "Selección básica de voz",
   textInputOnly: "Solo texto",
@@ -253,20 +253,20 @@ export const es: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Pago por Uso",
-  tenThousandChars: "100K caracteres",
+  tenThousandChars: "10.000 caracteres",
   millionChars: "1M caracteres",
   threeMillionChars: "3M caracteres",
   
   // FAQ
   faq: "Preguntas Frecuentes",
   faqTrialFeatures: "¿Qué incluye la prueba?",
-  faqTrialFeaturesAnswer: "7 días con 1000 caracteres, 50+ idiomas y controles básicos de velocidad y voz",
+  faqTrialFeaturesAnswer: "Prueba la conversión de texto a voz con {amount} caracteres durante {days} días. Elige entre las voces disponibles y ajusta la velocidad.",
   faqHowToTry: "¿Cómo inicio la prueba?",
   faqHowToTryAnswer: "Regístrate sin tarjeta. Actualiza a planes pagos cuando quieras",
   faqQuotaCalc: "¿Cómo se calcula la cuota?",
   faqQuotaCalcAnswer: "Se cuenta cada carácter incluyendo espacios y puntuación",
   faqPayment: "¿Métodos de pago aceptados?",
-  faqPaymentAnswer: "Tarjetas, WeChat Pay, Alipay. Transacciones seguras SSL",
+  faqPaymentAnswer: "Los métodos de pago disponibles se muestran al finalizar la compra.",
   faqQuotaType: "¿Diferencia entre cuotas?",
   faqQuotaTypeAnswer: "Cuotas compradas son permanentes, las de suscripción expiran",
   
@@ -456,7 +456,7 @@ export const es: TranslationType = {
       save: "Guardar",
     
       // Relacionado con la clonación de voz en la página de inicio
-      landingSubtitle: "Conversión de texto a voz instantánea en 50+ idiomas con clonación de voz y diseño de voz, utilizando tecnología avanzada de IA para síntesis vocal clara y natural.",
+      landingSubtitle: "Convierte texto en voz, clona voces que tengas autorización para usar y diseña voces desde tu navegador.",
       feature4Title: "Clonación de Voz",
       feature4Desc: "Clonación vocal personalizada para dar más calidez al habla de la IA",
     
@@ -525,7 +525,7 @@ export const es: TranslationType = {
   verificationError: "Error durante la verificación",
 
   // Lista de Funcionalidades Principales
-multiLanguageSupportItem: "Soporte para 50+ idiomas y dialectos",
+multiLanguageSupportItem: "Los idiomas disponibles dependen de la voz seleccionada",
 multiLanguageVoicesItem: "Múltiples voces masculinas/femeninas por idioma",
 multiLanguageAccentsItem: "Selección de acentos regionales (ej. inglés americano, británico)",
 naturalSpeechItem: "Entonación natural de nivel humano",
@@ -559,7 +559,7 @@ termsOfService: "Términos de Servicio",
 privacyPolicy: "Política de Privacidad",
 legalLinks: "Enlaces Legales",
 
-    demoPhrase1: "Convierte texto en voz natural, 50+ idiomas y voces",
+    demoPhrase1: "Convierte texto en voz natural eligiendo entre las voces disponibles",
     demoPhrase2: "Clona tu voz con personalización de voz en tiempo real",
 
     agreementPrefix: "Al registrarte, aceptas nuestros",

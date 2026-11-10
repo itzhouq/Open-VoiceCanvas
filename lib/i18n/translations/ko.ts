@@ -46,7 +46,7 @@ export const ko: TranslationType = {
   feature1Title: "고품질 음성",
   feature1Desc: "자연스러운 억양과 리듬의 선명한 음성 합성",
   feature2Title: "다국어 지원",
-  feature2Desc: "남녀 음성 지원 50+ 언어, 글로벌 콘텐츠 제작에 최적",
+  feature2Desc: "콘텐츠에 맞는 언어와 음성을 사용 가능한 목록에서 선택하세요.",
   feature3Title: "고급 기능",
   feature3Desc: "속도 조절, 오디오 시각화, 학습 향상을 위한 단어별 읽기 기능",
   ctaTitle: "지금 바로 텍스트 음성 변환 도구를 사용해 보세요",
@@ -81,7 +81,7 @@ export const ko: TranslationType = {
   googleLogin: "Google로 계속하기",
   dividerText: "또는",
   aiPowered: "AI 기반",
-  languagesSupported: "50개 이상 언어 지원",
+  languagesSupported: "다국어 지원",
   copyright: "© {year} 보이스캔버스. 모든 권리 보유.",
   footerSlogan: "더 나은 음성 경험을 위해 ❤️을 담아 제작했습니다",
   loginDescription: "더 많은 기능을 사용하려면 로그인하세요",
@@ -230,7 +230,7 @@ export const ko: TranslationType = {
   trialPeriod: "{days}일 체험 기간",
   yearlyQuota: "연간 {amount}자",
   monthlyQuota: "월 {amount}자",
-  languageSupport: "50개 이상 언어 지원",
+  languageSupport: "다국어 지원",
   basicSpeedControl: "기본 속도 제어",
   basicVoiceSelection: "기본 음성 선택",
   textInputOnly: "텍스트 입력 전용",
@@ -253,20 +253,20 @@ export const ko: TranslationType = {
 
   // 종량제
   payAsYouGo: "종량제",
-  tenThousandChars: "10만 문자",
+  tenThousandChars: "10,000자",
   millionChars: "100만 문자",
   threeMillionChars: "300만 문자",
 
   // FAQ
   faq: "자주 묻는 질문",
   faqTrialFeatures: "체험판에 포함된 기능은 무엇인가요?",
-  faqTrialFeaturesAnswer: "체험판은 7일간 1000자 사용 가능하며 50개 이상 언어 지원, 기본 속도 제어 및 음성 선택이 포함됩니다. 텍스트 입력을 통해 핵심 기능을 경험할 수 있습니다.",
+  faqTrialFeaturesAnswer: "체험판은 {days}일 동안 {amount}자의 텍스트 음성 변환을 제공합니다. 사용 가능한 음성을 선택하고 말하기 속도를 조절할 수 있습니다.",
   faqHowToTry: "체험판을 어떻게 시작하나요?",
   faqHowToTryAnswer: "신용카드 없이 계정 등록 후 즉시 시작 가능합니다. 체험 기간 중 언제든지 유료 플랜으로 업그레이드할 수 있습니다.",
   faqQuotaCalc: "문자 할당량은 어떻게 계산되나요?",
   faqQuotaCalcAnswer: "공백과 문장 부호를 포함한 실제 입력 텍스트 기준으로 계산됩니다.",
   faqPayment: "결제 방법은 무엇이 있나요?",
-  faqPaymentAnswer: "직불카드/신용카드, WeChat Pay, Alipay 등 다양한 결제 수단을 지원합니다. 모든 결제 채널은 보안을 위해 암호화됩니다.",
+  faqPaymentAnswer: "사용 가능한 결제 수단은 결제 페이지에 표시됩니다.",
   faqQuotaType: "구매 할당량과 멤버십 보너스 할당량의 차이는 무엇인가요?",
   faqQuotaTypeAnswer: "개별 구매한 할당량은 영구 유효하며, 멤버십 플랜 할당량은 기간 한정입니다. 사용 패턴에 맞게 선택하시기 바랍니다.",
 
@@ -456,7 +456,7 @@ export const ko: TranslationType = {
       save: "저장",
     
       // 홈페이지 음성 복제 관련
-      landingSubtitle: "50개 이상 언어 지원 실시간 텍스트-음성 변환, 첨단 AI 기술 기반 선명한 음성 합성 및 음성 복제와 음성 디자인 기능 제공",
+      landingSubtitle: "브라우저에서 텍스트를 음성으로 변환하고, 사용 권한이 있는 목소리를 복제하거나 새로운 음성을 디자인하세요.",
       feature4Title: "음성 복제",
       feature4Desc: "개인 맞춤형 음성 복제 기술로 더 자연스러운 AI 음성 구현",
     
@@ -525,7 +525,7 @@ export const ko: TranslationType = {
     verificationError: "인증 과정에서 오류가 발생했습니다",
 
     // 핵심 기능 목록
-multiLanguageSupportItem: "50개 이상의 언어와 방언 지원",
+multiLanguageSupportItem: "사용 가능한 언어는 선택한 음성에 따라 다릅니다",
 multiLanguageVoicesItem: "각 언어별 다양한 남녀 음성",
 multiLanguageAccentsItem: "지역별 악센트 선택 (예: 미국식, 영국식 영어)",
 naturalSpeechItem: "실사 수준의 자연스러운 억양",
@@ -559,7 +559,7 @@ termsOfService: "이용약관",
 privacyPolicy: "개인정보 처리방침",
 legalLinks: "법률 조항",
 
-    demoPhrase1: "텍스트를 자연스러운 음성으로 변환, 50+ 언어와 음성",
+    demoPhrase1: "원하는 음성을 선택해 텍스트를 자연스러운 음성으로 변환하세요",
     demoPhrase2: "목소리 클로닝, 실시간 음성 맞춤설정",
 
     agreementPrefix: "가입하면 당신은 우리의",

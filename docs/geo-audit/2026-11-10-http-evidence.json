@@ -1,0 +1,461 @@
+{
+  "capture_date": "2026-11-10",
+  "timezone": "Asia/Shanghai",
+  "site": "https://voicewove.com",
+  "source_commit": "a39e31b328daae0f7e7f58444b9b320f7e65ad18",
+  "method": "Unauthenticated HTTP GET; parse initial HTML with Python HTMLParser; exclude script/style content from text snippets; parse script type application/ld+json separately.",
+  "limitations": [
+    "Initial HTTP responses only; not a rendered-browser, audio-generation, account-entitlement or checkout test.",
+    "Samples are filtered text fragments, not adjacent question-and-answer pairs; do not infer an FAQ answer from neighboring entries.",
+    "No AI answer sampling or search-index inspection was performed."
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "final": "https://voicewove.com/",
+      "text_chars": 6571,
+      "sample": [
+        "VoiceWove — AI Text to Speech & Voice Cloning, 40+ Languages",
+        "Instant text-to-speech in 50+ languages with voice cloning and voice design, powered by advanced AI for natural and clear voice synthesis.",
+        "AI-powered voice generation with natural language descriptions",
+        "Cross-language cloning support",
+        "Multiple Languages",
+        "50+ languages with both male and female voices, perfect for global content",
+        "Support for 50+ languages and dialects",
+        "Multiple male and female voices per language",
+        "Free",
+        "1000 characters free",
+        "50+ languages supported",
+        "$49.9",
+        "50+ languages supported",
+        "$5.99",
+        "100000 characters per month",
+        "50+ languages supported",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "$59",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "100K characters",
+        "$6",
+        "The trial includes a 7-day period with 1000 characters, support for 50+ languages, basic speed control, and voice selection. You can experience core features through text input to see if it meets your needs.",
+        "Simply register for an account to get trial access, no credit card required. You can upgrade to a paid plan anytime during the trial to access more features and higher character quotas.",
+        "We accept various convenient payment methods: debit cards, credit cards, WeChat Pay, Alipay, and more. You'll find a suitable payment option regardless of your location. All payment channels are encrypted for security.",
+        "Voice cloning is AI technology that creates a digital replica of your voice by analyzing speech samples. Upload 10 seconds to 5 minutes of clear audio, and AI learns your voice characteristics to read any text using your voice, supporting multiple languages.",
+        "Free Text to Speech"
+      ],
+      "schema_count": 1,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/design",
+        "/free-text-to-speech",
+        "/podcast",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/pricing",
+      "status": 200,
+      "final": "https://voicewove.com/pricing",
+      "text_chars": 4421,
+      "sample": [
+        "Pricing — Free Trial, $5.99/mo Pro Plan & One-Time Packs | VoiceWove | VoiceWove",
+        "Free",
+        "1000 characters free",
+        "50+ languages supported",
+        "$49.9",
+        "50+ languages supported",
+        "$5.99",
+        "100000 characters per month",
+        "50+ languages supported",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "$59",
+        "Support for multiple languages including Chinese, English, Japanese, Korean",
+        "100K characters",
+        "$6",
+        "The trial includes a 7-day period with 1000 characters, support for 50+ languages, basic speed control, and voice selection. You can experience core features through text input to see if it meets your needs.",
+        "Simply register for an account to get trial access, no credit card required. You can upgrade to a paid plan anytime during the trial to access more features and higher character quotas.",
+        "We accept various convenient payment methods: debit cards, credit cards, WeChat Pay, Alipay, and more. You'll find a suitable payment option regardless of your location. All payment channels are encrypted for security.",
+        "Voice cloning is AI technology that creates a digital replica of your voice by analyzing speech samples. Upload 10 seconds to 5 minutes of clear audio, and AI learns your voice characteristics to read any text using your voice, supporting multiple languages.",
+        "Free Text to Speech"
+      ],
+      "schema_count": 1,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/free-text-to-speech",
+      "status": 200,
+      "final": "https://voicewove.com/free-text-to-speech",
+      "text_chars": 4280,
+      "sample": [
+        "Free Text to Speech Online — Natural AI Voices, No Sign-Up Hassle | VoiceWove | VoiceWove",
+        "VoiceWove · Free Text to Speech",
+        "Free Text to Speech — Natural AI Voices in 40+ Languages",
+        "Paste your text, pick a voice, download studio-quality MP3. Start with 10,000 free characters — no credit card, no software, no watermarks.",
+        "Convert Text to Speech — Free",
+        "10,000 free characters · 7-day trial · MP3 download · No watermark",
+        "Most free TTS tools give you one robotic voice, a 300-character limit and a watermark on the output. VoiceWove's free tier gives you 10,000 characters with production-grade neural voices — the same engine behind our paid plans.",
+        "When you outgrow the free tier, you don't switch tools: upgrade to a subscription (from $5.99/month) or grab a one-time character pack from $6 that never expires. Your account, history and voices carry over.",
+        "What's Included Free",
+        "📝 10,000 Free Characters",
+        "Narration, conversational, storytelling and character styles across 40+ languages.",
+        "⬇️ Clean MP3 Download",
+        "Produce the same audio in 40+ languages to reach international audiences.",
+        "Is this text-to-speech tool really free?",
+        "Every new account gets 10,000 characters of synthesis free for 7 days — enough for dozens of short audio clips. No credit card is required to start. After that, keep converting text with a subscription or one-time character packs starting at $6.",
+        "Which languages and voices are supported?",
+        "40+ languages including English, Chinese, Spanish, French, German, Japanese, Korean, Arabic and Hindi, with 200+ voices across styles: narration, conversational, storytelling and character voices.",
+        "Can I use the audio commercially?",
+        "No. VoiceWove runs entirely in your browser. Paste text, click generate, download MP3. Works on desktop and mobile.",
+        "Clone your own voice and speak any text in 40+ languages.",
+        "Start Converting Text — Free",
+        "10,000 characters on the house. Studio-quality audio in your browser, in under a minute.",
+        "Try Free Text to Speech",
+        "Free Text to Speech"
+      ],
+      "schema_count": 2,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ],
+        [
+          "FAQPage",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/pricing",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/voice-cloning",
+      "status": 200,
+      "final": "https://voicewove.com/voice-cloning",
+      "text_chars": 4922,
+      "sample": [
+        "Free Voice Cloning Online — Clone Your Voice with AI in Minutes | VoiceWove | VoiceWove",
+        "Free Voice Cloning Online — Speak Any Text in Your Own Voice",
+        "Upload a short audio sample and VoiceWove creates an AI clone of your voice. Then type anything — narration, dubbing, podcasts — and hear it in your voice, in 40+ languages.",
+        "Clone Your Voice — Free Trial",
+        "VoiceWove makes cloned voices practical: once your voice model exists, it becomes a selectable voice across the whole platform — use it for story voiceover, podcast narration, video dubbing, or translating your content into languages you don't speak. Your model is private to your account.",
+        "🌐 Cross-Language Speech",
+        "Your cloned voice can speak 40+ languages, so you can publish the same content for international audiences.",
+        "— publish the same material in 40+ languages, all in your voice.",
+        "Type any text and hear it in your cloned voice — download as MP3, in 40+ languages.",
+        "Is voice cloning free?",
+        "You can try voice cloning with a free 7-day trial (10,000 characters of synthesis, no credit card required). Cloning a voice requires a voice slot: one-time clone packs start at $3 for 1 voice slot and never expire. All AI platforms require paid slots for cloning because each voice model consumes real GPU resources.",
+        "Which languages can my cloned voice speak?",
+        "Once your voice model is created, you can make it speak text in 40+ languages — your cloned voice handles cross-language synthesis automatically.",
+        "Free Text to Speech",
+        "Try the full engine free — 10,000 characters, no card.",
+        "Hear Yourself Speak Any Language",
+        "Start with a free trial, then grab a clone pack from $3 — slots never expire.",
+        "Start Voice Cloning — Free",
+        "Free Text to Speech"
+      ],
+      "schema_count": 2,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ],
+        [
+          "FAQPage",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/pricing",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/ai-story-voiceover",
+      "status": 200,
+      "final": "https://voicewove.com/ai-story-voiceover",
+      "text_chars": 4354,
+      "sample": [
+        "Paste your story, give every character their own AI voice, and generate a professional story voiceover in minutes — narration and dialogue together, in 40+ languages. No microphone, no voice actors, no editing software.",
+        "Try AI Story Voiceover Free",
+        "Free 7-day trial · 10,000 characters · No credit card required",
+        "Writers use it to turn bedtime stories into audio for their kids. Creators use it to narrate YouTube horror stories and Reddit dramas with a full cast. Educators use it to bring dialogues to life for language learners. Podcasters use it to prototype fiction shows in an afternoon. If your story has more than one character, multi-voice AI voiceover is the fastest way to hear it come alive.",
+        "🌍 40+ Languages",
+        "Download your finished voiceover as MP3 and drop it straight into YouTube, TikTok, podcasts or audiobook projects.",
+        "Generate the full multi-voice voiceover and download it as MP3 — ready to publish anywhere.",
+        "Which languages are supported?",
+        "VoiceWove supports 40+ languages including English, Chinese, Spanish, French, German, Japanese, Korean, Portuguese, Arabic, Hindi and more, so you can produce story voiceovers for any audience.",
+        "Is it free to try?",
+        "Yes. Every new account gets a free 7-day trial with 10,000 characters of synthesis — no credit card required. After the trial, keep going with a subscription or a one-time character pack that never expires.",
+        "Start with 10,000 free characters. Your first multi-voice story voiceover is minutes away.",
+        "Create Your Story Voiceover — Free",
+        "Free Text to Speech"
+      ],
+      "schema_count": 2,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ],
+        [
+          "FAQPage",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/pricing",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/ai-podcast-generator",
+      "status": 200,
+      "final": "https://voicewove.com/ai-podcast-generator",
+      "text_chars": 4167,
+      "sample": [
+        "Give it a topic or paste a document. VoiceWove writes the conversational script and performs it with distinct AI voices — a publishable podcast episode, in 40+ languages, without touching a microphone.",
+        "Generate Your First Episode — Free",
+        "Free 7-day trial · 10,000 characters · No credit card required",
+        "Multi-speaker AI podcasts went mainstream when tools started turning documents into two-host conversations. The problem: you can't control the voices, the language, or publish the output.",
+        "VoiceWove gives you a full pipeline you control: generate the dialogue script from your topic, choose which AI voices play which host, tune the delivery, and export clean MP3 you own outright — in 40+ languages.",
+        "Same episode, multiple languages. Grow international listeners without re-recording anything.",
+        "— paste the week's headlines, get a digest episode in your feed's language.",
+        "Generate the episode and export MP3 — ready for Spotify, Apple Podcasts, YouTube or RSS.",
+        "Clone your voice and host episodes yourself — in 40+ languages.",
+        "Free Text to Speech",
+        "Try the full engine free — 10,000 characters, no card.",
+        "Which languages are supported?",
+        "40+ languages. You can also generate an episode in one language and re-produce it in another to reach international audiences with the same effort.",
+        "You do. Publish generated episodes on Spotify, Apple Podcasts, YouTube or anywhere else — commercial use is allowed on paid plans.",
+        "Generate your first episode free — script, voices and export included.",
+        "Generate a Podcast Episode — Free",
+        "Free Text to Speech"
+      ],
+      "schema_count": 2,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ],
+        [
+          "FAQPage",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer",
+          "Question",
+          "Answer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/pricing",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "final": "https://voicewove.com/terms",
+      "text_chars": 4140,
+      "sample": [
+        "6.1 You retain all rights to content you create (including uploaded audio and generated speech), but grant us a non-exclusive, worldwide, royalty-free license to enable us to provide and improve the Services.",
+        "10.2 We do not guarantee that the Services will be uninterrupted, timely, secure, or error-free.",
+        "Free Text to Speech"
+      ],
+      "schema_count": 1,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "final": "https://voicewove.com/privacy",
+      "text_chars": 7713,
+      "sample": [
+        "— large language model provider. Text prompts submitted for story generation are processed by DeepSeek to create story content.",
+        "Free Text to Speech"
+      ],
+      "schema_count": 1,
+      "schema_types": [
+        [
+          "Organization",
+          "WebSite",
+          "SoftwareApplication",
+          "Offer",
+          "Offer",
+          "Offer"
+        ]
+      ],
+      "links": [
+        "/ai-podcast-generator",
+        "/ai-story-voiceover",
+        "/app",
+        "/cloning",
+        "/cookies",
+        "/free-text-to-speech",
+        "/podcast",
+        "/privacy",
+        "/story",
+        "/terms",
+        "/voice-cloning",
+        "https://voicewove.com"
+      ]
+    }
+  ]
+}

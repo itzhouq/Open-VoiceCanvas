@@ -46,7 +46,7 @@ export const cy: TranslationType = {
   feature1Title: "Lais Uwchradd",
   feature1Desc: "Syntheseis llais clir gyda thôn a rhythm naturiol",
   feature2Title: "Aml-ieithoedd",
-  feature2Desc: "50+ o ieithoedd gyda lleisiau gwrywaidd a benywaidd, perffaith ar gyfer cynnwys byd-eang",
+  feature2Desc: "Dewiswch o blith yr ieithoedd a’r lleisiau sydd ar gael ar gyfer eich cynnwys.",
   feature3Title: "Nodweddion Uwch",
   feature3Desc: "Cyfaddaswch gyflymder, delweddu sain, a galluogi darllen air wrth air i wella dysgu",
   ctaTitle: "Dechreuwch Defnyddio'n Hofferyn Testun-i-Lleferydd Heddiw",
@@ -81,7 +81,7 @@ export const cy: TranslationType = {
   googleLogin: "Parhau gyda Google",
   dividerText: "neu",
   aiPowered: "Wedi'i Bweru gan AI",
-  languagesSupported: "50+ o Ieithoedd",
+  languagesSupported: "Cefnogaeth amlieithog",
   copyright: "© {year} VoiceWove. Cedwir pob hawl.",
   footerSlogan: "Cynhyrchwyd gyda ❤️ ar gyfer profiad llais gwell",
   loginDescription: "Mewngofnodwch gyda'ch cyfrif i gael mynediad at fwy o nodweddion",
@@ -232,7 +232,7 @@ export const cy: TranslationType = {
   trialPeriod: "Treial {days} diwrnod",
   yearlyQuota: "{amount} o gymeriadau y flwyddyn",
   monthlyQuota: "{amount} o gymeriadau y mis",
-  languageSupport: "50+ o ieithoedd yn cael eu cynnal",
+  languageSupport: "Cefnogaeth amlieithog",
   basicSpeedControl: "Rheoli cyflymder sylfaenol",
   basicVoiceSelection: "Dewis llais sylfaenol",
   textInputOnly: "Mewnbwn testun yn unig",
@@ -255,20 +255,20 @@ export const cy: TranslationType = {
 
   // Pay As You Go
   payAsYouGo: "Talu Wrth Ddefnyddio",
-  tenThousandChars: "100K cymeriad",
+  tenThousandChars: "10,000 o nodau",
   millionChars: "1M cymeriad",
   threeMillionChars: "3M cymeriad",
 
   // FAQ
   faq: "Cwestiynau Cyffredin",
   faqTrialFeatures: "Pa nodweddion sy'n gynwysedig yn y treial?",
-  faqTrialFeaturesAnswer: "Mae'r treial yn cynnwys cyfnod o 7 diwrnod gyda 1000 o gymeriadau, cefnogaeth ar gyfer 50+ o ieithoedd, rheoli cyflymder sylfaenol, a dewis llais. Gallwch brofi nodweddion craidd trwy fewnbwn testun i weld a yw'n cwrdd â'ch anghenion.",
+  faqTrialFeaturesAnswer: "Rhowch gynnig ar destun-i-lais gyda {amount} o nodau am {days} diwrnod. Dewiswch o blith y lleisiau sydd ar gael ac addaswch gyflymder y lleferydd.",
   faqHowToTry: "Sut alla i ddechrau'r treial?",
   faqHowToTryAnswer: "Cofrestrwch gyfrif i gael mynediad treial, dim cerdyn credyd angen. Gallwch uwchraddio i gynllun tâl unrhyw bryd yn ystod y treial i gael mynediad at fwy o nodweddion a chwotâu cymeriadau uwch.",
   faqQuotaCalc: "Sut mae cwota cymeriadau'n cael ei gyfrif?",
   faqQuotaCalcAnswer: "Cyfrifir cwota cymeriadau yn seiliedig ar y testun mewnbwn gwirioneddol, gan gynnwys bylchau ac atalnodau.",
   faqPayment: "Pa ddulliau taliad sy'n cael eu derbyn?",
-  faqPaymentAnswer: "Rydym yn derbyn amrywiaeth o ddulliau taliad cyfleus: cardiau debyd, cardiau credyd, WeChat Pay, Alipay, a mwy. Byddwch yn dod o hyd i opsiwn taliad addas waeth bynnag ble rydych chi. Mae pob sianel daliadau wedi'i amgryptio er diogelwch.",
+  faqPaymentAnswer: "Dangosir y dulliau talu sydd ar gael ar y dudalen dalu.",
   faqQuotaType: "Beth yw'r gwahaniaeth rhwng cwota a brynwyd a chwota bonws aelodaeth?",
   faqQuotaTypeAnswer: "Mae cwota a brynwyd ar wahân yn barhaol ac ni fydd byth yn dod i ben. Fodd bynnag, bydd cwota a dderbyniwyd drwy gynlluniau aelodaeth yn dros dro a bydd yn dod i ben pan fydd y cyfnod aelodaeth yn dod i ben. Rydym yn argymell dewis y dull prynu sy'n cyd-fynd orau â'ch anghenion defnydd.",
 
@@ -458,7 +458,7 @@ export const cy: TranslationType = {
     save: "Arbed",
   
       // Tudalen gartref - Clonio Llais
-      landingSubtitle: "Trosi testun i laith ar unwaith mewn 50+ o ieithoedd, yn cefnogi clonio llais a dylunio llais, wedi'i seilio ar dechnoleg AI blaengar ar gyfer cyfansoddi llais clir a naturiol.",
+      landingSubtitle: "Trowch destun yn lleferydd, cloniwch leisiau y mae gennych ganiatâd i’w defnyddio, a dyluniwch leisiau yn eich porwr.",
       feature4Title: "Clonio Llais",
       feature4Desc: "Clonio llais personoledig i wneud i'r SI siarad yn fwy dynol",
   
@@ -527,7 +527,7 @@ export const cy: TranslationType = {
   verificationError: "Gwall wrth ddilysu",
 
   // Eitemau Swyddogaethau Craidd
-multiLanguageSupportItem: "Cefnogi 50+ o ieithoedd a thafodieithoedd",
+multiLanguageSupportItem: "Mae’r ieithoedd sydd ar gael yn dibynnu ar y llais a ddewiswyd",
 multiLanguageVoicesItem: "Lliaws o leisiau gwrywaidd a benywaidd pob iaith",
 multiLanguageAccentsItem: "Dewis acenion rhanbarthol (e.e. Saesneg America, Prydain)",
 naturalSpeechItem: "Intonad naturiol lefel dyn",
@@ -561,7 +561,7 @@ termsOfService: "Telerau Defnyddwyr",
 privacyPolicy: "Polisi Preifatrwydd",
 legalLinks: "Telerau Cyfreithiol",
 
-    demoPhrase1: "Trosi testun i lais naturiol, mwy na 50 o ieithoedd a lleisiau",
+    demoPhrase1: "Trowch destun yn lleferydd naturiol gyda llais o’ch dewis",
     demoPhrase2: "Clônio eich llais, addasu lleferydd yn amser real",
 
     agreementPrefix: "Trwy gofrestru rydych chi'n cytuno i'n",

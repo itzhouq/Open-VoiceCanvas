@@ -46,7 +46,7 @@ export const tr: TranslationType = {
   feature1Title: "Yüksek Kaliteli Ses",
   feature1Desc: "Doğal tonlama ve ritimle kristal netliğinde ses sentezi",
   feature2Title: "Çok Dilli Destek",
-  feature2Desc: "Kadın ve erkek sesleriyle 50+ dil, küresel içerik için ideal",
+  feature2Desc: "İçeriğiniz için kullanılabilir dil ve ses seçeneklerinden seçim yapın.",
   feature3Title: "Gelişmiş Özellikler",
   feature3Desc: "Hızı özelleştir, sesi görselleştir ve kelime kelime okuma özelliği",
   ctaTitle: "Metinden Sese Aracımızı Hemen Kullanmaya Başlayın",
@@ -81,7 +81,7 @@ export const tr: TranslationType = {
   googleLogin: "Google ile devam et",
   dividerText: "veya",
   aiPowered: "AI Destekli",
-  languagesSupported: "50+ Dil",
+  languagesSupported: "Çok dilli destek",
   copyright: "© {year} VoiceWove. Tüm hakları saklıdır.",
   footerSlogan: "Daha iyi ses deneyimi için ❤️ ile tasarlandı",
   loginDescription: "Daha fazla özellik için giriş yap",
@@ -230,7 +230,7 @@ export const tr: TranslationType = {
   trialPeriod: "{days} günlük deneme",
   yearlyQuota: "Yıllık {amount} karakter",
   monthlyQuota: "Aylık {amount} karakter",
-  languageSupport: "50+ dil desteği",
+  languageSupport: "Çok dilli destek",
   basicSpeedControl: "Temel hız kontrolü",
   basicVoiceSelection: "Temel ses seçimi",
   textInputOnly: "Sadece metin girişi",
@@ -253,20 +253,20 @@ export const tr: TranslationType = {
 
   // Kullanım Başına Ödeme
   payAsYouGo: "Kullanım Başı Ödeme",
-  tenThousandChars: "100 bin karakter",
+  tenThousandChars: "10.000 karakter",
   millionChars: "1 milyon karakter",
   threeMillionChars: "3 milyon karakter",
 
   // SSS
   faq: "Sıkça Sorulan Sorular",
   faqTrialFeatures: "Deneme sürümünde neler var?",
-  faqTrialFeaturesAnswer: "7 gün, 1000 karakter ve 50+ dil desteği içerir",
+  faqTrialFeaturesAnswer: "{days} gün boyunca {amount} karakter ile metinden sese dönüşümü deneyin. Kullanılabilir seslerden birini seçin ve konuşma hızını ayarlayın.",
   faqHowToTry: "Deneme sürümünü nasıl başlatırım?",
   faqHowToTryAnswer: "Kart bilgisi girmeden kaydol. İstediğin zaman yükseltebilirsin",
   faqQuotaCalc: "Kota nasıl hesaplamır?",
   faqQuotaCalcAnswer: "Boşluk ve noktalama dahil",
   faqPayment: "Kabul edilen ödeme yöntemleri?",
-  faqPaymentAnswer: "Kartlar, WeChat Pay, Alipay. Tüm reaksiyonlar şifrelenir",
+  faqPaymentAnswer: "Kullanılabilir ödeme yöntemleri ödeme sayfasında gösterilir.",
   faqQuotaType: "Satın alınan ve abonelik kotası farkı?",
   faqQuotaTypeAnswer: "Satın alınanlar kalıcı, abonelik geçici",
 
@@ -456,7 +456,7 @@ export const tr: TranslationType = {
       save: "Kaydet",
     
       // Ana Sayfa Ses Klonlama Özellikleri
-      landingSubtitle: "50+ dilde anlık metinden sese dönüşüm, ses klonlama ve ses tasarımı desteği ve gelişmiş AI teknolojisiyle net doğal ses sentezi.",
+      landingSubtitle: "Tarayıcınızda metni sese dönüştürün, kullanma izniniz olan sesleri klonlayın ve sesler tasarlayın.",
       feature4Title: "Ses Klonlama",
       feature4Desc: "Kişiselleştirilmiş ses klonlama ile AI sesine sıcaklık katın",
       
@@ -524,7 +524,7 @@ export const tr: TranslationType = {
     verificationError: "Doğrulama sırasında bir hata oluştu",
 
     // Temel Özellikler Listesi
-multiLanguageSupportItem: "50+ dil ve lehçe desteği",
+multiLanguageSupportItem: "Kullanılabilir diller seçilen sese bağlıdır",
 multiLanguageVoicesItem: "Her dil için çeşitli erkek/kadın ses seçenekleri",
 multiLanguageAccentsItem: "Bölgesel aksan seçimi (ör: Amerikan İngilizcesi, İngiliz İngilizcesi)",
 naturalSpeechItem: "İnsan seviyesinde doğal tonlama",
@@ -558,7 +558,7 @@ termsOfService: "Kullanım Şartları",
 privacyPolicy: "Gizlilik Politikası",
 legalLinks: "Yasal Şartlar",
 
-    demoPhrase1: "Metni doğal sese dönüştürün, 50+ dil ve ses",
+    demoPhrase1: "Seçtiğiniz sesle metni doğal konuşmaya dönüştürün",
     demoPhrase2: "Sesinizi klonlayın, gerçek zamanlı ses özelleştirme",
 
     agreementPrefix: "Kayıt olarak, bizim",

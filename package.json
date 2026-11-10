@@ -11,6 +11,7 @@
     "db:analyze": "tsx scripts/analyze-db.ts",
     "migrate:clone-tables": "tsx scripts/migrate-clone-tables.ts",
     "check:translations": "tsx scripts/check-translations.ts",
+    "check:geo": "node scripts/check-geo.mjs",
     "test:discord": "tsx scripts/test-discord.ts",
     "fix:oauth-users": "tsx scripts/fix-oauth-users.ts"
   },

@@ -1,19 +1,20 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+import { PRODUCT_PRICES_USD } from '@/lib/product-catalog';
+import { TRIAL_OFFER } from '@/lib/trial-offer';
+
+const title = 'Pricing — Trial, Subscriptions and One-Time Packs';
+const description = `Try ${TRIAL_OFFER.characters.toLocaleString('en-US')} synthesis characters for ${TRIAL_OFFER.days} days. Monthly plan: $${PRODUCT_PRICES_USD.monthly.toFixed(2)}. Character packs from $${PRODUCT_PRICES_USD.tenThousandChars}; separate clone/design credits from $${PRODUCT_PRICES_USD.clone1}.`;
+const url = 'https://voicewove.com/pricing';
 
 export const metadata: Metadata = {
-  title: 'Pricing — Free Trial, $5.99/mo Pro Plan & One-Time Packs | VoiceWove',
-  description: 'Start free with 10,000 characters. Continue with a subscription from $5.99/month or one-time character packs from $6 and voice-clone packs from $3 that never expire.',
-  metadataBase: new URL('https://voicewove.com'),
-  alternates: { canonical: 'https://voicewove.com/pricing' },
-  openGraph: {
-    title: 'VoiceWove Pricing — Free Trial, $5.99/mo & One-Time Packs',
-    description: '7-day free trial (10,000 characters, no credit card). Subscriptions from $5.99/mo; one-time packs from $3 that never expire.',
-    url: 'https://voicewove.com/pricing',
-    siteName: 'VoiceWove',
-    type: 'website',
-  },
-}
+  title,
+  description,
+  alternates: { canonical: url },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+  openGraph: { title: `${title} | VoiceWove`, description, url, siteName: 'VoiceWove', type: 'website' },
+  twitter: { card: 'summary', title: `${title} | VoiceWove`, description },
+};
 
 export default function PricingLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return children;
 }

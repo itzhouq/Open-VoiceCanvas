@@ -1,235 +1,115 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { NavBar } from '@/components/nav-bar';
+import { GeoLandingPage, type LandingFaq } from '@/components/geo-landing-page';
+import { TRIAL_OFFER } from '@/lib/trial-offer';
+import { CLONE_PACKS, PRODUCT_PRICES_USD } from '@/lib/product-catalog';
+
+const trialCharacters = TRIAL_OFFER.characters.toLocaleString('en-US');
+const title = `AI Voice Cloning Online from $${PRODUCT_PRICES_USD.clone1}`;
+const description = `Clone your own or an authorized voice from an audio recording. Clone/design credits start at $${PRODUCT_PRICES_USD.clone1}; speech generation uses separate character quota.`;
 
 export const metadata: Metadata = {
-  title: 'Free Voice Cloning Online — Clone Your Voice with AI in Minutes | VoiceWove',
-  description: 'Create an AI clone of your voice online for free. Upload a short audio sample, and VoiceWove lets you speak any text in your own voice across 40+ languages. No software to install.',
+  title,
+  description,
   alternates: { canonical: 'https://voicewove.com/voice-cloning' },
   openGraph: {
-    title: 'Free Voice Cloning Online — Clone Your Voice with AI | VoiceWove',
-    description: 'Upload a short audio sample and speak any text in your own voice with AI voice cloning. 40+ languages, instant results, free trial.',
+    title,
+    description,
     url: 'https://voicewove.com/voice-cloning',
     siteName: 'VoiceWove',
     type: 'website',
   },
 };
 
-const faqs = [
+const faqs: LandingFaq[] = [
   {
-    q: 'Is voice cloning free?',
-    a: 'You can try voice cloning with a free 7-day trial (10,000 characters of synthesis, no credit card required). Cloning a voice requires a voice slot: one-time clone packs start at $3 for 1 voice slot and never expire. All AI platforms require paid slots for cloning because each voice model consumes real GPU resources.',
+    q: 'Is voice cloning included in the free trial?',
+    a: `No. The free trial provides ${trialCharacters} speech-synthesis characters for ${TRIAL_OFFER.days} days, but it does not include clone/design credits. Creating a voice clone requires a credit. The smallest pack costs $${PRODUCT_PRICES_USD.clone1} for ${CLONE_PACKS.clone1} credit.`,
   },
   {
-    q: 'How much audio do I need to clone a voice?',
-    a: 'A short, clean recording is enough — roughly 10 to 30 seconds of clear speech in a quiet environment works best. No studio equipment needed; a phone recording is fine if there is no background noise.',
+    q: 'Do I pay again to generate speech with my cloned voice?',
+    a: 'Creating the voice clone consumes a clone/design credit. Generating speech with an existing clone consumes character quota separately. You need available character quota, from an active trial, a subscription or a purchased character pack, to synthesize speech.',
   },
   {
-    q: 'Is it legal to clone a voice?',
-    a: 'Only clone voices you own or have explicit permission to use. VoiceWove strictly prohibits cloning someone else\'s voice without consent, impersonation, or creating deceptive content. Accounts violating this are suspended.',
+    q: 'How long should the recording be, and which files are accepted?',
+    a: 'Upload a clear MP3, M4A or WAV recording between 10 seconds and 5 minutes, with a file size of at most 5 MB. Record continuous speech from one authorized speaker in a quiet room. Avoid music, overlapping voices and strong echo.',
   },
   {
-    q: 'Which languages can my cloned voice speak?',
-    a: 'Once your voice model is created, you can make it speak text in 40+ languages — your cloned voice handles cross-language synthesis automatically.',
+    q: 'Can I record the sample on my phone?',
+    a: 'Yes, if the exported recording meets the format, size and duration requirements. Keep a steady distance from the microphone and use your normal speaking voice. Listen to the recording before uploading; recording quality affects the result.',
   },
   {
-    q: 'Can I delete my cloned voice?',
-    a: 'Yes. You can delete your voice model and uploaded audio samples at any time from your account, and we remove the underlying data from our systems.',
+    q: 'Can my cloned voice speak another language?',
+    a: 'The cloning workspace offers language choices for speech synthesis. Try a short passage in your target language and review pronunciation before a longer project. Results depend on the recording, text and selected language; language options are not a guarantee of equal quality in every language.',
+  },
+  {
+    q: 'Can I clone someone else’s voice or use a clone commercially?',
+    a: 'Only upload a voice you own or have legal permission to use. Impersonation and deceptive use are prohibited. Buying credits does not grant commercial rights or remove restrictions on the voice or source material. Check the Terms of Service and the restrictions in the cloning workspace; contact support before a use whose permission is unclear.',
+  },
+  {
+    q: 'What happens when I delete a cloned voice?',
+    a: 'The delete control removes the saved voice from your VoiceWove account list. For a request covering the original recording or the model held by a processing provider, contact support using the Privacy Policy. Removing a saved voice should not be treated as confirmation that every provider copy has been erased.',
+  },
+  {
+    q: 'Do clone/design credits expire, and can I reuse them?',
+    a: 'Purchased clone/design credits do not have a subscription expiry. A credit is consumed when you create a voice clone or voice design; it is not a reusable voice slot. Deleting a saved voice does not restore the consumed credit.',
+  },
+  {
+    q: 'Which audio format can I download?',
+    a: 'Speech generated in the cloning workspace downloads as MP3. The story and podcast tools export their combined audio as WAV, so check the output format of the tool you use for the finished project.',
   },
 ];
 
 export default function VoiceCloningPage() {
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <NavBar />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <header className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">
-            VoiceWove · AI Voice Cloning
-          </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
-            Free Voice Cloning Online — Speak Any Text in Your Own Voice
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Upload a short audio sample and VoiceWove creates an AI clone of your voice. Then type
-            anything — narration, dubbing, podcasts — and hear it in your voice, in 40+ languages.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/cloning"
-              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
-            >
-              Clone Your Voice — Free Trial
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-muted transition"
-            >
-              See Clone Packs
-            </Link>
-          </div>
-          <p className="text-xs text-muted-foreground mt-3">
-            Clone packs from $3 · Slots never expire · Consent policy enforced
-          </p>
-        </header>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-4">How AI Voice Cloning Works</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Voice cloning trains a neural model on a sample of your speech so it can generate new
-            audio in that same voice. What used to require a recording studio and hours of training
-            data now takes one short recording and a few minutes of processing.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            VoiceWove makes cloned voices practical: once your voice model exists, it becomes a
-            selectable voice across the whole platform — use it for story voiceover, podcast
-            narration, video dubbing, or translating your content into languages you don&apos;t
-            speak. Your model is private to your account.
-          </p>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">What You Get</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: '🎙️ One Sample Is Enough',
-                body: '10–30 seconds of clean speech is all it takes. Phone recording quality works — no studio needed.',
-              },
-              {
-                title: '🌐 Cross-Language Speech',
-                body: 'Your cloned voice can speak 40+ languages, so you can publish the same content for international audiences.',
-              },
-              {
-                title: '⏳ Slots Never Expire',
-                body: 'Clone packs are one-time purchases. Buy 1, 10 or 50 voice slots — they stay in your account forever.',
-              },
-              {
-                title: '🔒 Consent & Privacy First',
-                body: 'Cloning is only allowed for voices you own or are authorized to use. Delete your voice model and samples anytime.',
-              },
-            ].map((f) => (
-              <div key={f.title} className="rounded-lg border border-border p-5 bg-card hover:shadow-md transition">
-                <h3 className="font-bold mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">What Can You Use a Cloned Voice For?</h2>
-          <ul className="space-y-3 text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">YouTube & video narration</strong> — keep a consistent voice across every video without ever recording.</li>
-            <li><strong className="text-foreground">Audiobooks & serialized stories</strong> — narrate chapters on your own schedule; revisions never need a re-record.</li>
-            <li><strong className="text-foreground">Course & e-learning narration</strong> — update lessons by editing text, then regenerate audio in minutes.</li>
-            <li><strong className="text-foreground">Multilingual content</strong> — publish the same material in 40+ languages, all in your voice.</li>
-            <li><strong className="text-foreground">Podcast intros & segments</strong> — drop your voice into any project even when you have no time to record.</li>
-          </ul>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Tips for a Clean Voice Sample</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            The quality of your clone depends mostly on the 30 seconds you record. You don&apos;t need
-            expensive gear — just follow these four rules:
-          </p>
-          <ul className="space-y-3 text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Quiet room, no echo.</strong> A closet full of clothes beats an empty living room.</li>
-            <li><strong className="text-foreground">Keep the mic 15–20 cm away</strong> and speak at your natural pace and volume.</li>
-            <li><strong className="text-foreground">Read continuous sentences</strong> — a paragraph beats a word list; the model learns rhythm too.</li>
-            <li><strong className="text-foreground">Avoid background music or other voices</strong> — the model should hear only you.</li>
-          </ul>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">3 Steps to Clone Your Voice</h2>
-          <ol className="space-y-4">
-            {[
-              'Record 10–30 seconds of clear speech in a quiet room — read anything you like.',
-              'Upload it to VoiceWove and create your voice model (a few minutes of processing).',
-              'Type any text and hear it in your cloned voice — download as MP3, in 40+ languages.',
-            ].map((step, i) => (
-              <li key={i} className="flex gap-4 items-start">
-                <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white flex items-center justify-center font-bold">
-                  {i + 1}
-                </span>
-                <p className="text-muted-foreground leading-relaxed pt-1">{step}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-5">
-            {faqs.map((f) => (
-              <div key={f.q} className="border-b border-border pb-5">
-                <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Use Your Cloned Voice Everywhere</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Once created, your voice works across every VoiceWove tool:
-          </p>
-          <div className="grid sm:grid-cols-3 gap-4">
-            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Story Voiceover</p>
-              <p className="text-sm text-muted-foreground mt-1">Multi-character narration with your voice as the narrator.</p>
-            </a>
-            <a href="/ai-podcast-generator" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Podcast Generator</p>
-              <p className="text-sm text-muted-foreground mt-1">Two-host podcast episodes, one of them you.</p>
-            </a>
-            <a href="/free-text-to-speech" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">Free Text to Speech</p>
-              <p className="text-sm text-muted-foreground mt-1">Try the full engine free — 10,000 characters, no card.</p>
-            </a>
-          </div>
-        </section>
-
-        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
-          <h2 className="text-2xl font-bold mb-3">Hear Yourself Speak Any Language</h2>
-          <p className="text-muted-foreground mb-6">
-            Start with a free trial, then grab a clone pack from $3 — slots never expire.
-          </p>
-          <Link
-            href="/cloning"
-            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
-          >
-            Start Voice Cloning — Free
-          </Link>
-        </section>
-      </main>
-
-      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        <p>
-          © {new Date().getFullYear()} VoiceWove ·{' '}
-          <Link href="/pricing" className="hover:underline">Pricing</Link> ·{' '}
-          <Link href="/privacy" className="hover:underline">Privacy</Link> ·{' '}
-          <Link href="/terms" className="hover:underline">Terms</Link>
-        </p>
-      </footer>
-    </div>
+    <GeoLandingPage
+      eyebrow="AI Voice Cloning"
+      title="Clone Your Voice and Create New Speech"
+      description="Upload a recording of your own or an authorized voice, create a clone, and use it to read new text. Check the recording requirements and the two types of quota before you begin."
+      offerNote={`Clone/design credits from $${PRODUCT_PRICES_USD.clone1} · Speech uses separate character quota · Account required`}
+      primaryAction={{ href: '/cloning', label: 'Open Voice Cloning' }}
+      secondaryAction={{ href: '/pricing', label: 'See Clone Credit Packs' }}
+      introduction={{
+        title: 'How Does Voice Cloning Work?',
+        paragraphs: [
+          'Voice cloning uses a recording to create a voice that can speak new text. In VoiceWove, upload your sample, create the clone, then select the saved voice when generating speech. You can use a short test to check how it handles your words and pronunciation.',
+          `There are two costs to understand: creating a clone uses a clone/design credit, and generating audio uses character quota. A $${PRODUCT_PRICES_USD.clone1} pack includes ${CLONE_PACKS.clone1} clone/design credit. The free speech trial does not include that credit.`,
+        ],
+      }}
+      features={[
+        { title: 'Use an authorized recording', body: 'Start with your own voice or a recording you have permission to use. A quiet phone recording can meet the upload requirements.' },
+        { title: 'Generate new text', body: 'Select the saved clone and enter a new passage. Check a short result before producing a longer recording.' },
+        { title: 'Control the delivery', body: 'Adjust the available speed, pitch and audio settings in the cloning workspace.' },
+        { title: 'Keep costs visible', body: 'Clone/design credits and speech characters are separate balances. Check both before beginning a project.' },
+      ]}
+      specifications={[
+        { label: 'Recording format', value: 'MP3, M4A or WAV audio from one speaker.' },
+        { label: 'Recording limits', value: '10 seconds to 5 minutes; maximum file size 5 MB.' },
+        { label: 'Create a voice', value: `Requires a clone/design credit. $${PRODUCT_PRICES_USD.clone1} buys ${CLONE_PACKS.clone1} credit; purchased credits do not have a subscription expiry.` },
+        { label: 'Generate speech', value: 'Uses character quota separately from the credit used to create the voice.' },
+        { label: 'Speech trial', value: `${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days for new accounts. Clone/design credits are not included.` },
+        { label: 'Output', value: 'MP3 from the cloning workspace.' },
+        { label: 'Voice permissions', value: 'Your own or legally authorized voice. Follow the terms and the usage restrictions shown in the workspace.' },
+      ]}
+      steps={[
+        'Record continuous speech in a quiet room. Check that the recording is 10 seconds to 5 minutes, at most 5 MB, and in a supported format.',
+        'Sign in, check your clone/design credit balance, upload the recording and create the clone.',
+        'Select your saved clone and a language, then generate a short passage using character quota. Listen before downloading the MP3.',
+      ]}
+      example={{
+        title: 'A Script for Your Recording Test',
+        description: 'Read this passage aloud at your normal pace. Check the resulting recording duration and file size before uploading it.',
+        script: 'Hello, this is my voice sample. I am speaking at a comfortable pace in a quiet room. Today I walked through the park, watched the leaves move in the wind, and stopped to listen to the birds. I want to hear how my voice sounds when reading a new sentence.',
+      }}
+      faqs={faqs}
+      related={[
+        { href: '/free-text-to-speech', title: 'Text to Speech', description: 'Try speech generation with the available system voices.' },
+        { href: '/ai-story-voiceover', title: 'Story Voiceover', description: 'Assign voices to narration and character dialogue.' },
+        { href: '/ai-podcast-generator', title: 'AI Podcast Generator', description: 'Choose voices for an editable host-and-guest script.' },
+      ]}
+      closing={{
+        title: 'Start with a Clear Recording',
+        description: `Have your authorized sample ready. Creating the clone requires a clone/design credit from $${PRODUCT_PRICES_USD.clone1}, plus character quota when you generate speech.`,
+      }}
+    />
   );
 }

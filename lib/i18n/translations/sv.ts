@@ -46,7 +46,7 @@ export const sv: TranslationType = {
   feature1Title: "Hög Kvalitetsröst",
   feature1Desc: "Kristallklar talsyntes med naturlig intonation och rytm",
   feature2Title: "Flerspråkighet",
-  feature2Desc: "50+ språk med både manliga och kvinnliga röster, perfekt för globalt innehåll",
+  feature2Desc: "Välj bland tillgängliga språk och röster för ditt innehåll.",
   feature3Title: "Avancerade Funktioner",
   feature3Desc: "Anpassa hastighet, visualisera ljud och aktivera ord-för-ord-läsning",
   ctaTitle: "Börja Använda Vårt Text-till-Tal Verktyg Idag",
@@ -81,7 +81,7 @@ export const sv: TranslationType = {
   googleLogin: "Fortsätt med Google",
   dividerText: "eller",
   aiPowered: "AI-driven",
-  languagesSupported: "50+ Språk",
+  languagesSupported: "Stöd för flera språk",
   copyright: "© {year} VoiceWove. Alla rättigheter förbehållna.",
   footerSlogan: "Skapat med ❤️ för bättre röstupplevelser",
   loginDescription: "Logga in för fler funktioner",
@@ -230,7 +230,7 @@ export const sv: TranslationType = {
   trialPeriod: "{days} dagars testperiod",
   yearlyQuota: "{amount} tecken/år",
   monthlyQuota: "{amount} tecken/månad",
-  languageSupport: "50+ språk stöds",
+  languageSupport: "Stöd för flera språk",
   basicSpeedControl: "Grundläggande hastighetskontroll",
   basicVoiceSelection: "Grundläggande röstval",
   textInputOnly: "Endast textinmatning",
@@ -253,20 +253,20 @@ export const sv: TranslationType = {
 
   // Betala per användning
   payAsYouGo: "Betala per användning",
-  tenThousandChars: "100 tusen tecken",
+  tenThousandChars: "10 000 tecken",
   millionChars: "1 miljon tecken",
   threeMillionChars: "3 miljoner tecken",
 
   // FAQ
   faq: "Vanliga Frågor",
   faqTrialFeatures: "Vad ingår i testperioden?",
-  faqTrialFeaturesAnswer: "7 dagar med 1000 tecken och 50+ språk",
+  faqTrialFeaturesAnswer: "Prova text-till-tal med {amount} tecken i {days} dagar. Välj bland tillgängliga röster och justera talhastigheten.",
   faqHowToTry: "Hur startar jag testperioden?",
   faqHowToTryAnswer: "Registrera dig utan kort. Uppgradera när som helst",
   faqQuotaCalc: "Hur beräknas teckenkvoten?",
   faqQuotaCalcAnswer: "Inklusive mellanslag och skiljetecken",
   faqPayment: "Vilka betalmetoder accepteras?",
-  faqPaymentAnswer: "Kort, WeChat Pay, Alipay. Alla transaktioner är säkra",
+  faqPaymentAnswer: "Tillgängliga betalningsmetoder visas i kassan.",
   faqQuotaType: "Skillnad mellan köpt kvot och prenumeration?",
   faqQuotaTypeAnswer: "Köpt kvot är permanent, prenumerationskvot tillfällig",
 
@@ -456,7 +456,7 @@ export const sv: TranslationType = {
       save: "Spara",
     
       // Startsida - Röstkloning
-      landingSubtitle: "Realtidstext-till-tal för över 50 språk med röstkloning och röstdesign, baserat på avancerad AI-teknik för naturlig ljudsyntes.",
+      landingSubtitle: "Omvandla text till tal, klona röster som du har tillåtelse att använda och utforma röster i webbläsaren.",
       feature4Title: "Röstkloning",
       feature4Desc: "Personlig röstkloning som ger AI-mer mänsklig värme",
     
@@ -524,7 +524,7 @@ export const sv: TranslationType = {
     verificationError: "Fel uppstod under verifiering",
 
     // Kärnfunktionslista
-multiLanguageSupportItem: "Stöder 50+ språk och dialekter",
+multiLanguageSupportItem: "Tillgängliga språk beror på den valda rösten",
 multiLanguageVoicesItem: "Flera manliga/kvinnliga röster per språk",
 multiLanguageAccentsItem: "Regionala accentval (t.ex. amerikansk engelska, brittisk engelska)",
 naturalSpeechItem: "Mänskligt naturlig intonation",
@@ -558,7 +558,7 @@ termsOfService: "Användarvillkor",
 privacyPolicy: "Integritetspolicy",
 legalLinks: "Juridiska bestämmelser",
 
-    demoPhrase1: "Konvertera text till naturligt tal, 50+ språk och röster",
+    demoPhrase1: "Omvandla text till naturligt tal med en röst du väljer",
     demoPhrase2: "Klona din röst med realtidsanpassning av tal",
 
     agreementPrefix: "Genom att registrera dig godkänner du våra",

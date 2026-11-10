@@ -46,7 +46,7 @@ export const da: TranslationType = {
   feature1Title: "Højkvalitetsstemmer",
   feature1Desc: "Krystalklar stemmesyntese med naturlig intonation og rytme",
   feature2Title: "Flere Sprog",
-  feature2Desc: "50+ sprog med både mandlige og kvindelige stemmer, perfekt til globalt indhold",
+  feature2Desc: "Vælg blandt de tilgængelige sprog og stemmer til dit indhold.",
   feature3Title: "Avancerede Funktioner",
   feature3Desc: "Tilpas hastighed, visualiser lyd og aktiver ord-for-ord læsning til bedre læring",
   ctaTitle: "Begynd at Bruge Vores Tekst-til-Tale Værktøj i Dag",
@@ -81,7 +81,7 @@ export const da: TranslationType = {
   googleLogin: "Fortsæt med Google",
   dividerText: "eller",
   aiPowered: "AI-drevet",
-  languagesSupported: "50+ Sprog",
+  languagesSupported: "Understøttelse af flere sprog",
   copyright: " VoiceWove. Alle rettigheder forbeholdes.",
   footerSlogan: "Skabt med for en bedre stemmeoplevelse",
   loginDescription: "Log ind for at få adgang til flere funktioner",
@@ -230,7 +230,7 @@ export const da: TranslationType = {
   trialPeriod: "{days}-dages prøveperiode",
   yearlyQuota: "{amount} tegn pr. år",
   monthlyQuota: "{amount} tegn pr. måned",
-  languageSupport: "50+ sprog understøttet",
+  languageSupport: "Understøttelse af flere sprog",
   basicSpeedControl: "Grundlæggende hastighedskontrol",
   basicVoiceSelection: "Grundlæggende stemmevalg",
   textInputOnly: "Kun tekstinput",
@@ -253,20 +253,20 @@ export const da: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Betal-Efter-Brug",
-  tenThousandChars: "100K tegn",
+  tenThousandChars: "10.000 tegn",
   millionChars: "1M tegn",
   threeMillionChars: "3M tegn",
   
   // FAQ
   faq: "Ofte Stillede Spørgsmål",
   faqTrialFeatures: "Hvilke funktioner er inkluderet i prøveversionen?",
-  faqTrialFeaturesAnswer: "Prøveversionen inkluderer 7 dage med 1000 tegn, understøttelse af 50+ sprog, grundlæggende hastighedskontrol og stemmevalg. Du kan opleve kernefunktioner via tekstinput.",
+  faqTrialFeaturesAnswer: "Prøv tekst-til-tale med {amount} tegn i {days} dage. Vælg blandt de tilgængelige stemmer, og juster talehastigheden.",
   faqHowToTry: "Hvordan starter jeg prøveperioden?",
   faqHowToTryAnswer: "Blot opret en konto for at få adgang til prøveversionen, ingen kreditkort nødvendigt. Du kan opgradere til betalingsplan når som helst under prøveperioden.",
   faqQuotaCalc: "Hvordan beregnes tegnkvoten?",
   faqQuotaCalcAnswer: "Tegnkvote beregnes baseret på faktisk tekstinput inklusive mellemrum og tegnsætning.",
   faqPayment: "Hvilke betalingsmetoder accepteres?",
-  faqPaymentAnswer: "Vi accepterer diverse betalingsmetoder: debetkort, kreditkort, WeChat Pay, Alipay m.fl. Alle betalinger er krypterede.",
+  faqPaymentAnswer: "Tilgængelige betalingsmetoder vises ved betaling.",
   faqQuotaType: "Forskel mellem købt kvote og abonnementskvote?",
   faqQuotaTypeAnswer: "Separat købt kvote er permanent. Abonnementskvote udløber med abonnementsperioden.",
   
@@ -456,7 +456,7 @@ export const da: TranslationType = {
       save: "Gem",
   
       // Forside relateret til stemmeklon
-      landingSubtitle: "Tekst-til-tale i realtid for over 50 sprog, understøtter stemmeklonering og stemmedesign med avanceret AI-teknologi til klar og naturlig talesyntese.",
+      landingSubtitle: "Omdan tekst til tale, klon stemmer, du har tilladelse til at bruge, og design stemmer i din browser.",
       feature4Title: "Stemmeklonering",
       feature4Desc: "Personlig stemmeklonering der gør AI at lyde mere menneskelig",
   
@@ -525,7 +525,7 @@ export const da: TranslationType = {
   verificationError: "Fejl under bekræftelse",
 
   // Kernefunktionsliste
-multiLanguageSupportItem: "Understøtter 50+ sprog og dialekter",
+multiLanguageSupportItem: "Tilgængelige sprog afhænger af den valgte stemme",
 multiLanguageVoicesItem: "Flere mandlige/kvindelige stemmer pr. sprog",
 multiLanguageAccentsItem: "Valg af regionale accenter (f.eks. amerikansk, britisk engelsk)",
 naturalSpeechItem: "Menneskelig-naturlig taletone",
@@ -559,7 +559,7 @@ termsOfService: "Brugervilkår",
 privacyPolicy: "Privatlivspolitik",
 legalLinks: "Juridiske vilkår",
 
-    demoPhrase1: "Konverter tekst til naturlig tale, 50+ sprog og stemmetyper",
+    demoPhrase1: "Omdan tekst til naturlig tale med en stemme efter eget valg",
     demoPhrase2: "Klon din stemme med realtidstilpasning af tale",
 
     agreementPrefix: "Registrering betyder, at du accepterer vores",

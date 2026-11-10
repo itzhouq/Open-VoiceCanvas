@@ -46,7 +46,7 @@ export const yue: TranslationType = {
   feature1Title: "靚聲質素",
   feature1Desc: "自然語調同節奏，清晰過CD",
   feature2Title: "多國語言",
-  feature2Desc: "50幾種話男女聲都有，全球通行",
+  feature2Desc: "按內容需要揀可用嘅語言同聲音。",
   feature3Title: "高級功能",
   feature3Desc: "校速度、睇聲波、逐字讀，學嘢更易",
   ctaTitle: "即刻用我哋文字轉語音工具",
@@ -81,7 +81,7 @@ export const yue: TranslationType = {
   googleLogin: "用Google繼續",
   dividerText: "或者",
   aiPowered: "AI驅動",
-  languagesSupported: "50+種語言",
+  languagesSupported: "支援多種語言",
   copyright: "© {year} VoiceWove 版權所有",
   footerSlogan: "用心打造更好嘅語音體驗",
   loginDescription: "登入你嘅帳戶用更多功能",
@@ -230,7 +230,7 @@ export const yue: TranslationType = {
   trialPeriod: "試用{days}日",
   yearlyQuota: "每年{amount}隻字",
   monthlyQuota: "每月{amount}隻字",
-  languageSupport: "支援50+種話",
+  languageSupport: "支援多種語言",
   basicSpeedControl: "基本校速",
   basicVoiceSelection: "基本揀聲",
   textInputOnly: "淨係打字",
@@ -253,20 +253,20 @@ export const yue: TranslationType = {
   
   // 隨用隨付
   payAsYouGo: "用幾多俾幾多",
-  tenThousandChars: "10萬字",
+  tenThousandChars: "10,000個字元",
   millionChars: "100萬字",
   threeMillionChars: "300萬字",
   
   // 常見問題
   faq: "常見問題",
   faqTrialFeatures: "試用版有咩功能？",
-  faqTrialFeaturesAnswer: "試用期7天有1000字額度，50幾種話基本功能齊晒，任試核心功能睇啱唔啱使。",
+  faqTrialFeaturesAnswer: "試用期有{days}天，包含{amount}個字元額度。你可以輸入文字，揀可用嘅聲音同調整語速，試用文字轉語音功能。",
   faqHowToTry: "點開始試用？",
   faqHowToTryAnswer: "註冊就得，唔使碌卡。試用期間隨時升級都得。",
   faqQuotaCalc: "點計字數？",
   faqQuotaCalcAnswer: "計埋空格同標點，實際打幾多計幾多。",
   faqPayment: "收咩付款方式？",
-  faqPaymentAnswer: "信用卡、微信支付、支付寶都得，全球通行。",
+  faqPaymentAnswer: "可用嘅付款方式以結帳頁面顯示為準。",
   faqQuotaType: "買嘅字數同送嘅有咩唔同？",
   faqQuotaTypeAnswer: "自己買嘅字數永不過期，訂閱送嘅就跟plan到期。建議按需要揀。",
   
@@ -456,7 +456,7 @@ export const yue: TranslationType = {
       save: "慳",
     
       // 首頁 - 聲音克隆
-      landingSubtitle: "50幾種語言即時文字轉語音，支援聲音克隆同音色設計，用尖端AI技術合成清晰自然嘅人聲。",
+      landingSubtitle: "喺瀏覽器將文字轉成語音，克隆你有權使用嘅聲音，亦可以設計個人化音色。",
       feature4Title: "聲音克隆",
       feature4Desc: "個人化聲線複製，等AI把聲更有感情",
     
@@ -524,7 +524,7 @@ export const yue: TranslationType = {
     verificationError: "驗證過程出咗錯",
 
     // 核心功能列表
-multiLanguageSupportItem: "支援50+種語言同方言",
+multiLanguageSupportItem: "可用語言視乎所選聲音",
 multiLanguageVoicesItem: "每種語言多款男女聲",
 multiLanguageAccentsItem: "多地區口音選擇（例如美式英文、英式英文）",
 naturalSpeechItem: "真人級自然語調",
@@ -558,7 +558,7 @@ termsOfService: "用戶協議",
 privacyPolicy: "私隱政策",
 legalLinks: "法律條款",
 
-    demoPhrase1: "將文字轉換成自然語音，50+種語言同聲音",
+    demoPhrase1: "將文字轉成自然語音，揀適合內容嘅聲音",
     demoPhrase2: "克隆你嘅聲音，即時語音定制",
 
     agreementPrefix: "註冊即表示你同意我哋嘅",

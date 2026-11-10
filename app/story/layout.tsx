@@ -1,71 +1,67 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
+import Link from 'next/link';
+
+const title = 'AI Story Voiceover — Narrator and Character Voices';
+const description = 'Turn a written story into multi-character narration. Review dialogue, assign narrator and character voices, generate audio and download the combined WAV file.';
+const url = 'https://voicewove.com/story';
+const image = '/images/stroy-og.png';
 
 export const metadata: Metadata = {
-  title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
-  description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences. Support multiple character voices and advanced voice synthesis technology.',
-  metadataBase: new URL('https://voicewove.com'),
-  alternates: { canonical: 'https://voicewove.com/story' },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/apple-touch-icon-precomposed.png',
-    },
-  },
-  keywords: 'AI story generation, AI story dubbing, automatic voice over, story creation, voice synthesis, character dubbing, intelligent dubbing, story narration, text to speech, multi-character dubbing, immersive storytelling, voice generation, story audio, character voices, smart voice, story production, dubbing tool, voice story, automatic reading, story podcast, audiobook creation, podcast production, educational content, entertainment, storytelling platform, voice content creation, audio story maker, narrative voice, story automation, content creation tool, neural voice synthesis, AI voice technology, deep learning voice, machine learning audio, natural language processing, voice AI, speech synthesis, voice cloning, emotion synthesis, Minimax, AI故事生成, AI故事配音, 自动配音, 故事创作, 语音合成, 角色配音, 智能配音, 故事朗读, 文本转语音, 多角色配音, 沉浸式故事, 语音生成, 故事音频, 角色声音, 智能语音, 故事制作, 配音工具, 语音故事, 自动朗读, 故事播客, テキスト読み上げ, 音声合成, 音声変換, 多言語対応, 音声ツール, AI音声, ニューラル音声合成, 機械学習音声, 音声アシスタント, ストーリー生成, 物語作成, 音声吹き替え, キャラクター音声, 자동 더빙, 스토리 생성, 음성 합성, 캐릭터 더빙, 인공지능 음성, 뉴럴 음성합성, 머신러닝 음성, 음성 도우미, 이야기 생성, 음성 변환, generación de historias IA, doblaje automático, síntesis de voz, creación de historias, narración automática, voces de personajes, asistente de voz, génération d\'histoires IA, doublage automatique, synthèse vocale, création d\'histoires, narration automatique, voix de personnages, assistant vocal, KI-Geschichtenerstellung, automatische Synchronisation, Sprachsynthese, Geschichtenerstellung, automatische Erzählung, Charakterstimmen, Sprachassistent, generazione di storie IA, doppiaggio automatico, sintesi vocale, creazione di storie, narrazione automatica, voci dei personaggi, assistente vocale, генерация историй ИИ, автоматическое озвучивание, синтез речи, создание историй, автоматическое повествование, голоса персонажей, голосовой помощник, توليد القصص بالذكاء الاصطناعي, الدبلجة التلقائية, توليف الصوت, إنشاء القصص, السرد التلقائي, أصوات الشخصيات, المساعد الصوتي, कहानी निर्माण एआई, स्वचालित डबिंग, आवाज़ संश्लेषण, कहानी निर्माण, स्वचालित कथन, चरित्र आवाज़ें, आवाज़ सहायक, geração de histórias IA, dublagem automática, síntese de voz, criação de histórias, narração automática, vozes de personagens, assistente de voz',
+  title,
+  description,
+  alternates: { canonical: url },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   openGraph: {
-    title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis Service',
-    description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences.',
-    url: 'https://voicewove.com/story',
+    title: `${title} | VoiceWove`,
+    description,
+    url,
     siteName: 'VoiceWove',
-    locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: 'https://voicewove.com/images/story-og.png',
-        width: 1200,
-        height: 630,
-        alt: 'VoiceWove Story Interface',
-        type: 'image/png'
-      }
-    ]
+    images: [{ url: image, width: 1200, height: 630, alt: title }],
   },
   twitter: {
-    title: 'AI Story Dubbing - Professional Story Generation & Voice Synthesis',
-    description: 'Automatically generate stories and create voice dubbing using AI technology. Intelligently select appropriate voices based on story plots to create immersive storytelling experiences.',
     card: 'summary_large_image',
-    images: {
-      url: '/images/story-twitter.png',
-      alt: 'VoiceWove Story Interface',
-      width: 1200,
-      height: 630
-    },
-    creator: '@itzhouq2026',
-    site: '@itzhouq2026'
+    title: `${title} | VoiceWove`,
+    description,
+    images: [image],
   },
-  other: {
-    'og:image:secure_url': 'https://voicewove.com/images/story-og.png',
-    'pinterest-rich-pin': 'true',
-    'fb:app_id': '',
-    'article:author': 'https://voicewove.com',
-    'article:publisher': 'https://voicewove.com'
-  }
 };
 
-export default function StoryLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-    return (
+export default function StoryLayout({ children }: { children: React.ReactNode }) {
+  return (
     <>
-      <div className="bg-gradient-to-r from-teal-600/90 to-emerald-600/90 px-4 py-2 text-center">
-        <h1 className="text-sm font-semibold text-white sm:text-base">AI Story Voiceover Generator</h1>
-        <p className="mt-0.5 text-xs text-teal-50">Paste a story, assign a voice to every character, export multi-character narration in 40+ languages.</p>
-      </div>
+      <section aria-labelledby="story-overview" className="border-b border-border bg-primary/5">
+        <div className="container mx-auto px-4 py-6">
+          <h1 id="story-overview" className="text-2xl font-bold text-foreground">AI Story Voiceover Generator</h1>
+          <p className="mt-2 max-w-4xl text-muted-foreground">Paste a story or start from a story prompt, review the narration and dialogue, and choose a voice for the narrator and each character.</p>
+
+        </div>
+      </section>
       {children}
+      <section aria-labelledby="story-details" className="border-t border-border bg-primary/5">
+        <div className="container mx-auto px-4 py-6">
+          <h2 id="story-details" className="text-lg font-semibold">Input, output and account requirements</h2>
+          <dl className="mt-4 grid gap-4 text-sm md:grid-cols-3">
+            <div>
+              <dt className="font-semibold text-foreground">Input</dt>
+              <dd className="mt-1 text-muted-foreground">A story prompt or pasted story text. Review generated text and character assignments before creating audio.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-foreground">Output</dt>
+              <dd className="mt-1 text-muted-foreground">Preview individual segments and download the combined story as a WAV audio file.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-foreground">Voices</dt>
+              <dd className="mt-1 text-muted-foreground">Use available system voices or saved voices from your account. Speech generation uses synthesis characters.</dd>
+            </div>
+          </dl>
+          <p className="mt-3 text-sm text-muted-foreground">Sign in to generate audio using your account balances.</p>
+          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <Link href="/ai-story-voiceover" className="text-primary underline underline-offset-4">Multi-character story voiceover guide</Link>
+            <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
+          </div>
+        </div>
+      </section>
     </>
-  )
-} 
+  );
+}

@@ -46,7 +46,7 @@ export const de: TranslationType = {
   feature1Title: "Hochwertige Stimmen",
   feature1Desc: "Kristallklare Sprachsynthese mit natürlicher Intonation und Rhythmus",
   feature2Title: "Mehrsprachig",
-  feature2Desc: "50+ Sprachen mit männlichen und weiblichen Stimmen - ideal für globale Inhalte",
+  feature2Desc: "Wählen Sie aus den verfügbaren Sprachen und Stimmen für Ihre Inhalte.",
   feature3Title: "Erweiterte Funktionen",
   feature3Desc: "Angepasste Geschwindigkeit, Audio-Visualisierung und Wort-für-Wort-Lesemodus für besseres Lernen",
   ctaTitle: "Nutzen Sie unser Text-zu-Sprache-Tool jetzt",
@@ -81,7 +81,7 @@ export const de: TranslationType = {
   googleLogin: "Mit Google fortfahren",
   dividerText: "oder",
   aiPowered: "KI-gestützt",
-  languagesSupported: "50+ Sprachen",
+  languagesSupported: "Mehrsprachige Unterstützung",
   copyright: "© {year} VoiceWove. Alle Rechte vorbehalten.",
   footerSlogan: "Mit ❤️ entwickelt für bessere Sprach-Erlebnisse",
   loginDescription: "Anmelden für erweiterte Funktionen",
@@ -231,7 +231,7 @@ export const de: TranslationType = {
   trialPeriod: "{days}-Tage Testphase",
   yearlyQuota: "{amount} Zeichen/Jahr",
   monthlyQuota: "{amount} Zeichen/Monat",
-  languageSupport: "50+ unterstützte Sprachen",
+  languageSupport: "Mehrsprachige Unterstützung",
   basicSpeedControl: "Grundlegende Geschwindigkeitskontrolle",
   basicVoiceSelection: "Basis-Stimmenauswahl",
   textInputOnly: "Nur Texteingabe",
@@ -254,20 +254,20 @@ export const de: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Prepaid-Optionen",
-  tenThousandChars: "100.000 Zeichen",
+  tenThousandChars: "10.000 Zeichen",
   millionChars: "1 Mio. Zeichen",
   threeMillionChars: "3 Mio. Zeichen",
   
   // FAQ
   faq: "Häufige Fragen",
   faqTrialFeatures: "Was beinhaltet die Testversion?",
-  faqTrialFeaturesAnswer: "7 Tage Testphase mit 1000 Zeichen, 50+ Sprachen, Basisfunktionen zur Geschwindigkeits- und Stimmenanpassung.",
+  faqTrialFeaturesAnswer: "Testen Sie die Sprachausgabe mit {amount} Zeichen für {days} Tage. Wählen Sie eine verfügbare Stimme und passen Sie die Sprechgeschwindigkeit an.",
   faqHowToTry: "Wie starte ich die Testphase?",
   faqHowToTryAnswer: "Einfach Account erstellen - keine Kreditkarte erforderlich. Jederzeit upgrade auf Bezahltarif möglich.",
   faqQuotaCalc: "Wie wird das Zeichenkontingent berechnet?",
   faqQuotaCalcAnswer: "Berechnung erfolgt inklusive Leerzeichen und Satzzeichen.",
   faqPayment: "Akzeptierte Zahlungsmethoden?",
-  faqPaymentAnswer: "EC-Karten, Kreditkarten, WeChat Pay, Alipay. Alle Zahlungen SSL-verschlüsselt.",
+  faqPaymentAnswer: "Die verfügbaren Zahlungsmethoden werden beim Bezahlen angezeigt.",
   faqQuotaType: "Unterschied Kontingenttypen?",
   faqQuotaTypeAnswer: "Einzelkauf-Kontingente sind dauerhaft. Abonnement-Kontingente laufen mit Tarif ab.",
   
@@ -457,7 +457,7 @@ export const de: TranslationType = {
       save: "Speichern",
     
       // Startseite - Sprachklonierung
-      landingSubtitle: "Echtzeit-Text-zu-Sprache in 50+ Sprachen mit Sprachklonierung und Stimmdesign, basierend fortschrittlicher KI-Technologie für natürliche Sprachsynthese.",
+      landingSubtitle: "Wandeln Sie Text in Sprache um, klonen Sie Stimmen mit entsprechender Nutzungserlaubnis und gestalten Sie Stimmen im Browser.",
       feature4Title: "Stimmklonen",
       feature4Desc: "Personalisierte Sprachklonierung für menschenähnlichere KI-Stimmen",
     
@@ -526,7 +526,7 @@ export const de: TranslationType = {
   verificationError: "Fehler während der Bestätigung",
 
   // Kernfunktionsliste
-multiLanguageSupportItem: "Unterstützt 50+ Sprachen und Dialekte",
+multiLanguageSupportItem: "Die verfügbaren Sprachen hängen von der gewählten Stimme ab",
 multiLanguageVoicesItem: "Mehrere männliche/weibliche Stimmen pro Sprache",
 multiLanguageAccentsItem: "Regionale Akzentauswahl (z.B. Amerikanisches/Britisches Englisch)",
 naturalSpeechItem: "Menschlich-natürliche Sprachintonation",
@@ -560,7 +560,7 @@ termsOfService: "Nutzungsbedingungen",
 privacyPolicy: "Datenschutzrichtlinie",
 legalLinks: "Rechtliche Bestimmungen",
 
-    demoPhrase1: "Text in natürliche Sprache umwandeln, 50+ Sprachen und Stimmen",
+    demoPhrase1: "Verwandeln Sie Text mit einer Stimme Ihrer Wahl in natürliche Sprache",
     demoPhrase2: "Klonen Sie Ihre Stimme mit Echtzeit-Sprachanpassung",
 
     agreementPrefix: "Mit der Registrierung erklären Sie sich mit unseren",

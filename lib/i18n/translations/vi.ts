@@ -46,7 +46,7 @@ export const vi: TranslationType = {
   feature1Title: "Chất lượng cao",
   feature1Desc: "Giọng nói trong trẻo với ngữ điệu tự nhiên",
   feature2Title: "Đa ngôn ngữ",
-  feature2Desc: "50+ ngôn ngữ với cả giọng nam và nữ",
+  feature2Desc: "Chọn ngôn ngữ và giọng nói có sẵn phù hợp với nội dung của bạn.",
   feature3Title: "Tính năng nâng cao",
   feature3Desc: "Tuỳ chỉnh tốc độ, hiển thị âm thanh và đọc từng từ",
   ctaTitle: "Bắt đầu dùng công cụ chuyển văn bản thành giọng nói",
@@ -81,7 +81,7 @@ export const vi: TranslationType = {
   googleLogin: "Tiếp tục với Google",
   dividerText: "hoặc",
   aiPowered: "Công nghệ AI",
-  languagesSupported: "50+ Ngôn ngữ",
+  languagesSupported: "Hỗ trợ đa ngôn ngữ",
   copyright: "© {year} VoiceWove. Bảo lưu mọi quyền.",
   footerSlogan: "Được tạo bằng ❤️ cho trải nghiệm âm thanh tốt hơn",
   loginDescription: "Đăng nhập để truy cập thêm tính năng",
@@ -230,7 +230,7 @@ export const vi: TranslationType = {
   trialPeriod: "Dùng thử {days} ngày",
   yearlyQuota: "{amount} ký tự/năm",
   monthlyQuota: "{amount} ký tự/tháng",
-  languageSupport: "Hỗ trợ 50+ ngôn ngữ",
+  languageSupport: "Hỗ trợ đa ngôn ngữ",
   basicSpeedControl: "Điều chỉnh tốc độ cơ bản",
   basicVoiceSelection: "Lựa chọn giọng cơ bản",
   textInputOnly: "Chỉ nhập văn bản",
@@ -253,20 +253,20 @@ export const vi: TranslationType = {
   
   // Thanh toán linh hoạt
   payAsYouGo: "Trả theo mức sử dụng",
-  tenThousandChars: "100K ký tự",
+  tenThousandChars: "10.000 ký tự",
   millionChars: "1 triệu ký tự",
   threeMillionChars: "3 triệu ký tự",
   
   // Câu hỏi thường gặp
   faq: "Các câu hỏi thường gặp",
   faqTrialFeatures: "Bản dùng thử bao gồm những gì?",
-  faqTrialFeaturesAnswer: "7 ngày dùng thử với 1000 ký tự và 50+ ngôn ngữ",
+  faqTrialFeaturesAnswer: "Dùng thử chuyển văn bản thành giọng nói với {amount} ký tự trong {days} ngày. Chọn trong các giọng có sẵn và điều chỉnh tốc độ nói.",
   faqHowToTry: "Cách bắt đầu dùng thử?",
   faqHowToTryAnswer: "Đăng ký tài khoản miễn phí không cần thẻ tín dụng",
   faqQuotaCalc: "Cách tính hạn mức ký tự?",
   faqQuotaCalcAnswer: "Tính theo từng ký tự nhập vào, bao gồm cả dấu cách",
   faqPayment: "Phương thức thanh toán?",
-  faqPaymentAnswer: "Chấp nhận thẻ, WeChat Pay, Alipay - Bảo mật tuyệt đối",
+  faqPaymentAnswer: "Các phương thức thanh toán khả dụng được hiển thị tại trang thanh toán.",
   faqQuotaType: "Khác biệt giữa các loại hạn mức?",
   faqQuotaTypeAnswer: "Hạn mức mua riêng - vĩnh viễn, hạn mức gói - tạm thời",
   
@@ -456,7 +456,7 @@ export const vi: TranslationType = {
       save: "Tiết kiệm",
     
       // Trang chủ - Sao chép giọng nói
-      landingSubtitle: "Chuyển đổi văn bản thành giọng nói tức thì cho 50+ ngôn ngữ với công nghệ AI tiên tiến, hỗ trợ sao chép giọng nói và thiết kế giọng nói tự nhiên và rõ ràng.",
+      landingSubtitle: "Chuyển văn bản thành giọng nói, sao chép giọng mà bạn được phép sử dụng và thiết kế giọng nói trong trình duyệt.",
       feature4Title: "Sao chép giọng nói",
       feature4Desc: "Sao chép giọng nói cá nhân hóa, mang lại sự ấm áp cho AI",
     
@@ -524,7 +524,7 @@ export const vi: TranslationType = {
     verificationError: "Lỗi xảy ra trong quá trình xác thực",
 
     // Danh sách tính năng chính
-multiLanguageSupportItem: "Hỗ trợ 50+ ngôn ngữ và phương ngữ",
+multiLanguageSupportItem: "Ngôn ngữ khả dụng phụ thuộc vào giọng nói được chọn",
 multiLanguageVoicesItem: "Nhiều giọng nam/nữ cho mỗi ngôn ngữ",
 multiLanguageAccentsItem: "Lựa chọn giọng địa phương đa dạng (vd: tiếng Anh Mỹ, Anh Anh)",
 naturalSpeechItem: "Ngữ điệu tự nhiên như người thật",
@@ -558,7 +558,7 @@ termsOfService: "Điều khoản sử dụng",
 privacyPolicy: "Chính sách bảo mật",
 legalLinks: "Điều khoản pháp lý",
 
-    demoPhrase1: "Chuyển đổi văn bản thành giọng nói tự nhiên, 50+ ngôn ngữ và giọng nói",
+    demoPhrase1: "Chuyển văn bản thành giọng nói tự nhiên với giọng bạn chọn",
     demoPhrase2: "Nhân bản giọng nói của bạn, tùy chỉnh giọng nói thời gian thực",
 
     agreementPrefix: "Bằng cách đăng ký, bạn đồng ý với",

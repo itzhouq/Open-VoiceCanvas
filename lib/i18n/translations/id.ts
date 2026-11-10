@@ -46,7 +46,7 @@ export const id: TranslationType = {
   feature1Title: "Suara Berkualitas Tinggi",
   feature1Desc: "Sintesis suara jernih dengan intonasi dan ritme alami",
   feature2Title: "Multi Bahasa",
-  feature2Desc: "50+ bahasa dengan suara pria dan wanita, sempurna untuk konten global",
+  feature2Desc: "Pilih bahasa dan suara yang tersedia untuk konten Anda.",
   feature3Title: "Fitur Canggih",
   feature3Desc: "Sesuaikan kecepatan, visualisasi audio, dan pembacaan kata per kata untuk pembelajaran lebih baik",
   ctaTitle: "Mulai Gunakan Alat Teks-ke-Suara Kami Hari Ini",
@@ -81,7 +81,7 @@ export const id: TranslationType = {
   googleLogin: "Lanjutkan dengan Google",
   dividerText: "atau",
   aiPowered: "Ditenagai AI",
-  languagesSupported: "50+ Bahasa Didukung",
+  languagesSupported: "Dukungan multibahasa",
   copyright: "© {year} VoiceWove. Hak cipta dilindungi.",
   footerSlogan: "Dibuat dengan ❤️ untuk pengalaman suara lebih baik",
   loginDescription: "Masuk ke akun untuk mengakses fitur lebih",
@@ -232,7 +232,7 @@ export const id: TranslationType = {
   trialPeriod: "Uji coba {days} hari",
   yearlyQuota: "{amount} karakter per tahun",
   monthlyQuota: "{amount} karakter per bulan",
-  languageSupport: "50+ bahasa didukung",
+  languageSupport: "Dukungan multibahasa",
   basicSpeedControl: "Kontrol kecepatan dasar",
   basicVoiceSelection: "Pemilihan suara dasar",
   textInputOnly: "Hanya input teks",
@@ -255,20 +255,20 @@ export const id: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Bayar Sesuai Pemakaian",
-  tenThousandChars: "100K karakter",
+  tenThousandChars: "10.000 karakter",
   millionChars: "1Jt karakter",
   threeMillionChars: "3Jt karakter",
   
   // FAQ
   faq: "Pertanyaan Umum",
   faqTrialFeatures: "Fitur apa yang ada di uji coba?",
-  faqTrialFeaturesAnswer: "Uji coba 7 hari dengan 1000 karakter, dukungan 50+ bahasa, kontrol kecepatan dasar, dan pemilihan suara.",
+  faqTrialFeaturesAnswer: "Coba teks ke suara dengan {amount} karakter selama {days} hari. Pilih suara yang tersedia dan sesuaikan kecepatan bicara.",
   faqHowToTry: "Cara mulai uji coba?",
   faqHowToTryAnswer: "Cukup daftar akun tanpa kartu kredit. Bisa upgrade ke paket berbayar kapan saja.",
   faqQuotaCalc: "Bagaimana kuota karakter dihitung?",
   faqQuotaCalcAnswer: "Berdasarkan teks aktual yang dimasukkan, termasuk spasi dan tanda baca.",
   faqPayment: "Metode pembayaran apa yang diterima?",
-  faqPaymentAnswer: "Kartu debit/kredit, WeChat Pay, Alipay. Semua transaksi dienkripsi.",
+  faqPaymentAnswer: "Metode pembayaran yang tersedia ditampilkan saat checkout.",
   faqQuotaType: "Beda kuota beli dan bonus langganan?",
   faqQuotaTypeAnswer: "Kuota beli permanen. Kuota langganan sementara dan kadaluwarsa.",
   
@@ -458,7 +458,7 @@ export const id: TranslationType = {
       save: "Simpan",
     
       // Beranda - Klon Suara
-      landingSubtitle: "Konversi teks-ke-suara instan dalam 50+ bahasa dengan dukungan klon suara dan desain suara, menggunakan teknologi AI canggih untuk sintesis suara yang jelas dan alami.",
+      landingSubtitle: "Ubah teks menjadi suara, kloning suara yang berhak Anda gunakan, dan rancang suara di browser.",
       feature4Title: "Klon Suara",
       feature4Desc: "Klon suara personal untuk membuat AI berbicara lebih beremosi",
     
@@ -527,7 +527,7 @@ export const id: TranslationType = {
   verificationError: "Kesalahan dalam Proses Verifikasi",
 
   // Daftar Fitur Inti
-multiLanguageSupportItem: "Dukung 50+ bahasa & dialek",
+multiLanguageSupportItem: "Bahasa yang tersedia bergantung pada suara yang dipilih",
 multiLanguageVoicesItem: "Berbagai suara pria/wanita per bahasa",
 multiLanguageAccentsItem: "Pilihan aksen regional (contoh: Inggris Amerika, Inggris UK)",
 naturalSpeechItem: "Intonasi natural tingkat manusia",
@@ -561,7 +561,7 @@ termsOfService: "Syarat Layanan",
 privacyPolicy: "Kebijakan Privasi",
 legalLinks: "Ketentuan Hukum",
 
-    demoPhrase1: "Ubah teks menjadi suara alami, 50+ bahasa dan suara",
+    demoPhrase1: "Ubah teks menjadi ucapan alami dengan pilihan suara",
     demoPhrase2: "Klon suara Anda, penyesuaian suara waktu nyata",
 
     agreementPrefix: "Dengan mendaftar, Anda menyetujui",

@@ -46,7 +46,7 @@ export const he: TranslationType = {
   feature1Title: "איכות קול גבוהה",
   feature1Desc: "סינתזת קול ברורה עם אינטונציה טבעית ומקצב",
   feature2Title: "מגוון שפות",
-  feature2Desc: "תמיכה ביותר מ-50 שפות עם קולות זכריים ונקביים, מושלם לתוכן גלובלי",
+  feature2Desc: "בחרו מבין השפות והקולות הזמינים עבור התוכן שלכם.",
   feature3Title: "תכונות מתקדמות",
   feature3Desc: "התאמה אישית של מהירות, הדמיה אודיו וקריאה מילה אחר מילה ללמידה טובה יותר",
   ctaTitle: "התחל להשתמש בכלי הטקסט לדיבור שלנו היום",
@@ -81,7 +81,7 @@ export const he: TranslationType = {
   googleLogin: "המשך עם Google",
   dividerText: "או",
   aiPowered: "מונע בינה מלאכותית",
-  languagesSupported: "תמיכה ב-50+ שפות",
+  languagesSupported: "תמיכה במספר שפות",
   copyright: "© {year} VoiceWove. כל הזכויות שמורות.",
   footerSlogan: "נוצר ב-❤️ לחווית קול טובה יותר",
   loginDescription: "התחבר לחשבונך כדי לגשת לתכונות נוספות",
@@ -231,7 +231,7 @@ export const he: TranslationType = {
   trialPeriod: "ניסיון של {days} ימים",
   yearlyQuota: "{amount} תווים לשנה",
   monthlyQuota: "{amount} תווים לחודש",
-  languageSupport: "תמיכה ב-50+ שפות",
+  languageSupport: "תמיכה במספר שפות",
   basicSpeedControl: "בקרת מהירות בסיסית",
   basicVoiceSelection: "בחירת קול בסיסית",
   textInputOnly: "קלט טקסט בלבד",
@@ -254,20 +254,20 @@ export const he: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "שלם לפי שימוש",
-  tenThousandChars: "100K תווים",
+  tenThousandChars: "10,000 תווים",
   millionChars: "1M תווים",
   threeMillionChars: "3M תווים",
   
   // FAQ
   faq: "שאלות נפוצות",
   faqTrialFeatures: "אילו תכונות כלולות בניסיון?",
-  faqTrialFeaturesAnswer: "הניסיון כולל 7 ימים עם 1000 תווים, תמיכה ב-50+ שפות, בקרת מהירות בסיסית ובחירת קול. ניתן לחוות את תכונות הליבה דרך קלט טקסט כל עוד הוא עומד בדרישות.",
+  faqTrialFeaturesAnswer: "נסו המרת טקסט לדיבור עם {amount} תווים למשך {days} ימים. בחרו מבין הקולות הזמינים והתאימו את מהירות הדיבור.",
   faqHowToTry: "איך מתחילים ניסיון?",
   faqHowToTryAnswer: "פשוט הירשם לחשבון כדי לקבל גישה לניסיון, אין צורך בכרטיס אשראי. ניתן לשדרג לתוכנית בתשלום בכל עת במהלך הניסיון.",
   faqQuotaCalc: "כיצד מחושבת מכסת התווים?",
   faqQuotaCalcAnswer: "מכסת התווים מחושבת לפי הטקסט המוזן בפועל, כולל רווחים וסימני פיסוק.",
   faqPayment: "אילו שיטות תשלום נתמכות?",
-  faqPaymentAnswer: "אנו מקבלים מגוון שיטות תשלום נוחות: כרטיסי אשראי, WeChat Pay, Alipay ועוד. כל ערוצי התשלום מוצפנים ומאובטחים.",
+  faqPaymentAnswer: "אמצעי התשלום הזמינים מוצגים בעמוד התשלום.",
   faqQuotaType: "מה ההבדל בין מכסה שנרכשה לבין מכסה של מנוי?",
   faqQuotaTypeAnswer: "מכסה שנרכשה נשארת קבועה ואינה מתפוגגת. מכסה מתוכניות מנוי היא זמנית ותפוג עם סיום תקופת המנוי.",
   
@@ -457,7 +457,7 @@ export const he: TranslationType = {
       save: "שמירה",
     
       // עמוד הבית - שיבוט קולי
-      landingSubtitle: "המרת טקסט לדיבור מיידי ב-50+ שפות עם תמיכה בשיבוט קולי ועיצוב קול, באמצעות טכנולוגיית AI מתקדמת לסינתזת דיבור ברורה וטבעית.",
+      landingSubtitle: "המירו טקסט לדיבור, שכפלו קולות שיש לכם הרשאה להשתמש בהם ועצבו קולות בדפדפן.",
       feature4Title: "שיבוט קולי",
       feature4Desc: "שיבוט קולי מותאם אישית המעניק לדיבור הבינה המלאכותית חום אנושי",
     
@@ -526,7 +526,7 @@ export const he: TranslationType = {
     verificationError: "שגיאה במהלך האימות",
 
     // פריטי תכונות ליבה
-multiLanguageSupportItem: "תמיכה ב-50+ שפות ודיאלקטים",
+multiLanguageSupportItem: "השפות הזמינות תלויות בקול שנבחר",
 multiLanguageVoicesItem: "מגוון קולות גבריים ונשיים לכל שפה",
 multiLanguageAccentsItem: "בחירת מבטאים אזוריים (כגון אנגלית אמריקאית, בריטית)",
 naturalSpeechItem: "אינטונציה טבעית ברמה אנושית",
@@ -560,7 +560,7 @@ termsOfService: "תנאי שימוש",
 privacyPolicy: "מדיניות פרטיות",
 legalLinks: "הוראות משפטיות",
 
-    demoPhrase1: "המרת טקסט לדיבור טבעי, 50+ שפות וקולות",
+    demoPhrase1: "המירו טקסט לדיבור טבעי עם קול לבחירתכם",
     demoPhrase2: "שיבוט הקול שלך, התאמת קול בזמן אמת",
 
     agreementPrefix: "על ידי הרשמה, אתה מסכים ל",

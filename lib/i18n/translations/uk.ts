@@ -46,7 +46,7 @@ export const uk: TranslationType = {
   feature1Title: "Висока якість голосу",
   feature1Desc: "Чіткий синтез мови з природною інтонацією та ритмом",
   feature2Title: "Багатомовність",
-  feature2Desc: "50+ мов з чоловічими та жіночими голосами для глобального контенту",
+  feature2Desc: "Обирайте доступні мови та голоси для свого вмісту.",
   feature3Title: "Розширені функції",
   feature3Desc: "Налаштовуйте швидкість, візуалізуйте аудіо та увімкніть покрокове читання",
   ctaTitle: "Почніть використовувати наш текст-в-мову сьогодні",
@@ -81,7 +81,7 @@ export const uk: TranslationType = {
   googleLogin: "Продовжити з Google",
   dividerText: "або",
   aiPowered: "На основі ШІ",
-  languagesSupported: "50+ мов",
+  languagesSupported: "Підтримка кількох мов",
   copyright: "© {year} VoiceWove. Усі права захищені.",
   footerSlogan: "Створено з ❤️ для кращого голосового досвіду",
   loginDescription: "Увійдіть для доступу до всіх функцій",
@@ -230,7 +230,7 @@ export const uk: TranslationType = {
   trialPeriod: "{days}-денний пробний період",
   yearlyQuota: "{amount} сим./рік",
   monthlyQuota: "{amount} сим./міс.",
-  languageSupport: "50+ мов",
+  languageSupport: "Підтримка кількох мов",
   basicSpeedControl: "Базова швидкість",
   basicVoiceSelection: "Базові голоси",
   textInputOnly: "Лише текст",
@@ -253,20 +253,20 @@ export const uk: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Оплата за користування",
-  tenThousandChars: "100 тис. символів",
+  tenThousandChars: "10 000 символів",
   millionChars: "1 млн символів",
   threeMillionChars: "3 млн символів",
   
   // FAQ
   faq: "Часті запитання",
   faqTrialFeatures: "Що включає пробна версія?",
-  faqTrialFeaturesAnswer: "7 днів, 1000 символів, базові функції для 50+ мов.",
+  faqTrialFeaturesAnswer: "Спробуйте озвучування тексту: {amount} символів на {days} днів. Обирайте доступні голоси та налаштовуйте швидкість мовлення.",
   faqHowToTry: "Як почати пробний період?",
   faqHowToTryAnswer: "Просто зареєструйтесь - кредитна карта не потрібна.",
   faqQuotaCalc: "Як рахується ліміт символів?",
   faqQuotaCalcAnswer: "Лічильник враховує всі символи, включаючи пробіли.",
   faqPayment: "Які способи оплати?",
-  faqPaymentAnswer: "Картки, WeChat Pay, Alipay. Всі транзакції захищені.",
+  faqPaymentAnswer: "Доступні способи оплати наведено на сторінці оформлення платежу.",
   faqQuotaType: "Різниця між типами лімітів?",
   faqQuotaTypeAnswer: "Куплений ліміт - постійний, абонентський - тимчасовий.",
   
@@ -456,7 +456,7 @@ export const uk: TranslationType = {
       save: "Зберегти",
     
       // Головна сторінка - Клонування голосу
-      landingSubtitle: "Миттєве перетворення тексту в мовлення для 50+ мов з клонуванням голосу та дизайном голосу, засноване на передовій AI-технології для чіткого природного синтезу мовлення.",
+      landingSubtitle: "Перетворюйте текст на мовлення, клонуйте голоси, на використання яких маєте дозвіл, і створюйте голоси в браузері.",
       feature4Title: "Клонування голосу",
       feature4Desc: "Персоналізоване клонування голосу для надання AI емоційної глибини",
     
@@ -524,7 +524,7 @@ export const uk: TranslationType = {
     verificationError: "Помилка під час процесу перевірки",
 
     // Список основних функцій
-multiLanguageSupportItem: "Підтримка 50+ мов та діалектів",
+multiLanguageSupportItem: "Доступні мови залежать від вибраного голосу",
 multiLanguageVoicesItem: "Різні чоловічі/жіночі голоси для кожної мови",
 multiLanguageAccentsItem: "Вибір регіональних акцентів (наприклад, американська англійська, британська англійська)",
 naturalSpeechItem: "Природна інтонація рівня людини",
@@ -558,7 +558,7 @@ termsOfService: "Користувацька угода",
 privacyPolicy: "Політика конфіденційності",
 legalLinks: "Юридичні положення",
 
-    demoPhrase1: "Перетворюйте текст на природне мовлення, 50+ мов та голосів",
+    demoPhrase1: "Перетворюйте текст на природне мовлення з голосом на вибір",
     demoPhrase2: "Клонування вашого голосу з налаштуванням мовлення в реальному часі",
 
     agreementPrefix: "Реєструючись, ви погоджуєтеся з нашими",

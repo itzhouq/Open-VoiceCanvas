@@ -1,6 +1,6 @@
 # Open-VoiceWove
 
-Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，基于 Next.js 14 构建。它集成了多种顶尖的 AI 语音技术，为用户提供高质量的文字转语音 (TTS)、语音克隆、语音设计以及播客和故事生成服务。
+Open-VoiceWove 是基于 Next.js 14 构建的语音合成与克隆平台，提供文字转语音 (TTS)、语音克隆、语音设计，以及多角色故事和双人播客制作。具体输入格式、输出格式与额度规则见各功能页和价格页。
 
 > 🌐 在线体验：**https://voicewove.com** · 作者：[itzhouq](https://itzhouq.cn) · X：[@itzhouq2026](https://x.com/itzhouq2026)
 
@@ -9,8 +9,8 @@ Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，�
 ## 🌟 主要功能
 
 ### 🎙️ 核心语音服务
-- **多引擎支持**: 集成 OpenAI TTS、AWS Polly、MiniMax 等顶级语音合成引擎。
-- **多语言覆盖**: 支持全球 50+ 种语言和方言。
+- **语音引擎**: 包含 OpenAI TTS、AWS Polly、MiniMax 的适配代码；网站当前开放的引擎、语言和声音以工具内的选择项为准。
+- **多语言使用**: 在工具中选择可用语言和声音，先用短文本测试发音及效果。
 - **语音克隆**: 上传音频样本即可快速克隆声音，打造个性化语音助手。
 - **语音设计**: 自定义音色参数（语速、音调、音量等），创造独一无二的声音。
 
@@ -21,7 +21,7 @@ Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，�
 
 ### 🛡️ 企业级特性
 - **用户认证**: 完善的注册/登录系统，支持 GitHub、Google 第三方登录。
-- **订阅支付**: 集成 Stripe 支付系统，支持按月/年订阅及按量付费模式。
+- **订阅支付**: 当前结账使用 Creem，支持按月/年订阅及一次性购买字符包、克隆/设计次数。
 - **配额管理**: 精确的字符数和克隆声音数量配额控制。
 - **国际化**: 原生支持多语言界面 (i18n)。
 
@@ -39,7 +39,7 @@ Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，�
 - **数据库**: PostgreSQL (适配 Neon/Supabase)
 - **ORM**: [Prisma](https://www.prisma.io/)
 - **认证**: [NextAuth.js](https://next-auth.js.org/) (Auth.js)
-- **支付**: Stripe API
+- **支付**: Creem API（仓库保留部分旧支付适配代码）
 - **邮件**: Resend
 - **存储**: AWS S3 / Vercel Blob (用于音频存储)
 
@@ -54,7 +54,7 @@ Open-VoiceWove 是一个功能强大的多语言语音合成与克隆平台，�
 ### 环境要求
 - Node.js 18+
 - PostgreSQL 数据库
-- 各类 API Keys (OpenAI, AWS, Stripe 等)
+- 已启用服务的 API Keys（MiniMax、Creem 等）
 
 ### 1. 克隆项目
 ```bash
@@ -82,7 +82,7 @@ cp .env.example .env
 - `DATABASE_URL`: PostgreSQL 连接字符串
 - `NEXTAUTH_SECRET`: NextAuth 加密密钥
 - `OPENAI_API_KEY`: OpenAI 接口密钥
-- `STRIPE_SECRET_KEY`: Stripe 支付私钥
+- `CREEM_API_KEY`: 当前支付服务的 API 密钥
 - `AWS_ACCESS_KEY_ID`: AWS 访问密钥 (用于 Polly)
 
 ### 4. 数据库迁移
@@ -130,7 +130,16 @@ Open-VoiceWove/
 - `npm run start`: 运行生产版本
 - `npm run lint`: 代码风格检查
 - `npm run db:analyze`: 数据库分析脚本
-- `npm run check:translations`: 检查翻译缺失
+- `npm run check:geo`: 对运行中的本地站点检查公开页面、试用与套餐事实、FAQ、索引和 AI 摘要；默认地址为 `http://127.0.0.1:3015`，可通过 `GEO_BASE_URL` 覆盖。
+
+## 产品事实维护
+
+- 公开套餐价格与发放数量由 `lib/product-catalog.ts` 维护，计费处理与页面共用同一套额度映射。
+- `lib/trial-offer.ts` 读取 `TRIAL_TEMPORARY_QUOTA` 和 `TRIAL_DAYS`，页面与服务端试用权益使用同一配置。
+- 文字转语音和克隆工具下载 MP3；故事与播客的整段合并输出为 WAV。
+- 播客首次整段生成消耗确认对白字符数的两倍，单段编辑或重生成按该段字符数计算。
+- 创建克隆/设计声音消耗独立次数；生成语音另计字符额度。具体声音使用限制与数据处理规则见网站条款、隐私政策及工具提示。
+- `/llms.txt` 和 `/llms-full.txt` 由路由生成，不应重新放入过期的静态页面快照。
 
 ## 🤝 贡献
 

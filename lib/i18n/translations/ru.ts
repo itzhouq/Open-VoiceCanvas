@@ -46,7 +46,7 @@ export const ru: TranslationType = {
   feature1Title: "Высокое качество голоса",
   feature1Desc: "Кристально чистое озвучивание с естественной интонацией",
   feature2Title: "Мультиязычность",
-  feature2Desc: "50+ языков с мужскими и женскими голосами",
+  feature2Desc: "Выбирайте доступные языки и голоса для своего контента.",
   feature3Title: "Расширенные функции",
   feature3Desc: "Настройка скорости, визуализация звука и пословное чтение",
   ctaTitle: "Начните использовать наш инструмент тексто-в-речь",
@@ -81,7 +81,7 @@ export const ru: TranslationType = {
   googleLogin: "Продолжить через Google",
   dividerText: "или",
   aiPowered: "На базе ИИ",
-  languagesSupported: "50+ языков",
+  languagesSupported: "Поддержка нескольких языков",
   copyright: "© {year} VoiceWove. Все права защищены.",
   footerSlogan: "Создано с ❤️ для лучшего аудиоопыта",
   loginDescription: "Войдите для доступа к функциям",
@@ -230,7 +230,7 @@ export const ru: TranslationType = {
   trialPeriod: "Пробный период {days} дней",
   yearlyQuota: "{amount} симв./год",
   monthlyQuota: "{amount} симв./мес",
-  languageSupport: "50+ языков",
+  languageSupport: "Поддержка нескольких языков",
   basicSpeedControl: "Базовая регулировка скорости",
   basicVoiceSelection: "Базовый выбор голосов",
   textInputOnly: "Только текст",
@@ -253,20 +253,20 @@ export const ru: TranslationType = {
 
   // Оплата по факту
   payAsYouGo: "Оплата по факту использования",
-  tenThousandChars: "100 тыс. символов",
+  tenThousandChars: "10 000 символов",
   millionChars: "1 млн символов",
   threeMillionChars: "3 млн символов",
 
   // FAQ
   faq: "Частые вопросы",
   faqTrialFeatures: "Что входит в пробный период?",
-  faqTrialFeaturesAnswer: "7 дней, 1000 символов, базовые настройки голоса",
+  faqTrialFeaturesAnswer: "Попробуйте озвучивание текста: {amount} символов на {days} дней. Выбирайте доступные голоса и настраивайте скорость речи.",
   faqHowToTry: "Как начать пробный период?",
   faqHowToTryAnswer: "Зарегистрируйтесь без карты. Можно обновить тариф в любое время",
   faqQuotaCalc: "Как считается лимит?",
   faqQuotaCalcAnswer: "Учитываются пробелы и знаки препинания",
   faqPayment: "Доступные способы оплаты?",
-  faqPaymentAnswer: "Карты, электронные кошельки. Все платежи защищены",
+  faqPaymentAnswer: "Доступные способы оплаты указаны на странице оформления платежа.",
   faqQuotaType: "Разница между покупкой и подпиской?",
   faqQuotaTypeAnswer: "Купленные символы постоянны, по подписке - временны",
 
@@ -456,7 +456,7 @@ export const ru: TranslationType = {
       save: "Сохранить",
     
       // Главная страница - Клонирование голоса
-      landingSubtitle: "Преобразование текста в речь на 50+ языках с технологией клонирования голоса и дизайна голоса на базе ИИ для естественного синтеза речи.",
+      landingSubtitle: "Преобразуйте текст в речь, клонируйте голоса, на использование которых у вас есть разрешение, и создавайте голоса в браузере.",
       feature4Title: "Клонирование голоса",
       feature4Desc: "Персонализированное клонирование для эмоционального ИИ-голоса",
     
@@ -524,7 +524,7 @@ export const ru: TranslationType = {
     verificationError: "Ошибка в процессе проверки",
 
     // Основные функции
-multiLanguageSupportItem: "Поддержка 50+ языков и диалектов",
+multiLanguageSupportItem: "Доступные языки зависят от выбранного голоса",
 multiLanguageVoicesItem: "Мужские и женские голоса для каждого языка",
 multiLanguageAccentsItem: "Выбор региональных акцентов (например, американский английский, британский английский)",
 naturalSpeechItem: "Естественная интонация человеческого уровня",
@@ -558,7 +558,7 @@ termsOfService: "Пользовательское соглашение",
 privacyPolicy: "Политика конфиденциальности",
 legalLinks: "Юридические положения",
 
-    demoPhrase1: "Преобразуйте текст в естественную речь, более 50 языков и голосов",
+    demoPhrase1: "Преобразуйте текст в естественную речь, выбрав подходящий голос",
     demoPhrase2: "Клонируйте ваш голос, настройка речи в реальном времени",
 
     agreementPrefix: "Регистрируясь, вы соглашаетесь с нашими",

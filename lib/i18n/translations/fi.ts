@@ -46,7 +46,7 @@ export const fi: TranslationType = {
   feature1Title: "Korkealaatuinen Ääni",
   feature1Desc: "Kristallinkirkas äänensynteesi luonnollisella intonaatiolla ja rytmillä",
   feature2Title: "Useita Kieliä",
-  feature2Desc: "Yli 50 kieltä mies- ja naisäänin, täydellinen globaalille sisällölle",
+  feature2Desc: "Valitse sisällöllesi sopiva kieli ja ääni saatavilla olevista vaihtoehdoista.",
   feature3Title: "Edistyneet Ominaisuudet",
   feature3Desc: "Mukauta nopeutta, visualisoi ääntä ja ota käyttöön sana sanalta -luku parempaa oppimista varten",
   ctaTitle: "Aloita Teksti-puhe-työkalun Käyttö Tänään",
@@ -81,7 +81,7 @@ export const fi: TranslationType = {
   googleLogin: "Jatka Googlella",
   dividerText: "tai",
   aiPowered: "Tekoälyllä toimiva",
-  languagesSupported: "50+ Kieltä",
+  languagesSupported: "Monikielinen tuki",
   copyright: "© {year} VoiceWove. Kaikki oikeudet pidätetään.",
   footerSlogan: "Luotu ❤️:llä parempaa äänikokemusta varten",
   loginDescription: "Kirjaudu sisään saadaksesi enemmän ominaisuuksia",
@@ -232,7 +232,7 @@ export const fi: TranslationType = {
   trialPeriod: "{days} päivän kokeilu",
   yearlyQuota: "{amount} merkkiä/vuosi",
   monthlyQuota: "{amount} merkkiä/kk",
-  languageSupport: "Yli 50 tuettua kieltä",
+  languageSupport: "Monikielinen tuki",
   basicSpeedControl: "Perusnopeuden säätö",
   basicVoiceSelection: "Perusäänen valinta",
   textInputOnly: "Vain tekstisyöttö",
@@ -255,20 +255,20 @@ export const fi: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Maksu Käytön Mukaan",
-  tenThousandChars: "100K merkkiä",
+  tenThousandChars: "10 000 merkkiä",
   millionChars: "1M merkkiä",
   threeMillionChars: "3M merkkiä",
   
   // FAQ
   faq: "Usein Kysytyt Kysymykset",
   faqTrialFeatures: "Mitä kokeilu sisältää?",
-  faqTrialFeaturesAnswer: "7 päivää, 1000 merkkiä, yli 50 kieltä ja perussäätöjä",
+  faqTrialFeaturesAnswer: "Kokeile tekstin muuntamista puheeksi: käytössäsi on {amount} merkkiä {days} päivän ajan. Valitse saatavilla oleva ääni ja säädä puhenopeutta.",
   faqHowToTry: "Kuinka aloitan kokeilun?",
   faqHowToTryAnswer: "Rekisteröidy ilman luottokorttia. Päivitä milloin vain maksulliseen suunnitelmaan",
   faqQuotaCalc: "Kuinka merkkikiintiö lasketaan?",
   faqQuotaCalcAnswer: "Lasketaan tekstin todellisen merkkimäärän mukaan, mukaan lukien välilyönnit ja välimerkit",
   faqPayment: "Hyväksytyt maksutavat?",
-  faqPaymentAnswer: "Pankkikortit, WeChat Pay, Alipay. Kaikki tapahtumat salattuja",
+  faqPaymentAnswer: "Käytettävissä olevat maksutavat näkyvät kassalla.",
   faqQuotaType: "Mitä eroa kiintiöillä on?",
   faqQuotaTypeAnswer: "Erikseen ostetut kiintiöt ovat pysyviä. Tilauskiintiöt vanhenevat tilauskauden päätyttyä",
   
@@ -458,7 +458,7 @@ export const fi: TranslationType = {
       save: "Tallenna",
     
       // Etusivu - Äänen kloonaus
-      landingSubtitle: "Reaaliaikainen tekstistä puheeksi 50+ kielellä, äänen kloonauksen ja äänisuunnittelun tukemana käyttäen edistynyttä tekoälyteknologiaa selkeään ja luonnolliseen puhesynteesiin.",
+      landingSubtitle: "Muunna teksti puheeksi, kloonaa ääniä, joiden käyttöön sinulla on lupa, ja suunnittele ääniä selaimessasi.",
       feature4Title: "Äänen Kloonaus",
       feature4Desc: "Personoitu äänen kloonaus tekee tekoälyn puheesta lämpimämmän",
     
@@ -527,7 +527,7 @@ export const fi: TranslationType = {
   verificationError: "Virhe vahvistusprosessissa",
 
   // Ydintoiminnot
-multiLanguageSupportItem: "Tukee 50+ kieltä ja murretta",
+multiLanguageSupportItem: "Saatavilla olevat kielet riippuvat valitusta äänestä",
 multiLanguageVoicesItem: "Useita miehis- ja naisääniä kullekin kielelle",
 multiLanguageAccentsItem: "Alueelliset aksenttivaihtoehdot (esim. amerikanenglanti, brittienglanti)",
 naturalSpeechItem: "Ihmisen kaltainen luonnollinen äänensävy",
@@ -561,7 +561,7 @@ termsOfService: "Käyttöehdot",
 privacyPolicy: "Tietosuojakäytäntö",
 legalLinks: "Oikeudelliset määräykset",
 
-    demoPhrase1: "Muunna teksti luonnolliseksi puheeksi, 50+ kieltä ja ääntä",
+    demoPhrase1: "Muunna teksti luonnolliseksi puheeksi valitsemallasi äänellä",
     demoPhrase2: "Kloonaa äänneesi, äänen räätälöinti reaaliajassa",
 
     agreementPrefix: "Rekisteröitymällä hyväksyt",

@@ -1,216 +1,114 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { NavBar } from '@/components/nav-bar';
+import { GeoLandingPage, type LandingFaq } from '@/components/geo-landing-page';
+import { TRIAL_OFFER } from '@/lib/trial-offer';
+import { CHARACTER_PACKS, PRODUCT_PRICES_USD } from '@/lib/product-catalog';
+
+const trialCharacters = TRIAL_OFFER.characters.toLocaleString('en-US');
+const starterCharacters = CHARACTER_PACKS.tenThousandChars.toLocaleString('en-US');
+const title = 'Free Text to Speech Online with MP3 Download';
+const description = `Turn text into speech in your browser. New accounts receive ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days. Registration required; no credit card needed.`;
 
 export const metadata: Metadata = {
-  title: 'Free Text to Speech Online — Natural AI Voices, No Sign-Up Hassle | VoiceWove',
-  description: 'Convert text to natural-sounding speech online for free. 40+ languages, 200+ AI voices, MP3 download. Start with 10,000 free characters — no credit card required.',
+  title,
+  description,
   alternates: { canonical: 'https://voicewove.com/free-text-to-speech' },
   openGraph: {
-    title: 'Free Text to Speech Online — Natural AI Voices | VoiceWove',
-    description: 'Convert text to natural speech with 200+ AI voices in 40+ languages. 10,000 free characters, MP3 download, no credit card.',
+    title,
+    description,
     url: 'https://voicewove.com/free-text-to-speech',
     siteName: 'VoiceWove',
     type: 'website',
   },
 };
 
-const faqs = [
+const faqs: LandingFaq[] = [
   {
-    q: 'Is this text-to-speech tool really free?',
-    a: 'Every new account gets 10,000 characters of synthesis free for 7 days — enough for dozens of short audio clips. No credit card is required to start. After that, keep converting text with a subscription or one-time character packs starting at $6.',
+    q: 'Is VoiceWove text to speech free, and do I need an account?',
+    a: `New accounts receive ${trialCharacters} synthesis characters for a ${TRIAL_OFFER.days}-day trial. Register and sign in to generate audio; a credit card is not required for the trial. Once the trial expires or its quota is used, continue with a subscription or a one-time character pack.`,
   },
   {
-    q: 'How natural do the voices sound?',
-    a: 'VoiceWove uses state-of-the-art neural TTS models — the output carries natural intonation, pauses and emotion, not the robotic delivery of older generations. Listen to a sample before committing anything.',
+    q: 'Are characters the same as words?',
+    a: 'Characters and words are different. Quota is measured from the text sent for synthesis, including spaces and punctuation. A word usually contains several characters. Use the character counter in the workspace to check your text before generating audio.',
   },
   {
-    q: 'Which languages and voices are supported?',
-    a: '40+ languages including English, Chinese, Spanish, French, German, Japanese, Korean, Arabic and Hindi, with 200+ voices across styles: narration, conversational, storytelling and character voices.',
+    q: 'Can I download MP3 or WAV?',
+    a: 'The text-to-speech workspace downloads MP3 audio. The separate story and podcast tools export their combined audio as WAV. Choose the workflow that matches your project and check its output format before generating a long recording.',
   },
   {
-    q: 'Can I use the audio commercially?',
-    a: 'Yes — audio you generate on a paid plan can be used in YouTube videos, podcasts, e-learning courses, audiobooks and client work. See our terms of service for details.',
+    q: 'Can I upload a PDF or Word document?',
+    a: 'The text-to-speech workspace supports plain-text .txt and Markdown .md uploads. Direct PDF and Word import is not supported. Copy the text you want to read from your document, paste it into the workspace, and check the text before generating audio.',
   },
   {
-    q: 'Do I need to install anything?',
-    a: 'No. VoiceWove runs entirely in your browser. Paste text, click generate, download MP3. Works on desktop and mobile.',
+    q: 'How much text can I convert at once?',
+    a: 'The current text-to-speech workspace accepts up to 10,000 characters per request, subject to your remaining character quota. Split longer articles or book chapters into sections. Audio duration varies with the language, text and speaking speed.',
+  },
+  {
+    q: 'Which languages and voices can I use?',
+    a: 'The workspace displays the available language and voice options. Voice availability varies by language and workflow. Select your intended language and test a short passage, including names or specialist terms, before creating a longer recording.',
+  },
+  {
+    q: 'Can I use a clone of my own voice?',
+    a: `Voice cloning is a separate workflow. Creating a clone requires a clone/design credit; packs start at $${PRODUCT_PRICES_USD.clone1}. Speech generated with that clone also uses character quota. The text-to-speech trial does not include a free clone/design credit.`,
+  },
+  {
+    q: 'Can I use the audio in commercial videos or client work?',
+    a: 'Publication depends on your rights to the text and voice, the applicable voice restrictions, and our Terms of Service. Buying synthesis quota does not grant rights to third-party material. Review those conditions before publishing, and contact support if permission for your intended use is unclear.',
+  },
+  {
+    q: 'Can I buy characters without subscribing?',
+    a: `Yes. One-time character packs start at $${PRODUCT_PRICES_USD.tenThousandChars} for ${starterCharacters} characters. Purchased character quota does not expire. Subscription and trial quota have an expiry date; see the pricing page for the current plans.`,
   },
 ];
 
 export default function FreeTextToSpeechPage() {
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <NavBar />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <header className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-teal-500 mb-3">
-            VoiceWove · Free Text to Speech
-          </p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500">
-            Free Text to Speech — Natural AI Voices in 40+ Languages
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Paste your text, pick a voice, download studio-quality MP3. Start with 10,000 free
-            characters — no credit card, no software, no watermarks.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/app"
-              className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-8 py-3 text-white font-semibold hover:opacity-90 transition"
-            >
-              Convert Text to Speech — Free
-            </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-muted transition"
-            >
-              See Pricing
-            </Link>
-          </div>
-          <p className="text-xs text-muted-foreground mt-3">
-            10,000 free characters · 7-day trial · MP3 download · No watermark
-          </p>
-        </header>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-4">Why Another Text-to-Speech Tool?</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            Most free TTS tools give you one robotic voice, a 300-character limit and a watermark on
-            the output. VoiceWove&apos;s free tier gives you 10,000 characters with production-grade
-            neural voices — the same engine behind our paid plans.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            When you outgrow the free tier, you don&apos;t switch tools: upgrade to a subscription
-            (from $5.99/month) or grab a one-time character pack from $6 that never expires. Your
-            account, history and voices carry over.
-          </p>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Popular Ways People Use Text to Speech</h2>
-          <ul className="space-y-3 text-muted-foreground leading-relaxed">
-            <li><strong className="text-foreground">Listening instead of reading</strong> — turn articles, papers and newsletters into audio for your commute or workout.</li>
-            <li><strong className="text-foreground">Proofreading by ear</strong> — hearing your own text catches awkward phrasing your eyes skip over.</li>
-            <li><strong className="text-foreground">E-learning &amp; study notes</strong> — convert lecture notes into review audio you can play on repeat.</li>
-            <li><strong className="text-foreground">Accessibility</strong> — a readable, natural-sounding voice for low-vision or dyslexic readers.</li>
-            <li><strong className="text-foreground">Content production</strong> — narration drafts for videos and podcasts before committing to a studio take.</li>
-          </ul>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">What&apos;s Included Free</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: '📝 10,000 Free Characters',
-                body: 'Enough for dozens of voiceovers, study notes, or social media clips. Valid for 7 days.',
-              },
-              {
-                title: '🗣️ 200+ Neural Voices',
-                body: 'Narration, conversational, storytelling and character styles across 40+ languages.',
-              },
-              {
-                title: '🎚️ Speed & Pitch Control',
-                body: 'Fine-tune every clip. Slow down for learners, speed up for shorts, adjust per project.',
-              },
-              {
-                title: '⬇️ Clean MP3 Download',
-                body: 'No watermarks, no forced branding. Download and use your audio wherever you want.',
-              },
-            ].map((f) => (
-              <div key={f.title} className="rounded-lg border border-border p-5 bg-card hover:shadow-md transition">
-                <h3 className="font-bold mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Built for Real Workflows</h2>
-          <div className="space-y-5">
-            {[
-              ['🎥 Video creators', 'Narrate YouTube videos, TikTok shorts and course modules without recording your own voice.'],
-              ['📚 E-learning & study', 'Turn lecture notes and articles into audio you can listen to on the go.'],
-              ['📖 Audiobook & fiction writers', 'Hear your draft read aloud, or publish full narrated versions with multi-character voices.'],
-              ['🌍 Multilingual content', 'Produce the same audio in 40+ languages to reach international audiences.'],
-            ].map(([who, what]) => (
-              <div key={who} className="flex gap-4 items-start border-b border-border pb-4">
-                <span className="font-bold whitespace-nowrap">{who}</span>
-                <p className="text-sm text-muted-foreground leading-relaxed">{what}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-5">
-            {faqs.map((f) => (
-              <div key={f.q} className="border-b border-border pb-5">
-                <h3 className="font-semibold mb-2">{f.q}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-14">
-          <h2 className="text-2xl font-bold mb-6">Beyond Plain Text to Speech</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
-            <a href="/ai-story-voiceover" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Story Voiceover</p>
-              <p className="text-sm text-muted-foreground mt-1">Multi-character audio dramas — a different voice for every character.</p>
-            </a>
-            <a href="/voice-cloning" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Voice Cloning</p>
-              <p className="text-sm text-muted-foreground mt-1">Clone your own voice and speak any text in 40+ languages.</p>
-            </a>
-            <a href="/ai-podcast-generator" className="rounded-lg border border-border p-4 bg-card hover:border-teal-500/50 transition">
-              <p className="font-bold">AI Podcast Generator</p>
-              <p className="text-sm text-muted-foreground mt-1">Two-host podcast episodes from any topic or document.</p>
-            </a>
-          </div>
-        </section>
-
-        <section className="text-center rounded-2xl border border-border p-10 bg-gradient-to-br from-teal-500/5 to-cyan-500/5">
-          <h2 className="text-2xl font-bold mb-3">Start Converting Text — Free</h2>
-          <p className="text-muted-foreground mb-6">
-            10,000 characters on the house. Studio-quality audio in your browser, in under a minute.
-          </p>
-          <Link
-            href="/app"
-            className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-500 px-10 py-3 text-white font-semibold hover:opacity-90 transition"
-          >
-            Try Free Text to Speech
-          </Link>
-        </section>
-      </main>
-
-      <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
-        <p>
-          © {new Date().getFullYear()} VoiceWove ·{' '}
-          <Link href="/pricing" className="hover:underline">Pricing</Link> ·{' '}
-          <Link href="/privacy" className="hover:underline">Privacy</Link> ·{' '}
-          <Link href="/terms" className="hover:underline">Terms</Link>
-        </p>
-      </footer>
-    </div>
+    <GeoLandingPage
+      eyebrow="Free Text to Speech"
+      title="Free Text to Speech with MP3 Download"
+      description="Turn a video script, study note or article into speech. Paste your text, choose an available voice, adjust the delivery and download an MP3 in your browser."
+      offerNote={`${trialCharacters} characters · ${TRIAL_OFFER.days}-day trial · Account required · No credit card required`}
+      primaryAction={{ href: '/app', label: 'Try Text to Speech' }}
+      introduction={{
+        title: 'How Can I Turn Text into Audio?',
+        paragraphs: [
+          'VoiceWove reads text aloud using an AI voice. Use it to listen to study notes, check a draft by ear, or prepare narration for a video. You can hear the result before downloading it.',
+          `Start with the ${TRIAL_OFFER.days}-day trial to test your own text. When you need more quota, choose a subscription from $${PRODUCT_PRICES_USD.monthly}/month or a one-time character pack from $${PRODUCT_PRICES_USD.tenThousandChars}.`,
+        ],
+      }}
+      features={[
+        { title: 'Listen to your own text', body: 'Paste a passage and check its pronunciation, pacing and pauses before making a longer recording.' },
+        { title: 'Adjust the delivery', body: 'Use the workspace controls for speed and pitch to suit a lesson, reading exercise or narration draft.' },
+        { title: 'Download MP3', body: 'Save generated speech as an audio file for playback or further editing.' },
+        { title: 'Choose a payment model', body: 'Use a subscription for regular work or buy a character pack for occasional projects.' },
+      ]}
+      specifications={[
+        { label: 'Input', value: 'Pasted text, .txt files and .md files. Copy text out of PDF or Word documents first.' },
+        { label: 'Request limit', value: 'Up to 10,000 characters per request; your remaining quota must cover the text.' },
+        { label: 'Output', value: 'MP3 from the text-to-speech workspace.' },
+        { label: 'Free trial', value: `${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days after account registration. No credit card required.` },
+        { label: 'One-time pack', value: `$${PRODUCT_PRICES_USD.tenThousandChars} for ${starterCharacters} characters. Purchased character quota does not expire.` },
+        { label: 'Languages and voices', value: 'Check the choices available in the workspace for your language and test the voice on your text.' },
+      ]}
+      steps={[
+        'Create an account or sign in, then paste your text or upload a .txt or .md file.',
+        'Choose an available language and voice. Check the character count and adjust speed or pitch as needed.',
+        'Generate a short passage, listen for pronunciation and pacing, then download the MP3.',
+      ]}
+      example={{
+        title: 'Try This Short Narration Script',
+        description: 'Copy this passage into the text-to-speech workspace. Try two speaking speeds to hear which delivery fits a short introduction.',
+        script: 'Welcome to the quiet corner of the library. Today, we are following one small idea from a handwritten note to a finished story. Take a breath, turn the page, and let us begin.',
+      }}
+      faqs={faqs}
+      related={[
+        { href: '/ai-story-voiceover', title: 'Story Voiceover', description: 'Give the narrator and each character their own voice.' },
+        { href: '/voice-cloning', title: 'Voice Cloning', description: 'Check recording requirements and clone credit pricing.' },
+        { href: '/ai-podcast-generator', title: 'AI Podcast Generator', description: 'Turn text into an editable host-and-guest conversation.' },
+      ]}
+      closing={{
+        title: 'Hear Your Text Read Aloud',
+        description: `Start with a short passage using your ${trialCharacters}-character, ${TRIAL_OFFER.days}-day trial. Check the voice on your own words before choosing a paid plan.`,
+      }}
+    />
   );
 }

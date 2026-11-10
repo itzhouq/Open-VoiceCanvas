@@ -41,13 +41,13 @@ export const en: TranslationType = {
   off: "Off",
   characters: "characters",
   landingTitle: "VoiceWove",
-  landingSubtitle: "Instant text-to-speech in 50+ languages with voice cloning and voice design, powered by advanced AI for natural and clear voice synthesis.",
+  landingSubtitle: "Create speech from text, clone voices you are authorized to use, and design voices in your browser.",
   startNow: "Try it Now",
   tryForFree: "Try It For Free",
   feature1Title: "High-Quality Voice",
   feature1Desc: "Crystal-clear voice synthesis with natural intonation and rhythm",
   feature2Title: "Multiple Languages",
-  feature2Desc: "50+ languages with both male and female voices, perfect for global content",
+  feature2Desc: "Choose from the available voices and languages for your content.",
   feature3Title: "Advanced Features",
   feature3Desc: "Customize speed, visualize audio, and enable word-by-word reading for better learning",
   ctaTitle: "Start Using Our Text-to-Speech Tool Today",
@@ -100,7 +100,7 @@ export const en: TranslationType = {
   googleLogin: "Continue with Google",
   dividerText: "or",
   aiPowered: "AI Powered",
-  languagesSupported: "50+ Languages",
+  languagesSupported: "Multilingual support",
   copyright: "© {year} VoiceWove. All rights reserved.",
   footerSlogan: "Bringing every voice to life - Redefining the infinite possibilities of AI-powered speech experiences",
   loginDescription: "Sign in with your account to access more features",
@@ -252,7 +252,7 @@ export const en: TranslationType = {
   trialPeriod: "{days}-day trial",
   yearlyQuota: "{amount} characters per year",
   monthlyQuota: "{amount} characters per month",
-  languageSupport: "50+ languages supported",
+  languageSupport: "Multilingual support",
   basicSpeedControl: "Basic speed control",
   basicVoiceSelection: "Basic voice selection",
   textInputOnly: "Text input only",
@@ -275,20 +275,20 @@ export const en: TranslationType = {
   
   // Pay As You Go
   payAsYouGo: "Pay As You Go",
-  tenThousandChars: "100K characters",
+  tenThousandChars: "10,000 characters",
   millionChars: "1M characters",
   threeMillionChars: "3M characters",
   
   // FAQ
   faq: "Frequently Asked Questions",
   faqTrialFeatures: "What features are included in the trial?",
-  faqTrialFeaturesAnswer: "The trial includes a 7-day period with 1000 characters, support for 50+ languages, basic speed control, and voice selection. You can experience core features through text input to see if it meets your needs.",
+  faqTrialFeaturesAnswer: "Try text to speech with {amount} characters for {days} days. Choose from the available voices and adjust the speaking speed.",
   faqHowToTry: "How do I start the trial?",
   faqHowToTryAnswer: "Simply register for an account to get trial access, no credit card required. You can upgrade to a paid plan anytime during the trial to access more features and higher character quotas.",
   faqQuotaCalc: "How is the character quota calculated?",
   faqQuotaCalcAnswer: "Character quota is calculated based on the actual text input, including spaces and punctuation.",
   faqPayment: "What payment methods are accepted?",
-  faqPaymentAnswer: "We accept various convenient payment methods: debit cards, credit cards, WeChat Pay, Alipay, and more. You'll find a suitable payment option regardless of your location. All payment channels are encrypted for security.",
+  faqPaymentAnswer: "Available payment methods are shown at checkout.",
   faqQuotaType: "What's the difference between purchased quota and membership bonus quota?",
   faqQuotaTypeAnswer: "Character quota purchased separately is permanent and never expires. However, quota received through membership plans is temporary and will expire when the membership period ends. We recommend choosing the purchase method that best suits your usage needs.",
   
@@ -535,7 +535,7 @@ export const en: TranslationType = {
   verificationError: "An error occurred during verification",
 
   // Core features list items
-  multiLanguageSupportItem: "Support for 50+ languages and dialects",
+  multiLanguageSupportItem: "Language availability depends on the selected voice",
   multiLanguageVoicesItem: "Multiple male and female voices per language",
   multiLanguageAccentsItem: "Multiple regional accent options (e.g. US, UK English)",
   naturalSpeechItem: "Human-like natural intonation",
@@ -569,7 +569,7 @@ export const en: TranslationType = {
   agreementAnd: "and",
   legalLinks: "Legal",
 
-  demoPhrase1: "Convert text to natural speech, 50+ languages and voices",
+  demoPhrase1: "Turn text into natural speech with a choice of voices",
   demoPhrase2: "Clone your voice, real-time voice customization",
 
 

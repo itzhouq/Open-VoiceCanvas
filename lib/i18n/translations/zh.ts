@@ -46,7 +46,7 @@ export const zh: TranslationType = {
   feature1Title: "高品质语音",
   feature1Desc: "自然语调和韵律的清晰语音合成",
   feature2Title: "多语言支持",
-  feature2Desc: "支持50+语言男女声，满足全球化内容需求",
+  feature2Desc: "根据内容需要选择可用的语言和音色。",
   feature3Title: "高级功能",
   feature3Desc: "可调节语速、音频可视化及逐词朗读学习功能",
   ctaTitle: "立即使用我们的文本转语音工具",
@@ -81,7 +81,7 @@ export const zh: TranslationType = {
   googleLogin: "通过Google继续",
   dividerText: "或",
   aiPowered: "AI驱动",
-  languagesSupported: "50+种语言",
+  languagesSupported: "多语言支持",
   copyright: "© {year} VoiceWove 版权所有",
   footerSlogan: "让每一个声音都充满生命力，用AI重新定义语音体验的无限可能",
   loginDescription: "登录账号以使用更多功能",
@@ -231,7 +231,7 @@ export const zh: TranslationType = {
   trialPeriod: "{days}天试用期",
   yearlyQuota: "每年{amount}字符",
   monthlyQuota: "每月{amount}字符",
-  languageSupport: "支持50+种语言",
+  languageSupport: "多语言支持",
   basicSpeedControl: "基础语速调节",
   basicVoiceSelection: "基础音色选择",
   textInputOnly: "仅文本输入",
@@ -254,20 +254,20 @@ export const zh: TranslationType = {
   
   // 按需计费
   payAsYouGo: "按需计费",
-  tenThousandChars: "10万字",
+  tenThousandChars: "10,000字符",
   millionChars: "100万字",
   threeMillionChars: "300万字",
   
   // 常见问题
   faq: "常见问题",
   faqTrialFeatures: "体验版包含哪些功能？",
-  faqTrialFeaturesAnswer: "体验版提供7天试用期，包含1000字符额度，支持50+种语言的基础功能体验，可通过文本输入体验核心功能。",
+  faqTrialFeaturesAnswer: "体验版提供{days}天试用期，包含{amount}字符额度。您可以输入文本，选择可用音色并调整语速，体验文字转语音功能。",
   faqHowToTry: "如何开始体验？",
   faqHowToTryAnswer: "注册账号即可立即体验，无需绑定支付方式。试用期间可随时升级套餐获取更多功能。",
   faqQuotaCalc: "字符额度如何计算？",
   faqQuotaCalcAnswer: "根据实际输入的字符数统计（含空格及标点符号）。",
   faqPayment: "支持哪些支付方式？",
-  faqPaymentAnswer: "支持信用卡、微信支付、支付宝等多种方式，全部支付通道均采用加密传输。",
+  faqPaymentAnswer: "可用的支付方式以结账页面显示为准。",
   faqQuotaType: "购买额度与订阅额度的区别？",
   faqQuotaTypeAnswer: "单独购买的字符额度永久有效，订阅赠送额度随套餐有效期终止。建议根据使用需求选择。",
   
@@ -462,7 +462,7 @@ export const zh: TranslationType = {
     save: "节省",
 
     // 首页声音克隆相关
-    landingSubtitle: "50余种语言即时文本转语音，支持声音克隆与音色设计，基于先进AI技术实现清晰自然的语音合成。",
+    landingSubtitle: "在浏览器中将文字转换为语音，克隆您有权使用的声音，并设计个性化音色。",
     feature4Title: "声音克隆",
     feature4Desc: "个性化声音克隆，让AI说话更有温度",
     
@@ -538,7 +538,7 @@ export const zh: TranslationType = {
     verificationError: "验证过程中发生错误",
 
     // 核心功能列表项
-    multiLanguageSupportItem: "支持50+种语言和方言",
+    multiLanguageSupportItem: "可用语言取决于所选音色",
     multiLanguageVoicesItem: "每种语言多种男女声音色",
     multiLanguageAccentsItem: "多区域口音选择（如美式、英式英语）",
     naturalSpeechItem: "真人级自然语调",
@@ -572,7 +572,7 @@ export const zh: TranslationType = {
     agreementPrefix: "注册即表示您同意我们的",
     agreementAnd: "和",
 
-    demoPhrase1: "将文本转换为自然语音，支持50+种语言和声音",
+    demoPhrase1: "将文字转换为自然语音，选择适合内容的音色",
     demoPhrase2: "克隆您的声音，实时定制语音效果",
 
 

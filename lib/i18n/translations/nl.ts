@@ -46,7 +46,7 @@ export const nl: TranslationType = {
   feature1Title: "Hoogwaardige Stemmen",
   feature1Desc: "Kristalheldere spraaksynthese met natuurlijke intonatie en ritme",
   feature2Title: "Meertalig",
-  feature2Desc: "50+ talen met mannelijke en vrouwelijke stemmen, perfect voor wereldwijde content",
+  feature2Desc: "Kies uit de beschikbare talen en stemmen voor je content.",
   feature3Title: "Geavanceerde Functies",
   feature3Desc: "Pas snelheid aan, visualiseer audio en activeer woord-voor-woord lezen voor beter leren",
   ctaTitle: "Start Vandaag Nog Met Onze Tekst-naar-Spraak-Dienst",
@@ -81,7 +81,7 @@ export const nl: TranslationType = {
   googleLogin: "Doorgaan met Google",
   dividerText: "of",
   aiPowered: "Aangedreven door AI",
-  languagesSupported: "50+ Talen",
+  languagesSupported: "Meertalige ondersteuning",
   copyright: "© {year} VoiceWove. Alle rechten voorbehouden.",
   footerSlogan: "Met ❤️ gemaakt voor betere spraakervaring",
   loginDescription: "Log in voor meer functies",
@@ -230,7 +230,7 @@ export const nl: TranslationType = {
   trialPeriod: "{days}-dagen proefperiode",
   yearlyQuota: "{amount} tekens/jaar",
   monthlyQuota: "{amount} tekens/maand",
-  languageSupport: "50+ talen ondersteund",
+  languageSupport: "Meertalige ondersteuning",
   basicSpeedControl: "Basis snelheidsregeling",
   basicVoiceSelection: "Basis stemkeuze",
   textInputOnly: "Alleen tekstinvoer",
@@ -253,20 +253,20 @@ export const nl: TranslationType = {
   
   // Pay-as-you-go
   payAsYouGo: "Pay-as-you-go",
-  tenThousandChars: "100K tekens",
+  tenThousandChars: "10.000 tekens",
   millionChars: "1M tekens",
   threeMillionChars: "3M tekens",
   
   // FAQ
   faq: "Veelgestelde Vragen",
   faqTrialFeatures: "Welke functies zitten in de proefversie?",
-  faqTrialFeaturesAnswer: "7 dagen proefperiode met 1000 tekens, 50+ talen, basisinstellingen voor snelheid en stemkeuze.",
+  faqTrialFeaturesAnswer: "Probeer tekst-naar-spraak met {amount} tekens gedurende {days} dagen. Kies uit de beschikbare stemmen en pas de spreeksnelheid aan.",
   faqHowToTry: "Hoe start ik de proefperiode?",
   faqHowToTryAnswer: "Registreer zonder creditcard. Opwaarderen kan altijd tijdens de proefperiode.",
   faqQuotaCalc: "Hoe wordt de tekenlimiet berekend?",
   faqQuotaCalcAnswer: "Spaties en leestekens worden meegerekend in het totaal.",
   faqPayment: "Welke betaalmethoden?",
-  faqPaymentAnswer: "Debet-/creditcards, WeChat Pay, Alipay en meer. Alle transacties zijn versleuteld.",
+  faqPaymentAnswer: "De beschikbare betaalmethoden worden getoond bij het afrekenen.",
   faqQuotaType: "Verschil gekochte vs bonuslimiet?",
   faqQuotaTypeAnswer: "Gekochte limieten zijn permanent, abonnementslimieten tijdelijk. Kies wat bij u past.",
   
@@ -456,7 +456,7 @@ export const nl: TranslationType = {
       save: "Opslaan",
     
       // Homepage - Stemklonen
-      landingSubtitle: "Realtime tekst-naar-spraak in 50+ talen met stemklonen en stemontwerp, mogelijk gemaakt door geavanceerde AI-technologie voor heldere en natuurlijke spraaksynthese.",
+      landingSubtitle: "Zet tekst om in spraak, kloon stemmen waarvoor je toestemming hebt en ontwerp stemmen in je browser.",
       feature4Title: "Stemklonen",
       feature4Desc: "Gepersonaliseerde stemklonen maken AI-spraak menselijker",
     
@@ -524,7 +524,7 @@ export const nl: TranslationType = {
     verificationError: "Fout opgetreden tijdens verificatie",
 
     // Kernfunctionaliteiten
-multiLanguageSupportItem: "Ondersteuning voor 50+ talen en dialecten",
+multiLanguageSupportItem: "De beschikbare talen zijn afhankelijk van de gekozen stem",
 multiLanguageVoicesItem: "Meerdere mannelijke/vrouwelijke stemmen per taal",
 multiLanguageAccentsItem: "Regionale accentopties (bijv. Amerikaans Engels, Brits Engels)",
 naturalSpeechItem: "Menselijk natuurlijke intonatie",
@@ -558,7 +558,7 @@ termsOfService: "Gebruiksvoorwaarden",
 privacyPolicy: "Privacybeleid",
 legalLinks: "Juridische Bepalingen",
 
-    demoPhrase1: "Converteer tekst naar natuurlijke spraak, 50+ talen en stemmen",
+    demoPhrase1: "Zet tekst om in natuurlijke spraak met een stem naar keuze",
     demoPhrase2: "Kloon uw stem met real-time spraakmaatwerk",
 
     agreementPrefix: "Door je te registreren ga je akkoord met onze",

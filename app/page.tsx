@@ -7,6 +7,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/lib/i18n/language-context";
+import { useTrialOffer } from "@/components/product-facts-provider";
+import { CHARACTER_PACKS, CLONE_PACKS, PRODUCT_PRICES_USD, SUBSCRIPTION_PLANS, type TrialOffer } from "@/lib/product-catalog";
 import { NavBar } from "@/components/nav-bar";
 import { RequireAuth } from "@/components/require-auth";
 import { cn } from "@/lib/utils";
@@ -20,21 +22,23 @@ import { useSession } from "next-auth/react";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 
-// 从pricing页面导入的函数
+type Translate = (key: string, params?: Record<string, string | number>) => string;
+
+// Shared product values keep homepage offers aligned with checkout fulfillment.
 const payAsYouGo = [
   {
     type: "tenThousandChars",
-    price: "$6",
+    price: `$${PRODUCT_PRICES_USD.tenThousandChars}`,
     popular: false
   },
   {
     type: "millionChars",
-    price: "$55",
+    price: `$${PRODUCT_PRICES_USD.millionChars}`,
     popular: true
   },
   {
     type: "threeMillionChars",
-    price: "$150",
+    price: `$${PRODUCT_PRICES_USD.threeMillionChars}`,
     popular: false
   }
 ];
@@ -43,8 +47,8 @@ const plans = [
   {
     type: "trial",
     features: [
-      "freeChars|amount=1000",
-      "trialPeriod|days=7",
+      "freeChars",
+      "trialPeriod",
       "languageSupport",
       "basicSpeedControl",
       "basicVoiceSelection",
@@ -55,7 +59,7 @@ const plans = [
   {
     type: "yearly",
     features: [
-      "yearlyQuota|amount=1500000",
+      `yearlyQuota|amount=${SUBSCRIPTION_PLANS.yearly.characters}`,
       "languageSupport",
       "fullSpeedControl",
       "allVoices",
@@ -70,7 +74,7 @@ const plans = [
   {
     type: "monthly",
     features: [
-      "monthlyQuota|amount=100000",
+      `monthlyQuota|amount=${SUBSCRIPTION_PLANS.monthly.characters}`,
       "languageSupport",
       "fullSpeedControl",
       "allVoices",
@@ -84,8 +88,7 @@ const plans = [
 ];
 
 // pricing页面的辅助函数
-const getPlanName = (type: string) => {
-  const { t } = useLanguage();
+const getPlanName = (type: string, t: Translate) => {
   switch (type) {
     case 'trial': return t('trialPlan');
     case 'yearly': return t('yearlyPlan');
@@ -94,8 +97,7 @@ const getPlanName = (type: string) => {
   }
 };
 
-const getPlanDesc = (type: string) => {
-  const { t } = useLanguage();
+const getPlanDesc = (type: string, t: Translate) => {
   switch (type) {
     case 'trial': return t('trialDesc');
     case 'yearly': return t('yearlyDesc');
@@ -104,8 +106,7 @@ const getPlanDesc = (type: string) => {
   }
 };
 
-const getPlanPrice = (type: string) => {
-  const { t } = useLanguage();
+const getPlanPrice = (type: string, t: Translate) => {
   switch (type) {
     case 'trial':
       return (
@@ -117,7 +118,7 @@ const getPlanPrice = (type: string) => {
       return (
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground line-through">$9.99</span>
-          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$5.99</span>
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">${PRODUCT_PRICES_USD.monthly.toFixed(2)}</span>
           <span className="text-muted-foreground">{t('perMonth')}</span>
         </div>
       );
@@ -125,7 +126,7 @@ const getPlanPrice = (type: string) => {
       return (
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground line-through">$99.9</span>
-          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">$49.9</span>
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">${PRODUCT_PRICES_USD.yearly.toFixed(2)}</span>
           <span className="text-muted-foreground">{t('perYear')}</span>
         </div>
       );
@@ -134,8 +135,7 @@ const getPlanPrice = (type: string) => {
   }
 };
 
-const getPlanPeriod = (type: string) => {
-  const { t } = useLanguage();
+const getPlanPeriod = (type: string, t: Translate) => {
   switch (type) {
     case 'yearly': return t('perYear');
     case 'monthly': return t('perMonth');
@@ -143,8 +143,7 @@ const getPlanPeriod = (type: string) => {
   }
 };
 
-const getButtonText = (type: string) => {
-  const { t } = useLanguage();
+const getButtonText = (type: string, t: Translate) => {
   switch (type) {
     case 'trial': return t('startTrial');
     case 'yearly': return t('chooseYearly');
@@ -153,10 +152,11 @@ const getButtonText = (type: string) => {
   }
 };
 
-const translateFeature = (key: string) => {
-  const { t } = useLanguage();
+const translateFeature = (key: string, t: Translate, trialOffer: TrialOffer) => {
   
   const [featureKey, params] = key.split('|');
+  if (featureKey === 'freeChars') return t(featureKey, { amount: trialOffer.characters.toLocaleString('en-US') });
+  if (featureKey === 'trialPeriod') return t(featureKey, { days: trialOffer.days });
   if (params) {
     const paramObj = Object.fromEntries(
       params.split(',').map(p => {
@@ -172,19 +172,18 @@ const translateFeature = (key: string) => {
   return t(featureKey);
 };
 
-const getClonePackages = () => {
-  const { t } = useLanguage();
+const getClonePackages = (t: Translate) => {
   return [
     {
       id: 'clone1',
       name: t('clonePackageBasic'),
       originalPrice: '$5',
-      price: '$3',
+      price: `$${PRODUCT_PRICES_USD.clone1}`,
       saveAmount: '$2',
-      clones: 1,
+      clones: CLONE_PACKS.clone1,
       description: t('clonePackageBasicDesc'),
       features: [
-        t('cloneFeature1Times', { count: 1 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone1 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -195,12 +194,12 @@ const getClonePackages = () => {
       id: 'clone50',
       name: t('clonePackagePro'),
       originalPrice: '$299',
-      price: '$150',
+      price: `$${PRODUCT_PRICES_USD.clone50}`,
       saveAmount: '$149',
-      clones: 50,
+      clones: CLONE_PACKS.clone50,
       description: t('clonePackageProDesc'),
       features: [
-        t('cloneFeature1Times', { count: 50 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone50 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -211,12 +210,12 @@ const getClonePackages = () => {
       id: 'clone10',
       name: t('clonePackageAdvanced'),
       originalPrice: '$59',
-      price: '$30',
+      price: `$${PRODUCT_PRICES_USD.clone10}`,
       saveAmount: '$29',
-      clones: 10,
+      clones: CLONE_PACKS.clone10,
       description: t('clonePackageAdvancedDesc'),
       features: [
-        t('cloneFeature1Times', { count: 10 }),
+        t('cloneFeature1Times', { count: CLONE_PACKS.clone10 }),
         t('cloneFeatureValidForever'),
         t('cloneFeatureMultiLanguage'),
         t('cloneFeatureCustomization'),
@@ -228,6 +227,7 @@ const getClonePackages = () => {
 
 export default function LandingPage() {
   const { t } = useLanguage();
+  const trialOffer = useTrialOffer();
   const [activeTestimonialIndex, setActiveTestimonialIndex] = useState(0);
   const [stars, setStars] = useState<Array<{ top: number; left: number; delay: number; opacity: number }>>([]);
   const { data: session } = useSession();
@@ -1245,17 +1245,17 @@ export default function LandingPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                     <div className="relative">
                     <div className="mb-4">
-                      <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{getPlanName(plan.type)}</h3>
-                      <p className="text-muted-foreground">{getPlanDesc(plan.type)}</p>
+                      <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{getPlanName(plan.type, t)}</h3>
+                      <p className="text-muted-foreground">{getPlanDesc(plan.type, t)}</p>
                       </div>
                     <div className="mb-6">
-                      {getPlanPrice(plan.type)}
+                      {getPlanPrice(plan.type, t)}
                       </div>
                     <ul className="space-y-3 mb-6">
                       {plan.features.map((feature, index) => (
                         <li key={index} className="flex items-center">
                           <Check className="h-5 w-5 text-primary mr-2" />
-                          <span>{translateFeature(feature)}</span>
+                          <span id={feature === 'freeChars' ? 'trial-allowance' : feature === 'trialPeriod' ? 'trial-duration' : undefined}>{translateFeature(feature, t, trialOffer)}</span>
                         </li>
                       ))}
                     </ul>
@@ -1264,7 +1264,7 @@ export default function LandingPage() {
                       variant={plan.type === 'yearly' ? "default" : "outline"}
                       onClick={() => handlePlanClick(plan.type)}
                     >
-                      {getButtonText(plan.type)}
+                      {getButtonText(plan.type, t)}
                     </Button>
                   </div>
                 </Card>
@@ -1294,7 +1294,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               className="grid gap-8 md:grid-cols-3"
             >
-              {getClonePackages().map((pkg, index) => (
+              {getClonePackages(t).map((pkg, index) => (
                 <motion.div
                   key={pkg.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -1379,7 +1379,7 @@ export default function LandingPage() {
                 )}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-teal-500/10 to-cyan-500/10 rounded-lg" />
                     <div className="relative text-center">
-                      <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{t(plan.type)}</h3>
+                      <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-teal-500">{CHARACTER_PACKS[plan.type].toLocaleString('en-US')} {t('characters')}</h3>
                       <div className="mb-6">
                         <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-cyan-500">{plan.price}</span>
                       </div>
@@ -1439,7 +1439,7 @@ export default function LandingPage() {
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.03] via-teal-500/[0.03] to-cyan-500/[0.03] opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                         
                         {/* 装饰性引号 */}
-                        <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">"</div>
+                        <div className="absolute top-1 right-1 text-3xl text-teal-500/10 font-serif">&quot;</div>
                         
                         <div className="relative flex flex-col h-full">
                           <div className="flex-grow overflow-hidden">
@@ -1543,7 +1543,7 @@ export default function LandingPage() {
           >
             <div className="bg-background/60 backdrop-blur border border-primary/10 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-bold mb-2">{t('faqTrialFeatures')}</h3>
-              <p className="text-muted-foreground">{t('faqTrialFeaturesAnswer')}</p>
+              <p id="trial-details" className="text-muted-foreground">{t('faqTrialFeaturesAnswer', { amount: trialOffer.characters.toLocaleString('en-US'), days: trialOffer.days })}</p>
             </div>
             <div className="bg-background/60 backdrop-blur border border-primary/10 rounded-lg p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl font-bold mb-2">{t('faqHowToTry')}</h3>
@@ -1603,4 +1603,4 @@ export default function LandingPage() {
       </motion.div>
     </div>
   );
-} 
+}
