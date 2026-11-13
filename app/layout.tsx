@@ -21,8 +21,6 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const siteDescription = `Create text-to-speech, multi-character story narration and two-host podcasts. ${TRIAL_OFFER.characters.toLocaleString('en-US')} trial characters for ${TRIAL_OFFER.days} days; no credit card required.`;
-
 // Homepage-only metadata: every other route defines its own metadata, so the
 // root defaults below surface on / alone.
 const homeTitle = 'Voice Cloning & Text to Speech with AI Voices | VoiceWove';
@@ -103,8 +101,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VoiceWove — Text to Speech, Story Voices & Voice Cloning',
-    description: siteDescription,
+    title: homeTitle,
+    description: homeDescription,
     images: {
       url: 'https://voicewove.com/images/og-image.png',
       alt: 'VoiceWove - AI Voice Synthesis & Cloning Platform',

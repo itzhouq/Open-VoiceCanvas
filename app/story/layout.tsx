@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const title = 'Story Voiceover Generator — Narrator and Character Voices';
+const title = 'Story Voiceover Generator — Narrator & Cast';
 const description = 'Turn a written story into multi-character narration. Review dialogue, assign narrator and character voices, generate audio and download the combined WAV file.';
 const url = 'https://voicewove.com/story';
 const image = '/images/stroy-og.png';

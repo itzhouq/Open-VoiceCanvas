@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TRIAL_OFFER } from '@/lib/trial-offer';
 
-const title = 'Text to Speech — Paste Text or Upload a File, Get MP3';
+const title = 'Text to Speech — Paste or Upload Text, Get MP3';
 const description = 'Turn pasted text or TXT and Markdown files into speech. Choose a voice, adjust playback speed and download MP3 audio in the VoiceWove studio.';
 const url = 'https://voicewove.com/app';
 const image = '/images/studio-og.png';
