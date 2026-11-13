@@ -97,8 +97,8 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/app" className="hover:text-primary transition-colors">
-                    {t('textToSpeech')}
+                  <Link href="/free-text-to-speech" className="hover:text-primary transition-colors">
+                    Free Text to Speech
                   </Link>
                 </li>
                 <li>

@@ -63,7 +63,7 @@ export default function VoiceCloningPage() {
   return (
     <GeoLandingPage
       eyebrow="AI Voice Cloning"
-      title="Clone Your Voice and Create New Speech"
+      title="Voice Cloning: Clone Your Voice and Generate New Speech"
       description="Upload a recording of your own or an authorized voice, create a clone, and use it to read new text. Check the recording requirements and the two types of quota before you begin."
       offerNote={`Clone/design credits from $${PRODUCT_PRICES_USD.clone1} · Speech uses separate character quota · Account required`}
       primaryAction={{ href: '/cloning', label: 'Open Voice Cloning' }}
@@ -81,6 +81,14 @@ export default function VoiceCloningPage() {
         { title: 'Control the delivery', body: 'Adjust the available speed, pitch and audio settings in the cloning workspace.' },
         { title: 'Keep costs visible', body: 'Clone/design credits and speech characters are separate balances. Check both before beginning a project.' },
       ]}
+      comparison={{
+        title: 'AI Voice Cloning vs. Voice Design: Which Do You Need?',
+        paragraphs: [
+          'AI voice cloning reproduces one specific voice from a recording you own or are authorized to use, so it fits narration that must sound like a particular speaker.',
+          'Voice design creates a new voice from a written description, which fits projects that need a distinct voice without a recorded sample.',
+          'Creating either one consumes a clone/design credit, and speech generated with it uses character quota separately.',
+        ],
+      }}
       specifications={[
         { label: 'Recording format', value: 'MP3, M4A or WAV audio from one speaker.' },
         { label: 'Recording limits', value: '10 seconds to 5 minutes; maximum file size 5 MB.' },

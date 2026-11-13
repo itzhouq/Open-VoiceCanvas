@@ -59,17 +59,18 @@ export default function AiStoryVoiceoverPage() {
   return (
     <GeoLandingPage
       eyebrow="AI Story Voiceover"
-      title="Give Every Character a Voice"
+      title="AI Story Voiceover with a Voice for Every Character"
       description="Turn a written story into narration and dialogue with different AI voices. Assign the cast, edit individual segments and download the combined story as WAV."
       offerNote={`${trialCharacters} synthesis characters · ${TRIAL_OFFER.days}-day trial · Account required · No credit card required`}
       primaryAction={{ href: '/story', label: 'Try Story Voiceover' }}
       introduction={{
-        title: 'How Do I Narrate a Story with Multiple Voices?',
+        title: 'Narrator vs. Character Voices',
         paragraphs: [
           'VoiceWove gives narration and character dialogue separate voice assignments. Paste a story you have written, review its segments, then choose how each speaker sounds. This makes it useful for fiction drafts, classroom dialogues and stories with a cast of characters.',
           'You can also use the story generator to draft a script. Review the text and character assignments before synthesis, then listen to the segments and download the combined WAV audio.',
         ],
       }}
+      featuresHeading="Character Voice Generator: Cast Each Role"
       features={[
         { title: 'Assign a cast', body: 'Give the narrator and each character a voice, and keep those choices consistent across the scene.' },
         { title: 'Revise individual segments', body: 'Edit a line or its delivery, then regenerate the affected audio before combining the story.' },

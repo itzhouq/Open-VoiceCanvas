@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TRIAL_OFFER } from '@/lib/trial-offer';
 
-const title = 'Text to Speech Studio — Generate and Download Audio';
+const title = 'Text to Speech — Paste Text or Upload a File, Get MP3';
 const description = 'Turn pasted text or TXT and Markdown files into speech. Choose a voice, adjust playback speed and download MP3 audio in the VoiceWove studio.';
 const url = 'https://voicewove.com/app';
 const image = '/images/studio-og.png';
@@ -61,7 +61,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             {' '}trial synthesis characters for {TRIAL_OFFER.days} days, with no credit card required.
           </p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link href="/free-text-to-speech" className="text-primary underline underline-offset-4">Text-to-speech guide and trial details</Link>
+            <Link href="/free-text-to-speech" className="text-primary underline underline-offset-4">Free Text to Speech Guide</Link>
             <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
           </div>
         </div>

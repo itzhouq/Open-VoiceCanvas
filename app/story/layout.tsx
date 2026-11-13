@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const title = 'AI Story Voiceover — Narrator and Character Voices';
+const title = 'Story Voiceover Generator — Narrator and Character Voices';
 const description = 'Turn a written story into multi-character narration. Review dialogue, assign narrator and character voices, generate audio and download the combined WAV file.';
 const url = 'https://voicewove.com/story';
 const image = '/images/stroy-og.png';
@@ -32,7 +32,7 @@ export default function StoryLayout({ children }: { children: React.ReactNode })
     <>
       <section aria-labelledby="story-overview" className="border-b border-border bg-primary/5">
         <div className="container mx-auto px-4 py-6">
-          <h1 id="story-overview" className="text-2xl font-bold text-foreground">AI Story Voiceover Generator</h1>
+          <h1 id="story-overview" className="text-2xl font-bold text-foreground">Story Voiceover Generator</h1>
           <p className="mt-2 max-w-4xl text-muted-foreground">Paste a story or start from a story prompt, review the narration and dialogue, and choose a voice for the narrator and each character.</p>
 
         </div>
@@ -57,7 +57,7 @@ export default function StoryLayout({ children }: { children: React.ReactNode })
           </dl>
           <p className="mt-3 text-sm text-muted-foreground">Sign in to generate audio using your account balances.</p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link href="/ai-story-voiceover" className="text-primary underline underline-offset-4">Multi-character story voiceover guide</Link>
+            <Link href="/ai-story-voiceover" className="text-primary underline underline-offset-4">AI Story Voiceover Guide</Link>
             <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
           </div>
         </div>

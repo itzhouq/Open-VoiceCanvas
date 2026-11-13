@@ -19,6 +19,10 @@ interface GeoLandingPageProps {
   primaryAction: LandingLink;
   secondaryAction?: LandingLink;
   introduction: { title: string; paragraphs: string[] };
+  /** Optional H2 placed over the existing feature cards, which keep their H3s. */
+  featuresHeading?: string;
+  /** Optional product-comparison section rendered after the overview. */
+  comparison?: { title: string; paragraphs: string[] };
   features: { title: string; body: string }[];
   specifications: { label: string; value: string }[];
   steps: string[];
@@ -37,6 +41,8 @@ export function GeoLandingPage({
   primaryAction,
   secondaryAction = { href: '/pricing', label: 'See Pricing' },
   introduction,
+  featuresHeading,
+  comparison,
   features,
   specifications,
   steps,
@@ -88,6 +94,9 @@ export function GeoLandingPage({
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             {introduction.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
+          {featuresHeading && (
+            <h2 className="text-2xl font-bold mb-4 mt-10">{featuresHeading}</h2>
+          )}
           <div className="grid md:grid-cols-2 gap-6 mt-6">
             {features.map((feature) => (
               <div key={feature.title} className="rounded-lg border border-border p-5 bg-card hover:shadow-md transition">
@@ -97,6 +106,15 @@ export function GeoLandingPage({
             ))}
           </div>
         </section>
+
+        {comparison && (
+          <section className="mb-14" aria-labelledby="comparison-heading">
+            <h2 id="comparison-heading" className="text-2xl font-bold mb-4">{comparison.title}</h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              {comparison.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            </div>
+          </section>
+        )}
 
         <section id="specifications" className="mb-14 scroll-mt-24" aria-labelledby="specifications-heading">
           <h2 id="specifications-heading" className="text-2xl font-bold mb-6">Formats, Limits and Costs</h2>

@@ -40,7 +40,7 @@ export const en: TranslationType = {
   on: "On",
   off: "Off",
   characters: "characters",
-  landingTitle: "VoiceWove",
+  landingTitle: "Voice Cloning, Story Voiceover and Text to Speech",
   landingSubtitle: "Create speech from text, clone voices you are authorized to use, and design voices in your browser.",
   startNow: "Try it Now",
   tryForFree: "Try It For Free",

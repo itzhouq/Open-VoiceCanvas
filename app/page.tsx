@@ -693,13 +693,13 @@ export default function LandingPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Link href="/app/" className="w-full block">
+                <Link href="/free-text-to-speech" className="w-full block">
             <Button 
               size="lg" 
                     className="w-full sm:w-auto h-10 md:h-12 text-sm md:text-base gap-2 bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500 hover:from-cyan-600 hover:via-teal-600 hover:to-cyan-600 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 group"
             >
               <Rocket className="h-4 w-4 md:h-5 md:w-5 animate-pulse" />
-                    <span>{t('startNow')}</span>
+                    <span>Free Text to Speech</span>
                     <ArrowRight className="h-4 w-4 md:h-5 md:w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
@@ -820,7 +820,7 @@ export default function LandingPage() {
                 <div className="mt-6">
                   <Link href="/podcast" className="inline-flex">
                     <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600">
-                      {t('tryPodcastFeature')}
+                      Podcast Generator
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -866,7 +866,7 @@ export default function LandingPage() {
                 <div className="mt-6">
                   <Link href="/story" className="inline-flex">
                     <Button className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white hover:from-orange-600 hover:to-cyan-600">
-                      {t('tryStoryFeature')}
+                      {t('storyVoiceover')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -975,6 +975,17 @@ export default function LandingPage() {
               </div>
             </div>
           </motion.div>
+
+          {/* 声音克隆说明标题（覆盖下方 Voice Cloning 功能说明段落） */}
+          <motion.h2
+            className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-12 md:mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-teal-500 to-cyan-500"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            How Voice Cloning Works on VoiceWove
+          </motion.h2>
 
           {/* 功能3：声音克隆 */}
           <motion.div
@@ -1114,9 +1125,9 @@ export default function LandingPage() {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <Link href="/app" className="inline-flex">
+                  <Link href="/free-text-to-speech" className="inline-flex">
                     <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:from-cyan-600 hover:to-teal-600">
-                      {t('tryFeatureNow')}
+                      Free Text to Speech
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>

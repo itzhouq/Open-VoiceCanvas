@@ -67,7 +67,7 @@ export default function AiPodcastGeneratorPage() {
   return (
     <GeoLandingPage
       eyebrow="AI Podcast Generator"
-      title="Turn Your Notes into a Host-and-Guest Podcast"
+      title="AI Podcast Generator: Turn Your Notes into a Host-and-Guest Podcast"
       description="Paste a topic or source text, review an AI-generated dialogue, and choose a voice for each speaker. Edit the conversation and download the complete episode as WAV."
       offerNote={`${trialCharacters} synthesis characters · ${TRIAL_OFFER.days}-day trial · Account required · No credit card required`}
       primaryAction={{ href: '/podcast', label: 'Try the Podcast Generator' }}

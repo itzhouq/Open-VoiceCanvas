@@ -57,7 +57,7 @@ export default function DesignLayout({ children }: { children: React.ReactNode }
           </dl>
           <p className="mt-3 text-sm text-muted-foreground">Sign in to generate audio using your account balances.</p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link href="/voice-cloning" className="text-primary underline underline-offset-4">Need to reproduce your own recording? Read the cloning guide</Link>
+            <Link href="/voice-cloning" className="text-primary underline underline-offset-4">Voice Cloning Guide</Link>
             <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
           </div>
         </div>

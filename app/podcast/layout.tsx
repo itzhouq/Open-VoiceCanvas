@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const title = 'AI Podcast Generator — Host and Guest Dialogue';
+const title = 'Podcast Voice Generator — Host and Guest Voices';
 const description = 'Turn a topic or pasted text into a host-and-guest dialogue. Edit the script, choose voices, preview generated segments and download the combined WAV audio.';
 const url = 'https://voicewove.com/podcast';
 const image = '/images/podcast-og.png';
@@ -32,7 +32,7 @@ export default function PodcastLayout({ children }: { children: React.ReactNode 
     <>
       <section aria-labelledby="podcast-overview" className="border-b border-border bg-primary/5">
         <div className="container mx-auto px-4 py-6">
-          <h1 id="podcast-overview" className="text-2xl font-bold text-foreground">AI Podcast Generator</h1>
+          <h1 id="podcast-overview" className="text-2xl font-bold text-foreground">Podcast Voice Generator</h1>
           <p className="mt-2 max-w-4xl text-muted-foreground">Enter a topic or paste source text to generate a host-and-guest conversation. Review the script and choose voices before creating the audio.</p>
 
         </div>
@@ -57,7 +57,7 @@ export default function PodcastLayout({ children }: { children: React.ReactNode 
           </dl>
           <p className="mt-3 text-sm text-muted-foreground">Sign in to generate audio using your account balances.</p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link href="/ai-podcast-generator" className="text-primary underline underline-offset-4">AI podcast workflow and frequently asked questions</Link>
+            <Link href="/ai-podcast-generator" className="text-primary underline underline-offset-4">AI Podcast Generator Guide</Link>
             <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
           </div>
         </div>

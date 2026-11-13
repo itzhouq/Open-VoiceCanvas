@@ -23,6 +23,11 @@ export const viewport: Viewport = {
 
 const siteDescription = `Create text-to-speech, multi-character story narration and two-host podcasts. ${TRIAL_OFFER.characters.toLocaleString('en-US')} trial characters for ${TRIAL_OFFER.days} days; no credit card required.`;
 
+// Homepage-only metadata: every other route defines its own metadata, so the
+// root defaults below surface on / alone.
+const homeTitle = 'Voice Cloning & Text to Speech with AI Voices | VoiceWove';
+const homeDescription = 'Clone a voice you own from a 10-second recording, narrate stories with a cast of AI voices, and turn text into speech. 10,000 free characters, no card.';
+
 const ORG_WEB_APP_SCHEMA = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -61,10 +66,10 @@ const ORG_WEB_APP_SCHEMA = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://voicewove.com'),
   title: {
-    default: 'VoiceWove — Text to Speech, Story Voices & Voice Cloning',
+    default: homeTitle,
     template: '%s | VoiceWove'
   },
-  description: siteDescription,
+  description: homeDescription,
   keywords: ['text to speech', 'AI story voiceover', 'multi-character narration', 'AI podcast generator', 'voice cloning', 'voice design'],
   authors: [{ name: 'itzhouq', url: 'https://itzhouq.cn' }],
   creator: 'itzhouq',
@@ -84,8 +89,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://voicewove.com',
-    title: 'VoiceWove — Text to Speech, Story Voices & Voice Cloning',
-    description: siteDescription,
+    title: homeTitle,
+    description: homeDescription,
     siteName: 'VoiceWove',
     images: [
       {

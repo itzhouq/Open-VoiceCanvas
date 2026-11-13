@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { PRODUCT_PRICES_USD } from '@/lib/product-catalog';
 
-const title = 'Voice Cloning — Create and Use Your Own AI Voice';
-const description = 'Upload an authorized voice recording, create a saved AI voice, and generate speech from text. Clone/design credits and synthesis characters are purchased separately.';
+const title = 'Voice Cloner — Clone Your Recorded Voice';
+const description = `Upload an authorized recording, create a saved voice, then turn text into MP3 speech. Clone credits start at $${PRODUCT_PRICES_USD.clone1}; speech uses separate character quota.`;
 const url = 'https://voicewove.com/cloning';
 const image = '/images/cloning-og.png';
 
@@ -32,7 +33,7 @@ export default function CloningLayout({ children }: { children: React.ReactNode 
     <>
       <section aria-labelledby="cloning-overview" className="border-b border-border bg-primary/5">
         <div className="container mx-auto px-4 py-6">
-          <h1 id="cloning-overview" className="text-2xl font-bold text-foreground">AI Voice Cloning</h1>
+          <h1 id="cloning-overview" className="text-2xl font-bold text-foreground">Voice Cloner</h1>
           <p className="mt-2 max-w-4xl text-muted-foreground">Create a voice from a recording you own or have permission to use, then select that saved voice to generate new speech from text.</p>
 
         </div>
@@ -57,7 +58,7 @@ export default function CloningLayout({ children }: { children: React.ReactNode 
           </dl>
           <p className="mt-3 text-sm text-muted-foreground">Sign in to generate audio using your account balances.</p>
           <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            <Link href="/voice-cloning" className="text-primary underline underline-offset-4">Voice cloning requirements and pricing guide</Link>
+            <Link href="/voice-cloning" className="text-primary underline underline-offset-4">Voice Cloning Guide</Link>
             <Link href="/pricing" className="text-primary underline underline-offset-4">View plans and one-time packs</Link>
           </div>
         </div>
