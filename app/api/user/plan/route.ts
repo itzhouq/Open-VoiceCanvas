@@ -4,6 +4,9 @@ import { prisma } from '@/lib/prisma';
 import { authOptions } from '@/lib/auth';
 import { TRIAL_TEMPORARY_QUOTA, trialExpiry } from '@/lib/quota';
 
+// 读取会话，禁止构建期静态预渲染
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     console.log('开始获取用户计划信息...');
