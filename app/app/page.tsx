@@ -20,7 +20,7 @@ import { NavBar } from "@/components/nav-bar";
 import { motion } from "framer-motion";
 import { RequireAuth } from "@/components/require-auth";
 import { useSession } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useAnalytics } from '@/hooks/use-analytics';
 import { VoiceSelector } from '@/components/voice-selector';
 import { VoiceId } from "@aws-sdk/client-polly";
@@ -377,6 +377,7 @@ export default function Home() {
 
   // Onboarding: ?welcome=1 新用户直通——预填示例文本，引导一键试听
   const searchParams = useSearchParams();
+  const router = useRouter();
   const welcomeDoneRef = useRef(false);
   useEffect(() => {
     if (!session || searchParams.get('welcome') !== '1' || welcomeDoneRef.current) return;
@@ -472,6 +473,8 @@ export default function Home() {
               description: t("insufficientCharacterQuota"),
               variant: "destructive",
             });
+            // 额度不足直接引导到购买页，不让用户自己找入口
+            router.push('/pricing#character-packs');
             return;
           }
           quotaCheckPassed = true;
@@ -636,6 +639,8 @@ export default function Home() {
               description: t("insufficientCharacterQuota"),
               variant: "destructive",
             });
+            // 额度不足直接引导到购买页，不让用户自己找入口
+            router.push('/pricing#character-packs');
             return;
           }
           quotaCheckPassed = true;

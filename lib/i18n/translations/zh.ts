@@ -814,9 +814,9 @@ export const zh: TranslationType = {
   // 额度不足弹窗
   insufficientCloneCreditsTitle: "克隆/音色设计次数不足",
   insufficientCloneCreditsDesc: "您的克隆和音色设计次数已用完，需要购买更多次数才能继续使用此功能。",
-  insufficientCharacterCreditsTitle: "使用次数不足",
-  insufficientCharacterCreditsDesc: "您的使用次数已用完，需要购买更多次数才能继续使用此功能。",
-  buyCredits: "购买次数",
+  insufficientCharacterCreditsTitle: "字符额度不足",
+  insufficientCharacterCreditsDesc: "您的字符额度已用完，需要购买或升级套餐才能继续使用此功能。",
+  buyCredits: "购买套餐",
 
   // 首页音色设计功能
   voiceDesignFeatureTitle: "音色设计",

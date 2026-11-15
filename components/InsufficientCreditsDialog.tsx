@@ -32,8 +32,8 @@ export function InsufficientCreditsDialog({
   const handlePurchase = () => {
     onOpenChange(false);
     // 跳转到购买页面，并滚动到对应的套餐区域
-    // 目前字符套餐和克隆套餐都使用同一个区域
-    router.push('/pricing#clone-packages');
+    const target = type === 'clone' ? '/pricing#clone-packages' : '/pricing#character-packs';
+    router.push(target);
   };
 
   const getTitle = () => {

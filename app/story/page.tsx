@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { RequireAuth } from "@/components/require-auth";
 import { useSession } from "next-auth/react";
 import { Badge } from "@/components/ui/badge";
+import { InsufficientCreditsDialog } from "@/components/InsufficientCreditsDialog";
 import { StoryTitleUpdater } from "./title-updater";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
@@ -148,6 +149,7 @@ export default function StoryPage() {
   } | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [showInsufficientCreditsDialog, setShowInsufficientCreditsDialog] = useState(false);
   const [editingSegmentId, setEditingSegmentId] = useState<string | null>(null); // 新增：正在编辑的段落ID
   const [apiMode] = useState<'client'>('client'); // 默认使用客户端调用，不再让用户选择
   const [clonedVoices, setClonedVoices] = useState<ClonedVoice[]>([]); // 新增：克隆音色列表
@@ -622,11 +624,7 @@ export default function StoryPage() {
         const remainingQuota = totalQuota - usedCharacters;
 
         if (remainingQuota < totalCharacters) {
-          toast({
-            title: t('characterQuotaInsufficient'),
-            description: t('characterQuotaRequired', { required: totalCharacters, remaining: remainingQuota }),
-            variant: "destructive",
-          });
+          setShowInsufficientCreditsDialog(true);
           return;
         }
       } else {
@@ -1326,11 +1324,7 @@ export default function StoryPage() {
         const remainingQuota = totalQuota - usedCharacters;
 
         if (remainingQuota < characterCount) {
-          toast({
-            title: t('characterQuotaInsufficient'),
-            description: t('characterQuotaRequired', { required: characterCount, remaining: remainingQuota }),
-            variant: "destructive",
-          });
+          setShowInsufficientCreditsDialog(true);
           return;
         }
       } else {
@@ -2157,6 +2151,13 @@ export default function StoryPage() {
           </CardContent>
         </Card>
       </main>
+
+      {/* 额度不足弹窗 */}
+      <InsufficientCreditsDialog
+        open={showInsufficientCreditsDialog}
+        onOpenChange={setShowInsufficientCreditsDialog}
+        type="character"
+      />
 
       {/* 返回顶部按钮 */}
       <motion.div 

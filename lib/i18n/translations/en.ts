@@ -819,9 +819,9 @@ export const en: TranslationType = {
   // Insufficient credits dialog
   insufficientCloneCreditsTitle: "Insufficient Clone/Voice Design Credits",
   insufficientCloneCreditsDesc: "You have run out of clone and voice design credits. Please purchase more credits to continue using this feature.",
-  insufficientCharacterCreditsTitle: "Insufficient Usage Credits",
-  insufficientCharacterCreditsDesc: "You have run out of usage credits. Please purchase more credits to continue using this feature.",
-  buyCredits: "Buy Credits",
+  insufficientCharacterCreditsTitle: "Insufficient Character Quota",
+  insufficientCharacterCreditsDesc: "You have run out of character quota. Please purchase more characters or upgrade your plan to continue using this feature.",
+  buyCredits: "Buy Plan",
 
   // Homepage Voice Design Feature
   voiceDesignFeatureTitle: "Voice Design",

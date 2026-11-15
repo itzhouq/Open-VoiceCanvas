@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { NavBar } from "@/components/nav-bar";
+import { InsufficientCreditsDialog } from "@/components/InsufficientCreditsDialog";
 import { RequireAuth } from "@/components/require-auth";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from '@/lib/i18n/language-context';
@@ -161,6 +162,7 @@ export default function PodcastPage() {
   const [currentlyPlaying, setCurrentlyPlaying] = useState<number | null>(null);
   const [isGeneratingAudio, setIsGeneratingAudio] = useState<Set<number>>(new Set());
   const [isMergingAudio, setIsMergingAudio] = useState(false);
+  const [showInsufficientCreditsDialog, setShowInsufficientCreditsDialog] = useState(false);
   const [mergedAudioUrl, setMergedAudioUrl] = useState<string | null>(null);
   const [clonedVoices, setClonedVoices] = useState<ClonedVoice[]>([]);
   const [designedVoices, setDesignedVoices] = useState<DesignedVoice[]>([]);
@@ -274,15 +276,7 @@ export default function PodcastPage() {
         const remainingQuota = totalQuota - usedCharacters;
 
         if (remainingQuota < estimatedCharacters) {
-          toast({
-            title: t('characterQuotaInsufficientTitle'),
-            description: t('characterQuotaInsufficientDesc', {
-              contentLength: content.length,
-              required: estimatedCharacters,
-              remaining: remainingQuota
-            }),
-            variant: "destructive",
-          });
+          setShowInsufficientCreditsDialog(true);
           return;
         }
 
@@ -393,14 +387,7 @@ export default function PodcastPage() {
         const remainingQuota = totalQuota - usedCharacters;
 
         if (remainingQuota < totalCharacters) {
-          toast({
-            title: t('characterQuotaInsufficientTitle'),
-            description: t('characterQuotaNeedDesc', {
-              required: totalCharacters,
-              remaining: remainingQuota
-            }),
-            variant: "destructive",
-          });
+          setShowInsufficientCreditsDialog(true);
           return;
         }
       } else {
@@ -600,14 +587,7 @@ export default function PodcastPage() {
           const remainingQuota = totalQuota - usedCharacters;
 
           if (remainingQuota < characterCount) {
-            toast({
-              title: t('characterQuotaInsufficientTitle'),
-              description: t('characterQuotaNeedDesc', {
-                required: characterCount,
-                remaining: remainingQuota
-              }),
-              variant: "destructive",
-            });
+            setShowInsufficientCreditsDialog(true);
             return;
           }
         } else {
@@ -729,14 +709,7 @@ export default function PodcastPage() {
         const remainingQuota = totalQuota - usedCharacters;
 
         if (remainingQuota < characterCount) {
-          toast({
-            title: t('characterQuotaInsufficientTitle'),
-            description: t('characterQuotaNeedDesc', {
-              required: characterCount,
-              remaining: remainingQuota
-            }),
-            variant: "destructive",
-          });
+          setShowInsufficientCreditsDialog(true);
           return;
         }
       } else {
@@ -1873,6 +1846,13 @@ export default function PodcastPage() {
           <ChevronUp className="w-6 h-6 text-gray-600 dark:text-gray-400" />
         </button>
       </motion.div>
+
+      {/* 额度不足弹窗 */}
+      <InsufficientCreditsDialog
+        open={showInsufficientCreditsDialog}
+        onOpenChange={setShowInsufficientCreditsDialog}
+        type="character"
+      />
     </RequireAuth>
   );
 }
