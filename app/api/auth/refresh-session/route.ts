@@ -4,6 +4,9 @@ import { prisma } from '@/lib/prisma';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 
+// 读取会话，禁止构建期静态预渲染
+export const dynamic = 'force-dynamic';
+
 // 用于修复和刷新用户会话数据
 export async function GET() {
   try {

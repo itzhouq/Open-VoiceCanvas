@@ -20,6 +20,47 @@ function verifySignature(payload: string, signature: string, secret: string): bo
   }
 }
 
+// 订阅配额发放/续期：临时配额 = 套餐字符数，quotaExpiry = 订阅到期日
+// usedCharacters 钳制到永久配额内（超出部分视为上个临时周期用量，随新周期重置），
+// 避免试用/上个周期的用量吃掉新周期的订阅额度
+async function grantSubscriptionQuota(userId: string, planType: string, endDate: Date): Promise<void> {
+  const plan = SUBSCRIPTION_PLANS[planType] || SUBSCRIPTION_PLANS.monthly;
+  const existing = await prisma.characterQuota.findUnique({ where: { userId } });
+  const usedCharacters = existing ? Math.min(existing.usedCharacters, existing.permanentQuota) : 0;
+  await prisma.characterQuota.upsert({
+    where: { userId },
+    update: {
+      temporaryQuota: plan.characters,
+      quotaExpiry: endDate,
+      usedCharacters,
+      lastUpdated: new Date(),
+    },
+    create: {
+      userId,
+      permanentQuota: 0,
+      temporaryQuota: plan.characters,
+      usedCharacters: 0,
+      quotaExpiry: endDate,
+    },
+  });
+}
+
+// 收到无法归属用户的支付事件时告警（钱收了但发不了货，需人工补发）
+function notifyUnattributedPayment(eventType: string, eventId: string, obj: Record<string, any>): void {
+  console.error(`支付事件缺少 userId，未发放权益: ${eventType} ${eventId}`);
+  notifyFeishu({
+    title: '🚨 VoiceWove 支付事件无法归属用户',
+    level: 'error',
+    desc: '收到支付事件但 metadata 中没有 userId/referenceId，权益未发放，需人工补发',
+    fields: [
+      { label: '事件', value: `${eventType} (${eventId})` },
+      { label: '客户邮箱', value: obj?.customer?.email || '未知' },
+      { label: '订单号', value: obj?.order?.id || obj?.id || '未知' },
+    ],
+    dedupeKey: `creem:unattributed:${eventType}`,
+  }).catch(() => {});
+}
+
 interface CreemWebhookEvent {
   id: string;
   eventType: string;
@@ -71,7 +112,10 @@ export async function POST(req: Request) {
     switch (event.eventType) {
       // 首次支付完成（含订阅首期与一次性购买）
       case 'checkout.completed': {
-        if (!userId) break;
+        if (!userId) {
+          notifyUnattributedPayment(event.eventType, event.id, obj);
+          break;
+        }
         const planType = metadata.planType || '';
 
         if (planType === 'monthly' || planType === 'yearly') {
@@ -93,22 +137,8 @@ export async function POST(req: Request) {
               status: 'active',
             },
           });
-          // 订阅期间临时配额
-          await prisma.characterQuota.upsert({
-            where: { userId },
-            update: {
-              temporaryQuota: plan.characters,
-              quotaExpiry: endDate,
-              lastUpdated: new Date(),
-            },
-            create: {
-              userId,
-              permanentQuota: 0,
-              temporaryQuota: plan.characters,
-              usedCharacters: 0,
-              quotaExpiry: endDate,
-            },
-          });
+          // 订阅期间临时配额（同时钳制历史用量，见 grantSubscriptionQuota）
+          await grantSubscriptionQuota(userId, planType, endDate);
         } else if (CHARACTER_PACKS[planType]) {
           // 一次性字符包 → 永久配额
           await prisma.characterQuota.upsert({
@@ -183,7 +213,10 @@ export async function POST(req: Request) {
 
       // 订阅续费
       case 'subscription.paid': {
-        if (!userId) break;
+        if (!userId) {
+          notifyUnattributedPayment(event.eventType, event.id, obj);
+          break;
+        }
         const sub = obj;
         const endDate = sub.current_period_end_date
           ? new Date(sub.current_period_end_date)
@@ -199,6 +232,9 @@ export async function POST(req: Request) {
             status: 'active',
           },
         });
+        // 续费必须同步刷新临时配额与有效期，否则上个周期的 quotaExpiry 过期后，
+        // /api/user/plan 会把临时配额清零，续费用户将被 403 卡住无法合成
+        await grantSubscriptionQuota(userId, metadata.planType || 'monthly', endDate);
         // 续费支付流水（退款回查依赖）
         try {
           const renewAmount = obj.order?.amount ?? obj.amount ?? 0;

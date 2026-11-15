@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { verifyEmailToken } from '@/lib/verification';
 
+// 使用 request.url，禁止构建期静态预渲染
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
