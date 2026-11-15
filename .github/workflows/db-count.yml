@@ -7,13 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: inspect db (read-only)
+      - name: count voicewove users (read-only)
         env:
           PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
         run: |
-          echo "== current db =="
-          psql "$PROD_DATABASE_URL" -t -A -c "SELECT current_database(), current_user;"
-          echo "== tables =="
-          psql "$PROD_DATABASE_URL" -t -A -F'|' -c "SELECT table_schema, table_name FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog','information_schema') ORDER BY 1,2;"
-          echo "== databases =="
-          psql "$PROD_DATABASE_URL" -t -A -c "SELECT datname FROM pg_database WHERE NOT datistemplate ORDER BY 1;"
+          psql "$PROD_DATABASE_URL" -t -A -F'|' -v ON_ERROR_STOP=1 \
+            -c "SELECT 'total|'||count(*)||'|'||coalesce(min(\"createdAt\")::date::text,'-')||'|'||coalesce(max(\"createdAt\")::date::text,'-') FROM voicewove.users;" \
+            -c "SELECT 'last_7d|'||count(*) FROM voicewove.users WHERE \"createdAt\" >= now() - interval '7 days';" \
+            -c "SELECT 'this_month|'||count(*) FROM voicewove.users WHERE \"createdAt\" >= date_trunc('month', now());" \
+            -c "SELECT 'email_reg|'||count(*) FROM voicewove.users WHERE \"passwordHash\" IS NOT NULL;" \
+            -c "SELECT 'oauth_reg|'||count(*) FROM voicewove.users WHERE \"passwordHash\" IS NULL;" \
+            -c "SELECT 'oauth_by_provider|'||coalesce(provider,'-')||'|'||count(*) FROM voicewove.users u LEFT JOIN voicewove.Account a ON a.\"userId\"=u.id WHERE \"passwordHash\" IS NULL GROUP BY provider;"
