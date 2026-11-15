@@ -3,8 +3,8 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { notifyFeishu, maskEmail } from '@/lib/feishu-notify';
 
-const QWEN_API_KEY = process.env.QWEN_API_KEY;
-const QWEN_API_URL = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
+const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 // 访谈稿结构异常（空 choices/空内容/格式错误）共用一个去重键，避免同类告警刷屏
 function notifyBadDialogueResponse(desc: string, userEmail?: string | null): void {
@@ -17,6 +17,37 @@ function notifyBadDialogueResponse(desc: string, userEmail?: string | null): voi
   }).catch(() => {});
 }
 
+// 用 DeepSeek 生成访谈对话文本（原千问已下线，统一走 DeepSeek，与故事生成共用 DEEPSEEK_API_KEY）
+// 返回生成文本与模型名；失败时抛错
+async function generateDialogueText(prompt: string): Promise<{ text: string; model: string }> {
+  const response = await fetch(DEEPSEEK_API_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${DEEPSEEK_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'deepseek-chat',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0.7,
+      top_p: 0.8,
+      max_tokens: 8000,
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text().catch(() => '');
+    throw new Error(`deepseek: HTTP ${response.status} ${errorText.slice(0, 150)}`);
+  }
+
+  const data = await response.json();
+  const text = data.choices?.[0]?.message?.content || '';
+  if (!text) {
+    throw new Error('deepseek: 空响应');
+  }
+  return { text, model: 'deepseek-chat' };
+}
+
 export async function POST(req: Request) {
   try {
     // 检查用户是否登录
@@ -25,15 +56,15 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: '请先登录' }, { status: 401 });
     }
 
-    if (!QWEN_API_KEY) {
-      console.error('Qwen API key not configured');
+    if (!DEEPSEEK_API_KEY) {
+      console.error('DeepSeek API key not configured');
       notifyFeishu({
         title: '🚨 VoiceWove 播客对话稿不可用',
         level: 'error',
-        desc: 'QWEN_API_KEY 未配置，播客对话稿生成接口全部失败',
+        desc: 'DEEPSEEK_API_KEY 未配置，播客对话稿生成接口全部失败',
         dedupeKey: 'podcast-dialogue:not-configured',
       }).catch(() => {});
-      return NextResponse.json({ error: '通义千问 API 未配置' }, { status: 500 });
+      return NextResponse.json({ error: '对话生成服务未配置' }, { status: 500 });
     }
 
     const { content } = await req.json();
@@ -104,73 +135,29 @@ ${content}
   ]
 }`;
 
-    // 调用通义千问-Turbo-Latest API
-    const response = await fetch(QWEN_API_URL, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${QWEN_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'qwen-turbo-latest',
-        input: {
-          messages: [
-            {
-              role: 'user',
-              content: prompt
-            }
-          ]
-        },
-        parameters: {
-          temperature: 0.7,
-          top_p: 0.8,
-          max_tokens: 30000,
-          result_format: 'message'
-        }
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('通义千问API错误:', errorText);
+    // 生成访谈对话（DeepSeek）
+    let generatedContent: string;
+    let usedModel: string;
+    try {
+      const result = await generateDialogueText(prompt);
+      generatedContent = result.text;
+      usedModel = result.model;
+      console.log(`访谈对话生成完成，使用模型: ${usedModel}，内容长度:`, generatedContent.length);
+    } catch (genError) {
+      const reason = genError instanceof Error ? genError.message : String(genError);
+      console.error('播客对话生成失败:', reason);
       notifyFeishu({
         title: '❌ VoiceWove 播客对话稿生成失败',
         level: 'error',
-        desc: '通义千问 API 调用失败',
+        desc: '所有 LLM Provider 均失败，用户未获得对话稿',
         fields: [
-          { label: 'HTTP', value: String(response.status) },
+          { label: '原因', value: reason.slice(0, 200) },
           { label: '用户', value: maskEmail(session.user.email) },
-          { label: '响应摘要', value: errorText.slice(0, 150) },
         ],
-        dedupeKey: `podcast-dialogue:api-fail:${response.status}`,
+        dedupeKey: 'podcast-dialogue:all-providers-fail',
       }).catch(() => {});
       return NextResponse.json(
-        { success: false, error: `访谈生成失败: ${response.status}` },
-        { status: 500 }
-      );
-    }
-
-    const result = await response.json();
-    console.log('通义千问API响应:', JSON.stringify(result, null, 2));
-
-    // 检查通义千问API响应格式
-    if (!result.output) {
-      console.error('通义千问API响应格式错误:', result);
-      notifyBadDialogueResponse('通义千问 API 响应格式错误（无 output）', session.user.email);
-      return NextResponse.json(
-        { success: false, error: '访谈生成失败，API响应格式错误' },
-        { status: 500 }
-      );
-    }
-
-    // 通义千问API的响应格式
-    const generatedContent = result.output.text || result.output.choices?.[0]?.message?.content || result.output.content || '';
-
-    if (!generatedContent) {
-      console.error('通义千问API未返回内容:', result);
-      notifyBadDialogueResponse('通义千问 API 未返回内容', session.user.email);
-      return NextResponse.json(
-        { success: false, error: '访谈生成失败，API未返回内容' },
+        { success: false, error: '访谈生成失败，请稍后重试' },
         { status: 500 }
       );
     }
@@ -241,7 +228,7 @@ ${content}
       data: {
         segments: validSegments,
         totalSegments: validSegments.length,
-        model: 'qwen-turbo-latest'
+        model: usedModel
       }
     });
 

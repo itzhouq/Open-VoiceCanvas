@@ -71,8 +71,7 @@ export async function GET(req: Request) {
   // —— 配置健康检查（只查配置，不真实调用付费 API）——
   const configChecks: { key: string; label: string }[] = [
     { key: 'DATABASE_URL', label: '数据库' },
-    { key: 'DEEPSEEK_API_KEY', label: 'DeepSeek（故事）' },
-    { key: 'QWEN_API_KEY', label: '通义千问（播客稿）' },
+    { key: 'DEEPSEEK_API_KEY', label: 'DeepSeek（故事/播客稿）' },
     { key: 'MINIMAX_API_KEY', label: 'MiniMax（TTS/克隆）' },
     { key: 'MINIMAX_GROUP_ID', label: 'MiniMax Group' },
     { key: 'AWS_ACCESS_KEY_ID', label: 'AWS Polly' },
