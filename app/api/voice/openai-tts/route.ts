@@ -6,6 +6,7 @@ import { createId } from '@paralleldrive/cuid2';
 import { rateLimit } from '@/lib/rate-limit';
 import { prisma } from '@/lib/prisma';
 import { assertSynthesisAccess } from '@/lib/quota';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 export const dynamic = 'force-dynamic';
 
@@ -150,29 +151,51 @@ export async function POST(request: Request) {
     });
   } catch (error: any) {
     console.error('TTS process error:', error);
-    
+
     // 根据错误类型返回不同的错误信息
     if (error.name === 'APIConnectionError') {
-      return NextResponse.json({ 
+      notifyFeishu({
+        title: '❌ VoiceWove OpenAI TTS 失败',
+        level: 'error',
+        desc: '连接 OpenAI 服务失败（网络异常）',
+        fields: [{ label: '错误', value: String(error.message).slice(0, 200) }],
+        dedupeKey: 'openai-tts:connection-error',
+      }).catch(() => {});
+      return NextResponse.json({
         error: '连接OpenAI服务失败，请检查网络连接或稍后再试',
         details: error.message,
         errorType: 'connection_error'
       }, { status: 503 });
     } else if (error.status === 401 || error.status === 403) {
-      return NextResponse.json({ 
+      notifyFeishu({
+        title: '🚨 VoiceWove OpenAI 密钥无效',
+        level: 'error',
+        desc: 'OPENAI_API_KEY 无效或权限不足，OpenAI TTS 链路不可用',
+        fields: [{ label: 'HTTP', value: String(error.status) }],
+        dedupeKey: 'openai-tts:auth-error',
+      }).catch(() => {});
+      return NextResponse.json({
         error: 'OpenAI API密钥无效或权限不足',
         details: error.message,
         errorType: 'auth_error'
       }, { status: error.status });
     } else if (error.status === 429) {
-      return NextResponse.json({ 
+      // 业务限流，正常现象，不告警
+      return NextResponse.json({
         error: 'OpenAI API请求过于频繁，请稍后再试',
         details: error.message,
         errorType: 'rate_limit_error'
       }, { status: 429 });
     }
-    
-    return NextResponse.json({ 
+
+    notifyFeishu({
+      title: '❌ VoiceWove OpenAI TTS 失败',
+      level: 'error',
+      desc: 'OpenAI TTS 接口抛出异常，用户未获得音频',
+      fields: [{ label: '错误', value: String(error.message).slice(0, 200) }],
+      dedupeKey: 'openai-tts:general-error',
+    }).catch(() => {});
+    return NextResponse.json({
       error: ERROR_MESSAGES.ttsError,
       details: error.message,
       errorType: 'general_error'

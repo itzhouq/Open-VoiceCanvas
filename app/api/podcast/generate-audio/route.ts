@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 const MINIMAX_API_KEY = process.env.MINIMAX_API_KEY;
 const MINIMAX_GROUP_ID = process.env.MINIMAX_GROUP_ID;
@@ -15,6 +16,12 @@ export async function POST(req: Request) {
 
     if (!MINIMAX_API_KEY || !MINIMAX_GROUP_ID) {
       console.error('MiniMax API credentials not configured');
+      notifyFeishu({
+        title: '🚨 VoiceWove 播客音频不可用',
+        level: 'error',
+        desc: 'MINIMAX_API_KEY/GROUP_ID 未配置，播客音频生成接口全部失败',
+        dedupeKey: 'podcast-audio:not-configured',
+      }).catch(() => {});
       return NextResponse.json({ error: 'MiniMax API 未配置' }, { status: 500 });
     }
 
@@ -107,6 +114,12 @@ export async function POST(req: Request) {
 
       if (error.name === 'AbortError') {
         console.error('MiniMax API request timeout');
+        notifyFeishu({
+          title: '❌ VoiceWove 播客音频生成超时',
+          level: 'error',
+          desc: 'MiniMax 请求 30 秒超时，用户未获得音频',
+          dedupeKey: 'podcast-audio:timeout',
+        }).catch(() => {});
         return NextResponse.json({ error: '音频生成超时，请重试' }, { status: 408 });
       }
 
@@ -116,6 +129,15 @@ export async function POST(req: Request) {
 
   } catch (error) {
     console.error('Podcast audio generation error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove 播客音频生成失败',
+      level: 'error',
+      desc: '播客音频接口抛出异常（MiniMax 调用失败/内部错误）',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'podcast-audio:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
       { error: error instanceof Error ? error.message : '音频生成失败' },
       { status: 500 }

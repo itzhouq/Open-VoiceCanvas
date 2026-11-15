@@ -3,6 +3,7 @@ import { VerificationEmailTemplate } from './email-templates/VerificationEmail';
 import { ResetPasswordEmailTemplate } from './email-templates/ResetPasswordEmail';
 import { renderAsync } from '@react-email/render';
 import React from 'react';
+import { notifyFeishu, maskEmail } from './feishu-notify';
 
 // 初始化Resend
 const resendApiKey = process.env.RESEND_API_KEY;
@@ -150,6 +151,17 @@ export async function sendVerificationEmail(email: string, verificationUrl: stri
     return { success: true, messageId: data?.id };
   } catch (error) {
     console.error('Error sending verification email:', error);
+    // 关键事件 → 飞书：验证邮件发送失败，注册漏斗断裂
+    notifyFeishu({
+      title: '📧 VoiceWove 验证邮件发送失败',
+      level: 'error',
+      desc: '验证邮件未送达，该用户无法完成注册激活',
+      fields: [
+        { label: '收件人', value: maskEmail(email) },
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'email:verification-fail',
+    }).catch(() => {});
     throw error;
   }
 }
@@ -198,6 +210,17 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string, na
     return { success: true, messageId: data?.id };
   } catch (error) {
     console.error('Error sending password reset email:', error);
+    // 关键事件 → 飞书：重置密码邮件发送失败，用户找回密码流程断裂
+    notifyFeishu({
+      title: '📧 VoiceWove 重置密码邮件发送失败',
+      level: 'error',
+      desc: '密码重置邮件未送达，该用户无法找回密码',
+      fields: [
+        { label: '收件人', value: maskEmail(email) },
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'email:reset-password-fail',
+    }).catch(() => {});
     throw error;
   }
 }

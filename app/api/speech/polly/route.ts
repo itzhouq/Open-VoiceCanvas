@@ -7,6 +7,7 @@ import { pollyClient } from '@/lib/aws-config';
 import { rateLimit } from '@/lib/rate-limit';
 import { languageCodeMap } from '@/lib/polly-service';
 import { assertSynthesisAccess } from '@/lib/quota';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 export const dynamic = 'force-dynamic';
 
@@ -110,6 +111,15 @@ export async function POST(req: Request) {
     });
   } catch (error) {
     console.error('Polly synthesis error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove Polly 合成失败',
+      level: 'error',
+      desc: 'AWS Polly 合成抛出异常，用户未获得音频',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'polly:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
       { error: error instanceof Error ? error.message : '语音合成失败' },
       { status: 500 }

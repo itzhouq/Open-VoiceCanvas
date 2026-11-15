@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { validateUserSession } from '@/lib/auth';
 import { isCreemConfigured, createCheckout, CREEM_PRODUCTS } from '@/lib/creem';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 // 支付入口：planType → Creem hosted checkout
 // 合同：POST { planType } → { url }（前端直接跳转 url）
@@ -13,6 +14,12 @@ import { isCreemConfigured, createCheckout, CREEM_PRODUCTS } from '@/lib/creem';
 export async function POST(req: Request) {
   try {
     if (!isCreemConfigured()) {
+      notifyFeishu({
+        title: '🚨 VoiceWove 支付服务未配置',
+        level: 'error',
+        desc: 'CREEM_API_KEY 缺失，所有购买入口不可用',
+        dedupeKey: 'checkout:not-configured',
+      }).catch(() => {});
       return NextResponse.json(
         { error: '支付服务未配置（CREEM_API_KEY 缺失）' },
         { status: 500 }
@@ -67,6 +74,16 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error('创建支付会话错误:', error);
     const errorMessage = error instanceof Error ? error.message : '未知错误';
+    // 关键事件 → 飞书：用户点击购买但无法进入支付页，直接损失转化
+    notifyFeishu({
+      title: '🚨 VoiceWove 创建支付会话失败',
+      level: 'error',
+      desc: '用户点击购买但 Creem checkout 创建失败，无法进入支付页',
+      fields: [
+        { label: '错误', value: errorMessage.slice(0, 200) },
+      ],
+      dedupeKey: 'checkout:create-fail',
+    }).catch(() => {});
     return NextResponse.json(
       { error: `Error creating checkout session: ${errorMessage}` },
       { status: 500 }

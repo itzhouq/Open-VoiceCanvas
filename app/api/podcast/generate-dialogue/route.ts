@@ -1,9 +1,21 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { notifyFeishu, maskEmail } from '@/lib/feishu-notify';
 
 const QWEN_API_KEY = process.env.QWEN_API_KEY;
 const QWEN_API_URL = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
+
+// 访谈稿结构异常（空 choices/空内容/格式错误）共用一个去重键，避免同类告警刷屏
+function notifyBadDialogueResponse(desc: string, userEmail?: string | null): void {
+  notifyFeishu({
+    title: '❌ VoiceWove 播客对话稿生成失败',
+    level: 'error',
+    desc,
+    fields: [{ label: '用户', value: maskEmail(userEmail) }],
+    dedupeKey: 'podcast-dialogue:bad-response',
+  }).catch(() => {});
+}
 
 export async function POST(req: Request) {
   try {
@@ -15,6 +27,12 @@ export async function POST(req: Request) {
 
     if (!QWEN_API_KEY) {
       console.error('Qwen API key not configured');
+      notifyFeishu({
+        title: '🚨 VoiceWove 播客对话稿不可用',
+        level: 'error',
+        desc: 'QWEN_API_KEY 未配置，播客对话稿生成接口全部失败',
+        dedupeKey: 'podcast-dialogue:not-configured',
+      }).catch(() => {});
       return NextResponse.json({ error: '通义千问 API 未配置' }, { status: 500 });
     }
 
@@ -115,6 +133,17 @@ ${content}
     if (!response.ok) {
       const errorText = await response.text();
       console.error('通义千问API错误:', errorText);
+      notifyFeishu({
+        title: '❌ VoiceWove 播客对话稿生成失败',
+        level: 'error',
+        desc: '通义千问 API 调用失败',
+        fields: [
+          { label: 'HTTP', value: String(response.status) },
+          { label: '用户', value: maskEmail(session.user.email) },
+          { label: '响应摘要', value: errorText.slice(0, 150) },
+        ],
+        dedupeKey: `podcast-dialogue:api-fail:${response.status}`,
+      }).catch(() => {});
       return NextResponse.json(
         { success: false, error: `访谈生成失败: ${response.status}` },
         { status: 500 }
@@ -127,6 +156,7 @@ ${content}
     // 检查通义千问API响应格式
     if (!result.output) {
       console.error('通义千问API响应格式错误:', result);
+      notifyBadDialogueResponse('通义千问 API 响应格式错误（无 output）', session.user.email);
       return NextResponse.json(
         { success: false, error: '访谈生成失败，API响应格式错误' },
         { status: 500 }
@@ -138,6 +168,7 @@ ${content}
 
     if (!generatedContent) {
       console.error('通义千问API未返回内容:', result);
+      notifyBadDialogueResponse('通义千问 API 未返回内容', session.user.email);
       return NextResponse.json(
         { success: false, error: '访谈生成失败，API未返回内容' },
         { status: 500 }
@@ -179,6 +210,7 @@ ${content}
     }
 
     if (!parsedContent.segments || !Array.isArray(parsedContent.segments)) {
+      notifyBadDialogueResponse('访谈内容格式错误（无 segments）', session.user.email);
       return NextResponse.json(
         { success: false, error: '访谈内容格式错误' },
         { status: 500 }
@@ -195,6 +227,7 @@ ${content}
       }));
 
     if (validSegments.length === 0) {
+      notifyBadDialogueResponse('未生成有效的访谈内容（segments 为空）', session.user.email);
       return NextResponse.json(
         { success: false, error: '未生成有效的访谈内容' },
         { status: 500 }
@@ -214,6 +247,15 @@ ${content}
 
   } catch (error) {
     console.error('Podcast dialogue generation error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove 播客对话稿生成失败',
+      level: 'error',
+      desc: '播客对话稿接口抛出异常（网络/超时/内部错误）',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'podcast-dialogue:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
       { error: error instanceof Error ? error.message : '播客内容生成失败' },
       { status: 500 }

@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma';
 import axios from 'axios';
 import FormData from 'form-data';
 import { createId } from '@paralleldrive/cuid2';
+import { notifyFeishu, maskEmail } from '@/lib/feishu-notify';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 25; // Vercel免费版最大25秒
@@ -220,6 +221,16 @@ export async function POST(request: Request) {
     });
 
     console.log('Process completed successfully');
+    // 关键事件 → 飞书：音色克隆成功（低频高价值）
+    notifyFeishu({
+      title: '🎙️ VoiceWove 音色克隆成功',
+      level: 'info',
+      desc: '用户完成一次音色克隆，已扣减 1 次克隆额度',
+      fields: [
+        { label: '用户', value: maskEmail(user.email) },
+        { label: '剩余次数', value: String(updatedUser.remaining_clones) },
+      ],
+    }).catch(() => {});
     return NextResponse.json({
       voiceId: finalVoiceId,
       message: ERROR_MESSAGES.cloneSuccess,
@@ -238,8 +249,18 @@ export async function POST(request: Request) {
         headers: error.response?.headers,
         message: error.message
       });
+      notifyFeishu({
+        title: '❌ VoiceWove 音色克隆失败',
+        level: 'error',
+        desc: 'MiniMax 克隆接口调用失败',
+        fields: [
+          { label: 'HTTP', value: String(error.response?.status ?? '—') },
+          { label: '错误', value: String(error.message).slice(0, 200) },
+        ],
+        dedupeKey: `voice-clone:api-fail:${error.response?.status ?? 'unknown'}`,
+      }).catch(() => {});
       return NextResponse.json(
-        { 
+        {
           error: error.response?.data?.error || ERROR_MESSAGES.voiceCloneFailed,
           details: error.message,
           responseData: error.response?.data // 添加完整的响应数据以便调试
@@ -247,8 +268,17 @@ export async function POST(request: Request) {
         { status: error.response?.status || 500 }
       );
     }
+    notifyFeishu({
+      title: '❌ VoiceWove 音色克隆失败',
+      level: 'error',
+      desc: '音色克隆接口抛出异常（内部错误）',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'voice-clone:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
-      { 
+      {
         error: error instanceof Error ? error.message : ERROR_MESSAGES.voiceCloneFailed,
         details: 'Unexpected error occurred',
         stack: error instanceof Error ? error.stack : undefined // 添加堆栈跟踪以便调试
@@ -256,4 +286,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-} 
+}

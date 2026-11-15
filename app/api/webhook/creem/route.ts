@@ -34,11 +34,24 @@ export async function POST(req: Request) {
 
   if (!secret) {
     console.error('CREEM_WEBHOOK_SECRET 未配置');
+    notifyFeishu({
+      title: '🚨 VoiceWove 支付 Webhook 未配置',
+      level: 'error',
+      desc: 'CREEM_WEBHOOK_SECRET 未配置，所有支付回调将被拒绝，收款后权益无法发放',
+      dedupeKey: 'creem:secret-missing',
+    }).catch(() => {});
     return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 });
   }
 
   if (!verifySignature(rawBody, signature, secret)) {
     console.error('Creem webhook 签名验证失败');
+    notifyFeishu({
+      title: '🚨 VoiceWove 支付 Webhook 签名验证失败',
+      level: 'error',
+      desc: '可能是密钥配置不一致或恶意伪造请求，请核实 Creem 后台配置',
+      fields: [{ label: '签名前缀', value: signature.slice(0, 8) || '（空）' }],
+      dedupeKey: 'creem:bad-signature',
+    }).catch(() => {});
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
@@ -136,6 +149,17 @@ export async function POST(req: Request) {
           });
         } catch (paymentError) {
           console.error('支付流水记录失败:', paymentError);
+          notifyFeishu({
+            title: '🚨 VoiceWove 支付流水记录失败',
+            level: 'error',
+            desc: '权益已发放但支付流水未落库，对账/退款证据链缺失，需人工补记',
+            fields: [
+              { label: '产品', value: planType || 'unknown' },
+              { label: '用户', value: userId },
+              { label: '订单', value: obj.order?.id || obj.id || event.id },
+            ],
+            dedupeKey: `creem:payment-record-fail:${event.id}`,
+          }).catch(() => {});
         }
 
         // 关键事件 → 飞书
@@ -187,8 +211,29 @@ export async function POST(req: Request) {
               packageId: obj.order?.id || obj.id || event.id,
             },
           });
+          // 关键事件 → 飞书：订阅续费成功
+          notifyFeishu({
+            title: '🔁 VoiceWove 订阅续费成功',
+            level: 'info',
+            desc: '订阅已续期，权益已自动续上',
+            fields: [
+              { label: '套餐', value: metadata.planType || 'monthly' },
+              { label: '金额', value: `$${(renewAmount / 100).toFixed(2)}` },
+              { label: '下次到期', value: endDate.toLocaleDateString('zh-CN') },
+            ],
+          }).catch(() => {});
         } catch (e) {
           console.error('续费流水记录失败:', e);
+          notifyFeishu({
+            title: '🚨 VoiceWove 续费流水记录失败',
+            level: 'error',
+            desc: '续费权益已续上但流水未落库，对账链缺失，需人工补记',
+            fields: [
+              { label: '用户', value: userId },
+              { label: '订单', value: obj.order?.id || obj.id || event.id },
+            ],
+            dedupeKey: `creem:renew-record-fail:${event.id}`,
+          }).catch(() => {});
         }
         break;
       }
@@ -228,6 +273,13 @@ export async function POST(req: Request) {
         const orderId = obj.order_id || obj.order?.id || '';
         if (!checkoutId && !orderId) {
           console.warn('refund.created 缺少订单标识, event:', event.id);
+          notifyFeishu({
+            title: '🚨 VoiceWove 退款回收失败',
+            level: 'error',
+            desc: '退款事件缺少订单标识，无法定位发放记录，权益未回收，需人工处理',
+            fields: [{ label: '事件 ID', value: event.id }],
+            dedupeKey: `creem:refund-no-id:${event.id}`,
+          }).catch(() => {});
           break;
         }
         // payment 表 packageId 存的是发放时的订单号
@@ -240,6 +292,16 @@ export async function POST(req: Request) {
         });
         if (!payment) {
           console.warn('refund.created 未匹配到支付记录:', { orderId, checkoutId });
+          notifyFeishu({
+            title: '🚨 VoiceWove 退款回收失败',
+            level: 'error',
+            desc: '退款事件未匹配到本地支付记录，权益未回收，需人工核对',
+            fields: [
+              { label: '订单', value: orderId || checkoutId },
+              { label: '事件 ID', value: event.id },
+            ],
+            dedupeKey: `creem:refund-no-match:${event.id}`,
+          }).catch(() => {});
           break;
         }
         const planType = payment.type;
@@ -303,11 +365,31 @@ export async function POST(req: Request) {
 
       default:
         console.log('未处理的事件类型:', event.eventType);
+        notifyFeishu({
+          title: '⚠️ VoiceWove 支付 Webhook 未知事件',
+          level: 'warn',
+          desc: 'Creem 返回了未处理的事件类型，请确认是否需要新增处理逻辑',
+          fields: [
+            { label: '事件类型', value: event.eventType },
+            { label: '事件 ID', value: event.id },
+          ],
+          dedupeKey: `creem:unknown:${event.eventType}`,
+        }).catch(() => {});
     }
 
     return NextResponse.json({ received: true });
   } catch (error) {
     console.error('Creem webhook 处理错误:', error);
+    notifyFeishu({
+      title: '🚨 VoiceWove 支付 Webhook 处理错误',
+      level: 'error',
+      desc: '回调处理抛出异常，Creem 将自动重试；若持续失败，权益发放/回收会中断',
+      fields: [
+        { label: '事件', value: `${event?.eventType ?? 'unknown'} / ${event?.id ?? '—'}` },
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: `creem:handler-error:${event?.id ?? 'unknown'}`,
+    }).catch(() => {});
     // 返回 500 让 Creem 重试（30s → 1m → 5m → 1h）
     return NextResponse.json({ error: 'Processing failed' }, { status: 500 });
   }

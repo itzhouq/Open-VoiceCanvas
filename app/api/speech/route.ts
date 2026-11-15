@@ -3,6 +3,7 @@ import { rateLimit } from '@/lib/rate-limit';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
 import { assertSynthesisAccess } from '@/lib/quota';
+import { notifyFeishu } from '@/lib/feishu-notify';
 
 export const dynamic = 'force-dynamic';
 
@@ -189,6 +190,15 @@ export async function POST(req: Request) {
 
   } catch (error) {
     console.error('API error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove TTS 合成失败',
+      level: 'error',
+      desc: '语音合成接口抛出异常（MiniMax 调用失败/超时/内部错误），用户未获得音频',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'speech:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
       { error: error instanceof Error ? error.message : '语音生成失败' },
       { status: 500 }

@@ -11,6 +11,31 @@ const LEVEL_COLOR: Record<NotifyLevel, string> = {
   error: 'red',
 };
 
+// dedupeKey 内存去重：同一 key 在 TTL 内只发一条（serverless 多实例下为近似去重，足够抑制重复告警）
+const DEDUPE_TTL_MS = 5 * 60 * 1000;
+const dedupeMap = new Map<string, number>();
+
+function isDuplicate(key: string): boolean {
+  const now = Date.now();
+  // 顺手清理过期项，避免 Map 无限增长
+  for (const [k, expireAt] of dedupeMap) {
+    if (expireAt <= now) dedupeMap.delete(k);
+  }
+  const expireAt = dedupeMap.get(key);
+  if (expireAt && expireAt > now) return true;
+  dedupeMap.set(key, now + DEDUPE_TTL_MS);
+  return false;
+}
+
+/** 邮箱掩码：a***@domain.com */
+export function maskEmail(email?: string | null): string {
+  if (!email) return '—';
+  const [local, domain] = email.split('@');
+  if (!domain) return '***';
+  const head = local.slice(0, 1);
+  return `${head}***@${domain}`;
+}
+
 /**
  * 飞书自定义机器人推送（服务端，fire-and-forget，失败静默不阻塞主流程）
  * 与本地 feishu-notify CLI 同一 webhook，卡片风格对齐。
@@ -20,8 +45,11 @@ export async function notifyFeishu(opts: {
   level?: NotifyLevel;
   desc?: string;
   fields?: { label: string; value: string }[];
+  /** 相同 key 在 5 分钟内只发一条，用于抑制重复告警（如配置缺失、同一 webhook 连续异常） */
+  dedupeKey?: string;
 }): Promise<void> {
   if (!WEBHOOK_URL) return;
+  if (opts.dedupeKey && isDuplicate(opts.dedupeKey)) return;
   try {
     const timestamp = Math.floor(Date.now() / 1000).toString();
     const body: Record<string, unknown> = {

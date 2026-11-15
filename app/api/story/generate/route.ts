@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
+import { notifyFeishu, maskEmail } from '@/lib/feishu-notify';
 
 const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
@@ -15,6 +16,12 @@ export async function POST(req: Request) {
 
     if (!DEEPSEEK_API_KEY) {
       console.error('DeepSeek API key not configured');
+      notifyFeishu({
+        title: '🚨 VoiceWove 故事生成不可用',
+        level: 'error',
+        desc: 'DEEPSEEK_API_KEY 未配置，故事生成接口全部失败',
+        dedupeKey: 'story:not-configured',
+      }).catch(() => {});
       return NextResponse.json({ error: 'DeepSeek API 未配置' }, { status: 500 });
     }
 
@@ -81,6 +88,17 @@ export async function POST(req: Request) {
     if (!response.ok) {
       const errorText = await response.text();
       console.error('DeepSeek API error:', errorText);
+      notifyFeishu({
+        title: '❌ VoiceWove 故事生成失败',
+        level: 'error',
+        desc: 'DeepSeek API 调用失败，用户未能获得故事',
+        fields: [
+          { label: 'HTTP', value: String(response.status) },
+          { label: '用户', value: maskEmail(session.user.email) },
+          { label: '响应摘要', value: errorText.slice(0, 150) },
+        ],
+        dedupeKey: `story:api-fail:${response.status}`,
+      }).catch(() => {});
       return NextResponse.json(
         { error: 'DeepSeek API 调用失败' },
         { status: response.status }
@@ -88,9 +106,16 @@ export async function POST(req: Request) {
     }
 
     const data = await response.json();
-    
+
     if (!data.choices || data.choices.length === 0) {
       console.error('DeepSeek API returned no choices:', data);
+      notifyFeishu({
+        title: '❌ VoiceWove 故事生成失败',
+        level: 'error',
+        desc: 'DeepSeek 返回空 choices',
+        fields: [{ label: '用户', value: maskEmail(session.user.email) }],
+        dedupeKey: 'story:empty-choices',
+      }).catch(() => {});
       return NextResponse.json(
         { error: '故事生成失败，请重试' },
         { status: 500 }
@@ -113,9 +138,18 @@ export async function POST(req: Request) {
 
   } catch (error) {
     console.error('Story generation error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove 故事生成失败',
+      level: 'error',
+      desc: '故事生成接口抛出异常（网络/超时/内部错误）',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'story:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
       { error: error instanceof Error ? error.message : '故事生成失败' },
       { status: 500 }
     );
   }
-} 
+}

@@ -3,6 +3,7 @@ import { validateUserSession } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { createId } from '@paralleldrive/cuid2';
 import axios from 'axios';
+import { notifyFeishu, maskEmail } from '@/lib/feishu-notify';
 
 // 错误消息常量（与声音克隆保持一致）
 const ERROR_MESSAGES = {
@@ -150,6 +151,18 @@ export async function POST(request: Request) {
 
         console.log('Voice design saved successfully');
 
+        // 关键事件 → 飞书：音色设计成功（低频高价值）
+        notifyFeishu({
+          title: '🎨 VoiceWove 音色设计成功',
+          level: 'info',
+          desc: '用户完成一次音色设计，已扣减 1 次克隆额度',
+          fields: [
+            { label: '用户', value: maskEmail(user.email) },
+            { label: '音色名', value: name },
+            { label: '剩余次数', value: String(updatedUser.remaining_clones) },
+          ],
+        }).catch(() => {});
+
         // 将hex编码音频数据转换为Buffer
         const audioBuffer = Buffer.from(jsonResponse.trial_audio, 'hex');
         return new NextResponse(audioBuffer, {
@@ -166,8 +179,17 @@ export async function POST(request: Request) {
 
   } catch (error) {
     console.error('Voice design preview error:', error);
+    notifyFeishu({
+      title: '❌ VoiceWove 音色设计失败',
+      level: 'error',
+      desc: 'MiniMax 音色设计接口调用失败或内部错误',
+      fields: [
+        { label: '错误', value: error instanceof Error ? error.message.slice(0, 200) : String(error).slice(0, 200) },
+      ],
+      dedupeKey: 'voice-design:handler-error',
+    }).catch(() => {});
     return NextResponse.json(
-      { 
+      {
         error: error instanceof Error ? error.message : ERROR_MESSAGES.voiceDesignFailed,
         details: 'Unexpected error occurred'
       },
