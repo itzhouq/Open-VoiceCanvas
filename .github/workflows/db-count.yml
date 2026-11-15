@@ -1,0 +1,19 @@
+name: db-count
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: count users (read-only)
+        env:
+          PROD_DATABASE_URL: ${{ secrets.PROD_DATABASE_URL }}
+        run: |
+          psql "$PROD_DATABASE_URL" -t -A -F'|' -v ON_ERROR_STOP=1 \
+            -c "SELECT 'total|'||count(*)||'|'||coalesce(min(\"createdAt\")::date::text,'-')||'|'||coalesce(max(\"createdAt\")::date::text,'-') FROM users;" \
+            -c "SELECT 'last_7d|'||count(*) FROM users WHERE \"createdAt\" >= now() - interval '7 days';" \
+            -c "SELECT 'this_month|'||count(*) FROM users WHERE \"createdAt\" >= date_trunc('month', now());" \
+            -c "SELECT 'email_reg|'||count(*) FROM users WHERE \"passwordHash\" IS NOT NULL;" \
+            -c "SELECT 'oauth_reg|'||count(*) FROM users WHERE \"passwordHash\" IS NULL;"
