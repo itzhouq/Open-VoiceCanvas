@@ -15,6 +15,6 @@ jobs:
             -c "SELECT 'total|'||count(*)||'|'||coalesce(min(\"createdAt\")::date::text,'-')||'|'||coalesce(max(\"createdAt\")::date::text,'-') FROM voicewove.users;" \
             -c "SELECT 'last_7d|'||count(*) FROM voicewove.users WHERE \"createdAt\" >= now() - interval '7 days';" \
             -c "SELECT 'this_month|'||count(*) FROM voicewove.users WHERE \"createdAt\" >= date_trunc('month', now());" \
-            -c "SELECT 'email_reg|'||count(*) FROM voicewove.users WHERE \"passwordHash\" IS NOT NULL;" \
-            -c "SELECT 'oauth_reg|'||count(*) FROM voicewove.users WHERE \"passwordHash\" IS NULL;" \
-            -c "SELECT 'oauth_by_provider|'||coalesce(provider,'-')||'|'||count(*) FROM voicewove.users u LEFT JOIN voicewove.Account a ON a.\"userId\"=u.id WHERE \"passwordHash\" IS NULL GROUP BY provider;"
+            -c "SELECT 'email_reg|'||count(*) FROM voicewove.users WHERE password IS NOT NULL;" \
+            -c "SELECT 'oauth_reg|'||count(*) FROM voicewove.users WHERE password IS NULL;" \
+            -c "SELECT 'by_provider|'||coalesce(provider,'-')||'|'||count(*) FROM voicewove.users GROUP BY provider ORDER BY count(*) DESC;"
