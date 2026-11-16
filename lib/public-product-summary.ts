@@ -6,12 +6,20 @@ export function getPublicPageIndex() {
 
 > VoiceWove is a browser-based text-to-speech, multi-character story narration, two-host podcast, voice cloning and voice design service.
 
+Facts: ${TRIAL_OFFER.characters.toLocaleString('en-US')}-character / ${TRIAL_OFFER.days}-day trial, no credit card; one-time voice cloning or design credits from $${PRODUCT_PRICES_USD.clone1}; monthly subscription $${PRODUCT_PRICES_USD.monthly.toFixed(2)}; output is MP3 for text-to-speech and cloning, WAV for story and podcast.
+
 ## Product guides
 - [Text to speech](https://voicewove.com/free-text-to-speech): Account-based trial, text input, available voices and MP3 download.
 - [Story voiceover](https://voicewove.com/ai-story-voiceover): Narrator and character voices, editable scripts and combined WAV output.
 - [Podcast generator](https://voicewove.com/ai-podcast-generator): Topic or pasted text to a two-host script and combined WAV audio.
 - [Voice cloning](https://voicewove.com/voice-cloning): Recording requirements, separate cloning credits, consent and data handling.
 - [Pricing](https://voicewove.com/pricing): Current trial, subscriptions, one-time character packs and voice credits.
+
+## Tools
+- [Voice Cloner](https://voicewove.com/cloning): Workbench to clone a voice from your own or an authorized recording and synthesize MP3 speech with it.
+- [Story Voiceover Generator](https://voicewove.com/story): Workbench to paste or generate a story script, assign narrator and character voices, and export the combined WAV.
+- [Podcast Voice Generator](https://voicewove.com/podcast): Workbench to turn a topic or pasted text into a host-and-guest dialogue and export the episode as WAV.
+- [Voice Design](https://voicewove.com/design): Workbench to create a voice from a text description; uses a clone/design credit like voice cloning.
 
 ## Policies and support
 - [Terms](https://voicewove.com/terms): Content rights, voice restrictions, subscriptions and refund conditions.

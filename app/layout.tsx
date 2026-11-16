@@ -35,7 +35,12 @@ const ORG_WEB_APP_SCHEMA = {
       name: 'VoiceWove',
       url: 'https://voicewove.com',
       logo: 'https://voicewove.com/images/logo.png',
-      sameAs: ['https://x.com/itzhouq2026'],
+      sameAs: [
+        'https://x.com/itzhouq2026',
+        'https://github.com/itzhouq',
+        'https://itzhouq.cn',
+        'https://tools.itzhouq.cn',
+      ],
     },
     {
       '@type': 'WebSite',
