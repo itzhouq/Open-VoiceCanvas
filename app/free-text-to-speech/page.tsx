@@ -70,11 +70,31 @@ export default function FreeTextToSpeechPage() {
       primaryAction={{ href: '/app', label: 'Try Text to Speech' }}
       introduction={{
         title: 'How Can I Turn Text into Audio?',
-        paragraphs: [
-          'VoiceWove reads text aloud using an AI voice. Use it to listen to study notes, check a draft by ear, or prepare narration for a video. You can hear the result before downloading it.',
-          `Start with the ${TRIAL_OFFER.days}-day trial to test your own text. When you need more quota, choose a subscription from $${PRODUCT_PRICES_USD.monthly}/month or a one-time character pack from $${PRODUCT_PRICES_USD.tenThousandChars}.`,
+        definition: 'VoiceWove reads text aloud using an AI voice.',
+        bullets: [
+          'Use it to listen to study notes, check a draft by ear, or prepare narration for a video.',
+          'You can hear the result before downloading it.',
+          `Start with the ${TRIAL_OFFER.days}-day trial to test your own text.`,
+          `When you need more quota, choose a subscription from $${PRODUCT_PRICES_USD.monthly}/month or a one-time character pack from $${PRODUCT_PRICES_USD.tenThousandChars}.`,
         ],
       }}
+      answerBlock={{
+        answer: 'Text to speech is a tool that converts written text into spoken audio you can download. VoiceWove reads pasted text or TXT and Markdown files aloud with AI voices, accepts up to 10,000 characters per request, and downloads the result as MP3; new accounts get a 10,000-character, 7-day trial without a credit card.',
+        facts: [
+          `Free trial: ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days, no credit card; registration required.`,
+          'Input: pasted text, .txt and .md files; direct PDF and Word import is not supported.',
+          'Request limit: up to 10,000 characters per request.',
+          'Output: MP3 from the text-to-speech workspace.',
+          'Purchased character quota does not expire; trial and subscription quota do.',
+        ],
+      }}
+      fastFacts={[
+        { label: 'Free trial', value: `${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days, no credit card.` },
+        { label: 'Supported input', value: 'Pasted text, .txt and .md files. Direct PDF and Word import is not supported.' },
+        { label: 'Output format', value: 'MP3 from the text-to-speech workspace.' },
+        { label: 'Registration', value: 'Required. Sign in to generate audio; a credit card is not needed for the trial.' },
+      ]}
+      lastUpdated="2026-11-15"
       features={[
         { title: 'Listen to your own text', body: 'Paste a passage and check its pronunciation, pacing and pauses before making a longer recording.' },
         { title: 'Adjust the delivery', body: 'Use the workspace controls for speed and pitch to suit a lesson, reading exercise or narration draft.' },

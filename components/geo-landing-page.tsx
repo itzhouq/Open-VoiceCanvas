@@ -18,7 +18,13 @@ interface GeoLandingPageProps {
   offerNote: string;
   primaryAction: LandingLink;
   secondaryAction?: LandingLink;
-  introduction: { title: string; paragraphs: string[] };
+  introduction: { title: string; paragraphs?: string[]; definition?: string; bullets?: string[] };
+  /** Answer block rendered under the H1: one quotable paragraph plus standalone hard facts. */
+  answerBlock?: { answer: string; facts: string[] };
+  /** Two-column fast-facts table rendered under the H1, mirroring the specifications table markup. */
+  fastFacts?: { label: string; value: string }[];
+  /** Static "Last updated" line rendered above the footer; must be set explicitly, never derived from the build date. */
+  lastUpdated?: string;
   /** Optional H2 placed over the existing feature cards, which keep their H3s. */
   featuresHeading?: string;
   /** Optional product-comparison section rendered after the overview. */
@@ -41,6 +47,9 @@ export function GeoLandingPage({
   primaryAction,
   secondaryAction = { href: '/pricing', label: 'See Pricing' },
   introduction,
+  answerBlock,
+  fastFacts,
+  lastUpdated,
   featuresHeading,
   comparison,
   features,
@@ -89,10 +98,46 @@ export function GeoLandingPage({
           <p className="text-sm text-muted-foreground mt-4">{offerNote}</p>
         </header>
 
+        {answerBlock && (
+          <section className="mb-14 rounded-lg border border-border bg-card p-6" aria-label="Quick answer">
+            <p className="leading-relaxed text-muted-foreground">{answerBlock.answer}</p>
+            <ul className="mt-4 space-y-2 pl-5 list-disc text-sm text-muted-foreground leading-relaxed">
+              {answerBlock.facts.map((fact) => <li key={fact}>{fact}</li>)}
+            </ul>
+          </section>
+        )}
+
+        {fastFacts && fastFacts.length > 0 && (
+          <section className="mb-14" aria-label="Fast facts">
+            <div className="overflow-x-auto rounded-lg border border-border">
+              <table className="w-full text-sm text-left">
+                <caption className="sr-only">{eyebrow} fast facts</caption>
+                <tbody className="divide-y divide-border">
+                  {fastFacts.map(({ label, value }) => (
+                    <tr key={label}>
+                      <th scope="row" className="w-1/3 min-w-[8rem] align-top p-4 font-semibold bg-muted/40">{label}</th>
+                      <td className="p-4 text-muted-foreground leading-relaxed">{value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
         <section className="mb-14" aria-labelledby="overview-heading">
           <h2 id="overview-heading" className="text-2xl font-bold mb-4">{introduction.title}</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
-            {introduction.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {introduction.definition ? (
+              <>
+                <p>{introduction.definition}</p>
+                <ul className="space-y-2 pl-5 list-disc">
+                  {introduction.bullets?.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                </ul>
+              </>
+            ) : (
+              introduction.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+            )}
           </div>
           {featuresHeading && (
             <h2 className="text-2xl font-bold mb-4 mt-10">{featuresHeading}</h2>
@@ -190,6 +235,12 @@ export function GeoLandingPage({
           <Link href={primaryAction.href} className={primaryActionClass}>{primaryAction.label}</Link>
         </section>
       </main>
+
+      {lastUpdated && (
+        <p className="max-w-4xl mx-auto px-4 pb-6 text-center text-sm text-muted-foreground">
+          Last updated: {lastUpdated}
+        </p>
+      )}
 
       <footer className="border-t border-border py-8 px-4 text-center text-sm text-muted-foreground">
         <p>

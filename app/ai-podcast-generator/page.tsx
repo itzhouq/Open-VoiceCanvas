@@ -73,11 +73,30 @@ export default function AiPodcastGeneratorPage() {
       primaryAction={{ href: '/podcast', label: 'Try the Podcast Generator' }}
       introduction={{
         title: 'How Can I Make a Podcast from Written Content?',
-        paragraphs: [
-          'VoiceWove turns a topic or pasted text into a conversation between a host and a guest. Review the proposed dialogue, choose each speaker’s voice, and generate the segments. It is useful for lesson recaps, topic explainers and drafts of conversational episodes.',
-          'You control the script and voice assignments before creating the finished audio. Check facts against your source, revise any awkward lines, and combine the generated segments when the conversation is ready.',
+        definition: 'VoiceWove turns a topic or pasted text into a conversation between a host and a guest.',
+        bullets: [
+          'Review the proposed dialogue, choose each speaker’s voice, and generate the segments.',
+          'It is useful for lesson recaps, topic explainers and drafts of conversational episodes.',
+          'You control the script and voice assignments before creating the finished audio.',
+          'Check facts against your source, revise any awkward lines, and combine the generated segments when the conversation is ready.',
         ],
       }}
+      answerBlock={{
+        answer: 'The AI podcast generator is a tool that turns a topic or pasted text into an editable host-and-guest dialogue and renders it as audio. VoiceWove drafts the two-host script for review, assigns a separate voice to host and guest, and downloads the complete episode as WAV; the initial full-episode generation uses twice the confirmed dialogue character count.',
+        facts: [
+          'Input: a topic or pasted text, up to 10,000 characters; PDFs, Word files and URLs are not imported directly.',
+          'Character usage: the initial full episode uses 2 times the confirmed dialogue length; editing or regenerating one segment uses its own count once.',
+          'Output: WAV for the combined episode; MP3 for individual speech segments.',
+          `Free trial: ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days, no credit card.`,
+          'The host and the guest have separate voice assignments.',
+        ],
+      }}
+      fastFacts={[
+        { label: 'Host structure', value: 'A host and a guest with separate voice assignments.' },
+        { label: 'Character usage', value: `Initial full episode: ${PODCAST_BATCH_CHARACTER_MULTIPLIER} times the confirmed dialogue length. Individual segment edits and regeneration: the segment’s character count once.` },
+        { label: 'Output format', value: 'WAV for the combined episode; MP3 for individual speech segments.' },
+      ]}
+      lastUpdated="2026-11-15"
       features={[
         { title: 'Start with a topic or text', body: 'Paste notes or text from a document to prepare a host-and-guest dialogue.' },
         { title: 'Choose each speaker', body: 'Select the host and guest voices separately so listeners can follow the conversation.' },

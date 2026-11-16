@@ -65,11 +65,28 @@ export default function AiStoryVoiceoverPage() {
       primaryAction={{ href: '/story', label: 'Try Story Voiceover' }}
       introduction={{
         title: 'Narrator vs. Character Voices',
-        paragraphs: [
-          'VoiceWove gives narration and character dialogue separate voice assignments. Paste a story you have written, review its segments, then choose how each speaker sounds. This makes it useful for fiction drafts, classroom dialogues and stories with a cast of characters.',
-          'You can also use the story generator to draft a script. Review the text and character assignments before synthesis, then listen to the segments and download the combined WAV audio.',
+        definition: 'VoiceWove gives narration and character dialogue separate voice assignments.',
+        bullets: [
+          'Paste a story you have written, review its segments, then choose how each speaker sounds.',
+          'This makes it useful for fiction drafts, classroom dialogues and stories with a cast of characters.',
+          'You can also use the story generator to draft a script.',
+          'Review the text and character assignments before synthesis, then listen to the segments and download the combined WAV audio.',
         ],
       }}
+      answerBlock={{
+        answer: 'AI story voiceover is a text-to-speech workflow that assigns separate AI voices to a story’s narrator and characters. VoiceWove parses your pasted script into narration and dialogue segments, lets you review and edit each one, and downloads the combined story as a single WAV file.',
+        facts: [
+          `Free trial: ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days, no credit card.`,
+          'Manual input limit: up to 10,000 characters at a time.',
+          'Output: the combined story downloads as WAV; convert it yourself if you need MP3.',
+          'The narrator and each character receive separate voice assignments.',
+          `Cloned voices require separate clone/design credits, starting at USD ${PRODUCT_PRICES_USD.clone1}.`,
+        ],
+      }}
+      fastFacts={[
+        { label: 'Manual input limit', value: 'Up to 10,000 characters at a time.' },
+      ]}
+      lastUpdated="2026-11-15"
       featuresHeading="Character Voice Generator: Cast Each Role"
       features={[
         { title: 'Assign a cast', body: 'Give the narrator and each character a voice, and keep those choices consistent across the scene.' },

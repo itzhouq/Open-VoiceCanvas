@@ -70,11 +70,34 @@ export default function VoiceCloningPage() {
       secondaryAction={{ href: '/pricing', label: 'See Clone Credit Packs' }}
       introduction={{
         title: 'How Does Voice Cloning Work?',
-        paragraphs: [
-          'Voice cloning uses a recording to create a voice that can speak new text. In VoiceWove, upload your sample, create the clone, then select the saved voice when generating speech. You can use a short test to check how it handles your words and pronunciation.',
-          `There are two costs to understand: creating a clone uses a clone/design credit, and generating audio uses character quota. A $${PRODUCT_PRICES_USD.clone1} pack includes ${CLONE_PACKS.clone1} clone/design credit. The free speech trial does not include that credit.`,
+        definition: 'Voice cloning uses a recording to create a voice that can speak new text.',
+        bullets: [
+          'In VoiceWove, upload your sample, create the clone, then select the saved voice when generating speech.',
+          'You can use a short test to check how it handles your words and pronunciation.',
+          'There are two costs to understand: creating a clone uses a clone/design credit, and generating audio uses character quota.',
+          `A $${PRODUCT_PRICES_USD.clone1} pack includes ${CLONE_PACKS.clone1} clone/design credit.`,
+          'The free speech trial does not include that credit.',
         ],
       }}
+      answerBlock={{
+        answer: 'Voice cloning is a process that turns a recording of a voice into a reusable model that can read new text. VoiceWove creates the clone from a 10-second to 5-minute recording of your own or an authorized voice, then generates speech with it using separate character quota.',
+        facts: [
+          `Free trial: ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days, no credit card.`,
+          `Clone credit: USD ${PRODUCT_PRICES_USD.clone1} for ${CLONE_PACKS.clone1} credit; purchased credits do not expire.`,
+          'Recording: MP3, M4A or WAV; 10 seconds to 5 minutes; max 5 MB.',
+          'Output: MP3 from the cloning workspace; WAV for story and podcast.',
+          'Clone/design credits are not included in the free trial.',
+        ],
+      }}
+      fastFacts={[
+        { label: 'Recording format', value: 'MP3, M4A or WAV.' },
+        { label: 'Recording length', value: '10 seconds to 5 minutes.' },
+        { label: 'Maximum file size', value: '5 MB.' },
+        { label: 'Clone/design credit', value: `USD ${PRODUCT_PRICES_USD.clone1} for ${CLONE_PACKS.clone1} credit; purchased credits do not expire.` },
+        { label: 'Output format', value: 'MP3 from the cloning workspace.' },
+        { label: 'Trial includes clone credits', value: `No. The trial provides ${trialCharacters} synthesis characters for ${TRIAL_OFFER.days} days; clone/design credits are not included.` },
+      ]}
+      lastUpdated="2026-11-15"
       features={[
         { title: 'Use an authorized recording', body: 'Start with your own voice or a recording you have permission to use. A quiet phone recording can meet the upload requirements.' },
         { title: 'Generate new text', body: 'Select the saved clone and enter a new passage. Check a short result before producing a longer recording.' },
