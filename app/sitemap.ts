@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/story', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/cloning', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/design', priority: 0.8, changeFrequency: 'weekly' },
+    { path: '/voice-cloning-vs-voice-design', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/podcast', priority: 0.8, changeFrequency: 'weekly' },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' },
     { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },

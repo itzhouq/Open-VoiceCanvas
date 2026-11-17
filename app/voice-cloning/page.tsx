@@ -133,6 +133,7 @@ export default function VoiceCloningPage() {
       }}
       faqs={faqs}
       related={[
+        { href: '/voice-cloning-vs-voice-design', title: 'Voice cloning vs. voice design', description: 'Side-by-side comparison of recording needs, credits, languages and output.' },
         { href: '/free-text-to-speech', title: 'Text to Speech', description: 'Try speech generation with the available system voices.' },
         { href: '/ai-story-voiceover', title: 'Story Voiceover', description: 'Assign voices to narration and character dialogue.' },
         { href: '/ai-podcast-generator', title: 'AI Podcast Generator', description: 'Choose voices for an editable host-and-guest script.' },

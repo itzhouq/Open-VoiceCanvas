@@ -21,6 +21,9 @@ Facts: ${TRIAL_OFFER.characters.toLocaleString('en-US')}-character / ${TRIAL_OFF
 - [Podcast Voice Generator](https://voicewove.com/podcast): Workbench to turn a topic or pasted text into a host-and-guest dialogue and export the episode as WAV.
 - [Voice Design](https://voicewove.com/design): Workbench to create a voice from a text description; uses a clone/design credit like voice cloning.
 
+## Compare
+- [Voice cloning vs. voice design](https://voicewove.com/voice-cloning-vs-voice-design): Which workflow fits the project — recording needs, specific-voice fit, quota, languages and output formats.
+
 ## Policies and support
 - [Terms](https://voicewove.com/terms): Content rights, voice restrictions, subscriptions and refund conditions.
 - [Privacy](https://voicewove.com/privacy): Service providers, retention and deletion requests.
